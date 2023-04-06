@@ -1,0 +1,23 @@
+.swiper {
+  position: unset;
+  width: 100%;
+  height: 100%;
+}
+.wrapper {
+  position: relative;
+  max-width: 660px;
+  height: 120px;
+}
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+  display: flex;
+  cursor: pointer;
+  justify-content: center;
+  top: 140px;
+}
+.swiper-pagination-bullet,
+.swiper-pagination-bullet-active {
+  width: 12px;
+  height: 12px;
+  background-color: #f0eeee;
+}

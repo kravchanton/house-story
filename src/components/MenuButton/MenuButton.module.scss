@@ -1,0 +1,33 @@
+@import "./src/styles/variables";
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 33px;
+  font-size: 16px;
+  line-height: 19px;
+  padding: 10px 20px;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+  color: $text-color;
+  transition: all 200ms;
+  &:hover {
+    border-color: $text-color;
+  }
+}
+.wrapper {
+  width: 100%;
+}
+
+.text {
+  font-size: 12px;
+  line-height: 14px;
+}
+.lockWrapper {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-top: 8px;
+}

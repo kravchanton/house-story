@@ -1,0 +1,213 @@
+@import "./src/styles/variables";
+
+.meeting {
+  padding-top: 50px;
+  padding-bottom: 80px;
+}
+
+.textContent {
+  max-width: 663px;
+  flex-grow: 1;
+}
+.wrapper {
+  display: flex;
+  gap: 37px;
+  margin-bottom: 80px;
+}
+.title {
+  font-size: 40px;
+  line-height: 47px;
+  background: linear-gradient(91.24deg, #1eab5f 0.36%, #e7b97e 103.9%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  margin-bottom: 16px;
+}
+.subtitle {
+  font-size: 30px;
+  line-height: 35px;
+  opacity: 0.9;
+  margin-bottom: 40px;
+}
+
+.video {
+  border-radius: 5px;
+}
+
+.gifts {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 80px;
+}
+
+.giftsBlock {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.gift {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  max-width: 427px;
+}
+.desc {
+  font-size: 20px;
+  line-height: 23px;
+}
+.firstText {
+  font-size: 30px;
+  line-height: 35px;
+  margin-bottom: 40px;
+}
+.secondText {
+  margin-bottom: 24px;
+}
+.form {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+.titleForm {
+  margin-bottom: 16px;
+}
+.wrapperExample {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin-top: 80px;
+}
+.titleBlock {
+  font-size: 30px;
+  line-height: 35px;
+}
+.mediaContent {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+.imageGroup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+.videoGroup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 17px;
+}
+.text {
+  display: flex;
+  align-items: center;
+  gap: 27px;
+}
+.textTitle {
+  font-size: 26px;
+  line-height: 30px;
+  margin-bottom: 40px;
+}
+.descWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.description {
+  display: flex;
+  gap: 16px;
+}
+.actions {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  padding-bottom: 53px;
+  margin-bottom: 80px;
+}
+.actionsTitle {
+  color: $active-green;
+  max-width: 893px;
+  margin-bottom: 0;
+}
+.btn {
+  width: 100%;
+  color: #f0fcf6;
+  background: #1eab5f;
+  border-radius: 5px;
+  padding: 18.5px 0;
+  justify-content: center;
+}
+.wrapperBtn {
+  width: 49.4%;
+}
+.arrow {
+  position: absolute;
+  left: 50%;
+  top: 54px;
+}
+.visual {
+  margin-bottom: 80px;
+}
+
+.visualTitle {
+  margin-bottom: 40px;
+}
+.visualSubtitle {
+  max-width: 804px;
+  margin-bottom: 24px;
+}
+.visualMedia {
+  display: flex;
+  gap: 40px;
+}
+.visualImages {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.visualForm {
+  padding: 20px;
+  background: #2c2c2e;
+  box-shadow: -11px -10px 51px rgba(0, 0, 0, 0.25),
+    0px 0px 26px rgba(0, 0, 0, 0.53);
+  border-radius: 5px;
+  flex: 427px;
+}
+.contactsFormWrapper {
+  width: 100%;
+}
+.contactsForm {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 40px;
+  row-gap: 24px;
+}
+.contactsFormInput {
+  flex: 426px;
+}
+.contactsFormSelect {
+  flex: 426px;
+}
+.contactsFormBtn {
+  width: 31.4%;
+}
+.contactsFormTextarea {
+  flex-grow: 1;
+  height: 56px;
+  resize: none;
+
+}
+.contactsTitle {
+  font-size: 20px;
+  line-height: 23px;
+  margin-bottom: 16px;
+}
+.btnWrapper {
+
+}
