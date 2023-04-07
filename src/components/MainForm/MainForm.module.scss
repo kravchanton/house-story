@@ -1,0 +1,152 @@
+.mainWrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 106px;
+  padding-bottom: 184px;
+}
+
+.formWrapper {
+  padding-top: 68px;
+  display: flex;
+  flex-direction: column;
+  max-width: 770px;
+  z-index: 5;
+
+}
+
+.formWrapper h2 {
+
+  font-weight: 900;
+  font-size: 35px;
+  line-height: 42px;
+}
+
+.formWrapper h3 {
+  padding-top: 16px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 26px;
+}
+
+.form {
+  padding: 0 40px;
+  width: 770px;
+  min-height: 290px;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+  border-radius: 3px;
+}
+
+.titleForm {
+  padding-top: 24px;
+  font-weight: 900;
+  font-size: 25px;
+  line-height: 30px;
+  color: #1EAB5F;
+}
+
+.subTitleForm {
+  padding-top: 8px;
+  padding-bottom: 32px;
+  font-size: 16px;
+  line-height: 19px;
+  color: #000000;
+
+}
+
+.subTitleForm span {
+  color: #1EAB5F
+}
+
+.buttons {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: row;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.buttonRight {
+  background: #FFFFFF;
+  width: 386px;
+  height: 40px;
+  border: 1px solid #1EAB5F;
+  color: #000000;
+}
+
+.buttonLeft {
+  background: #1EAB5F;
+  width: 386px;
+  height: 40px;
+  color: #FFFFFF;
+}
+
+
+.contactsForm {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 40px;
+  row-gap: 24px;
+}
+
+.contactsFormInput {
+  width: 325px;
+  height: 40px;
+}
+
+.contactsFormSelect {
+  width: 325px;
+  height: 40px;
+
+}
+
+.contactsFormBtn {
+  width: 325px;
+  order: 4
+}
+
+.videoWrapper {
+  margin-top: 127px;
+  width: 704px;
+  height: 464px;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 3px;
+  z-index: 5;
+
+}
+
+.treeLeft {
+  position: absolute;
+  left: 0;
+  top: 526px;
+  z-index: 1;
+
+}
+
+.cloud {
+  position: absolute;
+  left: 33px;
+  top: 656px;
+  z-index: 0;
+}
+.backgroundHouse {
+  position: absolute;
+  right: 0;
+  top: 128px;
+  z-index: 0;
+}
+
+.rCloud {
+  position: absolute;
+  right: 0;
+  top: 784px;
+  z-index: 2;
+}
+.tCloud {
+  position: absolute;
+  right: 0;
+  top: 168px;
+  z-index: 2;
+}

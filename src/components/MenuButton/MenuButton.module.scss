@@ -9,13 +9,10 @@
   line-height: 19px;
   padding: 10px 20px;
   background-color: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 5px;
-  color: $text-color;
+  color: #FFFFFF;;
   transition: all 200ms;
-  &:hover {
-    border-color: $text-color;
-  }
+
 }
 .wrapper {
   width: 100%;

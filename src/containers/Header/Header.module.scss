@@ -1,10 +1,10 @@
 @import "./src/styles/variables";
 
 .header {
-  min-height: 200px;
-  padding-top: 40.5px;
-  box-shadow: -11px -10px 51px rgba(0, 0, 0, 0.25),
-    0px 0px 26px rgba(0, 0, 0, 0.53);
+  min-height: 214px;
+  padding-top: 26px;
+  z-index: 5;
+
 }
 
 .info {
@@ -67,13 +67,27 @@
   text-align: center;
 }
 .btn {
-  color: $text-color;
+  color: #FFFFFF;;
   font-size: 16px;
   line-height: 19px;
   padding: 23.5px 60px;
-  background-color: #444343;
-  box-shadow: 0 0 4px rgba(51, 51, 51, 0.5);
-  border-radius: 5px;
+  background: #1EAB5F;
+  box-shadow: 0px 4px 5px #319F1C;
+  border-radius: 6px;
+
+}
+.greenBlock {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  left: 0;
+  background: linear-gradient(90deg, rgba(246, 246, 246, 0) 1.47%, rgba(5, 160, 76, 0.92) 7.25%, #05A04C 14.68%, #1EAB5F 50.68%, #05A04C 84.33%, rgba(5, 160, 76, 0.79) 91.68%, rgba(246, 246, 246, 0) 99.05%);
+  border-radius: 3px;
+  width: 100%;
+  min-height: 64px;
+  z-index: 0;
+  height: 50px;
+  content: '';
 }
 .nav {
   display: flex;
@@ -81,8 +95,14 @@
   flex-wrap: wrap;
   gap: 40px;
   margin-bottom: 34px;
+  height: 64px;
+  z-index: 2;
+
+
+
 }
 .menuItem p {
+  color: #FFFFFF;
   text-align: center;
 }
 @media (max-width: 1200px) {

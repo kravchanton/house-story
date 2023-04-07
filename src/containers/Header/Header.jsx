@@ -2,9 +2,10 @@ import React from "react";
 
 import Instagram from "../../assets/instagram.png";
 import Facebook from "../../assets/facebook.png";
+import logo from "../../assets/logo.svg";
 
 import styles from "./Header.module.scss";
-import {Burger, Logo, Mail, Phone, WhatsUp} from "../../icons";
+import {Burger, Mail, Phone, WhatsUp} from "../../icons";
 import {Container, MenuButton} from "../../components";
 import {Telegram} from "../../icons";
 import {menu} from "../../mockData/menu";
@@ -18,7 +19,7 @@ export const Header = () => {
                     <NavLink
 
                         to='/'>
-                    <Logo className={styles.logo}/>
+                        <img src={logo} alt="logo"/>
                     </NavLink>
                     <div className={styles.phoneWrapper}>
                         <div className={styles.phone}>
@@ -40,22 +41,24 @@ export const Header = () => {
                         <p className={styles.textSocials}>Пишите, мы онлайн</p>
                     </div>
                     <button type="button" className={styles.btn}>
-                        Записаться на экскурсию
+                        Заказать звонок
                     </button>
                     <Burger/>
                 </div>
-                <nav className={styles.nav}>
-                    {menu.map((item) => (
-                        <NavLink
-                            key={item.id}
-                            to={item.link}>
-                            <MenuButton
-                                title={item.title}
-                                className={styles.menuItem}
-                            />
-                        </NavLink>
-                    ))}
-                </nav>
+                <div className={styles.greenBlock}>
+                    <nav className={styles.nav}>
+                        {menu.map((item) => (
+                            <NavLink
+                                key={item.id}
+                                to={item.link}>
+                                <MenuButton
+                                    title={item.title}
+                                    className={styles.menuItem}
+                                />
+                            </NavLink>
+                        ))}
+                    </nav>
+                </div>
             </Container>
         </header>
     );

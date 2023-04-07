@@ -31,10 +31,9 @@ export const Basic = ({
           messenger: "",
         }}
         onSubmit={(value) => {
-          console.log("hui");
-          console.log(answers);
+
           let data = { ...value, answer: answers };
-          console.log(data);
+
           axios.post(
             process.env.REACT_APP_API_URL + "/responses",
             {
