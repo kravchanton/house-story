@@ -6,7 +6,7 @@ import tree from './../../assets/tree.png'
 import cloud from './../../assets/cloud.png'
 import backgroundHouse from './../../assets/backgroudHouse.png'
 import rCloud from './../../assets/rCloud.png'
-import tCloud from './../../assets/tCloud.png'
+import tCloud from './../../assets/rCloud.png'
 
 export const MainForm = () => {
     return <div className={styles.mainWrapper}>

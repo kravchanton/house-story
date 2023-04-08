@@ -3,13 +3,15 @@ import quizReducer from "./quizReducer";
 import answersSlice from "./AnswerReducer";
 import meetingReducer from "./meetingReducer";
 import photoReducer from "./photoReducer";
+import catalogReducer from "./catalogReducer";
 
 export const store = configureStore({
   reducer: {
     quiz: quizReducer,
     answers: answersSlice,
     meetingData: meetingReducer,
-    photo: photoReducer
+    photo: photoReducer,
+    catalog: catalogReducer
   },
 });
 

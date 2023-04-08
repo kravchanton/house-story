@@ -1,0 +1,76 @@
+.catalog {
+  display: flex;
+  flex-direction: column;
+  z-index: 5;
+}
+
+.catalog h2 {
+  font-weight: 900;
+  font-size: 32px;
+  line-height: 39px;
+  color: #363130;
+  z-index: 5;
+}
+
+.catalog span {
+  color: #1EAB5F
+}
+
+.wrapper {
+  display: flex;
+  z-index: 5;
+
+
+}
+
+
+.NavigationWrapper {
+  width: 427px;
+
+}
+
+.searchInput {
+  padding: 18px;
+  width: 427px;
+  height: 56px;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: inset 4px 4px 25px rgba(241, 241, 241, 0.25);
+  border-radius: 5px;
+  color: white;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.NavigationButton {
+  margin-top: 40px;
+  width: 365px;
+  height: 60px;
+  border: 1px solid #1EAB5F;
+  border-radius: 5px;
+  color: #000000
+}
+
+.active {
+  color: #FFFFFF;
+  background: #1EAB5F;
+}
+
+.catalogList {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.catalogItem {
+  display: flex;
+  flex-direction: column;
+  width: 365px;
+  height: 348px;
+}
+.catalogItem h4{
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 29px;
+  color: #363130;
+}

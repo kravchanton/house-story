@@ -1,15 +1,12 @@
 import React from "react";
-import styles from "./catalog.module.scss";
+import styles from "./Catalog.module.scss";
 import {MenuButton} from "../MenuButton";
-import {ContactFormPhoto} from "./ContactFormPhoto";
 
-export const NavigationContainer = ({data, folder, setFolder, search, setSearch}) => {
-    const changeSearch = (e) => {
-        setSearch(e.currentTarget.value)
-    }
+export const MenuCatalog = ({data, folder, setFolder}) => {
+
     const changeFolder = (index) => {
         setFolder(index)
-        setSearch('')
+
     }
 
     return (
@@ -17,23 +14,22 @@ export const NavigationContainer = ({data, folder, setFolder, search, setSearch}
             <form action="">
 
                 <input className={styles.searchInput} type="text" id="search" name="search"
-                       onChange={e => changeSearch(e)} placeholder="Поиск" value={search}/>
+                       onChange={e => (e)} placeholder="Поиск" />
             </form>
             {data?.map((t, index) => {
                 return (
                     <div key={index} onClick={() => changeFolder(index)}>
                         <MenuButton
-                            title={t.attributes.folder}
+                            title={t.attributes.title}
                             className={
                                 folder === index
-                                    ? `${styles.PhotoNavigationButton} ${styles.active}`
-                                    : styles.PhotoNavigationButton
+                                    ? `${styles.NavigationButton} ${styles.active}`
+                                    : styles.NavigationButton
                             }
                         />
                     </div>
                 );
             })}
-            <ContactFormPhoto/>
         </div>
     );
 };

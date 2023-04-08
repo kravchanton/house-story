@@ -28,3 +28,8 @@ export const photoApi = {
         return apiInstance.get("photo-galleries?populate=deep");
     },
 };
+export const catalogApi = {
+    getCatalogData() {
+        return apiInstance.get("catalogs?populate=deep");
+    },
+};
