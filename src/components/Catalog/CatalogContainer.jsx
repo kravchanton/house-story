@@ -3,7 +3,7 @@ import styles from "./Catalog.module.scss";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchCatalog } from "../../bll/catalogReducer";
 import { MenuCatalog } from "./MenuCatalog";
-// import { CatalogList } from "./CatalogList";
+import { CatalogList } from "./CatalogList";
 
 export const CatalogContainer = () => {
   const [folder, setFolder] = useState(0);
@@ -22,7 +22,7 @@ export const CatalogContainer = () => {
       </h2>
       <div className={styles.wrapper}>
         <MenuCatalog data={data} folder={folder} setFolder={setFolder} />
-        {/*{data && <CatalogList data={data[folder].attributes} />}*/}
+        {data && <CatalogList data={data[folder].attributes} />}
       </div>
     </div>
   );
