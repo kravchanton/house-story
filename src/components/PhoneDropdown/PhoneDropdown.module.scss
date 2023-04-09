@@ -1,0 +1,35 @@
+.wrapper {
+  position: absolute;
+  padding-left: 88px;
+  padding-right: 32px;
+  padding-bottom: 32px;
+  top: 117px;
+  right: 502px;
+  z-index: 1;
+  background: #ffffff;
+  box-shadow: 0 10px 8px rgba(0, 0, 0, 0.25);
+  border-radius: 0 0 3px 3px;
+}
+.phone {
+  position: relative;
+  font-weight: 800;
+  font-size: 22px;
+  line-height: 27px;
+  color: #363130;
+  margin-bottom: 4px;
+  padding-bottom: 22px;
+
+  &:after {
+    content: "";
+    height: 1px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 40px;
+    background-color: #1eab5f;
+  }
+}
+.name {
+  font-weight: 700;
+  color: #1eab5f;
+}

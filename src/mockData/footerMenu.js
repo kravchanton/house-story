@@ -1,28 +1,29 @@
+import React from "react";
 import { Blog, Catalog, Contacts, Home, Shop, Specialist } from "../icons";
 
 export const footerMenu = [
   {
-    Icon: Home,
+    Icon: <Home />,
     title: "Главная",
   },
   {
-    Icon: Shop,
+    Icon: <Shop />,
     title: "Каталог готовых объектов",
   },
   {
-    Icon: Catalog,
+    Icon: <Catalog />,
     title: "Магазин стройматериалов",
   },
   {
-    Icon: Blog,
+    Icon: <Blog />,
     title: "Блог",
   },
   {
-    Icon: Specialist,
+    Icon: <Specialist />,
     title: "Выезд специалиста",
   },
   {
-    Icon: Contacts,
+    Icon: <Contacts />,
     title: "Контакты",
   },
 ];

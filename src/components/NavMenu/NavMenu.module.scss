@@ -1,0 +1,25 @@
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.title {
+  font-family: Roboto, sans-serif;
+  color: #ffffff;
+}
+.titleVariant {
+  font-size: 20.9606px;
+  line-height: 25px;
+  color: #0c0c0c;
+}
+.icon {
+  stroke: white;
+}
+.menuItem {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.iconVariant {
+  stroke: black;
+}

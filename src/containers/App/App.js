@@ -1,10 +1,8 @@
 import React from "react";
-import {Route, Routes} from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 
-import {Layout} from "../../pages";
-import {CatalogPage} from "../../pages/catalog/CatalogPage";
-
-
+import { Layout } from "../../pages";
+import { CatalogPage } from "../../pages/Catalog/CatalogPage";
 
 export const App = () => {
   return (

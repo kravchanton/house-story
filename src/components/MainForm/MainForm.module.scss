@@ -1,8 +1,10 @@
 .mainWrapper {
+  position: relative;
   display: flex;
   flex-direction: row;
   gap: 106px;
   padding-bottom: 184px;
+  z-index: 1;
 }
 
 .formWrapper {
@@ -11,11 +13,9 @@
   flex-direction: column;
   max-width: 770px;
   z-index: 5;
-
 }
 
 .formWrapper h2 {
-
   font-weight: 900;
   font-size: 35px;
   line-height: 42px;
@@ -32,7 +32,7 @@
   padding: 0 40px;
   width: 770px;
   min-height: 290px;
-  background: #FFFFFF;
+  background: #ffffff;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
   border-radius: 3px;
 }
@@ -42,7 +42,7 @@
   font-weight: 900;
   font-size: 25px;
   line-height: 30px;
-  color: #1EAB5F;
+  color: #1eab5f;
 }
 
 .subTitleForm {
@@ -51,11 +51,10 @@
   font-size: 16px;
   line-height: 19px;
   color: #000000;
-
 }
 
 .subTitleForm span {
-  color: #1EAB5F
+  color: #1eab5f;
 }
 
 .buttons {
@@ -68,20 +67,19 @@
 }
 
 .buttonRight {
-  background: #FFFFFF;
+  background: #ffffff;
   width: 386px;
   height: 40px;
-  border: 1px solid #1EAB5F;
+  border: 1px solid #1eab5f;
   color: #000000;
 }
 
 .buttonLeft {
-  background: #1EAB5F;
+  background: #1eab5f;
   width: 386px;
   height: 40px;
-  color: #FFFFFF;
+  color: #ffffff;
 }
-
 
 .contactsForm {
   display: flex;
@@ -99,12 +97,11 @@
 .contactsFormSelect {
   width: 325px;
   height: 40px;
-
 }
 
 .contactsFormBtn {
   width: 325px;
-  order: 4
+  order: 4;
 }
 
 .videoWrapper {
@@ -114,28 +111,26 @@
   background: rgba(0, 0, 0, 0.5);
   border-radius: 3px;
   z-index: 5;
-
 }
 
 .treeLeft {
   position: absolute;
-  left: 0;
-  top: 526px;
-  z-index: 1;
-
+  left: -162px;
+  top: 252px;
+  z-index: 2;
 }
 
 .cloud {
   position: absolute;
-  left: 33px;
-  top: 656px;
-  z-index: 0;
+  left: -282px;
+  top: 356px;
+  z-index: 1;
 }
 
 .backgroundHouse {
   position: absolute;
-  right: 0;
-  top: 128px;
+  right: -161px;
+  top: -150px;
   z-index: 0;
 
 }
@@ -143,14 +138,14 @@
 
 .rCloud {
   position: absolute;
-  right: 0;
-  top: 784px;
+  right: -161px;
+  top: 500px;
   z-index: 2;
 }
 
 .tCloud {
   position: absolute;
-  right: 0;
-  top: 168px;
+  right: -161px;
+  top: -200px;
   z-index: 2;
 }

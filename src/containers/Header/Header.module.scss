@@ -4,7 +4,6 @@
   min-height: 214px;
   padding-top: 26px;
   z-index: 5;
-
 }
 
 .info {
@@ -18,10 +17,23 @@
   display: flex;
   align-items: center;
   gap: 8px;
+  font-weight: 800;
+  font-size: 22px;
+  line-height: 27px;
+  color: #363130;
   margin-bottom: 4px;
+  &:after {
+    content: "";
+  }
 }
 .phoneWrapper {
-  text-align: center;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 7px 15px;
+  background: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+  border-radius: 3px;
 }
 .number {
   font-size: 20px;
@@ -29,19 +41,9 @@
   color: $active-green;
 }
 .text {
-  position: relative;
-  padding-left: 18px;
-  &:before {
-    position: absolute;
-    left: 8px;
-    top: 50%;
-    transform: translateY(-50%);
-    content: "";
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background-color: $active-green;
-  }
+  cursor: pointer;
+  color: $active-green;
+  font-weight: 700;
 }
 .textSocials {
   position: relative;
@@ -60,34 +62,46 @@
 .socials {
   display: flex;
   align-items: center;
-  gap: 13px;
-  margin-bottom: 4px;
+  justify-content: end;
+  gap: 26px;
+  margin-top: 15px;
 }
 .socialWrapper {
   text-align: center;
 }
+.burger {
+  fill: #000000;
+}
 .btn {
-  color: #FFFFFF;;
+  color: #ffffff;
   font-size: 16px;
   line-height: 19px;
   padding: 23.5px 60px;
-  background: #1EAB5F;
-  box-shadow: 0px 4px 5px #319F1C;
+  background: #1eab5f;
+  box-shadow: 0px 4px 5px #319f1c;
   border-radius: 6px;
-
 }
 .greenBlock {
   position: absolute;
   display: flex;
   justify-content: center;
   left: 0;
-  background: linear-gradient(90deg, rgba(246, 246, 246, 0) 1.47%, rgba(5, 160, 76, 0.92) 7.25%, #05A04C 14.68%, #1EAB5F 50.68%, #05A04C 84.33%, rgba(5, 160, 76, 0.79) 91.68%, rgba(246, 246, 246, 0) 99.05%);
+  background: linear-gradient(
+    90deg,
+    rgba(246, 246, 246, 0) 1.47%,
+    rgba(5, 160, 76, 0.92) 7.25%,
+    #05a04c 14.68%,
+    #1eab5f 50.68%,
+    #05a04c 84.33%,
+    rgba(5, 160, 76, 0.79) 91.68%,
+    rgba(246, 246, 246, 0) 99.05%
+  );
   border-radius: 3px;
   width: 100%;
   min-height: 64px;
   z-index: 0;
   height: 50px;
-  content: '';
+  content: "";
 }
 .nav {
   display: flex;
@@ -97,30 +111,68 @@
   margin-bottom: 34px;
   height: 64px;
   z-index: 2;
-
-
-
 }
 .menuItem p {
-  color: #FFFFFF;
+  color: #ffffff;
   text-align: center;
+}
+.plantWrapper {
+  max-width: 318px;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.plantText {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  color: #2f2c29;
+}
+.structure {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.structureText {
+  position: relative;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  &:after {
+    position: absolute;
+    left: 0;
+    bottom: -7px;
+    content: "";
+    background-color: #000000;
+    height: 2px;
+    width: 100%;
+  }
+}
+.iconWrapper {
+  padding: 12px 10px;
+  border-radius: 50%;
+  background-color: #ffffff;
+}
+.wrapper {
+  border-radius: 50%;
+  padding: 7px;
+  background-color: #e4e4e4;
 }
 @media (max-width: 1200px) {
   .nav {
     gap: 10px;
   }
   .btn {
-    font-size: 12px;;
+    font-size: 12px;
     padding: 15px 30px;
   }
-
 }
 
 @media (max-width: 992px) {
   .nav {
     gap: 5px;
   }
-
 }
 @media (max-width: 767px) {
   .socialWrapper {

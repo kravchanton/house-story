@@ -18,6 +18,7 @@ export const Basic = ({
   classNameForTextarea,
   btnText = "Оставить заявку",
   lockText,
+  date,
 }) => {
   let answers = useSelector((state) => state.answers.answer);
 
@@ -31,7 +32,6 @@ export const Basic = ({
           messenger: "",
         }}
         onSubmit={(value) => {
-
           let data = { ...value, answer: answers };
 
           axios.post(
@@ -60,26 +60,28 @@ export const Basic = ({
             name="phone"
             placeholder="Номер телефона"
           />
-          <Field
-            className={classNames(styles.select, classNameSelect)}
-            as="select"
-            id="messenger"
-            name="messenger"
-            placeholder="Выберите мессенджер"
-          >
-            <option defaultValue="Выберите мессенджер">
-              Выберите мессенджер
-            </option>
-            <option className={styles.option} value="viber">
-              Viber
-            </option>
-            <option className={styles.option} value="whats-up">
-              Whats-up
-            </option>
-            <option className={styles.option} value="telegram">
-              Telegram
-            </option>
-          </Field>
+          {!date && (
+            <Field
+              className={classNames(styles.select, classNameSelect)}
+              as="select"
+              id="messenger"
+              name="messenger"
+              placeholder="Выберите мессенджер"
+            >
+              <option defaultValue="Выберите мессенджер">
+                Выберите мессенджер
+              </option>
+              <option className={styles.option} value="viber">
+                Viber
+              </option>
+              <option className={styles.option} value="whats-up">
+                Whats-up
+              </option>
+              <option className={styles.option} value="telegram">
+                Telegram
+              </option>
+            </Field>
+          )}
 
           {inputVariant && (
             <Field
@@ -90,6 +92,15 @@ export const Basic = ({
               placeholder="Ваш вопрос(необязательно)"
             />
           )}
+          {date && (
+            <Field
+              className={classNames(styles.input, classNameForTextarea)}
+              type="text"
+              id="date"
+              name="date"
+              placeholder="Дата экскурсии"
+            />
+          )}
           <MenuButton
             className={styles.btn}
             classNameForBtn={classNameForBtn}
@@ -98,12 +109,6 @@ export const Basic = ({
           />
         </Form>
       </Formik>
-      {/*<div className={styles.lockWrapper}>*/}
-      {/*  <Lock />*/}
-      {/*  <p className={styles.text}>*/}
-      {/*    Ваши данные не будут переданы третьим лицам*/}
-      {/*  </p>*/}
-      {/*</div>*/}
     </div>
   );
 };

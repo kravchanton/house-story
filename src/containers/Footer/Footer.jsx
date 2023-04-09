@@ -4,12 +4,13 @@ import styles from "./Footer.module.scss";
 import Instagram from "../../assets/instagram.png";
 import Facebook from "../../assets/facebook.png";
 import Youtube from "../../assets/youtube.png";
-import { footerMenu } from "../../mockData/footerMenu";
+// import { footerMenu } from "../../mockData/footerMenu";
 
 import {
   Container,
   MenuButton,
-  MenuFooterItem,
+  NavMenu,
+  // MenuFooterItem,
   ReviewsSlider,
 } from "../../components";
 import { Arrow, ArrowRight, LogoVariant, WhatsUp, Telegram } from "../../icons";
@@ -31,17 +32,7 @@ export const Footer = () => {
             </p>
           </div>
         </div>
-
-        <nav className={styles.nav}>
-          {footerMenu.map((item) => (
-            <MenuFooterItem
-              key={item.title}
-              title={item.title}
-              Icon={item.Icon}
-              className={styles.menuItem}
-            />
-          ))}
-        </nav>
+        <NavMenu />
         <div className={styles.info}>
           <div className={styles.textWrapper}>
             <p className={styles.textInfo}>Смотреть все документы</p>
