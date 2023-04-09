@@ -1,8 +1,7 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 
-import { Layout } from "../../pages";
-import { CatalogPage } from "../../pages/Catalog/CatalogPage";
+import { CatalogPage, Layout } from "../../pages";
 
 export const App = () => {
   return (

@@ -1,1 +1,1 @@
-export * from "./NavigationCatalog";
+export * from "./NavigationHeader";
