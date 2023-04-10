@@ -23,3 +23,4 @@ export * from "./MenuDropdown";
 export * from "./Icon";
 export * from "./NavMenu";
 export * from "./NavigationHeader";
+export * from "./SliderBtn";
