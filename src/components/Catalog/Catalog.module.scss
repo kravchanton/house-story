@@ -19,6 +19,7 @@
 .wrapper {
   display: flex;
   z-index: 5;
+  padding-top: 24px;
 
 
 }
@@ -31,14 +32,13 @@
 
 .searchInput {
   padding: 18px;
-  width: 427px;
-  height: 56px;
-  background: rgba(255, 255, 255, 0.05);
-  box-shadow: inset 4px 4px 25px rgba(241, 241, 241, 0.25);
+  width: 365px;
+  height: 60px;
+  background: #FFFFFF;
+  border: 1px solid #1EAB5F;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
   border-radius: 5px;
-  color: white;
-  font-size: 16px;
-  line-height: 19px;
+  color: #363130;
 }
 
 .NavigationButton {
@@ -68,9 +68,41 @@
   width: 365px;
   height: 348px;
 }
+.catalogItem img{
+  margin-top: 16px;
+  width: 365px;
+  height: 207px;
+  object-fit: cover;
+  border-radius: 3px;
+}
 .catalogItem h4{
   font-weight: 900;
   font-size: 24px;
   line-height: 29px;
   color: #363130;
+}
+
+.price {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: end;
+  font-weight: 900;
+  font-size: 20px;
+  line-height: 24px;
+  color: #1EAB5F;
+}
+
+.ItemButton {
+  display: flex;
+  justify-content: center;
+
+  width: 100%;
+  height: 50px;
+  border: 1px solid #130D0D;
+  box-shadow: inset 4px 4px 25px rgba(241, 241, 241, 0.25);
+  border-radius: 5px;
+  color: #000000;
+  margin-top: 16px;
+
 }

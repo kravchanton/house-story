@@ -5,7 +5,7 @@ import { CatalogItem } from "./CatalogItem";
 export const CatalogList = ({ data }) => {
   return (
     <div className={styles.catalogList}>
-      {data.item.map((t, index) => (
+      {data.map((t, index) => (
         <CatalogItem key={index} data={t} />
       ))}
     </div>
