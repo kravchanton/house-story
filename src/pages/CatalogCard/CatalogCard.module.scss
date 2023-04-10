@@ -1,0 +1,275 @@
+.title {
+  font-weight: 900;
+  font-size: 38px;
+  line-height: 52px;
+  color: #363130;
+  margin-bottom: 37px;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 120px;
+}
+.about {
+  display: flex;
+  gap: 40px;
+}
+.images {
+  display: flex;
+  gap: 40px;
+  margin-bottom: 85px;
+}
+.mainImage {
+  width: 100%;
+  object-fit: cover;
+}
+.tripleImages {
+  display: flex;
+  flex-direction: column;
+  gap: 21px;
+}
+.imageView {
+  max-width: 230px;
+  height: 100%;
+  object-fit: cover;
+}
+.linkImageWrapper {
+  position: relative;
+}
+.linkText {
+  position: absolute;
+  bottom: 17px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #ffffff;
+  text-decoration: underline;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 21px;
+}
+.textBlock {
+  border: 1px solid #319f1c;
+  border-radius: 3px;
+  padding: 20px;
+  flex-grow: 1;
+}
+.priceBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-bottom: 40px;
+}
+.price {
+  display: flex;
+  justify-content: space-between;
+}
+.priceText {
+  font-weight: 900;
+  font-size: 30px;
+  line-height: 37px;
+  color: #1eab5f;
+}
+.text {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  color: #000000;
+}
+.btn {
+  font-weight: 600;
+  color: #ffffff;
+  height: 50px;
+  justify-content: center;
+  width: 100%;
+  background: #363130;
+  box-shadow: 0 0 4px rgba(51, 51, 51, 0.5);
+  border-radius: 5px;
+}
+.descHouse {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.propertyWrapper {
+  display: flex;
+  justify-content: space-between;
+}
+li div {
+  flex: 1 0;
+  border-bottom: 1px dotted #000;
+  height: 1em;
+  margin: 0 0.4em;
+}
+.btnWhite {
+  color: #000000;
+  background-color: #ffffff;
+  border: 1px solid #130d0d;
+  box-shadow: inset 4px 4px 25px rgba(241, 241, 241, 0.25);
+}
+.list {
+  padding-left: 20px;
+  margin-bottom: 24px;
+}
+.listTitle {
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 29px;
+  color: #363130;
+  margin-bottom: 16px;
+}
+.listItem {
+  font-size: 18px;
+  line-height: 28px;
+  color: #000000;
+  list-style: circle;
+}
+.additionalInfo {
+  background-color: #ffffff;
+  width: 100%;
+  border: 1px solid #1eab5f;
+  padding: 10px 20px;
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 29px;
+  text-decoration-line: underline;
+  color: #1eab5f;
+}
+.buttonBlock {
+  display: flex;
+  gap: 40px;
+  margin-bottom: 32px;
+}
+.buttonAction {
+  font-weight: 500;
+  color: #000000;
+  width: 100%;
+  height: 64px;
+  justify-content: center;
+  border: 1px solid #319f1c;
+  border-radius: 0 0 6px 6px;
+  &:active {
+    color: #ffffff;
+    background: #1eab5f;
+  }
+}
+.contactForm {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  row-gap: 16px;
+}
+.btnForm {
+  width: 500px;
+}
+.inputForm {
+  width: 500px;
+  height: 50px;
+}
+.selectForm {
+  width: 500px;
+  height: 50px;
+}
+.plan {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.titleBlock {
+  text-align: center;
+  max-width: 100%;
+}
+.section {
+  display: flex;
+}
+.floorImage {
+  max-width: 397px;
+  object-fit: cover;
+  margin-right: 40px;
+}
+.description {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  flex-grow: 1;
+}
+.descTitle {
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 29px;
+  color: #363130;
+}
+.smallImage {
+  max-width: 365px;
+  object-fit: cover;
+  margin-right: 40px;
+  &:last-child {
+    margin-right: 0;
+  }
+}
+.imagesWrapper {
+  margin-bottom: 40px;
+}
+.btnFloor {
+  justify-content: center;
+  height: 45px;
+  font-weight: 600;
+  background: #1eab5f;
+  box-shadow: 0 4px 4px #64bc45;
+  border-radius: 5px;
+  width: 325px;
+  margin: 0 auto;
+}
+.buildingHouse {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.houseImages {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+.buildingImage {
+  max-width: 500px;
+  object-fit: cover;
+}
+.favouriteHouses {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.favouriteCard {
+  display: flex;
+  gap: 40px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 3px;
+}
+.favouriteImg {
+  max-width: 345px;
+  object-fit: cover;
+}
+.favouriteDesc {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.favouriteText {
+  font-size: 24px;
+  line-height: 29px;
+}
+.favouritePrice {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.favouriteBg {
+  position: absolute;
+  left: -180px;
+  top: -200px;
+  z-index: -1;
+}
