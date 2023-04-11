@@ -20,7 +20,9 @@
   margin-bottom: 85px;
 }
 .mainImage {
-  width: 100%;
+  width: 770px;
+  height: 523px;
+  border-radius: 3px;
   object-fit: cover;
 }
 .tripleImages {
@@ -185,6 +187,7 @@ li div {
 }
 .floorImage {
   max-width: 397px;
+  max-height: 500px;
   object-fit: cover;
   margin-right: 40px;
 }
@@ -232,7 +235,8 @@ li div {
   gap: 40px;
 }
 .buildingImage {
-  max-width: 500px;
+  width: 500px;
+  height: 340px;
   object-fit: cover;
 }
 .favouriteHouses {
