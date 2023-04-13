@@ -1,14 +1,8 @@
 import React from "react";
 
 import styles from "./CatalogPage.module.scss";
-import {
-  Container,
-  MainForm,
-  CatalogContainer,
-  NavigationHeader,
-  Garanties,
-  Excursion,
-} from "../../components";
+import {CatalogContainer, Container, Excursion, Garanties, MainForm, NavigationHeader,} from "../../components";
+import {CatalogQuiz} from "../../components/Catalog/CatalogQuiz";
 
 export const CatalogPage = () => {
   return (
@@ -17,6 +11,7 @@ export const CatalogPage = () => {
         <NavigationHeader />
         <MainForm />
         <CatalogContainer />
+        <CatalogQuiz numberQuiz={2}/>
         <Garanties />
         <Excursion />
       </Container>

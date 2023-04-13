@@ -42,16 +42,16 @@
   width: 400px;
   min-width: 200px;
   height: 56px;
-  border: 1px solid #FFFFFF;
+  border: 1px solid #000000;
   border-radius: 5px;
   margin: 10px 20px 10px 0;
+  color: #000000;
 }
 
 
 .btn:hover {
-  background: #1eab5f;
-  color: #F0FCF6;
-  border: 1px solid #1eab5f;
+  color: #000000;
+  border: 1px solid #000000;
 
 }
 .btn:disabled {
@@ -59,7 +59,7 @@
   color: #000000;
   border: 1px solid #D0D0D0;
   cursor: auto;
-
+  border-radius: 5px;
 }
 .btnWrapper {
 

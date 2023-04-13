@@ -2,19 +2,19 @@
 
 .normal {
   padding: 11px 17px;
-  border: 1px solid $gold ;
-  border-radius: 50%;
-  color: $gold;
+  border: 1px solid #FDDF31;
+  color: #000000;
+  border-radius: 100%;
   font-size: 20px;
   line-height: 24px;
 }
 .active {
-  background-color: $gold;
+  background-color: #FDDF31;
   color: #000000;
 }
 .passed {
-  background-color: #775C3A;
-  border: 1px solid #775C3A ;
+  background-color: #E7B97E;
+  border: 1px solid #E7B97E ;
   color: #000000;
   cursor: pointer;
 
