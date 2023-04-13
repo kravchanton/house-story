@@ -4,14 +4,17 @@ import {useDispatch, useSelector} from "react-redux";
 import {fetchCatalog} from "../../bll/catalogReducer";
 import {MenuCatalog} from "./MenuCatalog";
 import {CatalogList} from "./CatalogList";
+import {useParams} from "react-router-dom";
 
 export const CatalogContainer = () => {
     const [folder, setFolder] = useState(0);
     const [search, setSearch] = useState('')
 
+    let id = useParams();
     const dispatch = useDispatch();
     useEffect(() => {
         dispatch(fetchCatalog());
+        setFolder(id.idPage - 1)
     }, []);
     let Arr = []
     let data = useSelector((state) => state.catalog.catalog);
@@ -31,7 +34,7 @@ export const CatalogContainer = () => {
             </h2>
             <div className={styles.wrapper}>
                 <MenuCatalog search={search} setSearch={setSearch} data={data} folder={folder} setFolder={setFolder}/>
-                {data && <CatalogList data={dataTransfer}/>}
+                {data && <CatalogList key={folder} data={dataTransfer}/>}
             </div>
         </div>
     );

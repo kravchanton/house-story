@@ -9,6 +9,8 @@ import {Basic, Container, MenuButton, SliderBtn} from "../../components";
 import {Swiper, SwiperSlide} from "swiper/react";
 import {useDispatch, useSelector} from "react-redux";
 import {fetchCatalog} from "../../bll/catalogReducer";
+import ReactMarkdown from "react-markdown";
+import rehypeRaw from 'https://esm.sh/rehype-raw@6'
 
 export const CatalogCard = () => {
 
@@ -92,22 +94,22 @@ export const CatalogCard = () => {
                                     <li className={styles.propertyWrapper}>
                                         <p className={styles.text}>Этажи</p>
                                         <div></div>
-                                        <p className={styles.text}>1</p>
+                                        <p className={styles.text}>{cardData.floors}</p>
                                     </li>
                                     <li className={styles.propertyWrapper}>
                                         <p className={styles.text}>Комнаты</p>
                                         <div></div>
-                                        <p className={styles.text}>4</p>
+                                        <p className={styles.text}>{cardData.rooms}</p>
                                     </li>
                                     <li className={styles.propertyWrapper}>
                                         <p className={styles.text}>Санузлы</p>
                                         <div></div>
-                                        <p className={styles.text}>2</p>
+                                        <p className={styles.text}>{cardData.bathrooms}</p>
                                     </li>
                                     <li className={styles.propertyWrapper}>
                                         <p className={styles.text}>Стиль</p>
                                         <div></div>
-                                        <p className={styles.text}>европейский</p>
+                                        <p className={styles.text}>{cardData.style}</p>
                                     </li>
                                 </ul>
                                 <MenuButton
@@ -118,29 +120,10 @@ export const CatalogCard = () => {
                             <div className={styles.descBlock}>
                                 <h4 className={styles.listTitle}>Описание работ</h4>
                                 <ul className={styles.list}>
-                                    {cardData.description}
-                                    <li className={styles.listItem}>
-                                        Залили свайно-ростверковый фундамент
-                                    </li>
-                                    <li className={styles.listItem}>
-                                        Доставили весь материал (бревно из Кирова)
-                                    </li>
-                                    <li className={styles.listItem}>
-                                        Собрали сруб (коробка дома)
-                                    </li>
-                                    <li className={styles.listItem}>Смонтировали кровлю</li>
-                                    <li className={styles.listItem}>
-                                        Произвели шлифовку оцилиндрованного бревна на следующий год
-                                        (отшлифовали торцы)
-                                    </li>
-                                    <li className={styles.listItem}>
-                                        Обработали неомидом, покрасили
-                                    </li>
-                                    <li className={styles.listItem}>
-                                        Также на следующий год утеплили крышу и полы (положили
-                                        фанеру с обрешёткой)
-                                    </li>
-                                    <li className={styles.listItem}>Потолок зашили вагонкой</li>
+
+                                    {/* eslint-disable-next-line react/no-children-prop */}
+                                   <div className={styles.listItem}><ReactMarkdown children={cardData.description} /></div>
+                                    
                                 </ul>
                                 <NavLink>
                                     <button className={styles.additionalInfo}>
@@ -161,10 +144,9 @@ export const CatalogCard = () => {
                                 alt="firstFloor"
                             />
                             <div className={styles.description}>
-                                <h4 className={styles.descTitle}>План 1 этажа</h4>
-                                <p className={styles.text}>Кухня-гостиная: 40,0 м2</p>
-                                <p className={styles.text}>Спальня: 11,3 м2</p>
-                                <p className={styles.text}>Гардеробная: 9,0 м2</p>
+                                <h4 className={styles.descTitle}>{t.title}</h4>
+                                {/* eslint-disable-next-line react/no-children-prop */}
+                                <p className={styles.text}><ReactMarkdown children={t.description} rehypePlugins={[rehypeRaw]} /></p>
                             </div>
                             <div className={styles.imagesBlock}>
                                 <div className={styles.imagesWrapper}>
@@ -178,7 +160,7 @@ export const CatalogCard = () => {
                                         alt="secondimg"/>
                                 </div>
                                 <MenuButton
-                                    title="Подробные планировки 1 этажа"
+                                    title={"Подробные планировки " + ++index + " этажа"}
                                     className={styles.btnFloor}
                                 />
                             </div>

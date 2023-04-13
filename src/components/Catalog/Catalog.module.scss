@@ -20,13 +20,13 @@
   display: flex;
   z-index: 5;
   padding-top: 24px;
+  gap: 40px;
 
 
 }
 
 
 .NavigationWrapper {
-  width: 427px;
 
 }
 
@@ -54,10 +54,15 @@
   color: #FFFFFF;
   background: #1EAB5F;
 }
-
+.catalogListWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .catalogList {
   display: flex;
   flex-direction: row;
+  width: 65vw;
   flex-wrap: wrap;
   gap: 40px;
 }
