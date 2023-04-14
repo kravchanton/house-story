@@ -1,0 +1,48 @@
+.section {
+  display: flex;
+}
+.floorImage {
+  max-width: 397px;
+  object-fit: cover;
+  margin-right: 40px;
+}
+.description {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  flex-grow: 1;
+}
+
+.smallImage {
+  max-width: 365px;
+  object-fit: cover;
+  margin-right: 40px;
+  &:last-child {
+    margin-right: 0;
+  }
+}
+.imagesWrapper {
+  margin-bottom: 40px;
+}
+.text {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  color: #000000;
+}
+.descTitle {
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 29px;
+  color: #363130;
+}
+.btnFloor {
+  justify-content: center;
+  height: 45px;
+  font-weight: 600;
+  background: #1eab5f;
+  box-shadow: 0 4px 4px #64bc45;
+  border-radius: 5px;
+  width: 325px;
+  margin: 0 auto;
+}

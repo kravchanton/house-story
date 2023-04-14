@@ -1,0 +1,15 @@
+.videoSection {
+  position: relative;
+  display: flex;
+  gap: 40px;
+}
+.video {
+  border-radius: 3px;
+  z-index: 2;
+}
+.house1 {
+  position: absolute;
+  left: -164px;
+  top: -230px;
+  z-index: 0;
+}

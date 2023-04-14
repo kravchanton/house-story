@@ -36,3 +36,7 @@ export * from "./CheckVariant";
 export * from "./Structure";
 export * from "./SmallArrow";
 export * from "./Close";
+export * from "./Pause";
+export * from "./PlayVariant";
+export * from "./PhoneSocials";
+export * from "./MailSocials";

@@ -42,6 +42,7 @@ export const MainForm = () => {
             <span> ( экономия до 30%)</span>
           </div>
           <Basic
+            select={true}
             classNameForm={styles.contactsForm}
             classNameInput={styles.contactsFormInput}
             classNameSelect={styles.contactsFormSelect}
