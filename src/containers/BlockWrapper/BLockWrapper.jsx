@@ -11,6 +11,7 @@ export const BlockWrapper = ({ title, subtitle }) => {
     <section className={styles.section}>
       <h3 className={classNames("titleBlock", styles.title)}>{title}</h3>
       <p className={styles.subtitle}>{subtitle}</p>
+      {/*sdf*/}
       <div className={styles.content}>
         <NavLink className={styles.card} to="#">
           <img className={styles.img} src={img1} alt="" />
