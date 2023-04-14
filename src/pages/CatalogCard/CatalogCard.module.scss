@@ -20,9 +20,7 @@
   margin-bottom: 85px;
 }
 .mainImage {
-  width: 770px;
-  height: 523px;
-  border-radius: 3px;
+  width: 100%;
   object-fit: cover;
 }
 .tripleImages {
@@ -70,6 +68,12 @@
   font-size: 30px;
   line-height: 37px;
   color: #1eab5f;
+}
+.descTitle {
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 29px;
+  color: #363130;
 }
 .text {
   font-weight: 500;
@@ -181,13 +185,13 @@ li div {
 .titleBlock {
   text-align: center;
   max-width: 100%;
+  z-index: 1;
 }
 .section {
   display: flex;
 }
 .floorImage {
   max-width: 397px;
-  max-height: 500px;
   object-fit: cover;
   margin-right: 40px;
 }
@@ -197,12 +201,7 @@ li div {
   gap: 24px;
   flex-grow: 1;
 }
-.descTitle {
-  font-weight: 900;
-  font-size: 24px;
-  line-height: 29px;
-  color: #363130;
-}
+
 .smallImage {
   max-width: 365px;
   object-fit: cover;
@@ -211,6 +210,13 @@ li div {
     margin-right: 0;
   }
 }
+.videoExcursion {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  z-index: 2;
+}
+
 .imagesWrapper {
   margin-bottom: 40px;
 }
@@ -225,55 +231,61 @@ li div {
   margin: 0 auto;
 }
 .buildingHouse {
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: 40px;
 }
-.houseImages {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 40px;
-}
-.buildingImage {
-  width: 500px;
-  height: 340px;
-  object-fit: cover;
-}
+
 .favouriteHouses {
   position: relative;
   display: flex;
   flex-direction: column;
   gap: 40px;
 }
-.favouriteCard {
-  display: flex;
-  gap: 40px;
-  padding: 20px;
-  background-color: #ffffff;
-  border-radius: 3px;
-}
-.favouriteImg {
-  max-width: 345px;
-  object-fit: cover;
-}
-.favouriteDesc {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-}
-.favouriteText {
-  font-size: 24px;
-  line-height: 29px;
-}
-.favouritePrice {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-}
 
-.favouriteBg {
+.contacts {
+  position: relative;
+  max-width: 507px;
+  z-index: 2;
+}
+.textArea {
+  resize: none;
+  min-height: 98px;
+}
+.house {
   position: absolute;
-  left: -180px;
-  top: -200px;
+  right: -1234px;
+  top: 20px;
+}
+.cloud {
+  position: absolute;
+  right: -1477px;
+  top: 380px;
+}
+.cloud1 {
+  position: absolute;
+  left: -248px;
+  top: 483px;
   z-index: -1;
+}
+.kaska {
+  position: absolute;
+  left: 550px;
+  top: 400px;
+}
+.titleFormInner {
+  margin-bottom: 40px;
+}
+.input {
+  height: 50px;
+}
+.select {
+  height: 50px;
+}
+.btnFormClass {
+  height: 50px;
+}
+.file {
+  height: 50px;
 }

@@ -13,18 +13,26 @@ export const Basic = ({
   classNameForm,
   classNameInput,
   classNameSelect,
-  inputVariant,
+  textarea,
   classNameForBtn,
   classNameForTextarea,
   btnText = "Оставить заявку",
   lockText,
   date,
+  classNameForTitle,
+  classNameForFile,
+  file,
+  select,
 }) => {
   let answers = useSelector((state) => state.answers.answer);
 
   return (
     <div className={className}>
-      {titleForm && <p className={styles.titleForm}>{titleForm}</p>}
+      {titleForm && (
+        <p className={classNames(styles.titleForm, classNameForTitle)}>
+          {titleForm}
+        </p>
+      )}
       <Formik
         initialValues={{
           name: "",
@@ -60,7 +68,7 @@ export const Basic = ({
             name="phone"
             placeholder="Номер телефона"
           />
-          {!date && (
+          {select && (
             <Field
               className={classNames(styles.select, classNameSelect)}
               as="select"
@@ -82,8 +90,17 @@ export const Basic = ({
               </option>
             </Field>
           )}
+          {file && (
+            <Field
+              className={classNames(styles.input, classNameForFile)}
+              type="file"
+              id="file"
+              name="file"
+              placeholder="Приккрепите свой проект"
+            />
+          )}
 
-          {inputVariant && (
+          {textarea && (
             <Field
               className={classNames(styles.input, classNameForTextarea)}
               as="textarea"
@@ -101,6 +118,7 @@ export const Basic = ({
               placeholder="Дата экскурсии"
             />
           )}
+
           <MenuButton
             className={styles.btn}
             classNameForBtn={classNameForBtn}

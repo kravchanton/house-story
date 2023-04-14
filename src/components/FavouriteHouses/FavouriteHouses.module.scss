@@ -1,0 +1,78 @@
+.favouriteCard {
+  display: flex;
+  gap: 40px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 3px;
+  width: 100%;
+}
+.slider {
+  width: 100%;
+}
+.favouriteImg {
+  max-width: 345px;
+  object-fit: cover;
+}
+.favouriteDesc {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.favouriteText {
+  font-size: 24px;
+  line-height: 29px;
+}
+.favouritePrice {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.favouriteBg {
+  position: absolute;
+  left: -180px;
+  top: -200px;
+  z-index: -1;
+}
+.descTitle {
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 29px;
+  color: #363130;
+}
+.price {
+  display: flex;
+  justify-content: space-between;
+}
+.priceText {
+  font-weight: 900;
+  font-size: 30px;
+  line-height: 37px;
+  color: #1eab5f;
+}
+.propertyWrapper {
+  display: flex;
+  justify-content: space-between;
+}
+li div {
+  flex: 1 0;
+  border-bottom: 1px dotted #000;
+  height: 1em;
+  margin: 0 0.4em;
+}
+.text {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  color: #000000;
+}
+.btnFloor {
+  justify-content: center;
+  height: 45px;
+  font-weight: 600;
+  background: #1eab5f;
+  box-shadow: 0 4px 4px #64bc45;
+  border-radius: 5px;
+  width: 325px;
+  margin: 0 auto;
+}

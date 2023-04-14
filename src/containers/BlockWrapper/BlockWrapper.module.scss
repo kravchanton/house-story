@@ -1,0 +1,41 @@
+.section {
+  display: flex;
+  flex-direction: column;
+}
+.title {
+  margin-bottom: 8px;
+}
+.subtitle {
+  font-size: 18px;
+  line-height: 24px;
+  color: #000000;
+  margin-bottom: 40px;
+}
+.content {
+  display: flex;
+  gap: 40px;
+}
+.card {
+  position: relative;
+  display: flex;
+  width: 500px;
+}
+.img {
+  width: 100%;
+  height: 100%;
+}
+.name {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.duration {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.read {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
