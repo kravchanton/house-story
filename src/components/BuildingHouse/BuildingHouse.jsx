@@ -8,7 +8,6 @@ import tree from "../../assets/tree.png";
 
 export const BuildingHouse = ({data}) => {
         return (
-
     <>
       <img className={styles.bgBuilding} src={bgBuilding1} alt="" />
       <img className={styles.bgBuilding1} src={bgBuilding2} alt="" />

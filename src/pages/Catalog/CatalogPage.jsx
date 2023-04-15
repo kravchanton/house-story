@@ -13,15 +13,6 @@ import {
 } from "../../components";
 import {CatalogQuiz} from "../../components/Catalog/CatalogQuiz";
 import {BlockWrapper} from "../../containers/BlockWrapper";
-import {
-  Container,
-  MainForm,
-  CatalogContainer,
-  NavigationHeader,
-  Garanties,
-  Excursion,
-} from "../../components";
-import { BlockWrapper } from "../../containers";
 
 export const CatalogPage = () => {
   return (
