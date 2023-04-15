@@ -1,8 +1,9 @@
 .sliderBtnNext {
   position: absolute;
   right: -60px;
+  transform: translateY(-50%);
   top: 50%;
-  z-index: 1;
+  z-index: 2;
   cursor: pointer;
 }
 
@@ -10,7 +11,7 @@
   position: absolute;
   left: -60px;
   top: 50%;
-  transform: rotate(180deg);
-  z-index: 1;
+  transform: rotate(180deg) translateY(-50%);
+  z-index: 2;
   cursor: pointer;
 }

@@ -24,6 +24,19 @@ import {BuildingHouse} from "../../components/BuildingHouse";
 
 // import ReactPlayer from "react-player";
 
+import {
+  Basic,
+  BuildingHouse,
+  Container,
+  FavouriteHouses,
+  MenuButton,
+  VideoExcursion,
+  FloorContent,
+} from "../../components";
+import { SectionCard } from "../../containers";
+
+// import ReactPlayer from "react-player";
+
 export const CatalogCard = () => {
   useEffect(() => {
     dispatch(fetchCatalog());
