@@ -149,7 +149,7 @@ export const CatalogCard = () => {
             title="Как строился дом"
             buttonText="Смотреть больше фото"
           >
-            {cardData?.buildings?.photos?.data?.slice(0,5).map((t,index) =>  <BuildingHouse key={index} data={t}/>)}
+            <BuildingHouse data={cardData?.buildings?.photos?.data}/>)
           </SectionCard>
           <SectionCard
             title=" Вам также могут понравиться"
