@@ -9,7 +9,8 @@ import {
   Garanties,
   Excursion,
 } from "../../components";
-import { BlockWrapper } from "../../containers";
+import {CatalogQuiz} from "../../components/Catalog/CatalogQuiz";
+import {BlockWrapper} from "../../containers/BlockWrapper";
 
 export const CatalogPage = () => {
   return (
@@ -18,6 +19,7 @@ export const CatalogPage = () => {
         <NavigationHeader />
         <MainForm />
         <CatalogContainer />
+        <CatalogQuiz numberQuiz={2}/>
         <BlockWrapper
           title="Топ выполненных объектов"
           subtitle="Показываем процесс работы изнутри, делимся результатами, опытом, полезными фишками"
