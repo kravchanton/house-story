@@ -5,7 +5,6 @@ import styles from "./BuildingHouse.module.scss";
 import bgBuilding1 from "../../assets/buildingBackground1.png";
 import bgBuilding2 from "../../assets/buildingBackground2.png";
 import tree from "../../assets/tree.png";
-import buildingHouse from "../../assets/building-house.png";
 
 export const BuildingHouse = ({data}) => {
         return (
@@ -16,7 +15,7 @@ export const BuildingHouse = ({data}) => {
       <div className={styles.houseImages}>
           {data?.slice(0,5).map((t,index) => <img key={index}
           className={styles.buildingImage}
-          src={buildingHouse}
+          src={`${process.env.REACT_APP_UPLOAD_URL}${t?.attributes?.url}`}
           alt="buildingHouse"
         />)}
       </div>
