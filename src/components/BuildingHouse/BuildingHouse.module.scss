@@ -1,0 +1,27 @@
+.bgBuilding {
+  position: absolute;
+  right: -160px;
+  bottom: 630px;
+}
+.bgBuilding1 {
+  position: absolute;
+  right: -160px;
+  bottom: 0;
+  z-index: 1;
+}
+.tree {
+  position: absolute;
+  left: -162px;
+  top: -350px;
+  z-index: 1;
+}
+.houseImages {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  z-index: 2;
+}
+.buildingImage {
+  max-width: 500px;
+  object-fit: cover;
+}
