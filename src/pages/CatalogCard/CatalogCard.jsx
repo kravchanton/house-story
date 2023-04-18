@@ -6,24 +6,9 @@ import cloud from "../../assets/cloud.png";
 import cloud1 from "../../assets/cloud1.png";
 import kaska from "../../assets/kaska.png";
 import styles from "./CatalogCard.module.scss";
-import {
-  Basic,
-  Container,
-
-  MenuButton,
-
-} from "../../components";
 import {useDispatch, useSelector} from "react-redux";
 import {fetchCatalog} from "../../bll/catalogReducer";
 import ReactMarkdown from "react-markdown";
-import {SectionCard} from "../../containers/SectionCard";
-import {FavouriteHouses} from "../../components/FavouriteHouses";
-import {VideoExcursion} from "../../components/VideoExcursion";
-import {FloorContent} from "../../components/FloorContent";
-import {BuildingHouse} from "../../components/BuildingHouse";
-
-// import ReactPlayer from "react-player";
-
 import {
   Basic,
   BuildingHouse,
