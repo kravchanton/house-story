@@ -1,8 +1,7 @@
 import React from "react";
 import {Route, Routes} from "react-router-dom";
 
-import {CatalogCard, CatalogPage, Layout} from "../../pages";
-import {GalleryCard} from "../../pages/GalleryCard";
+import {CatalogCard, CatalogPage, GalleryCard, Layout} from "../../pages";
 
 export const App = () => {
   return (
@@ -12,6 +11,7 @@ export const App = () => {
           <Route path="/catalog/:idPage" element={<CatalogPage/>}/>
           <Route path="/catalog/:idPage/:id" element={<CatalogCard/>} />
           <Route path="gallery-card" element={<GalleryCard />} />
+
       </Route>
     </Routes>
   );
