@@ -1,0 +1,64 @@
+.contacts {
+  padding-top: 140px;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+.title {
+  text-transform: uppercase;
+}
+.info {
+  display: flex;
+  justify-content: start;
+  gap: 40px;
+}
+.names,
+.desc {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.names {
+  flex-grow: 1;
+}
+.desc {
+  max-width: 332px;
+}
+.item {
+  display: flex;
+  align-items: start;
+  gap: 40px;
+}
+.itemDesc {
+}
+.name {
+  font-weight: 700;
+  color: #363130;
+}
+.department {
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 26px;
+  color: #1eab5f;
+  flex: 1 0 100%;
+  max-width: 365px;
+}
+.person {
+  font-weight: 700;
+  color: #363130;
+  max-width: 365px;
+}
+.personWrapper {
+}
+.phone {
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 27px;
+  color: #363130;
+}
+.photo {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}

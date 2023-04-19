@@ -8,7 +8,7 @@ import cloud from "../../assets/cloud.png";
 import { CheckVariant } from "../../icons";
 import { Basic } from "../Form";
 
-export const Excursion = () => {
+export const Excursion = ({ houseImg, cloudImg }) => {
   return (
     <article className={styles.wrapper}>
       <h3 className={classNames("titleBlock", styles.titleBlock)}>
@@ -45,8 +45,8 @@ export const Excursion = () => {
           date={true}
           btnText="Записаться на экскурсию"
         />
-        <img className={styles.imageHouse} src={dom} alt="" />
-        <img className={styles.imageCloud} src={cloud} alt="" />
+        {houseImg && <img className={styles.imageHouse} src={dom} alt="" />}
+        {cloudImg && <img className={styles.imageCloud} src={cloud} alt="" />}
       </div>
     </article>
   );

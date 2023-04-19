@@ -1,0 +1,16 @@
+.desc {
+  padding: 20px 20px 30px;
+  border: 1px solid #319f1c;
+  border-radius: 3px;
+  flex-grow: 1;
+}
+.images {
+  display: flex;
+  max-height: 435px;
+  gap: 40px;
+}
+.image {
+  width: 770px;
+  object-fit: cover;
+  border-radius: 3px 3px 3px 30px;
+}
