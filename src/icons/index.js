@@ -40,3 +40,7 @@ export * from "./Pause";
 export * from "./PlayVariant";
 export * from "./PhoneSocials";
 export * from "./MailSocials";
+export * from "./HouseVariant";
+export * from "./House";
+export * from "./SpinArrow";
+export * from "./ArrowThin";

@@ -5,10 +5,11 @@ import styles from "./VideoExcursion.module.scss";
 import dom1 from "../../assets/dom1.png";
 import poster from "../../assets/poster.png";
 
-export const VideoExcursion = () => {
+export const VideoExcursion = ({ bgimage }) => {
   return (
     <div className={styles.videoSection}>
-      <img className={styles.house1} src={dom1} alt="" />
+      {bgimage && <img className={styles.house1} src={dom1} alt="" />}
+
       <video
         poster={poster}
         className={styles.video}
