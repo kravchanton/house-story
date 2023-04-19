@@ -11,14 +11,13 @@ import { MenuButton, SliderBtn } from "../../components";
 
 export const FavouriteHouses = () => {
   return (
-    <>
+    <div className={styles.swiperWrapper}>
       <img className={styles.favouriteBg} src={bgFavourite} alt="" />
       <Swiper
-        watchSlidesProgress={true}
+        style={{ position: "unset" }}
         loop={true}
         slidesPerView={2}
         spaceBetween={40}
-        className={styles.slider}
       >
         <SwiperSlide>
           <div className={styles.favouriteCard}>
@@ -128,9 +127,9 @@ export const FavouriteHouses = () => {
             </div>
           </div>
         </SwiperSlide>
-        <SliderBtn direction="next" />
-        <SliderBtn direction="prev" />
+        <SliderBtn icon={null} direction="next" />
+        <SliderBtn icon={null} direction="prev" />
       </Swiper>
-    </>
+    </div>
   );
 };

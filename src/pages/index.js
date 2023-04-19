@@ -4,3 +4,6 @@ export * from "./Meeting";
 export * from "./Catalog";
 export * from "./CatalogCard";
 export * from "./GalleryCard";
+export * from "./ArticlePage";
+export * from "./Contacts";
+export * from "./About";

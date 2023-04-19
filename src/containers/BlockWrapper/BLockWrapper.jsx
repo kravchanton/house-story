@@ -1,11 +1,17 @@
 import React from "react";
 import classNames from "classnames";
 import { NavLink } from "react-router-dom";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { EffectFade } from "swiper";
 
 import poster from "../../assets/poster.png";
+import house from "../../assets/houseTop.png";
+
+import "swiper/css/effect-fade";
 
 import styles from "./BlockWrapper.module.scss";
-import { MenuButton } from "../../components";
+import { MenuButton, SliderBtn, VideoLink, SlideTop } from "../../components";
+import { HouseVariant } from "../../icons";
 
 export const BlockWrapper = ({
   title,
@@ -23,11 +29,18 @@ export const BlockWrapper = ({
   btn,
   article,
   video,
+  top,
+  video1,
+  video2,
+  video3,
+  classNameSection,
 }) => {
   return (
-    <section className={styles.section}>
-      <h3 className={classNames("titleBlock", styles.title)}>{title}</h3>
-      <p className={styles.subtitle}>{subtitle}</p>
+    <section className={classNames(styles.section, classNameSection)}>
+      <div>
+        <h3 className={classNames("titleBlock", styles.title)}>{title}</h3>
+        <p className={styles.subtitle}>{subtitle}</p>
+      </div>
 
       <div className={styles.content}>
         {article && (
@@ -54,17 +67,70 @@ export const BlockWrapper = ({
         )}
         {video && (
           <>
-            <NavLink to="#">
-              <video
-                width="500"
-                height="329"
-                controls
-                className={styles.video}
+            {video1 && (
+              <VideoLink
+                title={true}
+                author={true}
+                classNameWrapper={styles.wrapper}
+                src="https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4"
                 poster={poster}
+              />
+            )}
+            {video2 && (
+              <VideoLink
+                classNameWrapper={styles.wrapper}
+                youtubeLink="https://www.youtube.com/embed/ZDsWEApmyZI"
+                poster={poster}
+              />
+            )}
+            {video3 && (
+              <VideoLink
+                title={true}
+                author={true}
+                classNameWrapper={styles.wrapper}
+                src="https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4"
+                poster={poster}
+              />
+            )}
+          </>
+        )}
+        {top && (
+          <>
+            <div className={styles.buttons}>
+              <MenuButton
+                className={styles.btn}
+                title="Дома из оцилиндрованного бруса"
               >
-                <source src="./../assets/video.mp4" type="video.mp4" />
-              </video>
-            </NavLink>
+                <HouseVariant className={styles.icon} />
+              </MenuButton>
+              <MenuButton className={styles.btn} title="Дома из клееного бруса">
+                <HouseVariant className={styles.icon} />
+              </MenuButton>
+              <MenuButton
+                className={styles.btn}
+                title="Кирпичные/каменные дома"
+              >
+                <HouseVariant className={styles.icon} />
+              </MenuButton>
+              <MenuButton className={styles.btn} title="Кейсы по услугам">
+                <HouseVariant className={styles.icon} />
+              </MenuButton>
+            </div>
+            <Swiper effect={"fade"} modules={[EffectFade]} slidesPerView={1}>
+              <SwiperSlide>
+                <SlideTop img={poster} text="sdfsdfsdf" />
+              </SwiperSlide>
+              <SwiperSlide>
+                <SlideTop img={house} text="qqqqqqqqqqqqqqqq" />
+              </SwiperSlide>
+              <SwiperSlide>
+                <SlideTop />
+              </SwiperSlide>
+              <div className={styles.buttonsBlock}>
+                <SliderBtn icon={true} direction="next" />
+                <SliderBtn icon={true} direction="prev" />
+              </div>
+            </Swiper>
           </>
         )}
       </div>

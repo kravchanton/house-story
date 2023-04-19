@@ -3,9 +3,9 @@ import React from "react";
 import styles from "./ContactForm.module.scss";
 
 import specialist from "../../assets/specialist.png";
-import {Basic} from "../Form";
+import { Basic } from "../Form";
 
-export const ContactForm = () => {
+export const ContactForm = ({ text }) => {
   return (
     <div className={styles.wrapper}>
       <div className={styles.specialist}>
@@ -17,11 +17,8 @@ export const ContactForm = () => {
           </p>
         </div>
       </div>
-      <p className={styles.text}>
-        Не хотите отвечать на вопросы, оставьте заявку, и я проконсультирую вас
-        по всем вопросам.
-      </p>
-      <Basic />
+      <p className={styles.text}>{text}</p>
+      <Basic select={true} lockText={true} />
     </div>
   );
 };
