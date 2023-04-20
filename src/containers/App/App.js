@@ -1,17 +1,9 @@
 import React from "react";
 import {Route, Routes} from "react-router-dom";
 
-import {
-  About,
-  ArticlePage,
-  CatalogCard,
-  CatalogPage,
-  Contacts,
-  GalleryCard,
-  Layout,
-  Meeting,
-} from "../../pages";
-import {CatalogCard, CatalogPage, GalleryCard, Layout} from "../../pages";
+import {About, ArticlePage, CatalogCard, CatalogPage, Contacts, GalleryCard, Layout, Meeting,} from "../../pages";
+import {Gratitude} from "../../components";
+import {GalleryPage} from "../../pages/Gallery";
 
 export const App = () => {
   return (
@@ -19,8 +11,10 @@ export const App = () => {
       <Route path="/" element={<Layout />}>
           <Route path="catalog" element={<CatalogPage/>}/>
           <Route path="/catalog/:idPage" element={<CatalogPage/>}/>
+          <Route path="/catalog/:idPage/gratitude" element={<Gratitude/>}/>
           <Route path="/catalog/:idPage/:id" element={<CatalogCard/>} />
-          <Route path="gallery-card" element={<GalleryCard />} />
+          <Route path="/gallery-card/:idPage" element={<GalleryPage />} />
+          <Route path="/gallery-card/:idPage/:id" element={<GalleryCard />} />
           <Route path="article" element={<ArticlePage />} />
           <Route path="contacts" element={<Contacts />} />
           <Route path="about" element={<About />} />

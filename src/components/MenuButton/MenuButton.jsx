@@ -11,6 +11,7 @@ export const MenuButton = ({
   disabled,
   lockText,
   classNameForBtn,
+
 }) => {
   return (
     <div className={classNames(styles.wrapper, classNameForBtn)}>

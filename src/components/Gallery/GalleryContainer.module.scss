@@ -43,25 +43,16 @@
 
 .NavigationButton {
   margin-top: 40px;
-  justify-content: left;
-  gap: 16px;
   width: 365px;
   height: 60px;
   border: 1px solid #1EAB5F;
   border-radius: 5px;
   color: #000000
 }
-.NavigationButton svg{
-  width: 30px;
-  height: 30px;
-}
 
 .active {
   color: #FFFFFF;
   background: #1EAB5F;
-}
-.active svg{
-  filter: brightness(0) invert(1);
 }
 .catalogListWrapper {
   display: flex;
@@ -138,8 +129,4 @@
   text-transform: none;
 
 
-}
-
-.icon {
-  fill: #1eab5f;
 }
