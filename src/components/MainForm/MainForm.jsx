@@ -8,7 +8,7 @@ import backgroundHouse from "./../../assets/backgroudHouse.png";
 import rCloud from "./../../assets/rCloud.png";
 import tCloud from "./../../assets/tCloud.png";
 
-export const MainForm = () => {
+export const MainForm = ({data}) => {
   return (
     <div className={styles.mainWrapper}>
       <img className={styles.treeLeft} src={tree} alt="tree" />
@@ -22,11 +22,10 @@ export const MainForm = () => {
       <img className={styles.tCloud} src={tCloud} alt="tCloud" />
       <div className={styles.formWrapper}>
         <h2>
-          Личная встреча с мастером-прорабом у вас на объекте всего на 45 минут
+            {data.title}
         </h2>
         <h3>
-          По итогам встречи рассчитаем стоимость вашего ремонта в 2-3 вариантах
-          стоимости и исполнения + Специальный подарок от нашего Архитектора
+            {data.subtitle}
         </h3>
         <div className={styles.buttons}>
           <button className={styles.buttonLeft}>Записаться на встречу</button>

@@ -8,7 +8,8 @@ export const menu = [
   },
   {
     id: uuidv4(),
-    title: "Каталог готовых объектов",
+    title: "Фотогалерея",
+    link: '/gallery-card/1'
   },
   {
     id: uuidv4(),

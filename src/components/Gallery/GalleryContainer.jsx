@@ -3,9 +3,9 @@ import styles from "./GalleryContainer.module.scss";
 import {useDispatch, useSelector} from "react-redux";
 
 import {useParams} from "react-router-dom";
-import {MenuCatalog} from "../Catalog";
 import {PhotoList} from "./PhotoList";
 import {fetchPhotoGallery} from "../../bll/photoReducer";
+import {MenuPhoto} from "./MenuPhoto";
 
 export const GalleryContainer = () => {
     const [folder, setFolder] = useState(0);
@@ -32,11 +32,10 @@ export const GalleryContainer = () => {
     return (
         <div className={styles.catalog}>
             <h2>
-                Каталог более чем 70 готовых проектов из любых материалов <br/>{" "}
-                <span>напрямую от производителя и с гарантией до 50 лет</span>
+                фотогалерея
             </h2>
             <div className={styles.wrapper}>
-                <MenuCatalog search={search} setSearch={setSearch} data={data} folder={folder} setFolder={setFolder}/>
+                <MenuPhoto search={search} setSearch={setSearch} data={data} folder={folder} setFolder={setFolder}/>
                 {data && <PhotoList key={folder} data={dataTransfer}/>}
             </div>
         </div>

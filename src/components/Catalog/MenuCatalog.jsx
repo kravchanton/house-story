@@ -27,7 +27,7 @@ export const MenuCatalog = ({data, folder, setFolder, search, setSearch}) => {
                 return (
                     <div key={index} onClick={() => changeFolder(index)}>
                         <MenuButton
-                            title={t.attributes.folder}
+                            title={t.attributes.title}
                             className={
                                 folder === index
                                     ? `${styles.NavigationButton} ${styles.active}`

@@ -32,4 +32,8 @@ export const catalogApi = {
     getCatalogData() {
         return apiInstance.get("catalogs?populate=deep");
     },
+    getCatalogPageData() {
+        return apiInstance.get("gallery-pages?populate=deep");
+    },
 };
+

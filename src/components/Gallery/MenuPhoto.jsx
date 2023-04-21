@@ -1,8 +1,8 @@
 import React from "react";
-import styles from "./Catalog.module.scss";
+import styles from "./GalleryContainer.module.scss";
 import {MenuButton} from "../MenuButton";
 
-export const MenuCatalog = ({data, folder, setFolder, search, setSearch}) => {
+export const MenuPhoto = ({data, folder, setFolder, search, setSearch}) => {
     const changeFolder = (index) => {
         setFolder(index);
         setSearch('')

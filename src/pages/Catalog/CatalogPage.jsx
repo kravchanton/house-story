@@ -1,25 +1,26 @@
-import React from "react";
+import React, {useEffect} from "react";
 
 import img1 from "../../assets/Rectangle 123.jpg";
 
 import styles from "./CatalogPage.module.scss";
-import {
-  Container,
-  MainForm,
-  CatalogContainer,
-  NavigationHeader,
-  Garanties,
-  Excursion,
-} from "../../components";
+import {CatalogContainer, Container, Excursion, Garanties, MainForm, NavigationHeader,} from "../../components";
 import {CatalogQuiz} from "../../components/Catalog/CatalogQuiz";
 import {BlockWrapper} from "../../containers/BlockWrapper";
+import {useDispatch, useSelector} from "react-redux";
+import {fetchCatalogPage} from "./../../bll/catalogPageReducer";
 
 export const CatalogPage = () => {
+  const dispatch = useDispatch()
+  useEffect(() => {
+    dispatch(fetchCatalogPage());
+  }, []);
+  let data = useSelector((state) => state.catalogPage.catalogPage);
+  console.log(data)
   return (
     <main className={styles.main}>
-      <Container>
+      {data &&  <Container>
         <NavigationHeader />
-        <MainForm />
+        <MainForm data={data[0].attributes.mainForm}/>
         <CatalogContainer />
         <CatalogQuiz numberQuiz={2}/>
         <div className={styles.topWrapper}>
@@ -60,7 +61,7 @@ export const CatalogPage = () => {
         </div>
 
         <Excursion cloudImg={true} houseImg={true} />
-      </Container>
+      </Container>}
     </main>
   );
 };

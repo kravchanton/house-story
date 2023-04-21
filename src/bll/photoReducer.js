@@ -13,7 +13,9 @@ export const fetchPhotoGallery = createAsyncThunk(
 const photoSlice = createSlice({
     name: "photo",
     initialState,
-    reducers: {},
+    reducers: {
+
+    },
 
     extraReducers: (builder) => {
         builder.addCase(fetchPhotoGallery.fulfilled, (state, action) => {
