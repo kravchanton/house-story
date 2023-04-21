@@ -3,11 +3,13 @@ import { v4 as uuidv4 } from "uuid";
 export const menu = [
   {
     id: uuidv4(),
-    title: "Выполненные работы",
+    title: "Каталог",
+    link: 'catalog/1'
   },
   {
     id: uuidv4(),
-    title: "Каталог готовых объектов",
+    title: "Фотогалерея",
+    link: '/gallery-card/1'
   },
   {
     id: uuidv4(),

@@ -4,6 +4,7 @@ import answersSlice from "./AnswerReducer";
 import meetingReducer from "./meetingReducer";
 import photoReducer from "./photoReducer";
 import catalogReducer from "./catalogReducer";
+import catalogPageReducer from "./catalogPageReducer";
 
 export const store = configureStore({
   reducer: {
@@ -11,7 +12,8 @@ export const store = configureStore({
     answers: answersSlice,
     meetingData: meetingReducer,
     photo: photoReducer,
-    catalog: catalogReducer
+    catalog: catalogReducer,
+    catalogPage: catalogPageReducer
   },
 });
 

@@ -133,10 +133,10 @@ export const CatalogCard = () => {
               </div>
             </div>
           </div>
-          <SectionCard title="План дома" buttonText={false}>
+          {cardData.plans.length > 0 && <SectionCard title="План дома" buttonText={false}>
             {cardData.plans.map((t, index) => <FloorContent key={index} data={t}/>)}
             <div className={styles.section}></div>
-          </SectionCard>
+          </SectionCard>}
           <SectionCard
             title="Видео экскурсия"
             buttonText="Смотреть подробный кейс"
