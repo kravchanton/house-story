@@ -92,26 +92,11 @@ export const CatalogCard = () => {
                 </p>
                 <MenuButton title="Поэтапная оплата" className={styles.btn} />
                 <ul className={styles.descHouse}>
-                  <li className={styles.propertyWrapper}>
-                    <p className={styles.text}>Этажи</p>
+                  {cardData.item.map((t, index) => <li key={index} className={styles.propertyWrapper}>
+                    <p className={styles.text}>{t.title}</p>
                     <div></div>
-                    <p className={styles.text}>{cardData.floors}</p>
-                  </li>
-                  <li className={styles.propertyWrapper}>
-                    <p className={styles.text}>Комнаты</p>
-                    <div></div>
-                    <p className={styles.text}>{cardData.rooms}</p>
-                  </li>
-                  <li className={styles.propertyWrapper}>
-                    <p className={styles.text}>Санузлы</p>
-                    <div></div>
-                    <p className={styles.text}>{cardData.bathrooms}</p>
-                  </li>
-                  <li className={styles.propertyWrapper}>
-                    <p className={styles.text}>Стиль</p>
-                    <div></div>
-                    <p className={styles.text}>{cardData.style}</p>
-                  </li>
+                    <p className={styles.text}>{t.value}</p>
+                  </li>)}
                 </ul>
                 <MenuButton
                   title="Смотреть на карте"
@@ -133,28 +118,31 @@ export const CatalogCard = () => {
               </div>
             </div>
           </div>
-          {cardData.plans.length > 0 && <SectionCard title="План дома" buttonText={false}>
-            {cardData.plans.map((t, index) => <FloorContent key={index} data={t}/>)}
+          {cardData.section.title && <SectionCard title={cardData.section.title} buttonText={false}>
+            {cardData.section.sectionContent.map((t, index) => <FloorContent key={index} data={t}/>)}
             <div className={styles.section}></div>
           </SectionCard>}
-          <SectionCard
-            title="Видео экскурсия"
-            buttonText="Смотреть подробный кейс"
+          {cardData.block[0].title && <SectionCard
+            title={cardData.block[0].title}
+            buttonText={cardData.block[0].buttonTitle}
+            buttonLink={cardData.block[0].buttonLink}
           >
             <VideoExcursion />
-          </SectionCard>
-          <SectionCard
-            title="Как строился дом"
-            buttonText="Смотреть больше фото"
+          </SectionCard>}
+          {cardData.block[1].title && <SectionCard
+              title={cardData.block[1].title}
+              buttonText={cardData.block[1].buttonTitle}
+              buttonLink={cardData.block[1].buttonLink}
           >
-            <BuildingHouse data={cardData?.buildings?.photos?.data}/>)
-          </SectionCard>
-          <SectionCard
-            title=" Вам также могут понравиться"
-            buttonText="Перейти в каталог"
+            <BuildingHouse data={cardData.block[1].photos?.photos?.data}/>)
+          </SectionCard>}
+          {cardData.favourite[0].title  && <SectionCard
+              title={cardData.favourite[0].title}
+              buttonText={cardData.favourite[0].buttonTitle}
+              buttonLink={cardData.favourite[0].buttonLink}
           >
-            <FavouriteHouses />
-          </SectionCard>
+            <FavouriteHouses data={cardData.favourite[0].itemCard} />
+          </SectionCard>}
           <div className={styles.contacts}>
             <h3 className={classNames("titleBlock", styles.titleForm)}>
               У вас уже есть проект?

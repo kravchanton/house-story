@@ -20,7 +20,7 @@ export const CatalogPage = () => {
     <main className={styles.main}>
       {data &&  <Container>
         <NavigationHeader />
-        <MainForm data={data[0].attributes.mainForm}/>
+        <MainForm />
         <CatalogContainer />
         <CatalogQuiz numberQuiz={2}/>
         <div className={styles.topWrapper}>

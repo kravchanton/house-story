@@ -25,6 +25,7 @@ export const CatalogContainer = () => {
     } else if (data) {
         dataTransfer = data[folder]?.attributes?.item
     }
+    console.log(dataTransfer)
 
     return (
         <div className={styles.catalog}>

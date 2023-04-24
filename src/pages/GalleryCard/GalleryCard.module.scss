@@ -104,4 +104,25 @@
 .img {
   width: 100%;
   height: 100%;
+
+}
+
+.images {
+  width: 500px;
+  height: 374px;
+  cursor: pointer;
+}
+
+.gallery {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.wrap {
+  display: flex;
+  justify-content: center;
+}
+.buttn {
+  padding-top: 16px;
 }

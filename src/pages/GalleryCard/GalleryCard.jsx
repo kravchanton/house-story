@@ -1,47 +1,62 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination } from "swiper";
-
+import React, {useEffect, useState} from "react";
+import {NavLink, useParams} from "react-router-dom";
+import {Pagination, usePagination} from "pagination-react-js"
+import "yet-another-react-lightbox/styles.css";
+import Lightbox from "yet-another-react-lightbox";
+import "yet-another-react-lightbox/plugins/thumbnails.css";
+import Thumbnails from "yet-another-react-lightbox/plugins/thumbnails";
 // Import Swiper styles
-import "swiper/css";
-import "swiper/css/pagination";
-
-import plan from "../../assets/plan.png";
-import firstimg from "../../assets/firstFloorimg1.png";
 import instagram from "../../assets/inst.png";
 import facebook from "../../assets/facebook-logo.png";
 
 import styles from "./GalleryCard.module.scss";
 
-import { Container, MenuButton } from "../../components";
-import {
-  MailSocials,
-  PhoneSocials,
-  Telegram,
-  Viber,
-  WhatsUp,
-} from "../../icons";
+import {Container, MenuButton} from "../../components";
+import {MailSocials, PhoneSocials, Telegram, Viber, WhatsUp,} from "../../icons";
+import {useDispatch, useSelector} from "react-redux";
+import {fetchPhotoGallery} from "../../bll/photoReducer";
 
 export const GalleryCard = () => {
+  const {currentPage, entriesPerPage, entries} = usePagination(1, 6);
+
+  useEffect(() => {
+    dispatch(fetchPhotoGallery());
+  }, []);
+
+  let idCard = useParams();
+  const dispatch = useDispatch();
+  let cardData
+  let data = useSelector((state) => state.photo.photo);
+  data?.map(t => (t.attributes.project.filter(item => item.id == idCard.id ? cardData = item : '')))
+  console.log(cardData)
+  const [folder, setFolder] = useState(0)
+
+  const [open, setOpen] = useState(false)
+  const openLightBox = () => {
+    setOpen(true)
+
+  }
+  const thumbnailsRef = React.useRef(null);
+  let src = 'src'
+  let slides = []
+  cardData?.item[folder]?.photos?.data?.map(t => slides.push({[src]: `${process.env.REACT_APP_UPLOAD_URL}${t.attributes.url}`}))
+
   return (
     <section className={styles.galleryCard}>
-      <Container>
-        <h1 className={styles.title}>План 1 этажа</h1>
+      {cardData && <Container>
+        <h1 className={styles.title}>{cardData.title}</h1>
         <div className={styles.about}>
-          <img className={styles.plan} src={plan} alt="plan" />
+          <img className={styles.plan} src={`${process.env.REACT_APP_UPLOAD_URL}${cardData?.mainPhoto?.data?.attributes?.url}`} alt="plan" />
           <div className={styles.buttonsBlock}>
-            <img className={styles.imageFloor} src={firstimg} alt="firstimg" />
-            <MenuButton
-              classNameForBtn={styles.btnWrapper}
-              className={styles.btn}
-              title="План 2 этажа"
-            />
-            <MenuButton
-              classNameForBtn={styles.btnWrapper}
-              className={styles.btn}
-              title="Как строился дом"
-            />
+            <img className={styles.imageFloor} src={`${process.env.REACT_APP_UPLOAD_URL}${cardData.item[folder].photos.data[0].attributes?.url}`} alt="firstimg" />
+            {cardData.item.map((t,index) => <div key={index} className={styles.buttn} onClick={()=> setFolder(index)}><MenuButton
+                    classNameForBtn={styles.btnWrapper}
+                    className={styles.btn}
+                    title={t.title}
+                /></div>
+            )}
+
+
             <MenuButton
               classNameForBtn={styles.btnWrapper}
               className={styles.btnTransparent}
@@ -70,22 +85,9 @@ export const GalleryCard = () => {
           <div className={styles.textBlock}>
             <div>
               <p className={styles.text}>
-                Данное предложение обладает высоким инвестиционным потенциалом.
-                Его можно рассматривать как для собственного проживания или
-                отдыха на берегу Средиземного моря, так и для выгодной
-                инвестиции с целью сдачи квартиры в аренду получая при этом
-                хороший доход.
+                {cardData.description}
               </p>
 
-              <p className={styles.text}>
-                Отличное месторасположение и наличие инфраструктуры в комплексе
-                – именно тот вариант, который всегда востребован на рынке аренды
-                города.
-              </p>
-              <p className={styles.text}>
-                В стоимость апартаментов уже включена полная чистовая отделка,
-                укомплектованные санузлы и встроенная мебель в кухонной зоне.
-              </p>
             </div>
 
             <div className={styles.socials}>
@@ -126,43 +128,65 @@ export const GalleryCard = () => {
                   <img className={styles.icon} src={facebook} alt="facebook" />
                   <p>Facebook</p>
                 </NavLink>
+
               </div>
             </div>
           </div>
+
         </div>
         <div className={styles.photoBlock}>
-          <>
-            <Swiper
-              slidesPerView={6}
-              spaceBetween={40}
-              pagination={{
-                clickable: true,
-              }}
-              modules={[Pagination]}
-              className="mySwiper"
-            >
-              <SwiperSlide>Slide 1</SwiperSlide>
-              <SwiperSlide>Slide 2</SwiperSlide>
-              <SwiperSlide>Slide 3</SwiperSlide>
-              <SwiperSlide>Slide 4</SwiperSlide>
-              <SwiperSlide>Slide 5</SwiperSlide>
-              <SwiperSlide>Slide 6</SwiperSlide>
-              <SwiperSlide>Slide 7</SwiperSlide>
-              <SwiperSlide>Slide 8</SwiperSlide>
-              <SwiperSlide>Slide 9</SwiperSlide>
-              <SwiperSlide>Slide 1</SwiperSlide>
-              <SwiperSlide>Slide 2</SwiperSlide>
-              <SwiperSlide>Slide 3</SwiperSlide>
-              <SwiperSlide>Slide 4</SwiperSlide>
-              <SwiperSlide>Slide 5</SwiperSlide>
-              <SwiperSlide>Slide 6</SwiperSlide>
-              <SwiperSlide>Slide 7</SwiperSlide>
-              <SwiperSlide>Slide 8</SwiperSlide>
-              <SwiperSlide>Slide 9</SwiperSlide>
-            </Swiper>
-          </>
+
+
+
+              <div className={styles.gallery}> {cardData.item[folder].photos.data.slice(entries.indexOfFirst, entries.indexOfLast).map((t, index)=> <img onClick={() => openLightBox(index)} key={index} className={styles.images} src={`${process.env.REACT_APP_UPLOAD_URL}${t.attributes?.url}`} alt="image" />
+              )} </div>
+          <div className={styles.wrap}> <Pagination
+                entriesPerPage={entriesPerPage.get}
+                totalEntries={cardData.item[folder].photos.data.length}
+                currentPage={{get: currentPage.get, set: currentPage.set}}
+                offset={3}
+                classNames={{
+                  wrapper: "pagination m-auto",
+                  item: "pagination-item",
+                  itemActive: "pagination-item-active",
+                  navPrev: "pagination-item nav-item",
+                  navNext: "pagination-item nav-item",
+                  navStart: "pagination-item nav-item",
+                  navEnd: "pagination-item nav-item",
+                  navPrevCustom: "pagination-item",
+                  navNextCustom: "pagination-item"
+                }}
+                showFirstNumberAlways={true}
+                showLastNumberAlways={true}
+
+                navPrev="&#x2039;" // Here you can pass anything (Text, HTML Tag, React Component, ...)
+                navNext="&#x203a;" // Here you can pass anything (Text, HTML Tag, React Component, ...)
+                navPrevCustom={{
+                  steps: 6,
+                  content: "\u00B7\u00B7\u00B7" /* Here you can pass anything (Text, HTML Tag, React Component, ...) */
+                }}
+                navNextCustom={{
+                  steps: 6,
+                  content: "\u00B7\u00B7\u00B7" /* Here you can pass anything (Text, HTML Tag, React Component, ...) */
+                }}
+            />
+            <Lightbox
+                open={open}
+                close={() => setOpen(false)}
+                slides={slides}
+                plugins={[Thumbnails]}
+                thumbnails={{ref: thumbnailsRef}}
+                on={{
+                  click: () => {
+                    (thumbnailsRef.current?.visible
+                        ? thumbnailsRef.current?.hide
+                        : thumbnailsRef.current?.show)?.();
+                  },
+                }}
+            />
+          </div>
         </div>
-      </Container>
+      </Container>}
     </section>
   );
 };

@@ -64,20 +64,7 @@ export const PhotoList = ({folder}) => {
             }}
         />
 
-        <Lightbox
-            open={open}
-            close={() => setOpen(false)}
-            slides={slides}
-            plugins={[Thumbnails]}
-            thumbnails={{ref: thumbnailsRef}}
-            on={{
-                click: () => {
-                    (thumbnailsRef.current?.visible
-                        ? thumbnailsRef.current?.hide
-                        : thumbnailsRef.current?.show)?.();
-                },
-            }}
-        />
+
     </div>
 }
 

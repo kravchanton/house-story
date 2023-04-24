@@ -37,3 +37,12 @@ export const catalogApi = {
     },
 };
 
+export const api = {
+    getMainFormData() {
+        return apiInstance.get("main-form?populate=deep")
+    },
+    getTopObject() {
+        return apiInstance.get("top-objects?populate=deep")
+    }
+}
+

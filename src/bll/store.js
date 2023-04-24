@@ -5,6 +5,8 @@ import meetingReducer from "./meetingReducer";
 import photoReducer from "./photoReducer";
 import catalogReducer from "./catalogReducer";
 import catalogPageReducer from "./catalogPageReducer";
+import topObjectReducer from "./topObjectReducer";
+import mainFormReducer from "./mainFormReducer";
 
 export const store = configureStore({
   reducer: {
@@ -13,7 +15,9 @@ export const store = configureStore({
     meetingData: meetingReducer,
     photo: photoReducer,
     catalog: catalogReducer,
-    catalogPage: catalogPageReducer
+    catalogPage: catalogPageReducer,
+    mainForm: mainFormReducer,
+    topObject: topObjectReducer,
   },
 });
 

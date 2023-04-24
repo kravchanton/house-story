@@ -5,8 +5,9 @@ import rehypeRaw from 'https://esm.sh/rehype-raw@6'
 
 import {MenuButton} from "../MenuButton";
 import ReactMarkdown from "react-markdown";
+import {NavLink} from "react-router-dom";
 
-export const FloorContent = ({data, key}) => {
+export const FloorContent = ({data}) => {
     return (
         <div className={styles.section}>
             <img className={styles.floorImage}
@@ -19,15 +20,15 @@ export const FloorContent = ({data, key}) => {
             <div className={styles.imagesBlock}>
                 <div className={styles.imagesWrapper}>
                     <img className={styles.smallImage}
-                         src={`${process.env.REACT_APP_UPLOAD_URL}${data?.photos?.data[0]?.attributes?.url}`}
+                         src={`${process.env.REACT_APP_UPLOAD_URL}${data?.media?.data[0]?.attributes?.url}`}
                          alt="firstimg"/>
-                    <img src={`${process.env.REACT_APP_UPLOAD_URL}${data?.photos?.data[1]?.attributes?.url}`}
+                    <img src={`${process.env.REACT_APP_UPLOAD_URL}${data?.media?.data[1]?.attributes?.url}`}
                          alt="secondimg"/>
                 </div>
-                <MenuButton
-                    title={"Подробные планировки " + ++key + " этажа"}
+                <NavLink to={data.buttonLink}><MenuButton
+                    title={data.buttonTitle}
                     className={styles.btnFloor}
-                />
+                /></NavLink>
             </div>
         </div>
     );
