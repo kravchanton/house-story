@@ -13,11 +13,8 @@ export const menu = [
   },
   {
     id: uuidv4(),
-    title: "Магазин стройматериалов",
-  },
-  {
-    id: uuidv4(),
     title: "Блог",
+    link: 'blog/1/1'
   },
   {
     id: uuidv4(),

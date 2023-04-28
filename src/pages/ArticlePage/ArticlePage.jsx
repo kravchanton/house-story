@@ -4,7 +4,7 @@ import classNames from "classnames";
 import styles from "./ArticlePage.module.scss";
 
 
-import {Container, Excursion, Garanties, MainForm, MenuButton, NavigationArticle,} from "../../components";
+import {Container, Excursion, Garanties, MainForm, NavigationArticle,} from "../../components";
 
 import {BlockWrapper} from "../../containers";
 import img1 from "../../assets/Rectangle 123.jpg";
@@ -12,6 +12,8 @@ import {useParams} from "react-router-dom";
 import {useDispatch, useSelector} from "react-redux";
 import {fetchBlog} from "../../bll/blogReducer";
 import ReactMarkdown from "react-markdown";
+import rehypeRaw from 'https://esm.sh/rehype-raw@6'
+import {Images} from "./Images";
 
 export const ArticlePage = () => {
     useEffect(() => {
@@ -25,8 +27,12 @@ export const ArticlePage = () => {
     data?.map(t => (t.attributes.item.filter(item => item.id == idCard.id ? cardData = item : '')))
     console.log(cardData)
     const Refs = useRef([]);
-    const scroll = () => {
-        Refs.current[1].scrollIntoView({ behavior: "smooth" })
+    const RefsFirst = useRef(null);
+    const scroll = (index) => {
+        if(index == 'first') {
+            RefsFirst.current.scrollIntoView({ behavior: "smooth" })
+        }
+        else Refs?.current[index]?.scrollIntoView({ behavior: "smooth" })
     }
 
     return (
@@ -35,7 +41,7 @@ export const ArticlePage = () => {
                 <MainForm/>
                 <h3 className={classNames("titleBlock", styles.title)}>Статьи</h3>
                 <div className={styles.content}>
-                    <NavigationArticle scroll={scroll}/>
+                    <NavigationArticle scroll={scroll} cardData={cardData}/>
                     <div className={styles.desc}>
                         <h3 className={classNames("titleBlock", styles.descTitle)}>
                             {cardData.title}
@@ -45,13 +51,13 @@ export const ArticlePage = () => {
                             title={false}
                             garantiesVar={true}
                         />
-                        <div onClick={scroll} className={styles.textBlock}>
+                        <div ref={RefsFirst} className={styles.textBlock}>
                             <h3 className={styles.titleText}>
                                 {cardData.descrTitle}
                             </h3>
                             <div className={styles.descText}>
                                 {/* eslint-disable-next-line react/no-children-prop */}
-                                <ReactMarkdown children={cardData.descr}/>
+                                <ReactMarkdown children={cardData.descr}rehypePlugins={[rehypeRaw]}/>
                             </div>
                         </div>
                         <BlockWrapper
@@ -71,13 +77,10 @@ export const ArticlePage = () => {
 
                                 </div>
                                 <div className={styles.images}>
-                                    {t.photos.data.map((t, index) => <img key={index}
-                                                                          className={styles.image}
-                                                                          src={`${process.env.REACT_APP_UPLOAD_URL}${t?.attributes?.url}`}
-                                                                          alt=""/>)}
+                                   <Images data={t.photos.data}/>
 
                                 </div>
-                                <MenuButton className={styles.btn} title="Больше фото"/>
+
                             </div>
                         )}
                     </div>
