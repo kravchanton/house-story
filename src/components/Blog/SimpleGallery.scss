@@ -1,0 +1,12 @@
+.pswp-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+.pswp__zoom-wrap {
+  position: absolute;
+  top: -50%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}

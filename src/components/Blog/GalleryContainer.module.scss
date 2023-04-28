@@ -1,0 +1,141 @@
+.catalog {
+  display: flex;
+  flex-direction: column;
+  z-index: 5;
+}
+
+.catalog h2 {
+  font-weight: 900;
+  font-size: 32px;
+  line-height: 39px;
+  color: #363130;
+  z-index: 5;
+}
+
+.catalog span {
+  color: #1EAB5F
+}
+
+.wrapper {
+  display: flex;
+  z-index: 5;
+  padding-top: 24px;
+  gap: 40px;
+
+
+}
+
+
+.NavigationWrapper {
+
+}
+
+.searchInput {
+  padding: 18px;
+  width: 365px;
+  height: 60px;
+  background: #FFFFFF;
+  border: 1px solid #1EAB5F;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  color: #363130;
+}
+
+.NavigationButton {
+  margin-top: 40px;
+  justify-content: left;
+  gap: 16px;
+  width: 365px;
+  height: 60px;
+  border: 1px solid #1EAB5F;
+  border-radius: 5px;
+  color: #000000
+}
+.NavigationButton svg{
+  width: 30px;
+  height: 30px;
+}
+
+.active {
+  color: #FFFFFF;
+  background: #1EAB5F;
+}
+.active svg{
+  filter: brightness(0) invert(1);
+}
+.catalogListWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.catalogList {
+  display: flex;
+  flex-direction: row;
+  width: 65vw;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.catalogItem {
+  display: flex;
+  flex-direction: column;
+  width: 365px;
+  height: 348px;
+}
+.catalogItem img{
+  margin-top: 16px;
+  width: 365px;
+  height: 207px;
+  object-fit: cover;
+  border-radius: 3px;
+}
+.catalogItem h4{
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 29px;
+  color: #363130;
+}
+
+.price {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: end;
+  font-weight: 900;
+  font-size: 20px;
+  line-height: 24px;
+  color: #1EAB5F;
+}
+
+.ItemButton {
+  display: flex;
+  justify-content: center;
+
+  width: 100%;
+  height: 50px;
+  border: 1px solid #130D0D;
+  box-shadow: inset 4px 4px 25px rgba(241, 241, 241, 0.25);
+  border-radius: 5px;
+  color: #000000;
+  margin-top: 16px;
+
+}
+.QuizWrapper{
+  padding-top: 160px;
+}
+.QuizWrapper h2 {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 39px;
+  text-transform: uppercase;
+  color: #1EAB5F;
+}
+.QuizWrapper h2 span{
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  color: #000000;
+  text-transform: none;
+
+
+}

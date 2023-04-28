@@ -15,6 +15,7 @@ import {Container, MenuButton} from "../../components";
 import {MailSocials, PhoneSocials, Telegram, Viber, WhatsUp,} from "../../icons";
 import {useDispatch, useSelector} from "react-redux";
 import {fetchPhotoGallery} from "../../bll/photoReducer";
+import {BlockWrapper} from "../../containers";
 
 export const GalleryCard = () => {
   const {currentPage, entriesPerPage, entries} = usePagination(1, 6);
@@ -51,7 +52,11 @@ export const GalleryCard = () => {
             <img className={styles.imageFloor} src={`${process.env.REACT_APP_UPLOAD_URL}${cardData.item[folder].photos.data[0].attributes?.url}`} alt="firstimg" />
             {cardData.item.map((t,index) => <div key={index} className={styles.buttn} onClick={()=> setFolder(index)}><MenuButton
                     classNameForBtn={styles.btnWrapper}
-                    className={styles.btn}
+                    className={
+                      folder === index
+                          ? `${styles.NavigationButton} ${styles.active}`
+                          : styles.NavigationButton
+                    }
                     title={t.title}
                 /></div>
             )}
@@ -185,6 +190,13 @@ export const GalleryCard = () => {
                 }}
             />
           </div>
+        </div>
+        <div className={styles.topWrapper}>
+          <BlockWrapper
+              title="Топ выполненных объектов"
+              subtitle="Показываем процесс работы изнутри, делимся результатами, опытом, полезными фишками"
+              top={true}
+          ></BlockWrapper>
         </div>
       </Container>}
     </section>

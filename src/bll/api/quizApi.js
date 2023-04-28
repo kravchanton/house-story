@@ -43,6 +43,9 @@ export const api = {
     },
     getTopObject() {
         return apiInstance.get("top-objects?populate=deep")
+    },
+    getBlogData() {
+        return apiInstance.get("blogs?populate=deep")
     }
 }
 

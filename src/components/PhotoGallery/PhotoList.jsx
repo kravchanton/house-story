@@ -63,7 +63,20 @@ export const PhotoList = ({folder}) => {
                 content: "\u00B7\u00B7\u00B7" /* Here you can pass anything (Text, HTML Tag, React Component, ...) */
             }}
         />
-
+        <Lightbox
+            open={open}
+            close={() => setOpen(false)}
+            slides={slides}
+            plugins={[Thumbnails]}
+            thumbnails={{ref: thumbnailsRef}}
+            on={{
+                click: () => {
+                    (thumbnailsRef.current?.visible
+                        ? thumbnailsRef.current?.hide
+                        : thumbnailsRef.current?.show)?.();
+                },
+            }}
+        />
 
     </div>
 }

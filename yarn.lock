@@ -12193,6 +12193,11 @@ url@^0.11.0:
     punycode "1.3.2"
     querystring "0.2.0"
 
+use-ref-map@^0.1.2:
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/use-ref-map/-/use-ref-map-0.1.2.tgz#4e0d31ecbcf71bf16a0b6b8b0ace355c9d059d8c"
+  integrity sha512-jt3fhdXYWcwzW0g1Cfemf5pyETCTxNnmMtqdL8/OC1BibQKKf/xIriqGKL178szxUD5Nh/09P6bv65bzm0c2mw==
+
 use-sync-external-store@^1.0.0:
   version "1.2.0"
   resolved "https://registry.npmjs.org/use-sync-external-store/-/use-sync-external-store-1.2.0.tgz"

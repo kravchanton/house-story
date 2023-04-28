@@ -7,6 +7,7 @@ import catalogReducer from "./catalogReducer";
 import catalogPageReducer from "./catalogPageReducer";
 import topObjectReducer from "./topObjectReducer";
 import mainFormReducer from "./mainFormReducer";
+import blogReducer from "./blogReducer";
 
 export const store = configureStore({
   reducer: {
@@ -18,6 +19,7 @@ export const store = configureStore({
     catalogPage: catalogPageReducer,
     mainForm: mainFormReducer,
     topObject: topObjectReducer,
+    blog: blogReducer,
   },
 });
 

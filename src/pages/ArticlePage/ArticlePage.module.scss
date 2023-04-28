@@ -47,6 +47,8 @@
 }
 .images {
   display: flex;
+  max-width: 1175px;
+  flex-wrap: wrap;
   gap: 40px;
 }
 .image {

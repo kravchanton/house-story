@@ -26,6 +26,7 @@
     "redux": "^4.2.1",
     "sass": "^1.59.3",
     "swiper": "^9.1.1",
+    "use-ref-map": "^0.1.2",
     "uuid": "^9.0.0",
     "video-react": "^0.16.0",
     "web-vitals": "^2.1.4",
