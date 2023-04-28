@@ -3,6 +3,7 @@ import React, { useRef, useState } from "react";
 import styles from "./VideoLink.module.scss";
 import { Pause, PlayVariant } from "../../icons";
 import classNames from "classnames";
+import { Poster } from "../Poster";
 
 const playbackStatus = {
   Stopped: "stopped",
@@ -15,9 +16,7 @@ export const VideoLink = ({
   poster,
   youtubeLink,
   classNameWrapper,
-  title,
-  author,
-  desc,
+  className,
 }) => {
   const [play, setPlay] = useState(false);
   const [status, setStatus] = useState(playbackStatus.Stopped);
@@ -37,44 +36,9 @@ export const VideoLink = ({
     <>
       {src && (
         <div className={classNames(styles.wrapper, classNameWrapper)}>
-          {title && (
-            <h4
-              className={status === "stopped" ? styles.name : styles.nonPoster}
-            >
-              Как выбрать материал для дома?
-            </h4>
-          )}
-          {author && (
-            <p
-              className={
-                status === "stopped" ? styles.author : styles.nonPoster
-              }
-            >
-              Евгений Иванов
-            </p>
-          )}
-          {desc && (
-            <p
-              className={status === "stopped" ? styles.desc : styles.nonPoster}
-            >
-              руководитель строительной бригады
-            </p>
-          )}
-
-          <div
-            className={
-              status === "stopped" ? styles.posterWrapper : styles.nonPoster
-            }
-          >
-            <img
-              className={
-                status === "stopped" ? styles.posterVideo : styles.nonPoster
-              }
-              src={poster}
-              alt=""
-            />
-          </div>
-
+          {status === "stopped" ? (
+            <Poster className={className} src={poster} />
+          ) : null}
           {status === "stopped" || status === "paused" ? (
             <button className={styles.playBtn} onClick={handlePlay}>
               <PlayVariant />
@@ -84,36 +48,26 @@ export const VideoLink = ({
               <Pause />
             </button>
           )}
-          <video className={styles.video} ref={videoRef}>
+          <video
+            controls={status === "playing" && true}
+            className={styles.video}
+            ref={videoRef}
+          >
             <source src={src} type="video/mp4" />
           </video>
         </div>
       )}
       {youtubeLink && (
-        <div
-          className={classNames(
-            play ? styles.wrapperYoutube : styles.wrapperPlay,
-            classNameWrapper
-          )}
-        >
-          <h4 className={styles.name}>Как выбрать материал для дома?</h4>
-          <p className={styles.author}>Евгений Иванов</p>
-          <p className={styles.desc}>руководитель строительной бригады</p>
+        <div className={classNames(styles.wrapper, classNameWrapper)}>
+          {status === "stopped" ? (
+            <Poster className={className} src={poster} />
+          ) : null}
           <button
             onClick={() => setPlay((prevState) => !prevState)}
             className={styles.play}
           >
             <PlayVariant className={play && styles.nonPoster} />
           </button>
-          <img
-            onClick={() => setPlay((prevState) => !prevState)}
-            className={classNames(
-              !play ? styles.poster : styles.nonPoster,
-              classNameWrapper
-            )}
-            src={poster}
-            alt=""
-          />
           {play && (
             <iframe
               className={styles.videoYoutube}

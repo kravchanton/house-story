@@ -37,3 +37,6 @@ export * from "./MainFormComponent";
 export * from "./Popup";
 export * from "./Timer";
 export * from "./Gallery";
+export * from "./Poster";
+export * from "./ContactsGallery";
+export * from "./AboutGallery";

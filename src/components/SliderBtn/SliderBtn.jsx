@@ -4,7 +4,7 @@ import { useSwiper } from "swiper/react";
 import sliderBtn from "../../assets/sliderBtn.png";
 
 import styles from "./SliderBtn.module.scss";
-import { ArrowThin } from "../../icons/ArrowThin";
+import { ArrowThin } from "../../icons";
 
 export const SliderBtn = ({ direction, icon }) => {
   const swiper = useSwiper();

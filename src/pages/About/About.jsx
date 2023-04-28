@@ -1,105 +1,122 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import classNames from "classnames";
 import { Swiper, SwiperSlide } from "swiper/react";
 
-import img1 from "../../assets/Group 1744.png";
 import house from "../../assets/img-home-e1581520380712 1.png";
 import cloud from "../../assets/1-14781_white-clouds-png-clipart-baby-e-kill-the 17 (1).png";
 import cloudVariant from "../../assets/1-14781_white-clouds-png-clipart-baby-e-kill-the 18.png";
 import shepki from "../../assets/shepki 4.png";
-import houseSummer from "../../assets/02 - summer 1.png";
-import principles from "../../assets/photo_2022-01-13_15-51-54 6 (1).png";
 import review from "../../assets/photo_2022-01-13_15-52-04 2.png";
 import personImg from "../../assets/personImg.png";
 import bgReviews from "../../assets/00a8246c092185606e122eab3660496a 1.png";
 import cloud2 from "../../assets/1-14781_white-clouds-png-clipart-baby-e-kill-the 15.png";
-import roman from "../../assets/IMG_1340 1.png";
 
 import styles from "./About.module.scss";
 
 import {
+  AboutGallery,
   Container,
   Excursion,
   Garanties,
   MainForm,
   MenuButton,
-  SimpleGallery,
   SliderBtn,
   VideoLink,
 } from "../../components";
-import { CheckVariant, House, SpinArrow, SmallArrow } from "../../icons";
+import {
+  CheckVariant,
+  House,
+  HouseSecond,
+  SmallArrow,
+  SpinArrow,
+  Worker,
+  WorkerVariant,
+} from "../../icons";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchAboutData } from "../../bll/aboutReducer";
+import ReactMarkdown from "react-markdown";
+import { NavLink } from "react-router-dom";
 
 export const About = () => {
+  const [isActiveOffice, setIsActiveOffice] = useState(true);
+  const [isActiveProduction, setIsActiveProduction] = useState(false);
+  const [isActiveStock, setIsActiveStock] = useState(false);
+  const [id, setId] = useState(1);
+  const [filteredData, setFilteredData] = useState(null);
+  const dispatch = useDispatch();
+  const data = useSelector((state) => state.aboutData.aboutData.attributes);
+
+  useEffect(() => {
+    setFilteredData(
+      data?.keyPersons?.persons?.filter((item) => id === item.id)
+    );
+  }, [data, id]);
+  console.log(filteredData);
+
+  useEffect(() => {
+    dispatch(fetchAboutData());
+  }, []);
+
+  const handleActiveOffice = () => {
+    setIsActiveOffice(true);
+    setIsActiveProduction(false);
+    setIsActiveStock(false);
+  };
+  const handleActiveProduction = () => {
+    setIsActiveProduction(true);
+    setIsActiveOffice(false);
+    setIsActiveStock(false);
+  };
+
+  const handleActiveStock = () => {
+    setIsActiveStock(true);
+    setIsActiveOffice(false);
+    setIsActiveProduction(false);
+  };
+
   return (
     <section className={styles.about}>
       <Container>
         <MainForm />
         <div className={styles.history}>
           <h3 className={classNames("titleBlock", styles.title)}>
-            История возникновения компании House-Story{" "}
+            {data?.title}
           </h3>
-
-          <div className={styles.content}>
-            <div className={styles.text}>
-              <h4 className={styles.titleContent}>Как все начиналось?</h4>
-              <p className={styles.text}>
-                Основатель компании Стародубцев Егор работает в сфере
-                строительства с 2009 года. С 2009 по 2013 года работал в ООО
-                «Гидбурсервис» в сфере отопления, водоснабжения и канализации. С
-                2013 по 2016 года — в ЗАО «МРЭСС» в сфере энергетики в г. Сочи
-                на Олимпийских объектах, а так же учавствовал в строительстве
-                энергомоста в Крыму. В одной из командировок в Сыктывкар,
-                посетив завод по изготовлению деревянных домов , был очень
-                впечатлен. Четко поставленные процессы, слаженная работа опытных
-                специалистов, превосходный результат — такую строительную
-                компанию увидел Егор и захотел создать свою, основываясь на
-                полученном за годы работы опыте. Что он и сделал в 2016 году —
-                открыл ИП и поставил цель занять достойное место на российском
-                (и не только) строительном рынке.
-              </p>
-            </div>
-            <img className={styles.img} src={img1} alt="" />
-          </div>
-          <div className={styles.content}>
-            <img className={styles.img} src={img1} alt="" />
-            <div className={styles.text}>
-              <h4 className={styles.titleContent}>Знакомство с Романом</h4>
-              <p className={styles.text}>
-                Пожарицкий Роман — руководитель маркетингового агентства «Alfa
-                Digital Agency». За годы работы в сфере создания и продвижения
-                сайтов накопил большой опыт сотрудничества со строительными и
-                ремонтными кампаниями. Когда опыта стало так много, что
-                захотелось им делиться, пришла идея найти толкового партнера и
-                объединить свои силы для достижения максимального результата.
-                Перед тем, как начать сотрудничать с Егором, Роман отсеял около
-                25 строительных компаний в ходе переговоров. Только подход Егора
-                совпал с видением Романа на то, как надо строить и продвигать
-                строительный бизнес в онлайне. Желание работать и умение
-                качественного обрабатывать входящие заявки послужили толчком к
-                объединению усилий и началу партнерства.
-              </p>
-            </div>
-          </div>
-          <div className={styles.content}>
-            <div className={styles.text}>
-              <h4 className={styles.titleContent}>Первые заказы</h4>
-              <p className={styles.text}>
-                Самой важной и трудной задачей на начальном этапе было найти
-                бригаду опытных, надежных плотников и нацеленных на долгое
-                сотрудничество поставщиков качественных материалов. Здесь
-                помогли знакомства Егора, накопленные за время работы в
-                строительстве, а также пригодились связи Романа. В итоге над
-                проектом работала бригада из четырех плотников с опытом более 20
-                лет в строительстве домов из оцилиндрованного бревна. Результат
-                — качественно постороенный за 45 дней дом и благодарные отзывы
-                клиента. После нескольких успешных проектов было принятно
-                решение создать сайт с каталогом работ. Запустили рекламу и
-                получили крупный заказ в течение двух месяцев после получения
-                первых заявок.
-              </p>
-            </div>
-            <img className={styles.img} src={img1} alt="" />
-          </div>
+          {data?.contentBlock?.map((item) => {
+            return (
+              <>
+                {item.reverseContent ? (
+                  <div key={item.id} className={styles.content}>
+                    <img
+                      className={styles.img}
+                      src={`${process.env.REACT_APP_UPLOAD_URL}${item?.image?.data?.attributes?.url}`}
+                      alt=""
+                    />
+                    <div className={styles.text}>
+                      <h4 className={styles.titleContent}>{item.title}</h4>
+                      <p className={styles.text}>
+                        <ReactMarkdown>{item.text}</ReactMarkdown>
+                      </p>
+                    </div>
+                  </div>
+                ) : (
+                  <div key={item.id} className={styles.content}>
+                    <div className={styles.text}>
+                      <h4 className={styles.titleContent}>{item.title}</h4>
+                      <p className={styles.text}>
+                        <ReactMarkdown>{item.text}</ReactMarkdown>
+                      </p>
+                    </div>
+                    <img
+                      className={styles.img}
+                      src={`${process.env.REACT_APP_UPLOAD_URL}${item?.image?.data?.attributes?.url}`}
+                      alt=""
+                    />
+                  </div>
+                )}
+              </>
+            );
+          })}
         </div>
         <div className={styles.chronology}>
           <SpinArrow className={styles.iconArrow1} />
@@ -110,44 +127,48 @@ export const About = () => {
             <div className={styles.item}>
               <h4 className={styles.year}>2016</h4>
               <div className={styles.desc}>
-                <House />
+                <div>
+                  <House />
+                </div>
+
                 <p className={styles.descText}>
-                  <span>За первый год работы построили 20 домов,</span> пока без
-                  работ по внутренней отделке. Часть прибыли была потрачена на
-                  обучение специалистов.
+                  {data?.chronology?.description1}
                 </p>
               </div>
             </div>
             <div className={styles.item}>
               <h4 className={styles.year}>2017</h4>
               <div className={styles.desc}>
-                <House />
+                <div>
+                  <Worker />
+                </div>
+
                 <p className={styles.descText}>
-                  <span>За первый год работы построили 20 домов,</span> пока без
-                  работ по внутренней отделке. Часть прибыли была потрачена на
-                  обучение специалистов.
+                  {data?.chronology?.description2}
                 </p>
               </div>
             </div>
             <div className={styles.item}>
               <h4 className={styles.year}>2018</h4>
               <div className={styles.desc}>
-                <House />
+                <div>
+                  <WorkerVariant />
+                </div>
+
                 <p className={styles.descText}>
-                  <span>За первый год работы построили 20 домов,</span> пока без
-                  работ по внутренней отделке. Часть прибыли была потрачена на
-                  обучение специалистов.
+                  {data?.chronology?.description3}
                 </p>
               </div>
             </div>
             <div className={styles.item}>
               <h4 className={styles.year}>2023</h4>
               <div className={styles.desc}>
-                <House />
+                <div>
+                  <HouseSecond />
+                </div>
+
                 <p className={styles.descText}>
-                  <span>За первый год работы построили 20 домов,</span> пока без
-                  работ по внутренней отделке. Часть прибыли была потрачена на
-                  обучение специалистов.
+                  {data?.chronology?.description4}
                 </p>
               </div>
             </div>
@@ -155,15 +176,48 @@ export const About = () => {
         </div>
         <div className={styles.photos}>
           <div className={styles.tabsBlock}>
-            <button className={styles.tab}>Наш офис</button>
-            <button className={styles.tab}>Производство</button>
-            <button className={styles.tab}>Склад</button>
+            <button
+              className={classNames(
+                styles.tab,
+                isActiveOffice && styles.activeTab
+              )}
+              onClick={handleActiveOffice}
+            >
+              Наш офис
+            </button>
+            <button
+              className={classNames(
+                styles.tab,
+                isActiveProduction && styles.activeTab
+              )}
+              onClick={handleActiveProduction}
+            >
+              Производство
+            </button>
+            <button
+              onClick={handleActiveStock}
+              className={classNames(
+                styles.tab,
+                isActiveStock && styles.activeTab
+              )}
+            >
+              Склад
+            </button>
           </div>
           <div className={styles.imagesBlock}>
             <div className={styles.images}>
-              <SimpleGallery />
+              <AboutGallery
+                isActiveProduction={isActiveProduction}
+                isActiveOffice={isActiveOffice}
+                isActiveStock={isActiveStock}
+              />
             </div>
-            <MenuButton title="Смотреть подробнее" className={styles.btn} />
+            <NavLink to={data?.photos?.buttonLink}>
+              <MenuButton
+                title={data?.photos?.buttonText}
+                className={styles.btn}
+              />
+            </NavLink>
           </div>
         </div>
         <Excursion houseImg={true} />
@@ -175,27 +229,31 @@ export const About = () => {
             <div className={styles.column}>
               <div className={styles.card}>
                 <h4 className={styles.number}>1</h4>
-                <h4 className={styles.textNumber}>Заявка</h4>
+                <h4 className={styles.textNumber}>
+                  {data?.howWeWork?.card[0]?.title}
+                </h4>
                 <p className={styles.descNumber}>
-                  Оставляете заявку на ремонт и встречаетесь с замерщиком
+                  {data?.howWeWork?.card[0]?.description}
                 </p>
               </div>
               <div className={styles.card}>
                 <h4 className={styles.number}>4</h4>
-                <h4 className={styles.textNumber}>Ремонт и прием работы</h4>
+                <h4 className={styles.textNumber}>
+                  {data?.howWeWork?.card[3]?.title}
+                </h4>
                 <p className={styles.descNumber}>
-                  Производится ремонт под ключ, каждый этап принимается вами.
-                  Если нужны корректировки, то мы вносим их.
+                  {data?.howWeWork?.card[3]?.description}
                 </p>
               </div>
             </div>
             <div className={classNames(styles.column, styles.middleColumn)}>
               <div className={styles.card}>
                 <h4 className={styles.number}>2</h4>
-                <h4 className={styles.textNumber}>Расчет стоимости</h4>
+                <h4 className={styles.textNumber}>
+                  {data?.howWeWork?.card[1]?.title}
+                </h4>
                 <p className={styles.descNumber}>
-                  Получаете первичное предложение с расчетом стоимости ремонта
-                  под ключ с погрешностью 5%
+                  {data?.howWeWork?.card[1]?.description}
                 </p>
               </div>
               <div>
@@ -205,22 +263,31 @@ export const About = () => {
             <div className={styles.column}>
               <div className={styles.card}>
                 <h4 className={styles.number}>3</h4>
-                <h4 className={styles.textNumber}>Смета</h4>
+                <h4 className={styles.textNumber}>
+                  {data?.howWeWork?.card[2]?.title}
+                </h4>
                 <p className={styles.descNumber}>
-                  Составляем смету на основе расчетных данных
+                  {data?.howWeWork?.card[2]?.description}
                 </p>
               </div>
               <div className={styles.card}>
                 <h4 className={styles.number}>5</h4>
-                <h4 className={styles.textNumber}>Оплата</h4>
+                <h4 className={styles.textNumber}>
+                  {data?.howWeWork?.card[4]?.title}
+                </h4>
                 <p className={styles.descNumber}>
-                  Проводится поэтапная работа (до 10 этапов), каждый этап
-                  оплачивается отдельно по завершению
+                  {data?.howWeWork?.card[4]?.description}
                 </p>
               </div>
             </div>
           </div>
-          <MenuButton className={styles.btnDark} title="Смотреть подробнее" />
+          <NavLink to={data?.howWeWork?.buttonLink}>
+            <MenuButton
+              className={styles.btnDark}
+              title={data?.howWeWork?.buttonText}
+            />
+          </NavLink>
+
           <img className={styles.cloud} src={cloud} alt="" />
           <img className={styles.shepki} src={shepki} alt="" />
         </div>
@@ -235,7 +302,17 @@ export const About = () => {
           <div className={styles.clientsContent}>
             <img className={styles.cloudClient} src={cloudVariant} alt="" />
             <div className={styles.imgWrapper}>
-              <img className={styles.houseImg} src={houseSummer} alt="" />
+              <img
+                className={styles.houseImg}
+                src={`${process.env.REACT_APP_UPLOAD_URL}${data?.clients?.image?.data?.attributes?.url}`}
+                alt=""
+              />
+              <NavLink to={data?.clients?.buttonLink}>
+                <MenuButton
+                  title={data?.clients?.buttonText}
+                  className={classNames(styles.btn, styles.btnClients)}
+                />
+              </NavLink>
             </div>
             <div className={styles.clientsCards}>
               <div className={styles.clientCard}>
@@ -277,36 +354,20 @@ export const About = () => {
           </h3>
           <div className={styles.principlesWrapper}>
             <div className={styles.textWrapper}>
-              <div className={styles.itemPrinciples}>
-                <CheckVariant />
-                <p className={styles.itemText}>
-                  <span>Клиент всегда прав</span>, но он может не знать, как
-                  лучше. Поэтому наша задача, как специалистов, показать все
-                  наилучшие варианты для выполнения задачи заказчика.
-                </p>
-              </div>
-              <div className={styles.itemPrinciples}>
-                <CheckVariant />
-                <p className={styles.itemText}>
-                  <span>Репутация — наше всё</span>. За каждый заказ мы несем
-                  личную ответственность — от руководителя до специалиста
-                  рабочей (строительной) бригады. Мы прекрасно знаем, как
-                  работает «сарафанное радио», поэтому не рискуем выполнять
-                  работу спустя рукава.
-                </p>
-              </div>
-              <div className={styles.itemPrinciples}>
-                <CheckVariant />
-                <p className={styles.itemText}>
-                  <span>Все условия прописаны в договоре</span>. Не важно, как
-                  вы к нам пришли — по рекомендации знакомых или из интернета —
-                  основой нашего сотрудничества является договор. Это гарантия
-                  взаимопонимания клиента и исполнителя.
-                </p>
-              </div>
+              {data?.principles?.principle?.map((item) => (
+                <div key={item.id} className={styles.itemPrinciples}>
+                  <CheckVariant />
+                  <p className={styles.itemText}>
+                    <ReactMarkdown>{item.description}</ReactMarkdown>
+                  </p>
+                </div>
+              ))}
             </div>
-
-            <img className={styles.principlesImg} src={principles} alt="" />
+            <img
+              className={styles.principlesImg}
+              src={`${process.env.REACT_APP_UPLOAD_URL}${data?.principles?.image?.data?.attributes?.url}`}
+              alt=""
+            />
           </div>
         </div>
         <Garanties classNameWrapper={styles.garantiesWrapper} title={true} />
@@ -319,28 +380,50 @@ export const About = () => {
             профессионализма
           </h3>
           <div className={styles.videoReview}>
-            <VideoLink
-              classNameWrapper={styles.videoWrapper}
-              poster={review}
-              src="https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4"
-            />
+            {data?.reviews?.youtubeLink && (
+              <VideoLink
+                className={styles.videoPoster}
+                classNameWrapper={styles.videoWrapper}
+                poster={review}
+                youtubeLink={data?.reviews?.youtubeLink}
+                // src="https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4"
+              />
+            )}
+            {data?.reviews?.externalLink && (
+              <VideoLink
+                className={styles.videoPoster}
+                classNameWrapper={styles.videoWrapper}
+                poster={review}
+                src={data?.reviews?.externalLink}
+                // src="https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4"
+              />
+            )}
+            {data?.reviews?.mainVideo?.data?.attributes?.url && (
+              <VideoLink
+                className={styles.videoPoster}
+                classNameWrapper={styles.videoWrapper}
+                poster={review}
+                src={`${process.env.REACT_APP_UPLOAD_URL}${data?.reviews?.mainVideo?.data?.attributes?.url}`}
+                // src="https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4"
+              />
+            )}
+
             <div className={styles.reviewText}>
-              <p className={styles.date}>24.10.2019</p>
-              <h4 className={styles.name}>Сергей Миронов</h4>
+              <p className={styles.date}>{data?.reviews?.mainReview?.date}</p>
+              <h4 className={styles.name}>{data?.reviews?.mainReview?.name}</h4>
               <p className={styles.reviewDesc}>
-                Огромное спасибо за профессиональный подход к делу! Когда встал
-                вопрос о выборе компании для строительства дома, решили сразу,
-                только Зодчий. Цена, качество, сроки строительства, по этим
-                категориям конкурентов нет.
+                {data?.reviews?.mainReview?.reviewBody}
               </p>
               <button className={styles.readMore}>
                 <p className={styles.btnText}>Читать дальше</p>
                 <SmallArrow className={styles.iconArrow} />
               </button>
-              <MenuButton
-                className={styles.btnReview}
-                title="Смотреть все видеоотзывы"
-              />
+              <NavLink to={data?.reviews?.mainReview?.buttonLink}>
+                <MenuButton
+                  className={styles.btnReview}
+                  title={data?.reviews?.mainReview?.buttonText}
+                />
+              </NavLink>
             </div>
           </div>
           <div className={styles.reviewSlider}>
@@ -349,64 +432,22 @@ export const About = () => {
               slidesPerView={2}
               spaceBetween={40}
             >
-              <SwiperSlide>
-                <div className={styles.sliderCard}>
-                  <img className={styles.personImg} src={personImg} alt="" />
-                  <div className={styles.reviewText}>
-                    <p className={styles.date}>24.10.2019</p>
-                    <h4 className={styles.name}>Сергей Миронов</h4>
-                    <p className={styles.reviewDesc}>
-                      Огромное спасибо за профессиональный подход к делу! Когда
-                      встал вопрос о выборе компании для строительства дома,
-                      решили сразу, только Зодчий. Цена, качество, сроки
-                      строительства, по этим категориям конкурентов нет.
-                    </p>
-                    <button className={styles.readMore}>
-                      <p className={styles.btnText}>Читать дальше</p>
-                      <SmallArrow className={styles.iconArrow} />
-                    </button>
+              {data?.reviews?.commonReviews?.reviewItem?.map((item) => (
+                <SwiperSlide key={item.id}>
+                  <div className={styles.sliderCard}>
+                    <img className={styles.personImg} src={personImg} alt="" />
+                    <div className={styles.reviewText}>
+                      <p className={styles.date}>{item.date}</p>
+                      <h4 className={styles.name}>{item.name}</h4>
+                      <p className={styles.reviewDesc}>{item.reviewBody}</p>
+                      <button className={styles.readMore}>
+                        <p className={styles.btnText}>Читать дальше</p>
+                        <SmallArrow className={styles.iconArrow} />
+                      </button>
+                    </div>
                   </div>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className={styles.sliderCard}>
-                  <img className={styles.personImg} src={personImg} alt="" />
-                  <div className={styles.reviewText}>
-                    <p className={styles.date}>24.10.2019</p>
-                    <h4 className={styles.name}>Сергей Миронов</h4>
-                    <p className={styles.reviewDesc}>
-                      Огромное спасибо за профессиональный подход к делу! Когда
-                      встал вопрос о выборе компании для строительства дома,
-                      решили сразу, только Зодчий. Цена, качество, сроки
-                      строительства, по этим категориям конкурентов нет.
-                    </p>
-                    <button className={styles.readMore}>
-                      <p className={styles.btnText}>Читать дальше</p>
-                      <SmallArrow className={styles.iconArrow} />
-                    </button>
-                  </div>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className={styles.sliderCard}>
-                  <img className={styles.personImg} src={personImg} alt="" />
-                  <div className={styles.reviewText}>
-                    <p className={styles.date}>24.10.2019</p>
-                    <h4 className={styles.name}>Сергей Миронов</h4>
-                    <p className={styles.reviewDesc}>
-                      Огромное спасибо за профессиональный подход к делу! Когда
-                      встал вопрос о выборе компании для строительства дома,
-                      решили сразу, только Зодчий. Цена, качество, сроки
-                      строительства, по этим категориям конкурентов нет.
-                    </p>
-                    <button className={styles.readMore}>
-                      <p className={styles.btnText}>Читать дальше</p>
-                      <SmallArrow className={styles.iconArrow} />
-                    </button>
-                  </div>
-                </div>
-              </SwiperSlide>
-
+                </SwiperSlide>
+              ))}
               <SliderBtn icon={null} direction="next" />
               <SliderBtn icon={null} direction="prev" />
             </Swiper>
@@ -418,74 +459,61 @@ export const About = () => {
           </h3>
           <div className={styles.personsContent}>
             <div className={styles.imgRoman}>
-              <img src={roman} alt="" />
-              <h4 className={styles.personName}>Пожарицкий Роман Николаевич</h4>
+              <img
+                src={
+                  filteredData &&
+                  `${process.env.REACT_APP_UPLOAD_URL}${filteredData[0]?.photo?.data?.attributes?.url}`
+                }
+                alt=""
+              />
+              <h4 className={styles.personName}>{filteredData?.name}</h4>
             </div>
             <div className={styles.contentDesc}>
               <h4 className={styles.descTitle}>Основные компетенции</h4>
               <div className={styles.competentions}>
-                <div className={styles.competentionBlock}>
-                  <div className={styles.competentionItem}>
-                    <h4 className={styles.competentionNumber}>1</h4>
-                    <h4 className={styles.itemTitle}>Компетенция</h4>
-                  </div>
-                  <div className={styles.competentionDesc}>
-                    Получаете первичное предложение с расчетом стоимости ремонта
-                    под ключ с погрешностью 5%
-                  </div>
-                </div>
-                <div className={styles.competentionBlock}>
-                  <div className={styles.competentionItem}>
-                    <h4 className={styles.competentionNumber}>2</h4>
-                    <h4 className={styles.itemTitle}>Компетенция</h4>
-                  </div>
-                  <div className={styles.competentionDesc}>
-                    Получаете первичное предложение с расчетом стоимости ремонта
-                    под ключ с погрешностью 5%
-                  </div>
-                </div>
-                <div className={styles.competentionBlock}>
-                  <div className={styles.competentionItem}>
-                    <h4 className={styles.competentionNumber}>3</h4>
-                    <h4 className={styles.itemTitle}>Компетенция</h4>
-                  </div>
-                  <div className={styles.competentionDesc}>
-                    Получаете первичное предложение с расчетом стоимости ремонта
-                    под ключ с погрешностью 5%
-                  </div>
-                </div>
-                <div className={styles.competentionBlock}>
-                  <div className={styles.competentionItem}>
-                    <h4 className={styles.competentionNumber}>4</h4>
-                    <h4 className={styles.itemTitle}>Компетенция</h4>
-                  </div>
-                  <div className={styles.competentionDesc}>
-                    Получаете первичное предложение с расчетом стоимости ремонта
-                    под ключ с погрешностью 5%
-                  </div>
-                </div>
-                <div className={styles.competentionBlock}>
-                  <div className={styles.competentionItem}>
-                    <h4 className={styles.competentionNumber}>5</h4>
-                    <h4 className={styles.itemTitle}>Компетенция</h4>
-                  </div>
-                  <div className={styles.competentionDesc}>
-                    Получаете первичное предложение с расчетом стоимости ремонта
-                    под ключ с погрешностью 5%
-                  </div>
-                </div>
-                <div className={styles.competentionBlock}>
-                  <div className={styles.competentionItem}>
-                    <h4 className={styles.competentionNumber}>6</h4>
-                    <h4 className={styles.itemTitle}>Компетенция</h4>
-                  </div>
-                  <div className={styles.competentionDesc}>
-                    Получаете первичное предложение с расчетом стоимости ремонта
-                    под ключ с погрешностью 5%
-                  </div>
-                </div>
+                {filteredData &&
+                  filteredData[0]?.competention?.map((item) => (
+                    <div key={item.id} className={styles.competentionBlock}>
+                      <div className={styles.competentionItem}>
+                        <h4 className={styles.competentionNumber}>
+                          {item.number}
+                        </h4>
+                        <h4 className={styles.itemTitle}>{item.title}</h4>
+                      </div>
+                      <div className={styles.competentionDesc}>
+                        {item.description}
+                      </div>
+                    </div>
+                  ))}
               </div>
-              <div className={styles.persons}></div>
+              <div className={styles.swiperWrapper}>
+                <Swiper slidesPerView={4} spaceBetween={32}>
+                  {data?.keyPersons?.persons?.map((item) => (
+                    <SwiperSlide onClick={() => setId(item.id)} key={item.id}>
+                      <div className={styles.personCard}>
+                        <div className={styles.imageCardWrapper}>
+                          <img
+                            className={styles.miniImg}
+                            src={`${process.env.REACT_APP_UPLOAD_URL}${item?.photo?.data?.attributes?.formats?.thumbnail?.url}`}
+                            alt=""
+                          />
+                        </div>
+
+                        <h3
+                          className={classNames(
+                            styles.personJob,
+                            id === item.id && styles.activeSlide
+                          )}
+                        >
+                          {item?.department}
+                        </h3>
+                      </div>
+                    </SwiperSlide>
+                  ))}
+                  <SliderBtn icon={null} direction="next" />
+                  <SliderBtn icon={null} direction="prev" />
+                </Swiper>
+              </div>
             </div>
           </div>
         </div>
