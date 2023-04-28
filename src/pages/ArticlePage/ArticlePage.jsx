@@ -67,7 +67,7 @@ export const ArticlePage = () => {
                                 </h3>
                                 <div className={styles.descText}>
                                     {/* eslint-disable-next-line react/no-children-prop */}
-                                    <ReactMarkdown children={t.descr}/>
+                                    <ReactMarkdown children={t.descr} rehypePlugins={[rehypeRaw]}/>
 
                                 </div>
                                 <div className={styles.images}>
