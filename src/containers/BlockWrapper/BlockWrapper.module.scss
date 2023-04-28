@@ -103,16 +103,17 @@
   height: 60px;
   border: 1px solid #1eab5f;
   border-radius: 3px;
-  &:active {
-    background: #1eab5f;
-    font-weight: 600;
-    color: #ffffff;
-  }
+}
+.btnActive {
+  background: #1eab5f;
+  font-weight: 600;
+  color: #ffffff;
 }
 .icon {
   fill: #1eab5f;
 }
-.btn:active .icon {
+.btn,
+.btnActive .icon {
   fill: #ffffff;
 }
 
@@ -136,4 +137,7 @@
 }
 .wrapper {
   width: 100%;
+}
+.slide {
+  width: 500px;
 }

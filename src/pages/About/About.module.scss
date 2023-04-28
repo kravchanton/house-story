@@ -62,7 +62,7 @@
   gap: 40px;
 }
 .year {
-  flex: 1 1 40%;
+  flex: 1 0 30%;
   font-weight: 900;
   font-size: 66px;
   line-height: 80px;
@@ -111,6 +111,10 @@
   color: #363130;
   border: 1px solid #319f1c;
   border-radius: 0 0 6px 6px;
+}
+.activeTab {
+  background-color: #1eab5f;
+  color: #ffffff;
 }
 .imagesBlock {
   display: flex;
@@ -162,9 +166,9 @@
 .card {
   display: flex;
   flex-direction: column;
+  align-items: center;
   width: 500px;
   height: 234px;
-  padding: 20px;
   text-align: center;
   background: #ffffff;
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.25);
@@ -176,7 +180,6 @@
   line-height: 80px;
   color: #1eab5f;
   text-shadow: 0 4px 8px #64bc45;
-  margin-bottom: 16px;
 }
 .textNumber {
   font-size: 25px;
@@ -242,6 +245,7 @@
   transform: rotate(-6.75deg);
 }
 .imgWrapper {
+  position: relative;
   flex: 1 1 100%;
   width: 769px;
   height: 406px;
@@ -250,6 +254,12 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+.btnClients {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 24px;
 }
 .clientsCards {
   display: flex;
@@ -400,6 +410,8 @@
   border-radius: 3px;
   z-index: 2;
 }
+.sliderBtnNext {
+}
 
 .personImg {
   width: 190px;
@@ -445,6 +457,7 @@
   padding-bottom: 67.5px;
 }
 .imgRoman img {
+  object-fit: cover;
   width: 360px;
   height: 426px;
   margin-bottom: 16px;
@@ -462,6 +475,9 @@
   line-height: 29px;
   color: #363130;
   margin-bottom: 32px;
+}
+.contentDesc {
+  flex-grow: 1;
 }
 .competentions {
   display: flex;
@@ -505,18 +521,31 @@
 .miniImg {
   width: 124px;
   height: 124px;
+  object-fit: cover;
   border-radius: 20px;
   margin-bottom: 8px;
 }
+.imageCardWrapper {
+}
+.personCard {
+  cursor: pointer;
+  width: 124px;
+}
+
 .personJob {
   font-weight: 900;
   font-size: 14px;
   line-height: 17px;
   color: #000000;
 }
+.activeSlide {
+  color: #1eab5f;
+}
 .swiper-slide {
   width: 100px;
 }
 .reviewSlider {
   position: relative;
+}
+.videoPoster {
 }

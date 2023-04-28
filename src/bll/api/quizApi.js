@@ -23,6 +23,17 @@ export const meetingApi = {
         return apiInstance.get("meeting?populate=deep");
     },
 };
+
+export const contactsApi = {
+  getContactsData() {
+    return apiInstance.get("contact?populate=deep");
+  },
+};
+export const aboutApi = {
+  getAboutData() {
+    return apiInstance.get("about?populate=deep");
+  },
+};
 export const photoApi = {
     getPhotoData() {
         return apiInstance.get("photo-galleries?populate=deep");
