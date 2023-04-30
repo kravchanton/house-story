@@ -1,9 +1,8 @@
 import React, { useRef, useState } from "react";
+import classNames from "classnames";
 
 import styles from "./VideoLink.module.scss";
 import { Pause, PlayVariant } from "../../icons";
-import classNames from "classnames";
-import { Poster } from "../Poster";
 
 const playbackStatus = {
   Stopped: "stopped",
@@ -13,10 +12,13 @@ const playbackStatus = {
 
 export const VideoLink = ({
   src,
+  title,
+  author,
+  descr,
   poster,
   youtubeLink,
   classNameWrapper,
-  className,
+  blurPoster,
 }) => {
   const [play, setPlay] = useState(false);
   const [status, setStatus] = useState(playbackStatus.Stopped);
@@ -37,7 +39,19 @@ export const VideoLink = ({
       {src && (
         <div className={classNames(styles.wrapper, classNameWrapper)}>
           {status === "stopped" ? (
-            <Poster className={className} src={poster} />
+            <div
+              className={classNames(
+                styles.poster,
+                blurPoster && styles.blurPoster
+              )}
+            >
+              <h3 className={styles.title}>{title}</h3>
+              <p className={styles.author}>{author}</p>
+              <p className={styles.desc}>{descr}</p>
+              <div>
+                <img className={styles.image} src={poster} alt="" />
+              </div>
+            </div>
           ) : null}
           {status === "stopped" || status === "paused" ? (
             <button className={styles.playBtn} onClick={handlePlay}>
@@ -60,7 +74,19 @@ export const VideoLink = ({
       {youtubeLink && (
         <div className={classNames(styles.wrapper, classNameWrapper)}>
           {status === "stopped" ? (
-            <Poster className={className} src={poster} />
+            <div
+              className={classNames(
+                styles.poster,
+                blurPoster && styles.blurPoster
+              )}
+            >
+              <h3 className={styles.title}>{title}</h3>
+              <div>
+                <p className={styles.author}>{author}</p>
+                <p className={styles.desc}>{descr}</p>
+              </div>
+              <img className={styles.image} src={poster} alt="" />
+            </div>
           ) : null}
           <button
             onClick={() => setPlay((prevState) => !prevState)}
