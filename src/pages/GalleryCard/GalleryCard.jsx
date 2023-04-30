@@ -35,7 +35,6 @@ export const GalleryCard = () => {
   const [open, setOpen] = useState(false)
   const openLightBox = () => {
     setOpen(true)
-
   }
   const thumbnailsRef = React.useRef(null);
   let src = 'src'

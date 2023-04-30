@@ -12,6 +12,7 @@ import {
 } from "../../components";
 import {BlockWrapper} from "../../containers/BlockWrapper";
 import {BlogContainer} from "../../components/Blog/BlogContainer";
+import {TopObject} from "../../components/TopObject/TopObject";
 
 export const BlogPage = () => {
   return (
@@ -20,13 +21,8 @@ export const BlogPage = () => {
         <NavigationHeader />
         <MainForm />
         <BlogContainer />
-        <div className={styles.topWrapper}>
-          <BlockWrapper
-            title="Топ выполненных объектов"
-            subtitle="Показываем процесс работы изнутри, делимся результатами, опытом, полезными фишками"
-            top={true}
-          ></BlockWrapper>
-        </div>
+        <TopObject/>
+
 
         <Garanties title={true} />
         <div className={styles.wrapperMedia}>

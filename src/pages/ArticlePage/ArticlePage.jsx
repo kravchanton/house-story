@@ -14,6 +14,7 @@ import {fetchBlog} from "../../bll/blogReducer";
 import ReactMarkdown from "react-markdown";
 import rehypeRaw from 'https://esm.sh/rehype-raw@6'
 import {Images} from "./Images";
+import {TopObject} from "../../components/TopObject/TopObject";
 
 export const ArticlePage = () => {
     useEffect(() => {
@@ -77,7 +78,7 @@ export const ArticlePage = () => {
 
                                 </div>
                                 <div className={styles.images}>
-                                   <Images data={t.photos.data}/>
+                                   <Images data={t.photos.data} galleryID="my-test-gallery"/>
 
                                 </div>
 
@@ -85,11 +86,9 @@ export const ArticlePage = () => {
                         )}
                     </div>
                 </div>
-                <BlockWrapper
-                    title="Топ выполненных объектов"
-                    subtitle="Показываем процесс работы изнутри, делимся результатами, опытом, полезными фишками"
-                    top={true}
-                />
+
+                <TopObject/>
+
                 <div className={styles.mediaWrapper}>
                     <BlockWrapper
                         video={true}
