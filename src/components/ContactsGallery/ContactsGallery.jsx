@@ -1,9 +1,10 @@
 import React, { useEffect } from "react";
-import { Gallery } from "../Gallery";
+import { useDispatch, useSelector } from "react-redux";
 
 import "./ContactsGallery.scss";
-import { useDispatch, useSelector } from "react-redux";
+
 import { fetchContactsData } from "../../bll/contactsReducer";
+import { GalleryContactsComponent } from "../GalleryContactsComponent";
 
 export const ContactsGallery = () => {
   const dispatch = useDispatch();
@@ -17,7 +18,7 @@ export const ContactsGallery = () => {
 
   return (
     <div>
-      <Gallery
+      <GalleryContactsComponent
         galleryID="my-test-gallery"
         images={[
           {

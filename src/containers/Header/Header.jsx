@@ -6,18 +6,25 @@ import phone from "../../assets/phoneContact.png";
 
 import styles from "./Header.module.scss";
 
-import { Burger, SmallArrow, Structure, Viber, WhatsUp } from "../../icons";
+import { SmallArrow, Structure } from "../../icons";
 import {
   Container,
   MenuButton,
   MenuDropdown,
   PhoneDropdown,
 } from "../../components";
-import { Telegram } from "../../icons";
-import { menu } from "../../mockData/menu";
-import { Link, NavLink } from "react-router-dom";
 
-export const Header = () => {
+import { menu } from "../../mockData/menu";
+import { NavLink } from "react-router-dom";
+
+export const Header = ({
+  buttonText,
+  buttonLink,
+  socialLinks,
+  contactItems,
+  mainPhone,
+  mainContact,
+}) => {
   const [isOpenContacts, setIsOpenContacts] = useState(false);
   const [isOpenMenu, setIsOpenMenu] = useState(false);
   return (
@@ -43,41 +50,45 @@ export const Header = () => {
             <div>
               <p className={styles.structureText}>Заказать 3D-макет дома</p>
               <div className={styles.socials}>
-                <Link to="#">
-                  <WhatsUp />
-                </Link>
-                <Link to="#">
-                  <Viber />
-                </Link>
-                <Link to="#">
-                  <Telegram />
-                </Link>
+                {socialLinks.map((item) => (
+                  <a
+                    key={item.id}
+                    href={item.link}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <img
+                      src={`${process.env.REACT_APP_UPLOAD_URL}${item.icon.data.attributes.url}`}
+                      alt=""
+                    />
+                  </a>
+                ))}
               </div>
             </div>
           </div>
 
-          <div
-            onClick={() => setIsOpenContacts((prevState) => !prevState)}
-            className={styles.phoneWrapper}
-          >
+          <div className={styles.phoneWrapper}>
             <img src={phone} alt="" />
             <div>
               <h4 className={styles.phone}>
-                <span>+7 (915) 168-55-50</span>
-                <SmallArrow />
+                <a className={styles.phoneNumber} href={`tel: ${mainPhone}`}>
+                  {mainPhone}
+                </a>
+                <button
+                  onClick={() => setIsOpenContacts((prevState) => !prevState)}
+                >
+                  <SmallArrow />
+                </button>
               </h4>
-              <p className={styles.text}>Прораб онлайн, звоните!</p>
-              {isOpenContacts && <PhoneDropdown />}
+              <p className={styles.text}>{mainContact}</p>
+              {isOpenContacts && <PhoneDropdown contactItems={contactItems} />}
             </div>
           </div>
-
-          <button type="button" className={styles.btn}>
-            Заказать звонок
-          </button>
-          <Burger
-            activate={() => setIsOpenMenu((prevState) => !prevState)}
-            className={styles.burger}
-          />
+          <NavLink to={buttonLink}>
+            <button type="button" className={styles.btn}>
+              {buttonText}
+            </button>
+          </NavLink>
           {isOpenMenu && (
             <MenuDropdown
               closeMenu={() => setIsOpenMenu(false)}

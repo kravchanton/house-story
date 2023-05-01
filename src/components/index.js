@@ -40,3 +40,7 @@ export * from "./Gallery";
 export * from "./Poster";
 export * from "./ContactsGallery";
 export * from "./AboutGallery";
+export * from "./GalleryAboutComponent";
+export * from "./GalleryContactsComponent";
+export * from "./ReviewText";
+export * from "./CommonReviewText";

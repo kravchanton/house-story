@@ -1,19 +1,10 @@
 import React, { useState } from "react";
 
 import styles from "./MainFormComponent.module.scss";
-import { NavLink } from "react-router-dom";
-import {
-  MailSocials,
-  PhoneSocials,
-  Telegram,
-  Viber,
-  WhatsUp,
-} from "../../icons";
-import instagram from "../../assets/inst.png";
-import facebook from "../../assets/facebook-logo.png";
+
 import { Basic } from "../Form";
 
-export const MainFormComponent = () => {
+export const MainFormComponent = ({ links }) => {
   const [isActiveRight, setIsActiveRight] = useState(false);
   const [isActiveLeft, setIsActiveLeft] = useState(true);
 
@@ -62,34 +53,21 @@ export const MainFormComponent = () => {
           />
         ) : (
           <div className={styles.socialsWrapper}>
-            <NavLink className={styles.link} to="#">
-              <PhoneSocials />
-              <p>Звонок</p>
-            </NavLink>
-            <NavLink className={styles.link} to="#">
-              <MailSocials />
-              <p>Почта</p>
-            </NavLink>
-            <NavLink className={styles.link} to="#">
-              <WhatsUp />
-              <p>WhatsApp</p>
-            </NavLink>
-            <NavLink className={styles.link} to="#">
-              <Viber />
-              <p>Viber</p>
-            </NavLink>
-            <NavLink className={styles.link} to="#">
-              <Telegram />
-              <p>Telegram</p>
-            </NavLink>
-            <NavLink className={styles.link} to="#">
-              <img className={styles.icon} src={instagram} alt="instagram" />
-              <p>Instagram</p>
-            </NavLink>
-            <NavLink className={styles.link} to="#">
-              <img className={styles.icon} src={facebook} alt="facebook" />
-              <p>Facebook</p>
-            </NavLink>
+            {links.map((item) => (
+              <a
+                className={styles.socialLink}
+                key={item.id}
+                href={item.link}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img
+                  src={`${process.env.REACT_APP_UPLOAD_URL}${item.icon.data.attributes.url}`}
+                  alt=""
+                />
+                <p>{item.title}</p>
+              </a>
+            ))}
           </div>
         )}
       </div>

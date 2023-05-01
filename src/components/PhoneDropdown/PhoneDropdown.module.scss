@@ -1,10 +1,10 @@
 .wrapper {
   position: absolute;
   padding-left: 88px;
-  padding-right: 32px;
+  padding-right: 41px;
   padding-bottom: 32px;
   top: 117px;
-  right: 502px;
+  right: 455px;
   z-index: 1;
   background: #ffffff;
   box-shadow: 0 10px 8px rgba(0, 0, 0, 0.25);
@@ -28,6 +28,9 @@
     top: 40px;
     background-color: #1eab5f;
   }
+}
+.phoneNumber {
+  color: #000000;
 }
 .name {
   font-weight: 700;

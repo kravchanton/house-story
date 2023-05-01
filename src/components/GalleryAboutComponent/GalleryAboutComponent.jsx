@@ -1,10 +1,12 @@
 import React, { useEffect } from "react";
-import PhotoSwipeLightbox from "photoswipe/lightbox";
-import "photoswipe/style.css";
-import "./Gallery.scss";
 import { useSelector } from "react-redux";
+import PhotoSwipeLightbox from "photoswipe/lightbox";
 
-export const Gallery = (props) => {
+import "photoswipe/style.css";
+
+import "./GalleryAboutComponent.scss";
+
+export const GalleryAboutComponent = (props) => {
   const data = useSelector((state) => state.aboutData.aboutData.attributes);
 
   useEffect(() => {
