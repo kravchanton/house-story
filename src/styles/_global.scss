@@ -28,3 +28,15 @@ h6 {
     color: #1eab5f;
   }
 }
+@media (max-width: 480px) {
+  .titleBlock {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    background: linear-gradient(91.24deg, #1eab5f 0.36%, #e7b97e 103.9%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+  }
+}

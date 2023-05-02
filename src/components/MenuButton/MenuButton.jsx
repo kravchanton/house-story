@@ -11,7 +11,6 @@ export const MenuButton = ({
   disabled,
   lockText,
   classNameForBtn,
-
 }) => {
   return (
     <div className={classNames(styles.wrapper, classNameForBtn)}>
@@ -19,7 +18,8 @@ export const MenuButton = ({
         disabled={disabled}
         className={classNames(styles.button, className)}
       >
-        {children} {title}
+        <p>{title}</p>
+        {children}
       </button>
       {lockText && (
         <div className={styles.lockWrapper}>

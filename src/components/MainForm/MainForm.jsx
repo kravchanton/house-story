@@ -31,7 +31,7 @@ export const MainForm = () => {
           <img className={styles.tCloud} src={tCloud} alt="tCloud" />
           <div className={styles.formWrapper}>
             <h2>{data.attributes.title}</h2>
-            <h3>{data.attributes.subtitle}</h3>
+            <p className={styles.formSubtitle}>{data.attributes.subtitle}</p>
 
             <MainFormComponent links={data?.attributes?.socialForm?.socialLinks} />
           </div>

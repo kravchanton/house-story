@@ -8,3 +8,9 @@
   height: 374px;
 }
 
+@media (max-width: 480px) {
+  .imageWrapper {
+    width: 100%;
+    height: 100%;
+  }
+}

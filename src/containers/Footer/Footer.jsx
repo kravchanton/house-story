@@ -8,13 +8,15 @@ import {
   Container,
   MenuButton,
   NavMenu,
-  // MenuFooterItem,
   ReviewsSlider,
+  // VideoLink,
+  // MenuFooterItem,
+  // ReviewsSlider,
 } from "../../components";
 import { Arrow, ArrowRight, LogoVariant } from "../../icons";
+// import { Swiper, SwiperSlide } from "swiper/react";
 
 export const Footer = ({ socialLinks, reviews }) => {
-  console.log(reviews);
   return (
     <footer className={styles.footer}>
       <Container className={styles.container}>
@@ -24,7 +26,9 @@ export const Footer = ({ socialLinks, reviews }) => {
             <ReviewsSlider reviews={reviews} />
           </div>
           <div className={styles.logoBlock}>
-            <LogoVariant />
+            <div className={styles.logoWrapper}>
+              <LogoVariant />
+            </div>
             <p className={styles.text}>
               <span>Alfa Digital Agency</span> – разработка высоко конверсионных
               сайтов

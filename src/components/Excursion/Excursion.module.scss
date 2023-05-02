@@ -10,6 +10,9 @@
 .titleBlock {
   max-width: 846px;
 }
+.mobile {
+  display: none;
+}
 .descWrapper {
   display: flex;
   gap: 40px;
@@ -54,4 +57,45 @@
   right: -160px;
   top: 315px;
   z-index: 2;
+}
+
+@media (max-width: 480px) {
+  .imageHouse {
+    display: none;
+  }
+  .imageCloud {
+    display: none;
+  }
+  .descWrapper {
+    flex-direction: column;
+    gap: 16px;
+  }
+  .descTitle {
+    display: none;
+  }
+  .listTitle {
+    display: block;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    color: #000000;
+  }
+  .titleBlock {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    color: #1eab5f;
+  }
+  .mobile {
+    display: inline-block;
+  }
+  .wrapper {
+    gap: 16px;
+    margin-bottom: 40px;
+  }
+  .listItem li {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+  }
 }

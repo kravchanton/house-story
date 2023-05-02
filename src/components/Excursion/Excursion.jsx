@@ -12,7 +12,8 @@ export const Excursion = ({ houseImg, cloudImg }) => {
   return (
     <article className={styles.wrapper}>
       <h3 className={classNames("titleBlock", styles.titleBlock)}>
-        <span>Хотите увидеть в живую</span> строящиеся объекты
+        <span>Хотите увидеть в живую</span> строящиеся объекты или посетить наш
+        склад и производство
       </h3>
       <div className={styles.descWrapper}>
         <div className={styles.descWrapperText}>

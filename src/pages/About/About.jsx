@@ -28,6 +28,8 @@ import {
   SliderBtn,
   VideoLink,
   ReviewText,
+  AboutContentBlock,
+  PhotoItemAbout,
 } from "../../components";
 import {
   CheckVariant,
@@ -59,7 +61,7 @@ export const About = () => {
   }, []);
 
   const handleActiveOffice = () => {
-    setIsActiveOffice(true);
+    setIsActiveOffice((prevState) => !prevState);
     setIsActiveProduction(false);
     setIsActiveStock(false);
   };
@@ -78,7 +80,7 @@ export const About = () => {
   return (
     <section className={styles.about}>
       {data && (
-        <Container>
+        <Container className={styles.aboutContainer}>
           <MainForm />
           <div className={styles.history}>
             <h3 className={classNames("titleBlock", styles.title)}>
@@ -86,37 +88,13 @@ export const About = () => {
             </h3>
             {data.contentBlock.map((item) => {
               return (
-                <>
-                  {item.reverseContent ? (
-                    <div key={item.id} className={styles.content}>
-                      <img
-                        className={styles.img}
-                        src={`${process.env.REACT_APP_UPLOAD_URL}${item.image.data.attributes.url}`}
-                        alt=""
-                      />
-                      <div className={styles.text}>
-                        <h4 className={styles.titleContent}>{item.title}</h4>
-                        <p className={styles.text}>
-                          <ReactMarkdown>{item.text}</ReactMarkdown>
-                        </p>
-                      </div>
-                    </div>
-                  ) : (
-                    <div key={item.id} className={styles.content}>
-                      <div className={styles.text}>
-                        <h4 className={styles.titleContent}>{item.title}</h4>
-                        <p className={styles.text}>
-                          <ReactMarkdown>{item.text}</ReactMarkdown>
-                        </p>
-                      </div>
-                      <img
-                        className={styles.img}
-                        src={`${process.env.REACT_APP_UPLOAD_URL}${item.image.data.attributes.url}`}
-                        alt=""
-                      />
-                    </div>
-                  )}
-                </>
+                <AboutContentBlock
+                  text={item.text}
+                  src={item.image.data.attributes.url}
+                  reverseContent={item.reverseContent}
+                  key={item.id}
+                  title={item.title}
+                />
               );
             })}
           </div>
@@ -134,9 +112,10 @@ export const About = () => {
                   <div>
                     <House />
                   </div>
-
                   <p className={styles.descText}>
-                    {data.chronology.description1}
+                    <ReactMarkdown>
+                      {data.chronology.description1}
+                    </ReactMarkdown>
                   </p>
                 </div>
               </div>
@@ -146,9 +125,10 @@ export const About = () => {
                   <div>
                     <Worker />
                   </div>
-
                   <p className={styles.descText}>
-                    {data.chronology.description2}
+                    <ReactMarkdown>
+                      {data.chronology.description2}
+                    </ReactMarkdown>
                   </p>
                 </div>
               </div>
@@ -158,9 +138,10 @@ export const About = () => {
                   <div>
                     <WorkerVariant />
                   </div>
-
                   <p className={styles.descText}>
-                    {data.chronology.description3}
+                    <ReactMarkdown>
+                      {data.chronology.description3}
+                    </ReactMarkdown>
                   </p>
                 </div>
               </div>
@@ -170,13 +151,23 @@ export const About = () => {
                   <div>
                     <HouseSecond />
                   </div>
-
                   <p className={styles.descText}>
-                    {data.chronology.description4}
+                    <ReactMarkdown>
+                      {data.chronology.description4}
+                    </ReactMarkdown>
                   </p>
                 </div>
               </div>
             </div>
+          </div>
+          <div className={styles.mobilePhotos}>
+            <PhotoItemAbout
+              buttonLink={data.photos.buttonLink}
+              buttonText={data.photos.buttonText}
+              title="Наш офис"
+              isActiveOffice={isActiveOffice}
+              activeOffice={handleActiveOffice}
+            />
           </div>
           <div className={styles.photos}>
             <div className={styles.tabsBlock}>
@@ -229,6 +220,63 @@ export const About = () => {
             <h3 className={classNames("titleBlock", styles.titleHowWeWork)}>
               Как мы работаем
             </h3>
+            <div className={styles.mobileCards}>
+              <div className={styles.card}>
+                <h4 className={styles.number}>1</h4>
+                <div className={styles.cardDescMobile}>
+                  <h4 className={styles.textNumber}>
+                    {data.howWeWork.card[0].title}
+                  </h4>
+                  <p className={styles.descNumber}>
+                    {data.howWeWork.card[0].description}
+                  </p>
+                </div>
+              </div>
+              <div className={styles.card}>
+                <h4 className={styles.number}>2</h4>
+                <div className={styles.cardDescMobile}>
+                  <h4 className={styles.textNumber}>
+                    {data.howWeWork.card[1].title}
+                  </h4>
+                  <p className={styles.descNumber}>
+                    {data.howWeWork.card[1].description}
+                  </p>
+                </div>
+              </div>
+              <div className={styles.card}>
+                <h4 className={styles.number}>3</h4>
+                <div className={styles.cardDescMobile}>
+                  <h4 className={styles.textNumber}>
+                    {data.howWeWork.card[2].title}
+                  </h4>
+                  <p className={styles.descNumber}>
+                    {data.howWeWork.card[2].description}
+                  </p>
+                </div>
+              </div>
+              <div className={styles.card}>
+                <h4 className={styles.number}>4</h4>
+                <div className={styles.cardDescMobile}>
+                  <h4 className={styles.textNumber}>
+                    {data.howWeWork.card[3].title}
+                  </h4>
+                  <p className={styles.descNumber}>
+                    {data.howWeWork.card[3].description}
+                  </p>
+                </div>
+              </div>
+              <div className={styles.card}>
+                <h4 className={styles.number}>5</h4>
+                <div className={styles.cardDescMobile}>
+                  <h4 className={styles.textNumber}>
+                    {data.howWeWork.card[4].title}
+                  </h4>
+                  <p className={styles.descNumber}>
+                    {data.howWeWork.card[4].description}
+                  </p>
+                </div>
+              </div>
+            </div>
             <div className={styles.cards}>
               <div className={styles.column}>
                 <div className={styles.card}>
@@ -285,13 +333,12 @@ export const About = () => {
                 </div>
               </div>
             </div>
-            <NavLink to={data.howWeWork.buttonLink}>
+            <NavLink className={styles.btnLink} to={data.howWeWork.buttonLink}>
               <MenuButton
                 className={styles.btnDark}
                 title={data.howWeWork.buttonText}
               />
             </NavLink>
-
             <img className={styles.cloud} src={cloud} alt="" />
             <img className={styles.shepki} src={shepki} alt="" />
           </div>
@@ -311,7 +358,10 @@ export const About = () => {
                   src={`${process.env.REACT_APP_UPLOAD_URL}${data.clients.image.data.attributes.url}`}
                   alt=""
                 />
-                <NavLink to={data.clients.buttonLink}>
+                <NavLink
+                  className={styles.btnClientsDesctop}
+                  to={data.clients.buttonLink}
+                >
                   <MenuButton
                     title={data.clients.buttonText}
                     className={classNames(styles.btn, styles.btnClients)}
@@ -348,6 +398,15 @@ export const About = () => {
                     Более <span>117</span> построенных домов.
                   </p>
                 </div>
+                <NavLink
+                  className={styles.btnClientsMobile}
+                  to={data.clients.buttonLink}
+                >
+                  <MenuButton
+                    title={data.clients.buttonText}
+                    className={styles.btn}
+                  />
+                </NavLink>
               </div>
             </div>
           </div>

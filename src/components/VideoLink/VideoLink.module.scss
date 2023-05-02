@@ -1,6 +1,6 @@
 .wrapper {
   position: relative;
-  min-width: 500px;
+  min-width: 200px;
   height: 100%;
   width: 100%;
 }
@@ -172,4 +172,23 @@
 }
 .blurPoster {
   z-index: auto;
+}
+
+@media (max-width: 480px) {
+  .author {
+    font-size: 12px;
+    line-height: 14px;
+  }
+  .desc {
+    font-size: 12px;
+    line-height: 16px;
+  }
+  .title {
+    font-size: 14px;
+    line-height: 16px;
+  }
+  .poster {
+    padding: 15px 10px;
+    gap: 100px;
+  }
 }

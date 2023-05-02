@@ -3,3 +3,9 @@
   height: 48px;
   fill: #1eab5f;
 }
+@media (max-width: 480px) {
+  .icon {
+    width: 40px;
+    height: 40px;
+  }
+}

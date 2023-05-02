@@ -25,3 +25,16 @@
   top: 35px;
   cursor: pointer;
 }
+
+@media (max-width: 480px) {
+  .wrapper {
+    padding: 80px 30px 30px;
+    left: 0;
+    top: 0;
+    width: 100%;
+  }
+  .closeIcon {
+    right: 20px;
+    top: 20px;
+  }
+}
