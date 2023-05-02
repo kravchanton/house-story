@@ -10,6 +10,8 @@ import mainFormReducer from "./mainFormReducer";
 import blogReducer from "./blogReducer";
 import contactsReducer from "./contactsReducer";
 import aboutReducer from "./aboutReducer";
+import blockArticleReducer from "./blockAtricleReducer";
+import blockVideoReducer from "./blockVideoReducer";
 
 export const store = configureStore({
   reducer: {
@@ -24,6 +26,8 @@ export const store = configureStore({
     mainForm: mainFormReducer,
     topObject: topObjectReducer,
     blog: blogReducer,
+    blockArticle: blockArticleReducer,
+    blockVideo: blockVideoReducer
   },
 });
 

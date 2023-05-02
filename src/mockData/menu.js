@@ -14,7 +14,7 @@ export const menu = [
   {
     id: uuidv4(),
     title: "Блог",
-    link: 'blog/1/1'
+    link: 'blog/1'
   },
   {
     id: uuidv4(),

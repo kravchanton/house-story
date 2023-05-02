@@ -4,10 +4,7 @@ import classNames from "classnames";
 import styles from "./ArticlePage.module.scss";
 
 
-import {Container, Excursion, Garanties, MainForm, NavigationArticle,} from "../../components";
-
-import {BlockWrapper} from "../../containers";
-import img1 from "../../assets/Rectangle 123.jpg";
+import {Container, Excursion, Garanties, MainForm, NavigationArticle, VideoLink,} from "../../components";
 import {useParams} from "react-router-dom";
 import {useDispatch, useSelector} from "react-redux";
 import {fetchBlog} from "../../bll/blogReducer";
@@ -15,6 +12,8 @@ import ReactMarkdown from "react-markdown";
 import rehypeRaw from 'https://esm.sh/rehype-raw@6'
 import {Images} from "./Images";
 import {TopObject} from "../../components/TopObject/TopObject";
+import {BLockArticle} from "../../components/BlockArticle/BlockArticle";
+import {BlockVideo} from "../../components/BlockVideo/BlockVideo";
 
 export const ArticlePage = () => {
     useEffect(() => {
@@ -61,13 +60,18 @@ export const ArticlePage = () => {
                                 <ReactMarkdown children={cardData.descr}rehypePlugins={[rehypeRaw]}/>
                             </div>
                         </div>
-                        <BlockWrapper
-                            video={true}
-                            video1={true}
-                            video2={true}
-                            title={cardData.videoTitle}
-                            classNameSection={styles.sectionWrapper}
-                        />
+                        <div className={styles.content}>
+                            {cardData?.videos?.slice(0, 2).map((t, index) => <VideoLink
+                                    key={index}
+                                    title={t.title}
+                                    author={t.author}
+                                    classNameWrapper={styles.wrapper}
+                                    youtubeLink={t.youtubeLink}
+                                    src={t?.video?.data?.attributes?.name && `${process.env.REACT_APP_UPLOAD_URL}${t?.video?.data?.attributes?.url}`}
+                                    poster={`${process.env.REACT_APP_UPLOAD_URL}${t?.image?.data?.attributes?.url}`}
+                                />
+                            )}
+                        </div>
                         {cardData.section.map((t, index) => <div key={index}  ref={el => Refs.current[index] = el} className={styles.textBlock}>
                                 <h3 className={styles.titleText}>
                                     {t.stage} <span>{t.title}</span>
@@ -88,35 +92,8 @@ export const ArticlePage = () => {
                 </div>
 
                 <TopObject/>
-
-                <div className={styles.mediaWrapper}>
-                    <BlockWrapper
-                        video={true}
-                        video1={true}
-                        video2={true}
-                        video3={true}
-                        btn={true}
-                        title="Видеоблог"
-                        subtitle="Снимаем для вас интересные ролики, в которых делимся полезной информацией"
-                    />
-                    <BlockWrapper
-                        article={true}
-                        btn={true}
-                        title="Статьи"
-                        subtitle="Пишем для вас полезные статьи, основанные на реальном опыте и многолетней практике"
-                        image1={img1}
-                        nameCard1="Как выбрать материал для дома?"
-                        readingDuration1="Время на чтение: 3 минуты"
-                        image2={img1}
-                        nameCard2="Сколько стоит дом построить?"
-                        readingDuration2="Время на чтение: 2 минуты"
-                        image3={img1}
-                        nameCard3="Как провести электричество в частный дом?"
-                        readingDuration3="Время на чтение: 2 минуты"
-                        readText="Читать"
-                    />
-                </div>
-
+                <BlockVideo />
+                <BLockArticle/>
                 <Excursion cloudImg={true} houseImg={true}/>
             </Container>}
         </section>

@@ -20,7 +20,6 @@ export const Images = ({data, galleryID}) => {
         };
     }, []);
 
-    console.log(count)
     return <div>
         <div className={styles.images} id={galleryID}>
             {data.slice(0, count).map((t, index) => (<a

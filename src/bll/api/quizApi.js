@@ -57,6 +57,12 @@ export const api = {
     },
     getBlogData() {
         return apiInstance.get("blogs?populate=deep")
+    } ,
+    getBlockArticleData() {
+        return apiInstance.get("block-atricle?populate=deep")
+    },
+    getBlockVideoData() {
+        return apiInstance.get("block-video?populate=deep")
     }
 }
 
