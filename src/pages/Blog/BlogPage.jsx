@@ -4,7 +4,7 @@ import styles from "./BlogPage.module.scss";
 import {Container, Excursion, Garanties, MainForm, NavigationHeader,} from "../../components";
 import {BlogContainer} from "../../components/Blog/BlogContainer";
 import {TopObject} from "../../components/TopObject/TopObject";
-import {BLockArticle} from "../../components/BlockArticle/BlockArticle";
+import {BlockArticle} from "../../components/BlockArticle/BlockArticle";
 import {BlockVideo} from "../../components/BlockVideo/BlockVideo";
 
 export const BlogPage = () => {
@@ -16,10 +16,9 @@ export const BlogPage = () => {
         <BlogContainer />
         <TopObject/>
 
-
         <Garanties title={true} />
         <BlockVideo />
-        <BLockArticle/>
+        <BlockArticle/>
         <Excursion cloudImg={true} houseImg={true} />
       </Container>
     </main>

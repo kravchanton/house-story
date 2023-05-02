@@ -13,6 +13,7 @@ import rehypeRaw from 'https://esm.sh/rehype-raw@6'
 import {Images} from "./Images";
 import {TopObject} from "../../components/TopObject/TopObject";
 import {BlockVideo} from "../../components/BlockVideo/BlockVideo";
+import {BlockArticle} from "../../components/BlockArticle/BlockArticle";
 
 export const ArticlePage = () => {
     useEffect(() => {
@@ -92,7 +93,7 @@ export const ArticlePage = () => {
 
                 <TopObject/>
                 <BlockVideo />
-                <BLockArticle/>
+                <BlockArticle/>
                 <Excursion cloudImg={true} houseImg={true}/>
             </Container>}
         </section>

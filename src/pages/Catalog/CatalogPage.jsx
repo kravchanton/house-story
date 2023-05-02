@@ -6,7 +6,7 @@ import {CatalogQuiz} from "../../components/Catalog/CatalogQuiz";
 import {useDispatch, useSelector} from "react-redux";
 import {fetchCatalogPage} from "./../../bll/catalogPageReducer";
 import {TopObject} from "../../components/TopObject/TopObject";
-import {BLockArticle} from "../../components/BlockArticle/BlockArticle";
+import {BlockArticle} from "../../components/BlockArticle/BlockArticle";
 import {BlockVideo} from "../../components/BlockVideo/BlockVideo";
 
 export const CatalogPage = () => {
@@ -27,7 +27,7 @@ export const CatalogPage = () => {
 
                 <Garanties title={true}/>
                 <BlockVideo />
-                <BLockArticle/>
+                <BlockArticle/>
                 <Excursion cloudImg={true} houseImg={true}/>
             </Container>}
         </main>
