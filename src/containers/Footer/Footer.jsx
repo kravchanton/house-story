@@ -17,6 +17,7 @@ import { Arrow, ArrowRight, LogoVariant } from "../../icons";
 // import { Swiper, SwiperSlide } from "swiper/react";
 
 export const Footer = ({ socialLinks, reviews }) => {
+  console.log(reviews);
   return (
     <footer className={styles.footer}>
       <Container className={styles.container}>
