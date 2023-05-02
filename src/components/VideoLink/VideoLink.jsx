@@ -19,10 +19,12 @@ export const VideoLink = ({
   youtubeLink,
   classNameWrapper,
   blurPoster,
+  footer,
 }) => {
   const [play, setPlay] = useState(false);
   const [status, setStatus] = useState(playbackStatus.Stopped);
   const videoRef = useRef();
+  console.log(youtubeLink);
 
   const handlePlay = () => {
     setStatus(playbackStatus.Playing);
@@ -49,7 +51,11 @@ export const VideoLink = ({
               <p className={styles.author}>{author}</p>
               <p className={styles.desc}>{descr}</p>
               <div>
-                <img className={styles.image} src={poster} alt="" />
+                <img
+                  className={!footer ? styles.image : styles.imageFooter}
+                  src={poster}
+                  alt=""
+                />
               </div>
             </div>
           ) : null}
@@ -85,7 +91,11 @@ export const VideoLink = ({
                 <p className={styles.author}>{author}</p>
                 <p className={styles.desc}>{descr}</p>
               </div>
-              <img className={styles.image} src={poster} alt="" />
+              <img
+                className={!footer ? styles.image : styles.imageFooter}
+                src={poster}
+                alt=""
+              />
             </div>
           ) : null}
           <button
