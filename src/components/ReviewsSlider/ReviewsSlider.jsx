@@ -10,29 +10,31 @@ import "./ReviewsSlider.scss";
 import { Review } from "../Review";
 
 export const ReviewsSlider = ({ reviews }) => {
-  console.log(reviews);
+  console.log(reviews[1].youtubeLink);
   return (
-    <div className="wrapper">
-      <Swiper
-        loop={true}
-        slidesPerView={3}
-        spaceBetween={30}
-        pagination={{ clickable: true }}
-        modules={[Pagination]}
-      >
-        <>
-          {reviews.map((item) => (
-            <SwiperSlide key={item.id}>
-              <Review
-                externalLink={item.externalLink}
-                yotubeLink={item.youtubeLink}
-                src={`${process.env.REACT_APP_UPLOAD_URL}${item?.video?.data?.attributes?.url}`}
-                image={`${process.env.REACT_APP_UPLOAD_URL}${item.posterImage.data.attributes.url}`}
-              />
-            </SwiperSlide>
-          ))}
-        </>
-      </Swiper>
-    </div>
+    <>
+      {reviews && (
+        <Swiper
+          loop={true}
+          slidesPerView={3}
+          spaceBetween={30}
+          pagination={{ clickable: true }}
+          modules={[Pagination]}
+        >
+          <>
+            {reviews.map((item) => (
+              <SwiperSlide key={item.id}>
+                <Review
+                  externalLink={item?.externalLink}
+                  yotubeLink={item?.youtubeLink}
+                  src={`${process.env.REACT_APP_UPLOAD_URL}${item?.video?.data?.attributes?.url}`}
+                  image={`${process.env.REACT_APP_UPLOAD_URL}${item.posterImage.data.attributes.url}`}
+                />
+              </SwiperSlide>
+            ))}
+          </>
+        </Swiper>
+      )}
+    </>
   );
 };

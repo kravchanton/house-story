@@ -28,3 +28,26 @@
   color: #363130;
   margin-bottom: 16px;
 }
+
+@media (max-width: 480px) {
+  .wrapper {
+    gap: 24px;
+    margin-bottom: 40px;
+  }
+  .wrapperCard {
+    gap: 24px;
+  }
+  .card {
+    box-shadow: none;
+    padding: 0;
+  }
+  .title {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+  }
+  .descWeapper p {
+    font-size: 12px;
+    line-height: 14px;
+  }
+}

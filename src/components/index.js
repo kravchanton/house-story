@@ -44,3 +44,5 @@ export * from "./GalleryAboutComponent";
 export * from "./GalleryContactsComponent";
 export * from "./ReviewText";
 export * from "./CommonReviewText";
+export * from "./AboutContentBlock";
+export * from "./PhotoItemAbout";

@@ -26,8 +26,26 @@
     content: "";
   }
 }
+.logo {
+  display: block;
+  width: 199px;
+  height: 66px;
+}
+.logo p {
+  font-family: Roboto, sans-serif;
+  font-size: 14px;
+  line-height: 16px;
+  color: #000000;
+}
+.logo img {
+  width: 100%;
+  object-fit: cover;
+}
 .phoneNumber {
   color: #000000;
+}
+.btnArrow {
+  background-color: transparent;
 }
 .phoneWrapper {
   cursor: pointer;
@@ -37,6 +55,9 @@
   background: #ffffff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
   border-radius: 3px;
+}
+.phoneBurger {
+  display: none;
 }
 .number {
   font-size: 20px;
@@ -183,40 +204,54 @@
   }
 }
 @media (max-width: 480px) {
-  .btn {
+  .header {
+    padding: 14px 0;
+    min-height: 60px;
+    background: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+    border-radius: 3px;
+  }
+  .logo p {
     display: none;
   }
   .logo {
-    width: 100.13px;
-    height: 22.52px;
+    width: 72px;
+    height: 24px;
   }
-  .socialWrapper {
+  .plantWrapper {
     display: none;
   }
-  .header {
-    min-height: 60px;
-    padding: 16px 0;
+  .structure {
+    display: none;
   }
-  .container {
-    padding: 0 16px;
+  .btnLink {
+    display: none;
   }
-  .text {
-    font-size: 12px;
-    line-height: 14px;
-    &:before {
-      width: 5px;
-      height: 5px;
-    }
+  .phoneBurger {
+    background-color: transparent;
+    display: block;
   }
-  .number {
-    font-size: 12px;
-    line-height: 14px;
+  .phoneWrapper {
+    padding: 0;
+    background-color: transparent;
+    box-shadow: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
   }
-  .phoneIcon {
+  .phoneWrapper img {
     width: 14px;
     height: 14px;
   }
-  .nav {
+  .phone {
+    font-size: 12px;
+    line-height: 15px;
+  }
+  .text {
+    font-size: 12px;
+    line-height: 15px;
+  }
+  .greenBlock {
     display: none;
   }
   .info {

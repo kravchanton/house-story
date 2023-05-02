@@ -19,7 +19,7 @@ export const MainFormComponent = ({ links }) => {
   };
 
   return (
-    <div>
+    <div className={styles.wrapper}>
       <div className={styles.buttons}>
         <button
           onClick={handleActiveLeft}

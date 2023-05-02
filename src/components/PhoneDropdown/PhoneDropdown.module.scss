@@ -3,8 +3,8 @@
   padding-left: 88px;
   padding-right: 41px;
   padding-bottom: 32px;
-  top: 117px;
-  right: 455px;
+  top: 113px;
+  right: 455.7px;
   z-index: 1;
   background: #ffffff;
   box-shadow: 0 10px 8px rgba(0, 0, 0, 0.25);
@@ -35,4 +35,28 @@
 .name {
   font-weight: 700;
   color: #1eab5f;
+}
+
+@media (max-width: 480px) {
+  .wrapper {
+    width: 160px;
+    padding-right: 16px;
+    padding-left: 20px;
+    padding-bottom: 5px;
+    right: 15px;
+    top: 60px;
+  }
+  .phone {
+    font-size: 12px;
+    line-height: 14px;
+    padding-bottom: 10px;
+    &:after {
+      top: 20px;
+    }
+  }
+  .name {
+    font-size: 12px;
+    line-height: 14px;
+    margin-bottom: 5px;
+  }
 }

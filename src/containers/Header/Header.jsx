@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 
-import logo from "../../assets/logo.svg";
+// import logo from "../../assets/logo3.svg";
 import plant from "../../assets/plant.png";
 import phone from "../../assets/phoneContact.png";
 
 import styles from "./Header.module.scss";
 
-import { SmallArrow, Structure } from "../../icons";
+import { Burger, Logo, SmallArrow, Structure } from "../../icons";
 import {
   Container,
   MenuButton,
@@ -31,9 +31,11 @@ export const Header = ({
     <header className={styles.header}>
       <Container className={styles.container}>
         <div className={styles.info}>
-          <NavLink to="/">
-            <img src={logo} alt="logo" />
+          <NavLink className={styles.logo} to="/">
+            <Logo />
+            <p>Общестроительная компания</p>
           </NavLink>
+
           <div className={styles.plantWrapper}>
             <img src={plant} alt="" />
             <h4 className={styles.plantText}>
@@ -75,6 +77,7 @@ export const Header = ({
                   {mainPhone}
                 </a>
                 <button
+                  className={styles.btnArrow}
                   onClick={() => setIsOpenContacts((prevState) => !prevState)}
                 >
                   <SmallArrow />
@@ -84,7 +87,14 @@ export const Header = ({
               {isOpenContacts && <PhoneDropdown contactItems={contactItems} />}
             </div>
           </div>
-          <NavLink to={buttonLink}>
+          <button
+            className={styles.phoneBurger}
+            onClick={() => setIsOpenMenu(true)}
+          >
+            <Burger />
+          </button>
+
+          <NavLink className={styles.btnLink} to={buttonLink}>
             <button type="button" className={styles.btn}>
               {buttonText}
             </button>
