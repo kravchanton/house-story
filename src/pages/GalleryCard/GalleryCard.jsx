@@ -15,7 +15,8 @@ import {Container, MenuButton} from "../../components";
 import {MailSocials, PhoneSocials, Telegram, Viber, WhatsUp,} from "../../icons";
 import {useDispatch, useSelector} from "react-redux";
 import {fetchPhotoGallery} from "../../bll/photoReducer";
-import {BlockWrapper} from "../../containers";
+import {TopObject} from "../../components/TopObject/TopObject";
+import {BlockArticle} from "../../components/BlockArticle/BlockArticle";
 
 export const GalleryCard = () => {
   const {currentPage, entriesPerPage, entries} = usePagination(1, 6);
@@ -35,7 +36,6 @@ export const GalleryCard = () => {
   const [open, setOpen] = useState(false)
   const openLightBox = () => {
     setOpen(true)
-
   }
   const thumbnailsRef = React.useRef(null);
   let src = 'src'
@@ -191,13 +191,9 @@ export const GalleryCard = () => {
             />
           </div>
         </div>
-        <div className={styles.topWrapper}>
-          <BlockWrapper
-              title="Топ выполненных объектов"
-              subtitle="Показываем процесс работы изнутри, делимся результатами, опытом, полезными фишками"
-              top={true}
-          ></BlockWrapper>
-        </div>
+        <TopObject/>
+
+        <BlockArticle/>
       </Container>}
     </section>
   );

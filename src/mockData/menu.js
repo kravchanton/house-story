@@ -14,16 +14,17 @@ export const menu = [
   {
     id: uuidv4(),
     title: "Блог",
-    link: 'blog/1/1'
+    link: 'blog/1'
   },
   {
     id: uuidv4(),
     title: "О нас",
+    link: 'about'
   },
   {
     id: uuidv4(),
-    title: "Квиз",
-    link: 'quiz/1'
+    title: "Контакты",
+    link: 'contacts'
   },
   {
     id: uuidv4(),

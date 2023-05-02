@@ -48,8 +48,10 @@ export const VideoLink = ({
               )}
             >
               <h3 className={styles.title}>{title}</h3>
-              <p className={styles.author}>{author}</p>
-              <p className={styles.desc}>{descr}</p>
+              <div>
+                <p className={styles.author}>{author}</p>
+                <p className={styles.desc}>{descr}</p>
+              </div>
               <div>
                 <img
                   className={!footer ? styles.image : styles.imageFooter}

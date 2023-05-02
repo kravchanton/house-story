@@ -12,7 +12,6 @@ import { VideoLink } from "../VideoLink";
 import styles from "../Review/Review.module.scss";
 
 export const ReviewsSlider = ({ reviews }) => {
-  console.log(reviews[1].youtubeLink);
   return (
     <>
       {reviews && (
