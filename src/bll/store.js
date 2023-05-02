@@ -12,6 +12,7 @@ import contactsReducer from "./contactsReducer";
 import aboutReducer from "./aboutReducer";
 import blockArticleReducer from "./blockAtricleReducer";
 import blockVideoReducer from "./blockVideoReducer";
+import layoutReducer from "./layoutReducer";
 
 export const store = configureStore({
   reducer: {
@@ -20,6 +21,7 @@ export const store = configureStore({
     meetingData: meetingReducer,
     contactsData: contactsReducer,
     aboutData: aboutReducer,
+    layoutData: layoutReducer,
     photo: photoReducer,
     catalog: catalogReducer,
     catalogPage: catalogPageReducer,

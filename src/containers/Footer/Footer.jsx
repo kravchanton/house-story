@@ -1,9 +1,7 @@
 import React from "react";
 
 import styles from "./Footer.module.scss";
-import Instagram from "../../assets/instagram.png";
-import Facebook from "../../assets/facebook.png";
-import Youtube from "../../assets/youtube.png";
+
 // import { footerMenu } from "../../mockData/footerMenu";
 
 import {
@@ -13,16 +11,17 @@ import {
   // MenuFooterItem,
   ReviewsSlider,
 } from "../../components";
-import { Arrow, ArrowRight, LogoVariant, WhatsUp, Telegram } from "../../icons";
+import { Arrow, ArrowRight, LogoVariant } from "../../icons";
 
-export const Footer = () => {
+export const Footer = ({ socialLinks, reviews }) => {
+  console.log(reviews);
   return (
     <footer className={styles.footer}>
       <Container className={styles.container}>
         <div className={styles.left}>
           <div className={styles.reviews}>
             <p className={styles.title}>Видеоотзывы от партнёров</p>
-            <ReviewsSlider />
+            <ReviewsSlider reviews={reviews} />
           </div>
           <div className={styles.logoBlock}>
             <LogoVariant />
@@ -48,11 +47,19 @@ export const Footer = () => {
             <Arrow className={styles.arrow} />
           </MenuButton>
           <div className={styles.contacts}>
-            <WhatsUp />
-            <Telegram />
-            <img src={Instagram} alt="Instagram" />
-            <img src={Youtube} alt="Youtube" />
-            <img src={Facebook} alt="Facebook" />
+            {socialLinks.map((item) => (
+              <a
+                key={item.id}
+                href={item.link}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img
+                  src={`${process.env.REACT_APP_UPLOAD_URL}${item.icon.data.attributes.url}`}
+                  alt=""
+                />
+              </a>
+            ))}
           </div>
           <div className={styles.logoMobile}>
             <LogoVariant />

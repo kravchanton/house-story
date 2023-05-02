@@ -7,10 +7,10 @@ import "swiper/css/pagination";
 
 import "./ReviewsSlider.scss";
 
-import { reviews } from "../../mockData/reviews";
 import { Review } from "../Review";
 
-export const ReviewsSlider = () => {
+export const ReviewsSlider = ({ reviews }) => {
+  console.log(reviews);
   return (
     <div className="wrapper">
       <Swiper
@@ -23,7 +23,12 @@ export const ReviewsSlider = () => {
         <>
           {reviews.map((item) => (
             <SwiperSlide key={item.id}>
-              <Review image={item.image} />
+              <Review
+                externalLink={item.externalLink}
+                yotubeLink={item.youtubeLink}
+                src={`${process.env.REACT_APP_UPLOAD_URL}${item?.video?.data?.attributes?.url}`}
+                image={`${process.env.REACT_APP_UPLOAD_URL}${item.posterImage.data.attributes.url}`}
+              />
             </SwiperSlide>
           ))}
         </>

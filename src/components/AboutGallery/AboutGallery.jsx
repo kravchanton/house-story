@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Gallery } from "../Gallery";
+import { GalleryAboutComponent } from "../GalleryAboutComponent";
 
 import "./AboutGallery.scss";
 
@@ -12,16 +12,22 @@ export const AboutGallery = ({
   return (
     <div>
       {isActiveOffice && (
-        <Gallery isActiveOffice={isActiveOffice} galleryID="my-test-gallery" />
+        <GalleryAboutComponent
+          isActiveOffice={isActiveOffice}
+          galleryID="my-test-gallery"
+        />
       )}
       {isActiveProduction && (
-        <Gallery
+        <GalleryAboutComponent
           isActiveProduction={isActiveProduction}
           galleryID="my-test-gallery"
         />
       )}
       {isActiveStock && (
-        <Gallery isActiveStock={isActiveStock} galleryID="my-test-gallery" />
+        <GalleryAboutComponent
+          isActiveStock={isActiveStock}
+          galleryID="my-test-gallery"
+        />
       )}
     </div>
   );
