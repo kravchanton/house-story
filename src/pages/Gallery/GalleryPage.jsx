@@ -4,8 +4,8 @@ import styles from "./GalleryPage.module.scss";
 import {Container, Excursion, Garanties, MainForm, NavigationHeader,} from "../../components";
 import {GalleryContainer} from "../../components/Gallery/GalleryContainer";
 import {TopObject} from "../../components/TopObject/TopObject";
-import {BLockArticle} from "../../components/BlockArticle/BlockArticle";
 import {BlockVideo} from "../../components/BlockVideo/BlockVideo";
+import {BlockArticle} from "../../components/BlockArticle/BlockArticle";
 
 export const GalleryPage = () => {
   return (
@@ -19,7 +19,7 @@ export const GalleryPage = () => {
 
         <Garanties title={true} />
         <BlockVideo />
-        <BLockArticle/>
+        <BlockArticle/>
 
         <Excursion cloudImg={true} houseImg={true} />
       </Container>

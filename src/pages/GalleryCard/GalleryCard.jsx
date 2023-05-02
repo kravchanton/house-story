@@ -16,7 +16,7 @@ import {MailSocials, PhoneSocials, Telegram, Viber, WhatsUp,} from "../../icons"
 import {useDispatch, useSelector} from "react-redux";
 import {fetchPhotoGallery} from "../../bll/photoReducer";
 import {TopObject} from "../../components/TopObject/TopObject";
-import {BLockArticle} from "../../components/BlockArticle/BlockArticle";
+import {BlockArticle} from "../../components/BlockArticle/BlockArticle";
 
 export const GalleryCard = () => {
   const {currentPage, entriesPerPage, entries} = usePagination(1, 6);
@@ -193,7 +193,7 @@ export const GalleryCard = () => {
         </div>
         <TopObject/>
 
-        <BLockArticle/>
+        <BlockArticle/>
       </Container>}
     </section>
   );
