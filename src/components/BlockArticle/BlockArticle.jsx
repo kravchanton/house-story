@@ -30,7 +30,7 @@ export const BlockArticle = () => {
                 <div className={styles.content}>
 
                     {data.items.slice(0, 3).map((t, index) =>
-                        <NavLink key={index} className={styles.card} to="#">
+                        <NavLink key={index} className={styles.card} to={t.link}>
                             <img className={styles.img} src={`${process.env.REACT_APP_UPLOAD_URL}${t?.image?.data?.attributes?.url}`} alt="" />
                             <h4 className={styles.name}>{t.title}</h4>
                             <p className={styles.duration}>{t.time}</p>

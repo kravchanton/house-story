@@ -33,7 +33,7 @@ export const MainForm = () => {
             <h2>{data.attributes.title}</h2>
             <h3>{data.attributes.subtitle}</h3>
 
-            <MainFormComponent links={data.attributes.socialForm.socialLinks} />
+            <MainFormComponent links={data?.attributes?.socialForm?.socialLinks} />
           </div>
           <div className={styles.videoWrapper}>
             <VideoLink
@@ -41,8 +41,8 @@ export const MainForm = () => {
               title={data.attributes.videoTitle}
               author={data.attributes.author}
               descr={data.attributes.descr}
-              poster={`${process.env.REACT_APP_UPLOAD_URL}${data.attributes.poster.data.attributes.url}`}
-              youtubeLink={data.attributes.youtubeLink}
+              poster={`${process.env.REACT_APP_UPLOAD_URL}${data?.attributes?.poster?.data?.attributes?.url}`}
+              youtubeLink={data?.attributes?.youtubeLink}
             />
           </div>
         </>
