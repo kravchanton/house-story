@@ -10,7 +10,6 @@ import "./ReviewsSlider.scss";
 import { Review } from "../Review";
 
 export const ReviewsSlider = ({ reviews }) => {
-  console.log(reviews[1].youtubeLink);
   return (
     <>
       {reviews && (
