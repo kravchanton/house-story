@@ -51,11 +51,10 @@ export const VideoLink = ({
                             )}
                         >
                             <h3 className={styles.title}>{title}</h3>
-                            <p className={styles.author}>{author}</p>
+                          <div> <p className={styles.author}>{author}</p>
                             <p className={styles.desc}>{position}</p>
                             {link &&    <NavLink to={`/video/${id}`}><p className={styles.link}>Смотреть</p></NavLink>}
-                            {link &&    <NavLink to={`/video/${id}`}><p className={styles.link}>Смотреть</p></NavLink>}
-                            <div>
+                          </div><div>
                                 <img
                                     className={!footer ? styles.image : styles.imageFooter}
                                     src={poster}
