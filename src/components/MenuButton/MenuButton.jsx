@@ -18,8 +18,9 @@ export const MenuButton = ({
         disabled={disabled}
         className={classNames(styles.button, className)}
       >
+          {children}
         <p>{title}</p>
-        {children}
+
       </button>
       {lockText && (
         <div className={styles.lockWrapper}>

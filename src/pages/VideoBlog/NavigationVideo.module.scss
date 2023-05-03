@@ -1,0 +1,35 @@
+.nav {
+  width: 365px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.searchInput {
+  padding: 18px;
+  width: 365px;
+  height: 60px;
+  background: #ffffff;
+  border: 1px solid #1eab5f;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  color: #363130;
+}
+.navigationButton {
+  width: 365px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.titleNav {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 21px;
+  color: #1eab5f;
+}
+.btn {
+  text-align: left;
+  width: 100%;
+  color: #000000;
+  border: 1px solid #1eab5f;
+  border-radius: 5px;
+}

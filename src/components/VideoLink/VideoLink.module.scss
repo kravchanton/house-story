@@ -80,7 +80,7 @@
   max-width: 401px;
   position: absolute;
   left: 40px;
-  top: 267px;
+  bottom: 70px;
   font-weight: 600;
   font-size: 16px;
   line-height: 22px;
@@ -91,7 +91,17 @@
   max-width: 401px;
   position: absolute;
   left: 40px;
-  top: 290px;
+  bottom: 43px;
+  font-size: 14px;
+  line-height: 18px;
+  color: #ffffff;
+  z-index: 2;
+}
+.link {
+  max-width: 401px;
+  position: absolute;
+  right: 40px;
+  bottom: 43px;
   font-size: 14px;
   line-height: 18px;
   color: #ffffff;

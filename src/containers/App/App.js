@@ -1,12 +1,17 @@
-import React from "react";
-import {Route, Routes} from "react-router-dom";
+import React, {useLayoutEffect} from "react";
+import {Route, Routes, useLocation} from "react-router-dom";
 
 import {About, ArticlePage, CatalogCard, CatalogPage, Contacts, GalleryCard, Layout, Meeting,} from "../../pages";
 import {Gratitude} from "../../components";
 import {GalleryPage} from "../../pages/Gallery";
 import {BlogPage} from "../../pages/Blog";
+import {VideoBlog} from "../../pages/VideoBlog";
 
 export const App = () => {
+    const location = useLocation();
+    useLayoutEffect(() => {
+        document.documentElement.scrollTo(0, 0);
+    }, [location.pathname]);
   return (
     <Routes>
       <Route path="/" element={<Layout />}>
@@ -18,6 +23,7 @@ export const App = () => {
           <Route path="/gallery-card/:idPage/:id" element={<GalleryCard />} />
           <Route path="/blog/:idPage" element={<BlogPage />} />
           <Route path="/blog/:idPage/:id" element={<ArticlePage />} />
+          <Route path="/video/:id" element={<VideoBlog />} />
           <Route path="contacts" element={<Contacts />} />
           <Route path="about" element={<About />} />
           <Route path="meeting" element={<Meeting />} />
