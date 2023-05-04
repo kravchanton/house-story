@@ -573,14 +573,13 @@
     border-radius: 5px;
   }
   .history {
-    gap: 0;
+    gap: 16px;
     margin-bottom: 24px;
   }
   .title {
     font-weight: 700;
     font-size: 18px;
     line-height: 22px;
-    margin-bottom: 16px;
   }
   .titleContent {
     font-weight: 700;
@@ -707,11 +706,14 @@
   .subtitle {
     font-size: 12px;
     line-height: 14px;
-    margin-bottom: 16px;
+    margin-bottom: 0;
     margin-top: 0;
   }
   .clients {
     margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
   }
   .clientsContent {
     flex-direction: column;
@@ -799,7 +801,110 @@
   }
   .gratitude {
     gap: 24px;
+    margin-bottom: 40px;
   }
   .bg {
+    display: none;
+  }
+  .reviewBg {
+    display: none;
+  }
+  .reviewCloud {
+    display: none;
+  }
+  .videoReview {
+    box-shadow: none;
+    flex-direction: column;
+    padding: 0;
+    gap: 20px;
+  }
+  .videoWrapper {
+    min-width: 100%;
+    height: 180px;
+    order: 2;
+  }
+  .sliderCard {
+    background: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+    border-radius: 5px 5px 0 0;
+    width: 100%;
+    padding: 16px;
+    gap: 16px;
+  }
+  .personImg {
+    order: 2;
+    width: 80px;
+    height: 80px;
+  }
+  .keyPersons {
+    gap: 24px;
+    margin-bottom: 40px;
+  }
+  .competentions {
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+  .imgRoman {
+    padding: 0;
+  }
+  .personsContent {
+    background: #ffffff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+    border-radius: 5px 5px 0px 0px;
+    padding: 16px;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .imgRoman img {
+    width: 100%;
+    height: 100%;
+  }
+  .descTitle {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    color: #1eab5f;
+    margin-bottom: 8px;
+  }
+  .personName {
+    font-weight: 900;
+    font-size: 12px;
+    line-height: 15px;
+  }
+  .competentionBlock {
+    gap: 8px;
+  }
+  .competentionNumber {
+    font-size: 20px;
+    line-height: 24px;
+    color: #1eab5f;
+  }
+  .itemTitle {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    color: #363130;
+    padding-bottom: 0;
+  }
+  .competentionDesc {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+  }
+  .competentionItem {
+    align-items: center;
+    gap: 16px;
+  }
+  .personJob {
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 12px;
+  }
+  .miniImg {
+    width: 80px;
+    height: 80px;
+  }
+  .personCard {
+    width: 80px;
   }
 }

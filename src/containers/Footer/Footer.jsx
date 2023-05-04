@@ -2,6 +2,8 @@ import React from "react";
 
 import styles from "./Footer.module.scss";
 
+import logo from "../../assets/logo-variant.svg";
+
 // import { footerMenu } from "../../mockData/footerMenu";
 
 import {
@@ -36,7 +38,10 @@ export const Footer = ({ socialLinks, reviews }) => {
             </p>
           </div>
         </div>
-        <NavMenu />
+        <div className={styles.menu}>
+          <NavMenu />
+        </div>
+
         <div className={styles.info}>
           <div className={styles.textWrapper}>
             <p className={styles.textInfo}>Смотреть все документы</p>
@@ -67,7 +72,7 @@ export const Footer = ({ socialLinks, reviews }) => {
             ))}
           </div>
           <div className={styles.logoMobile}>
-            <LogoVariant />
+            <img src={logo} alt="" />
             <p className={styles.text}>
               <span>Alfa Digital Agency</span> – разработка высоко конверсионных
               сайтов

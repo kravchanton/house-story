@@ -3,6 +3,7 @@ import React from "react";
 import styles from "./SlideTop.module.scss";
 import { MenuButton } from "../MenuButton";
 import { NavLink } from "react-router-dom";
+import classNames from "classnames";
 
 export const SlideTop = ({ img, data }) => {
   return (
@@ -24,8 +25,12 @@ export const SlideTop = ({ img, data }) => {
               </li>
             ))}
           </ul>
-          <NavLink to={data.buttonLink}>
+          <NavLink className={styles.btnWrapper} to={data.buttonLink}>
             <MenuButton title={data.buttonTitle} className={styles.btn} />
+            <MenuButton
+              title="Написать прорабу"
+              className={classNames(styles.btn, styles.btnSecond)}
+            />
           </NavLink>
         </div>
       </div>

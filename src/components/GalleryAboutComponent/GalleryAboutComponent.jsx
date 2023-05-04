@@ -29,6 +29,7 @@ export const GalleryAboutComponent = (props) => {
       lightbox = null;
     };
   }, []);
+  console.log(props.isActiveProduction);
 
   return (
     <div className="pswp-gallery" id={props.galleryID}>
@@ -54,43 +55,47 @@ export const GalleryAboutComponent = (props) => {
             </a>
           ))}
       {props.isActiveProduction &&
-        data?.photos?.production?.photos?.data?.map((image, index) => (
-          <a
-            href={`${process.env.REACT_APP_UPLOAD_URL}${image?.attributes?.url}`}
-            data-pswp-width={image?.attributes?.width}
-            data-pswp-height={image?.attributes?.height}
-            key={props.galleryID + "-" + index}
-            target="_blank"
-            rel="noreferrer"
-          >
-            <div className="imageWrapper">
-              <img
-                className="imageGallery"
-                src={`${process.env.REACT_APP_UPLOAD_URL}${image?.attributes?.url}`}
-                alt=""
-              />
-            </div>
-          </a>
-        ))}
+        data?.photos?.production?.photos?.data
+          ?.slice(0, isMobile)
+          .map((image, index) => (
+            <a
+              href={`${process.env.REACT_APP_UPLOAD_URL}${image?.attributes?.url}`}
+              data-pswp-width={image?.attributes?.width}
+              data-pswp-height={image?.attributes?.height}
+              key={props.galleryID + "-" + index}
+              target="_blank"
+              rel="noreferrer"
+            >
+              <div className="imageWrapper">
+                <img
+                  className="imageGallery"
+                  src={`${process.env.REACT_APP_UPLOAD_URL}${image?.attributes?.url}`}
+                  alt=""
+                />
+              </div>
+            </a>
+          ))}
       {props.isActiveStock &&
-        data?.photos?.stock?.photos?.data?.map((image, index) => (
-          <a
-            href={`${process.env.REACT_APP_UPLOAD_URL}${image?.attributes?.url}`}
-            data-pswp-width={image?.attributes?.width}
-            data-pswp-height={image?.attributes?.height}
-            key={props.galleryID + "-" + index}
-            target="_blank"
-            rel="noreferrer"
-          >
-            <div className="imageWrapper">
-              <img
-                className="imageGallery"
-                src={`${process.env.REACT_APP_UPLOAD_URL}${image?.attributes?.url}`}
-                alt=""
-              />
-            </div>
-          </a>
-        ))}
+        data?.photos?.stock?.photos?.data
+          ?.slice(0, isMobile)
+          .map((image, index) => (
+            <a
+              href={`${process.env.REACT_APP_UPLOAD_URL}${image?.attributes?.url}`}
+              data-pswp-width={image?.attributes?.width}
+              data-pswp-height={image?.attributes?.height}
+              key={props.galleryID + "-" + index}
+              target="_blank"
+              rel="noreferrer"
+            >
+              <div className="imageWrapper">
+                <img
+                  className="imageGallery"
+                  src={`${process.env.REACT_APP_UPLOAD_URL}${image?.attributes?.url}`}
+                  alt=""
+                />
+              </div>
+            </a>
+          ))}
     </div>
   );
 };

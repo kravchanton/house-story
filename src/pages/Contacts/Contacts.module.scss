@@ -62,3 +62,54 @@
   flex-direction: column;
   gap: 40px;
 }
+
+@media (max-width: 480px) {
+  .info {
+    flex-direction: column;
+  }
+  .item {
+    flex-direction: column;
+    gap: 8px;
+  }
+  .names {
+    gap: 8px;
+  }
+  .department {
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 14px;
+  }
+  .person {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+  }
+  .personWrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .phone {
+    font-size: 12px;
+    line-height: 14px;
+  }
+  .contacts {
+    padding-top: 24px;
+    gap: 40px;
+  }
+  .title {
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 22px;
+    color: #363130;
+    background: transparent;
+    -webkit-text-fill-color: #363130;
+  }
+  .photo {
+    gap: 24px;
+    background: #ffffff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+    border-radius: 3px;
+    padding: 16px;
+  }
+}

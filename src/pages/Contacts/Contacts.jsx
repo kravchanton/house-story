@@ -58,7 +58,7 @@ export const Contacts = () => {
             <BlockWrapper
               top={true}
               title="Топ выполненных объектов"
-              subtitle="Топ выполненных объектов"
+              subtitle="Показываем процесс работы изнутри, делимся результатами, опытом, полезными фишками"
             />
             <Excursion houseImg={true} cloudImg={true} />
           </div>

@@ -30,3 +30,10 @@
 .btnActive {
   background-color: #1eab5f;
 }
+
+@media (max-width: 480px) {
+  .button p {
+    font-size: 12px;
+    line-height: 14px;
+  }
+}

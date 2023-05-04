@@ -61,7 +61,7 @@ export const About = () => {
   }, []);
 
   const handleActiveOffice = () => {
-    setIsActiveOffice((prevState) => !prevState);
+    setIsActiveOffice(true);
     setIsActiveProduction(false);
     setIsActiveStock(false);
   };
@@ -75,6 +75,16 @@ export const About = () => {
     setIsActiveStock(true);
     setIsActiveOffice(false);
     setIsActiveProduction(false);
+  };
+
+  const toggleActiveOffice = () => {
+    setIsActiveOffice((prevState) => !prevState);
+  };
+  const toggleActiveProduction = () => {
+    setIsActiveProduction((prevState) => !prevState);
+  };
+  const toggleActiveStock = () => {
+    setIsActiveStock((prevState) => !prevState);
   };
 
   return (
@@ -162,13 +172,32 @@ export const About = () => {
           </div>
           <div className={styles.mobilePhotos}>
             <PhotoItemAbout
+              isActiveOffice={isActiveOffice}
               buttonLink={data.photos.buttonLink}
               buttonText={data.photos.buttonText}
               title="Наш офис"
-              isActiveOffice={isActiveOffice}
-              activeOffice={handleActiveOffice}
+              activeOffice={toggleActiveOffice}
             />
           </div>
+          <div className={styles.mobilePhotos}>
+            <PhotoItemAbout
+              isActiveProduction={isActiveProduction}
+              buttonLink={data.photos.buttonLink}
+              buttonText={data.photos.buttonText}
+              title="Производство"
+              activeProduction={toggleActiveProduction}
+            />
+          </div>
+          <div className={styles.mobilePhotos}>
+            <PhotoItemAbout
+              isActiveStock={isActiveStock}
+              buttonLink={data.photos.buttonLink}
+              buttonText={data.photos.buttonText}
+              title="Склад"
+              activeStock={toggleActiveStock}
+            />
+          </div>
+
           <div className={styles.photos}>
             <div className={styles.tabsBlock}>
               <button
@@ -482,8 +511,15 @@ export const About = () => {
             <div className={styles.reviewSlider}>
               <Swiper
                 style={{ position: "unset" }}
-                slidesPerView={2}
                 spaceBetween={40}
+                breakpoints={{
+                  320: {
+                    slidesPerView: 1,
+                  },
+                  768: {
+                    slidesPerView: 2,
+                  },
+                }}
               >
                 {data.reviews.commonReviews.reviewItem.map((item) => (
                   <SwiperSlide key={item.id}>
@@ -542,17 +578,26 @@ export const About = () => {
                     ))}
                 </div>
                 <div className={styles.swiperWrapper}>
-                  <Swiper slidesPerView={4} spaceBetween={32}>
+                  <Swiper
+                    spaceBetween={32}
+                    breakpoints={{
+                      320: {
+                        slidesPerView: 3,
+                        spaceBetween: 10,
+                      },
+                      768: {
+                        slidesPerView: 6,
+                      },
+                    }}
+                  >
                     {data.keyPersons.persons.map((item) => (
                       <SwiperSlide onClick={() => setId(item.id)} key={item.id}>
                         <div className={styles.personCard}>
-                          <div className={styles.imageCardWrapper}>
-                            <img
-                              className={styles.miniImg}
-                              src={`${process.env.REACT_APP_UPLOAD_URL}${item.photo.data.attributes.formats.thumbnail.url}`}
-                              alt=""
-                            />
-                          </div>
+                          <img
+                            className={styles.miniImg}
+                            src={`${process.env.REACT_APP_UPLOAD_URL}${item.photo.data.attributes.formats.thumbnail.url}`}
+                            alt=""
+                          />
 
                           <h3
                             className={classNames(
