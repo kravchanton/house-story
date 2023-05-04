@@ -2,8 +2,6 @@
   display: flex;
   flex-direction: column;
   gap: 40px;
-  margin-top: 120px;
-  margin-bottom: 107px;
 }
 .title {
   margin-bottom: 8px;
@@ -145,23 +143,60 @@
 }
 
 .NavigationButton {
-  justify-content: left;
+  justify-content: space-between;
   gap: 24px;
   width: 365px;
   height: 60px;
-  border: 1px solid #1EAB5F;
+  border: 1px solid #1eab5f;
   border-radius: 5px;
-  color: #000000
+  color: #000000;
 }
-.NavigationButton svg{
+.NavigationButton svg {
   width: 30px;
   height: 30px;
 }
 
 .active {
-  color: #FFFFFF;
-  background: #1EAB5F;
+  color: #ffffff;
+  background: #1eab5f;
 }
-.active svg{
+.active svg {
   filter: brightness(0) invert(1);
+}
+.mobile {
+  display: none;
+}
+
+@media (max-width: 480px) {
+  .subtitle {
+    font-size: 12px;
+    line-height: 14px;
+  }
+  .section {
+    gap: 24px;
+  }
+  .content {
+    flex-direction: column;
+    gap: 16px;
+  }
+  .NavigationButton {
+    height: 40px;
+    width: 100%;
+  }
+  .buttonsBlock {
+    width: 70px;
+    height: 18px;
+    gap: 10px;
+    bottom: 15px;
+    left: 15px;
+  }
+  .buttons {
+    gap: 16px;
+  }
+  .desctop {
+    display: none;
+  }
+  .mobile {
+    display: block;
+  }
 }

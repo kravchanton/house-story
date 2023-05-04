@@ -7,6 +7,7 @@ import { Basic } from "../Form";
 export const MainFormComponent = ({ links }) => {
   const [isActiveRight, setIsActiveRight] = useState(false);
   const [isActiveLeft, setIsActiveLeft] = useState(true);
+  console.log(links);
 
   const handleActiveRight = () => {
     setIsActiveRight(true);
@@ -62,7 +63,7 @@ export const MainFormComponent = ({ links }) => {
                 rel="noreferrer"
               >
                 <img
-                  src={`${process.env.REACT_APP_UPLOAD_URL}${item.icon.data.attributes.url}`}
+                  src={`${process.env.REACT_APP_UPLOAD_URL}${item?.icon?.data?.attributes?.url}`}
                   alt=""
                 />
                 <p>{item.title}</p>

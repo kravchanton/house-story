@@ -38,10 +38,16 @@ export const BlockWrapper = ({
   const [isActive, setIsActive] = useState(true);
   console.log(isActive);
 
+  useEffect(() => {
+    return document.documentElement.clientWidth < 768
+      ? setIsActive(false)
+      : setIsActive(true);
+  });
+
   const handleActiveFolder = (index) => {
     setFolder(index);
     if (folder) {
-      setIsActive(true);
+      setIsActive((prevState) => !prevState);
     }
   };
 
@@ -124,6 +130,22 @@ export const BlockWrapper = ({
                   >
                     <HouseVariant className={styles.icon} />
                   </MenuButton>
+                  <div className={styles.topMobile}>
+                    <Swiper className="mySwiper" slidesPerView={1}>
+                      {data[folder].attributes.object.map((t, index) => (
+                        <SwiperSlide key={index}>
+                          <SlideTop
+                            img={`${process.env.REACT_APP_UPLOAD_URL}${t?.mainPhoto?.data?.attributes?.url}`}
+                            data={t}
+                          />
+                        </SwiperSlide>
+                      ))}
+                      <div className={styles.buttonsBlock}>
+                        <SliderBtn icon={true} direction="next" />
+                        <SliderBtn icon={true} direction="prev" />
+                      </div>
+                    </Swiper>
+                  </div>
                 </div>
               ))}
             </div>
