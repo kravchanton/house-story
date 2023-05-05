@@ -111,7 +111,7 @@
   display: flex;
   justify-content: center;
 
-  width: 100%;
+  width: 220px;
   height: 50px;
   border: 1px solid #130D0D;
   box-shadow: inset 4px 4px 25px rgba(241, 241, 241, 0.25);
@@ -120,8 +120,38 @@
   margin-top: 16px;
 
 }
+.share {
+ display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  width: 129px;
+  height: 50px;
+  border: 1px solid #130D0D;
+  box-shadow: inset 4px 4px 25px rgba(241, 241, 241, 0.25);
+  border-radius: 5px;
+  color: #000000;
+  margin-top: 16px;
+}
+.share p {
+  font-style: normal;
+  font-size: 16px;
+  line-height: 19px;
+  color: #000000;
+}
+.shareLinks {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+}
 .QuizWrapper{
   padding-top: 160px;
+}
+
+.wrapperBtn {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
 }
 .QuizWrapper h2 {
   font-weight: 700;
