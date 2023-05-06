@@ -81,3 +81,8 @@
     flex-direction: column-reverse;
   }
 }
+@media (max-width: 480px) {
+  .btn {
+    width: 70vw;
+  }
+}

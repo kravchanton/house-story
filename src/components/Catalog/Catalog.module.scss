@@ -16,6 +16,7 @@
   color: #1EAB5F
 }
 
+
 .wrapper {
   display: flex;
   z-index: 5;
@@ -24,7 +25,17 @@
 
 
 }
+.wrapperMobile {
+  display: flex;
+  flex-direction: column;
+  z-index: 5;
+  padding-top: 24px;
 
+
+}
+.itemMobile {
+
+}
 
 .NavigationWrapper {
 
@@ -51,7 +62,8 @@
   border-radius: 5px;
   color: #000000
 }
-.NavigationButton svg{
+
+.NavigationButton svg {
   width: 30px;
   height: 30px;
 }
@@ -60,20 +72,38 @@
   color: #FFFFFF;
   background: #1EAB5F;
 }
-.active svg{
+
+.active svg {
   filter: brightness(0) invert(1);
 }
+
 .catalogListWrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+
+.catalogListWrapperMobile {
+  max-width: 65vw;
+  padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+}
+
 .catalogList {
   display: flex;
   flex-direction: row;
   width: 65vw;
   flex-wrap: wrap;
   gap: 40px;
+
+}
+
+
+.hidden {
+  display: none;
 }
 
 .catalogItem {
@@ -82,14 +112,16 @@
   width: 365px;
   height: 348px;
 }
-.catalogItem img{
+
+.catalogItem img {
   margin-top: 16px;
   width: 365px;
   height: 207px;
   object-fit: cover;
   border-radius: 3px;
 }
-.catalogItem h4{
+
+.catalogItem h4 {
   font-weight: 900;
   font-size: 24px;
   line-height: 29px;
@@ -120,8 +152,9 @@
   margin-top: 16px;
 
 }
+
 .share {
- display: flex;
+  display: flex;
   flex-direction: column;
   align-items: center;
   gap: 5px;
@@ -133,18 +166,21 @@
   color: #000000;
   margin-top: 16px;
 }
+
 .share p {
   font-style: normal;
   font-size: 16px;
   line-height: 19px;
   color: #000000;
 }
+
 .shareLinks {
   display: flex;
   justify-content: center;
   gap: 6px;
 }
-.QuizWrapper{
+
+.QuizWrapper {
   padding-top: 160px;
 }
 
@@ -153,6 +189,7 @@
   flex-direction: row;
   gap: 15px;
 }
+
 .QuizWrapper h2 {
   font-weight: 700;
   font-size: 32px;
@@ -160,7 +197,8 @@
   text-transform: uppercase;
   color: #1EAB5F;
 }
-.QuizWrapper h2 span{
+
+.QuizWrapper h2 span {
   font-weight: 400;
   font-size: 18px;
   line-height: 21px;
@@ -172,4 +210,25 @@
 
 .icon {
   fill: #1eab5f;
+}
+
+@media (max-width: 992px) {
+  .wrapper {
+    display: none
+  }
+}
+@media (min-width: 992px) {
+  .wrapperMobile {
+    display: none
+  }
+}
+@media (max-width: 992px) {
+  .catalogList {
+    display: flex;
+    flex-direction: column;
+    width: 65vw;
+    flex-wrap: wrap;
+    gap: 40px;
+    align-items: center;
+  }
 }
