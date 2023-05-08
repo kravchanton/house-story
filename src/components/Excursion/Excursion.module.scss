@@ -16,6 +16,9 @@
   display: flex;
   gap: 40px;
 }
+.descWrapperVariant {
+  align-items: end;
+}
 .descTitle {
   font-size: 24px;
   line-height: 29px;
@@ -57,12 +60,21 @@
   top: 315px;
   z-index: 2;
 }
+.imageHouseVariant {
+  position: absolute;
+  left: -170px;
+  top: -49px;
+  z-index: 2;
+}
 
 @media (max-width: 480px) {
   .imageHouse {
     display: none;
   }
   .imageCloud {
+    display: none;
+  }
+  .imageHouseVariant {
     display: none;
   }
   .descWrapper {

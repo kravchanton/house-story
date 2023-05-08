@@ -47,3 +47,4 @@ export * from "./CommonReviewText";
 export * from "./AboutContentBlock";
 export * from "./PhotoItemAbout";
 export * from "./TopObject";
+export * from "./MainFormVariant";

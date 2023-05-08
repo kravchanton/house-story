@@ -1,22 +1,28 @@
 import React from "react";
 import styles from "./Quiz.module.scss";
-import {RadioButton} from "../RadioButton/RadioButton";
+import { RadioButton } from "../RadioButton/RadioButton";
 
-import {useDispatch} from "react-redux";
-import {changeData} from "../../bll/quizReducer";
-import {Input} from "../Input/Input";
+import { useDispatch } from "react-redux";
+import { changeData } from "../../bll/quizReducer";
+import { Input } from "../Input/Input";
 
-export const QuizItem = ({ data, questionNumber, handleSetAnswer , objNumber, setDisabledButton}) => {
+export const QuizItem = ({
+  data,
+  questionNumber,
+  handleSetAnswer,
+  objNumber,
+  setDisabledButton,
+}) => {
   const dispatch = useDispatch();
   const setData = (answer, id) => {
     // eslint-disable-next-line no-debugger
 
-    dispatch(changeData({ id, questionNumber,objNumber }));
+    dispatch(changeData({ id, questionNumber, objNumber }));
     handleSetAnswer(answer);
   };
   return (
     <div>
-      <div>{data.title}</div>
+      <p className={styles.title}>{data.title}</p>
       {data.input !== true ? (
         <div className={styles.rowImage}>
           {data.options.map((t, index) => {
@@ -28,9 +34,7 @@ export const QuizItem = ({ data, questionNumber, handleSetAnswer , objNumber, se
               >
                 {t.image.data !== null && (
                   <img
-                    src={
-                      `${process.env.REACT_APP_UPLOAD_URL}${t.image.data[0].attributes.formats.thumbnail.url}`
-                    }
+                    src={`${process.env.REACT_APP_UPLOAD_URL}${t.image.data[0].attributes.formats.thumbnail.url}`}
                     alt="image"
                   />
                 )}
@@ -44,9 +48,15 @@ export const QuizItem = ({ data, questionNumber, handleSetAnswer , objNumber, se
       ) : (
         <div className={styles.rowImage}>
           {data.options.map((t, index) => {
-            return <div key={index} className={styles.item}>
-              <Input key={questionNumber} setDisabledButton={setDisabledButton} data={t}/>
-            </div>
+            return (
+              <div key={index} className={styles.item}>
+                <Input
+                  key={questionNumber}
+                  setDisabledButton={setDisabledButton}
+                  data={t}
+                />
+              </div>
+            );
           })}
         </div>
       )}

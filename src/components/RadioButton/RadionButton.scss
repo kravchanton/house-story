@@ -1,6 +1,7 @@
 .radio-label {
   cursor: pointer;
-
+  display: flex;
+  align-items: end;
 }
 
 .radio-input {
@@ -8,7 +9,7 @@
 }
 
 .radio-input:checked + span {
-  border: 1px solid #1EAB5F;
+  border: 1px solid #1eab5f;
 }
 
 .radio-input:checked + span:after {
@@ -20,7 +21,7 @@
   cursor: pointer;
   width: 30px;
   height: 30px;
-  border: 1px solid #1EAB5F;
+  border: 1px solid #1eab5f;
   border-radius: 50%;
   display: inline-block;
   position: relative;
@@ -28,10 +29,10 @@
 
 /* for inner filled circle */
 .custom-radio::after {
-  content: '';
+  content: "";
   width: 30px;
   height: 30px;
-  background: #1EAB5F;
+  background: #1eab5f;
   position: absolute;
   border-radius: 50%;
   top: 50%;
