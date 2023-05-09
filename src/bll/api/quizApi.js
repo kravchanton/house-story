@@ -63,7 +63,9 @@ export const api = {
   getLandingPage() {
     return apiInstance.get("landing-page?populate=deep");
   },
-
+  getGratitudeForm() {
+    return apiInstance.get("gratitude-form?populate=deep");
+  },
   getTopObject() {
     return apiInstance.get("top-objects?populate=deep");
   },

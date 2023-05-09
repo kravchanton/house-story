@@ -16,6 +16,7 @@ import layoutReducer from "./layoutReducer";
 import mainFormVariantReducer from "./mainFormVariantReducer";
 import ourProjectReducer from "./ourProjectReducer";
 import landingPageReducer from "./landingPageReducer";
+import gratitudeFormReducer from "./gratitudeFormReducer";
 
 export const store = configureStore({
   reducer: {
@@ -36,6 +37,7 @@ export const store = configureStore({
     mainFormVariant: mainFormVariantReducer,
     ourProject: ourProjectReducer,
     landingPage: landingPageReducer,
+    gratitudeForm: gratitudeFormReducer,
   },
 });
 

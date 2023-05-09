@@ -8,6 +8,7 @@ import {
   CatalogPage,
   Contacts,
   GalleryCard,
+  GratitudeForm,
   Layout,
   Meeting,
 } from "../../pages";
@@ -33,6 +34,7 @@ export const App = () => {
         <Route path="meeting" element={<Meeting />} />
         <Route path="landing" element={<LandingPage />} />
         <Route path="gratitude" element={<Gratitude />} />
+        <Route path="gratitude-success" element={<GratitudeForm />} />
       </Route>
     </Routes>
   );

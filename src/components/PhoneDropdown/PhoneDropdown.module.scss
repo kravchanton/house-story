@@ -39,11 +39,11 @@
 
 @media (max-width: 480px) {
   .wrapper {
-    width: 160px;
+    width: 100%;
     padding-right: 16px;
-    padding-left: 20px;
-    padding-bottom: 5px;
-    right: 15px;
+    padding-left: 16px;
+    padding-bottom: 16px;
+    right: 0;
     top: 60px;
   }
   .phone {

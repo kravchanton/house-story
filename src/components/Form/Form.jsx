@@ -7,6 +7,7 @@ import * as Yup from "yup";
 
 import styles from "./Form.module.scss";
 import { MenuButton } from "../MenuButton";
+import { useNavigate } from "react-router-dom";
 
 export const Basic = ({
   className,
@@ -26,6 +27,7 @@ export const Basic = ({
   select,
 }) => {
   let answers = useSelector((state) => state.answers.answer);
+  const navigate = useNavigate();
   const phoneRegExp =
     /^((\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/;
 
@@ -64,6 +66,7 @@ export const Basic = ({
               },
             }
           );
+          navigate("/gratitude-success");
         }}
       >
         {({ errors, touched }) => (

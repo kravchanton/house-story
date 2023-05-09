@@ -189,7 +189,7 @@
     padding-bottom: 0;
   }
   .formWrapper {
-    padding-top: 20px;
+    padding-top: 0;
   }
   .formWrapper h2 {
     font-size: 18px;
@@ -204,6 +204,7 @@
     gap: 16px;
     flex-direction: column;
     width: 100%;
+    padding-top: 20px;
   }
   .videoWrapper {
     width: 100%;

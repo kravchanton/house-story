@@ -63,3 +63,40 @@
   line-height: 21px;
   margin-bottom: 24px;
 }
+
+@media (max-width: 480px) {
+  .title {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    margin-bottom: 16px;
+  }
+
+  .arrow {
+    display: none;
+  }
+  .content {
+    flex-direction: column;
+    gap: 24px;
+  }
+  .text {
+    font-size: 12px;
+    line-height: 14px;
+  }
+  .textBlock {
+    gap: 16px;
+  }
+  .smallText {
+    font-size: 14px;
+    line-height: 16px;
+  }
+  .formWrapper {
+    padding: 0;
+    box-shadow: none;
+  }
+  .gratitude {
+    padding: 16px;
+    margin-top: 24px;
+    margin-bottom: 40px;
+  }
+}

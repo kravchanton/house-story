@@ -288,8 +288,11 @@
     width: 100%;
     height: 100%;
   }
+  .videoGroup {
+    width: 100%;
+  }
   .videoWrapper {
-    width: 100vw;
+    width: 100%;
     height: 161px;
   }
   .text {
@@ -316,6 +319,7 @@
     display: none;
   }
   .meeting {
+    padding-top: 0;
     padding-bottom: 0;
   }
 }
