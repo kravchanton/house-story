@@ -2,13 +2,15 @@ import React from "react";
 
 import styles from "./GratitudeForm.module.scss";
 
-import { Excursion, OurProjects } from "../../components";
+import { Container, Excursion, OurProjects } from "../../components";
 
 export const GratitudeForm = () => {
   return (
-    <section>
-      <OurProjects />
-      <Excursion />
+    <section className={styles.wrapper}>
+      <Container>
+        <OurProjects />
+        <Excursion />
+      </Container>
     </section>
   );
 };

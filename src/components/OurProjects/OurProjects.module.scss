@@ -25,6 +25,7 @@
   font-weight: 900;
   font-size: 24px;
   line-height: 29px;
+  color: #363130;
 }
 .desc {
   display: flex;
@@ -75,4 +76,34 @@
   display: flex;
   justify-content: center;
   text-align: center;
+}
+
+@media (max-width: 480px) {
+  .wrapper {
+    gap: 16px;
+    margin-bottom: 40px;
+  }
+  .projectsWrapper {
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  .title {
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 22px;
+  }
+  .projectCard h4 {
+    font-size: 14px;
+    line-height: 18px;
+  }
+  .projectCard {
+    gap: 8px;
+  }
+  .desc h5 {
+    font-size: 12px;
+    line-height: 14px;
+  }
+  .btn {
+    height: 40px;
+  }
 }

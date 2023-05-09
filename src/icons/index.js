@@ -47,3 +47,4 @@ export * from "./ArrowThin";
 export * from "./Worker";
 export * from "./WorkerVariant";
 export * from "./HouseSecond";
+export * from "./Binoculars";
