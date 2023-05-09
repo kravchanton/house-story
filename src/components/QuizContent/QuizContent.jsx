@@ -41,7 +41,7 @@ export const QuizContent = ({
   const navigate = useNavigate();
   const navigateToGratitude = () => {
     dispatch(setAnswer({ title: questions[questionNumber].title, answer }));
-    navigate("gratitude", { replace: true });
+    navigate("/gratitude", { replace: true });
   };
   return (
     <>

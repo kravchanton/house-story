@@ -1,0 +1,65 @@
+@import "../../styles/variables";
+
+.gratitude {
+  margin-top: 60px;
+  background: #ffffff;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  padding: 40px;
+  margin-bottom: 120px;
+}
+.title {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 39px;
+  text-transform: uppercase;
+  color: #1eab5f;
+  margin-bottom: 70px;
+}
+.content {
+  display: flex;
+  gap: 40px;
+}
+.textBlock {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.text {
+  display: flex;
+  align-items: center;
+  font-size: 26px;
+  line-height: 31px;
+  color: #000000;
+  gap: 16px;
+}
+.smallText {
+  font-size: 20px;
+  line-height: 23px;
+  color: #000000;
+}
+.icon {
+  stroke: #1eab5f;
+}
+.arrow {
+  position: absolute;
+  right: 0;
+  bottom: 75px;
+  stroke: #fddf31;
+  fill: #fddf31;
+}
+.formWrapper {
+  padding: 40px;
+  background: #ffffff;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  flex-grow: 1;
+}
+.textForm {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 21px;
+  margin-bottom: 24px;
+}

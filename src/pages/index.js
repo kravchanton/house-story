@@ -7,3 +7,5 @@ export * from "./GalleryCard";
 export * from "./ArticlePage";
 export * from "./Contacts";
 export * from "./About";
+export * from "./Gratitude";
+export * from "./GratitudeForm";

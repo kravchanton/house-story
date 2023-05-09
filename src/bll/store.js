@@ -14,6 +14,8 @@ import blockArticleReducer from "./blockAtricleReducer";
 import blockVideoReducer from "./blockVideoReducer";
 import layoutReducer from "./layoutReducer";
 import mainFormVariantReducer from "./mainFormVariantReducer";
+import ourProjectReducer from "./ourProjectReducer";
+import landingPageReducer from "./landingPageReducer";
 
 export const store = configureStore({
   reducer: {
@@ -32,6 +34,8 @@ export const store = configureStore({
     blockArticle: blockArticleReducer,
     blockVideo: blockVideoReducer,
     mainFormVariant: mainFormVariantReducer,
+    ourProject: ourProjectReducer,
+    landingPage: landingPageReducer,
   },
 });
 

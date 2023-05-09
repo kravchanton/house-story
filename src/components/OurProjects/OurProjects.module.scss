@@ -1,0 +1,78 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin-bottom: 130px;
+}
+
+.title {
+  font-weight: 900;
+  font-size: 32px;
+  line-height: 52px;
+  color: #363130;
+}
+.projectsWrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.projectCard {
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.projectCard h4 {
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 29px;
+}
+.desc {
+  display: flex;
+  justify-content: space-between;
+}
+.desc h5 {
+  font-weight: 900;
+  font-size: 20px;
+  line-height: 24px;
+  color: #1eab5f;
+}
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.buttons {
+  display: flex;
+  gap: 24px;
+}
+.btn {
+  width: 100%;
+  height: 50px;
+  color: #000000;
+  justify-content: center;
+  border: 1px solid #130d0d;
+  box-shadow: inset 4px 4px 25px rgba(241, 241, 241, 0.25);
+}
+.btnWrapper {
+  width: unset;
+  flex-grow: 1;
+}
+.btnWrapperMap {
+  width: unset;
+}
+.button {
+  justify-content: center;
+  width: 238px;
+  height: 43px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  color: #ffffff;
+  background: #1eab5f;
+  box-shadow: 0px 4px 8px #64bc45;
+}
+.buttonWrapper {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}

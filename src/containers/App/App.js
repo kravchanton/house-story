@@ -32,6 +32,7 @@ export const App = () => {
         <Route path="about" element={<About />} />
         <Route path="meeting" element={<Meeting />} />
         <Route path="landing" element={<LandingPage />} />
+        <Route path="gratitude" element={<Gratitude />} />
       </Route>
     </Routes>
   );

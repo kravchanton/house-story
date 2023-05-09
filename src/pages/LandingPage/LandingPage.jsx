@@ -1,17 +1,37 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+
+import { fetchLandingPage } from "../../bll/landingPageReducer";
 
 import styles from "./LandingPage.module.scss";
 
-import { Container, Excursion, MainFormVariant, Quiz } from "../../components";
+import {
+  Container,
+  Excursion,
+  MainFormVariant,
+  OurProjects,
+  Quiz,
+} from "../../components";
 
 export const LandingPage = () => {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(fetchLandingPage());
+  }, []);
+  let data = useSelector((state) => state.landingPage.landingPage);
+  console.log(data);
   return (
     <section className={styles.wrapper}>
-      <Container>
-        <MainFormVariant />
-        <Quiz numberQuiz={1} />
-        <Excursion houseImgVariant={true} descWrapperVariant={true} />
-      </Container>
+      {data && (
+        <Container>
+          {data.attributes.form && <MainFormVariant />}
+          {data.attributes.quiz && <Quiz numberQuiz={1} />}
+          {data.attributes.ourProjects && <OurProjects />}
+          {data.attributes.excursion && (
+            <Excursion houseImgVariant={true} descWrapperVariant={true} />
+          )}
+        </Container>
+      )}
     </section>
   );
 };
