@@ -2,7 +2,8 @@
   padding: 20px 19px 30px;
   border: 1px solid #319f1c;
   border-radius: 3px;
-  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
 }
 .images {
   display: flex;
@@ -37,7 +38,8 @@
   padding-top: 24px;
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 16px;
+  flex-grow: 1;
 }
 .propertyWrapper {
   display: flex;
@@ -67,4 +69,68 @@ li div {
   line-height: 19px;
   color: #000000;
   justify-content: center;
+}
+.btnSecond {
+  background: linear-gradient(91.24deg, #1eab5f 0.36%, #e7b97e 103.9%);
+  color: #ffffff;
+  border: none;
+}
+
+@media (max-width: 480px) {
+  .images {
+    flex-direction: column;
+
+    background: #ffffff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+    border-radius: 3px;
+    padding: 16px;
+    gap: 16px;
+    min-height: 448px;
+  }
+  .image {
+    width: 100%;
+    order: 2;
+  }
+  .desc {
+    padding: 0;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 12px;
+    flex-grow: 1;
+  }
+  .desc h3 {
+    font-size: 16px;
+    line-height: 20px;
+    color: #363130;
+  }
+  .price {
+    padding-top: 0;
+  }
+  .priceText {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .descHouse {
+    padding-top: 16px;
+    flex-grow: 1;
+    gap: 0;
+  }
+  .btnWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    order: 2;
+  }
+  .propertyWrapper p {
+    font-size: 12px;
+    line-height: 14px;
+  }
+  .btn {
+    width: 100%;
+    height: 40px;
+    margin-top: 0;
+  }
 }

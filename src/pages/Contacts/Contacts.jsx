@@ -11,8 +11,9 @@ import {
   Excursion,
   MainFormComponent,
   ContactsGallery,
+  TopObject,
 } from "../../components";
-import { BlockWrapper } from "../../containers";
+import { fetchMainForm } from "../../bll/mainFormReducer";
 
 export const Contacts = () => {
   const dispatch = useDispatch();
@@ -20,8 +21,14 @@ export const Contacts = () => {
     (state) => state.contactsData.contactsData.attributes
   );
 
+  const mainFormData = useSelector((state) => state.mainForm.mainForm);
+
   useEffect(() => {
     dispatch(fetchContactsData());
+  }, []);
+
+  useEffect(() => {
+    dispatch(fetchMainForm());
   }, []);
 
   console.log(data);
@@ -47,7 +54,9 @@ export const Contacts = () => {
                   );
                 })}
               </div>
-              <MainFormComponent />
+              <MainFormComponent
+                links={mainFormData?.attributes?.socialForm?.socialLinks}
+              />
             </div>
             <div className={styles.photo}>
               <h3 className={classNames("titleBlock", styles.title)}>
@@ -55,11 +64,7 @@ export const Contacts = () => {
               </h3>
               <ContactsGallery />
             </div>
-            <BlockWrapper
-              top={true}
-              title="Топ выполненных объектов"
-              subtitle="Топ выполненных объектов"
-            />
+            <TopObject />
             <Excursion houseImg={true} cloudImg={true} />
           </div>
         </Container>

@@ -54,20 +54,23 @@ export const catalogApi = {
 };
 
 export const api = {
-    getMainFormData() {
-        return apiInstance.get("main-form?populate=deep")
-    },
-    getTopObject() {
-        return apiInstance.get("top-objects?populate=deep")
-    },
-    getBlogData() {
-        return apiInstance.get("blogs?populate=deep")
-    } ,
-    getBlockArticleData() {
-        return apiInstance.get("block-atricle?populate=deep")
-    },
-    getBlockVideoData() {
-        return apiInstance.get("block-video?populate=deep")
-    }
-}
+  getMainFormData() {
+    return apiInstance.get("main-form?populate=deep");
+  },
+  getMainFormVariantData() {
+    return apiInstance.get("main-form-variant?populate=deep");
+  },
 
+  getTopObject() {
+    return apiInstance.get("top-objects?populate=deep");
+  },
+  getBlogData() {
+    return apiInstance.get("blogs?populate=deep");
+  },
+  getBlockArticleData() {
+    return apiInstance.get("block-atricle?populate=deep");
+  },
+  getBlockVideoData() {
+    return apiInstance.get("block-video?populate=deep");
+  },
+};

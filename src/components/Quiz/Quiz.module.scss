@@ -1,8 +1,11 @@
 .rowImage {
   display: flex;
   flex-wrap: wrap;
-
-
+}
+.title {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 23px;
 }
 
 .item {
@@ -11,8 +14,25 @@
   min-width: 250px;
   max-height: 253px;
   margin: 20px 40px 20px 0;
+  font-size: 16px;
+  line-height: 19px;
 }
 .radioBtn {
   cursor: pointer;
   padding-top: 20px;
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 14px;
+    line-height: 16px;
+  }
+  .item {
+    font-size: 12px;
+    line-height: 14px;
+    margin: 8px;
+  }
+  .radioBtn {
+    padding-top: 0;
+  }
 }

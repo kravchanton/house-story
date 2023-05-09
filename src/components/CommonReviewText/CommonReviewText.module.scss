@@ -62,3 +62,33 @@
   transition: all 200ms;
   transform: rotate(180deg);
 }
+@media (max-width: 480px) {
+  .date {
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    margin-bottom: 8px;
+  }
+  .name {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    margin-bottom: 8px;
+  }
+  .reviewDesc {
+    font-size: 12px;
+    line-height: 14px;
+    max-height: 58px;
+    margin-bottom: 8px;
+  }
+  .readMore {
+    gap: 8px;
+  }
+  .btnText {
+    font-size: 12px;
+    line-height: 14px;
+  }
+  .collapsible {
+    max-height: 100px;
+  }
+}

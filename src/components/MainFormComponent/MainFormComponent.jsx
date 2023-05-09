@@ -1,10 +1,17 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import styles from "./MainFormComponent.module.scss";
 
 import { Basic } from "../Form";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchMainForm } from "../../bll/mainFormReducer";
 
-export const MainFormComponent = ({ links }) => {
+export const MainFormComponent = () => {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(fetchMainForm());
+  }, []);
+  let data = useSelector((state) => state.mainForm.mainForm);
   const [isActiveRight, setIsActiveRight] = useState(false);
   const [isActiveLeft, setIsActiveLeft] = useState(true);
 
@@ -53,7 +60,7 @@ export const MainFormComponent = ({ links }) => {
           />
         ) : (
           <div className={styles.socialsWrapper}>
-            {links.map((item) => (
+            {data?.attributes?.socialForm?.socialLinks.map((item) => (
               <a
                 className={styles.socialLink}
                 key={item.id}
@@ -62,7 +69,7 @@ export const MainFormComponent = ({ links }) => {
                 rel="noreferrer"
               >
                 <img
-                  src={`${process.env.REACT_APP_UPLOAD_URL}${item.icon.data.attributes.url}`}
+                  src={`${process.env.REACT_APP_UPLOAD_URL}${item?.icon?.data?.attributes?.url}`}
                   alt=""
                 />
                 <p>{item.title}</p>

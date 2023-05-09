@@ -2,3 +2,10 @@
   width: 35px;
   height: 29px;
 }
+
+@media (max-width: 480px) {
+  .icon {
+    width: 20px;
+    height: 17px;
+  }
+}

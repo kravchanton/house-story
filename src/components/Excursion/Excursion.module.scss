@@ -1,5 +1,4 @@
 .wrapper {
-  padding-top: 158px;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -16,6 +15,9 @@
 .descWrapper {
   display: flex;
   gap: 40px;
+}
+.descWrapperVariant {
+  align-items: end;
 }
 .descTitle {
   font-size: 24px;
@@ -58,12 +60,21 @@
   top: 315px;
   z-index: -2;
 }
+.imageHouseVariant {
+  position: absolute;
+  left: -170px;
+  top: -49px;
+  z-index: 2;
+}
 
 @media (max-width: 480px) {
   .imageHouse {
     display: none;
   }
   .imageCloud {
+    display: none;
+  }
+  .imageHouseVariant {
     display: none;
   }
   .descWrapper {
@@ -92,6 +103,7 @@
   .wrapper {
     gap: 16px;
     margin-bottom: 40px;
+    padding-top: 0;
   }
   .listItem li {
     font-weight: 400;

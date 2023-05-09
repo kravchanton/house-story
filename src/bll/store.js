@@ -13,6 +13,7 @@ import aboutReducer from "./aboutReducer";
 import blockArticleReducer from "./blockAtricleReducer";
 import blockVideoReducer from "./blockVideoReducer";
 import layoutReducer from "./layoutReducer";
+import mainFormVariantReducer from "./mainFormVariantReducer";
 
 export const store = configureStore({
   reducer: {
@@ -29,7 +30,8 @@ export const store = configureStore({
     topObject: topObjectReducer,
     blog: blogReducer,
     blockArticle: blockArticleReducer,
-    blockVideo: blockVideoReducer
+    blockVideo: blockVideoReducer,
+    mainFormVariant: mainFormVariantReducer,
   },
 });
 

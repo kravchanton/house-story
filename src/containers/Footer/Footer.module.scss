@@ -121,13 +121,12 @@
   .container {
     flex-direction: column;
   }
-  .nav {
-    display: none;
-  }
+
   .buttonFirst,
   .buttonSecond {
     padding: 10px 16px;
     margin-top: 16px;
+    height: 36px;
   }
   .buttonFirst,
   .buttonSecond p {
@@ -142,7 +141,7 @@
     padding-bottom: 16px;
   }
   .contacts {
-    margin-top: 24px;
+    margin-top: 16px;
     margin-bottom: 24px;
     gap: 35px;
   }
@@ -151,13 +150,18 @@
   }
   .logoMobile {
     display: flex;
-    align-items: center;
-    gap: 8px;
+  }
+  .logoMobile img {
+    width: 16px;
+    height: 23px;
   }
   .text {
     color: gray;
     opacity: 1;
     font-size: 12px;
     line-height: 14px;
+  }
+  .menu {
+    display: none;
   }
 }

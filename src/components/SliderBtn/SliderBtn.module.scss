@@ -18,3 +18,9 @@
 .prev {
   transform: rotate(180deg);
 }
+@media (max-width: 480px) {
+  .sliderBtnNext,
+  .sliderBtnPrev {
+    display: none;
+  }
+}

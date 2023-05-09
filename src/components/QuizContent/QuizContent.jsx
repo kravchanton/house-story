@@ -8,6 +8,7 @@ import { Calculator } from "../../icons";
 import { QuizItem } from "../Quiz/QuizItem";
 import { useDispatch } from "react-redux";
 import { deleteLastAnswer, setAnswer } from "../../bll/AnswerReducer";
+import classNames from "classnames";
 
 export const QuizContent = ({
   questionNumber,
@@ -44,6 +45,13 @@ export const QuizContent = ({
   };
   return (
     <>
+      <h3 className={classNames("titleBlock", styles.title)}>
+        Не знаете какой дом хотите построить?{" "}
+      </h3>
+      <p className={styles.subtitle}>
+        Пройдите тест, и мы подберем для вас проект дома и рассчитаем стоимость
+        строительства!
+      </p>
       <div className={styles.buttonBlock}>
         <MenuButton
           classNameForBtn={styles.btnWrapper}
@@ -63,7 +71,10 @@ export const QuizContent = ({
         </MenuButton>
       </div>
       <div className={styles.quizWrapper}>
-        <ContactForm />
+        <div className={styles.contactForm}>
+          <ContactForm />
+        </div>
+
         <div className={styles.question}>
           <div className={styles.navigation}>
             {questions?.map((item, index) => (
@@ -89,6 +100,7 @@ export const QuizContent = ({
             {questions.length - 1 > questionNumber ? (
               <div onClick={changeQuestion}>
                 <MenuButton
+                  classNameForBtn={styles.btnWrapper}
                   disabled={disabledButton}
                   title="Следующий вопрос"
                   className={styles.btn}
@@ -97,6 +109,7 @@ export const QuizContent = ({
             ) : (
               <div onClick={navigateToGratitude}>
                 <MenuButton
+                  classNameForBtn={styles.btnWrapper}
                   disabled={disabledButton}
                   title="Закончить опрос"
                   className={styles.btn}
@@ -105,7 +118,11 @@ export const QuizContent = ({
             )}
             {questionNumber > 0 && (
               <div onClick={prevQuestion}>
-                <MenuButton title="Предыдущий вопрос" className={styles.btn} />
+                <MenuButton
+                  classNameForBtn={styles.btnWrapper}
+                  title="Предыдущий вопрос"
+                  className={styles.btn}
+                />
               </div>
             )}
           </div>

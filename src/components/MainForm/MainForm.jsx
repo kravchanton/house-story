@@ -16,6 +16,7 @@ export const MainForm = () => {
     dispatch(fetchMainForm());
   }, []);
   let data = useSelector((state) => state.mainForm.mainForm);
+  console.log(data);
   return (
     <div className={styles.mainWrapper}>
       {data && (
@@ -33,7 +34,7 @@ export const MainForm = () => {
             <h2>{data.attributes.title}</h2>
             <p className={styles.formSubtitle}>{data.attributes.subtitle}</p>
 
-            <MainFormComponent links={data?.attributes?.socialForm?.socialLinks} />
+            <MainFormComponent />
           </div>
           <div className={styles.videoWrapper}>
             <VideoLink

@@ -4,3 +4,8 @@
   height: 8px;
   fill: none;
 }
+@media (max-width: 480px) {
+  .icon {
+    width: 17px;
+  }
+}
