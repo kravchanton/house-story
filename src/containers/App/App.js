@@ -11,11 +11,12 @@ import {
   GratitudeForm,
   Layout,
   Meeting,
+  Gratitude,
+  BlogPage,
+  LandingPage,
+  GalleryPage,
+  Appointment,
 } from "../../pages";
-import { Gratitude } from "../../components";
-import { GalleryPage } from "../../pages/Gallery";
-import { BlogPage } from "../../pages/Blog";
-import { LandingPage } from "../../pages/LandingPage";
 
 export const App = () => {
   return (
@@ -35,6 +36,7 @@ export const App = () => {
         <Route path="landing" element={<LandingPage />} />
         <Route path="gratitude" element={<Gratitude />} />
         <Route path="gratitude-success" element={<GratitudeForm />} />
+        <Route path="appointment" element={<Appointment />} />
       </Route>
     </Routes>
   );

@@ -9,3 +9,7 @@ export * from "./Contacts";
 export * from "./About";
 export * from "./Gratitude";
 export * from "./GratitudeForm";
+export * from "./Appointment";
+export * from "./Blog";
+export * from "./LandingPage";
+export * from "./Gallery";

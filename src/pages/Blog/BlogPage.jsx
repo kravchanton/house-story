@@ -1,11 +1,17 @@
 import React from "react";
 
 import styles from "./BlogPage.module.scss";
-import {Container, Excursion, Garanties, MainForm, NavigationHeader,} from "../../components";
-import {BlogContainer} from "../../components/Blog/BlogContainer";
-import {TopObject} from "../../components/TopObject/TopObject";
-import {BlockArticle} from "../../components/BlockArticle/BlockArticle";
-import {BlockVideo} from "../../components/BlockVideo/BlockVideo";
+import {
+  Container,
+  Excursion,
+  Garanties,
+  MainForm,
+  NavigationHeader,
+} from "../../components";
+import { BlogContainer } from "../../components/Blog/BlogContainer";
+import { TopObject } from "../../components/TopObject/TopObject";
+import { BlockArticle } from "../../components/BlockArticle/BlockArticle";
+import { BlockVideo } from "../../components/BlockVideo/BlockVideo";
 
 export const BlogPage = () => {
   return (
@@ -14,11 +20,10 @@ export const BlogPage = () => {
         <NavigationHeader />
         <MainForm />
         <BlogContainer />
-        <TopObject/>
-
+        <TopObject />
         <Garanties title={true} />
         <BlockVideo />
-        <BlockArticle/>
+        <BlockArticle />
         <Excursion cloudImg={true} houseImg={true} />
       </Container>
     </main>
