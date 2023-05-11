@@ -15,9 +15,9 @@ import {
     GalleryPage,
     BlogPage,
     LandingPage,
-    VideoBlog,
     Appointment,
 } from "../../pages";
+import {VideoBlog} from "../../pages/VideoBlog";
 
 export const App = () => {
     const location = useLocation();
@@ -41,7 +41,6 @@ export const App = () => {
                 <Route path="about" element={<About/>}/>
                 <Route path="meeting" element={<Meeting/>}/>
                 <Route path="landing" element={<LandingPage/>}/>
-
                 <Route path="gratitude" element={<Gratitude/>}/>
                 <Route path="gratitude-success" element={<GratitudeForm/>}/>
                 <Route path="appointment" element={<Appointment/>}/>
