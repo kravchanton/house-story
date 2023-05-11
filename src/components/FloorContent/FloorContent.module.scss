@@ -4,9 +4,10 @@
 .floorImage {
   max-width: 397px;
   object-fit: cover;
-  margin-right: 40px;
+  margin-right: 16px;
 }
 .description {
+  width: 300px;
   display: flex;
   flex-direction: column;
   gap: 24px;
@@ -23,7 +24,11 @@
 }
 .imagesWrapper {
   margin-bottom: 40px;
+  margin-left: 16px;
+
 }
+
+
 .text {
   font-weight: 500;
   font-size: 18px;

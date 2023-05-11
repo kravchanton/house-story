@@ -20,6 +20,7 @@ export const App = () => {
                 <Route path="/catalog/:idPage" element={<CatalogPage/>}/>
                 <Route path="/catalog/:idPage/gratitude" element={<Gratitude/>}/>
                 <Route path="/catalog/:idPage/:id" element={<CatalogCard/>}/>
+                <Route path="/gallery-card" element={<GalleryPage/>}/>
                 <Route path="/gallery-card/:idPage" element={<GalleryPage/>}/>
                 <Route path="/gallery-card/:idPage/:id" element={<GalleryCard/>}/>
                 <Route path="/blog/:idPage" element={<BlogPage/>}/>

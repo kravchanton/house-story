@@ -25,7 +25,22 @@
 
 }
 
+.wrapperMobile {
+  display: flex;
+  flex-direction: column;
+  z-index: 5;
+  padding-top: 24px;
 
+
+}
+.catalogListWrapperMobile {
+  max-width: 65vw;
+  padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+}
 .NavigationWrapper {
 
 }
@@ -42,9 +57,9 @@
 }
 
 .NavigationButton {
-  margin-top: 40px;
+  margin-top: 24px;
   justify-content: left;
-  gap: 16px;
+  gap: 24px;
   width: 365px;
   height: 60px;
   border: 1px solid #1EAB5F;
@@ -138,4 +153,58 @@
   text-transform: none;
 
 
+}
+
+.wrapperMobile {
+  display: flex;
+  flex-direction: column;
+  z-index: 5;
+  padding-top: 24px;
+
+
+}
+@media (max-width: 992px) {
+  .catalogList {
+    display: flex;
+    flex-direction: column;
+    width: 65vw;
+    flex-wrap: wrap;
+    gap:  0;
+    align-items: center;
+  }
+  .NavigationButton {
+    height: 40px;
+    width: 100%;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+  }
+  .wrapper {
+    display: none
+  }
+  .catalog h2 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+  }
+  .catalogItem h4 {
+    font-style: normal;
+    font-weight: 900;
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .price {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px
+  }
+}
+
+@media (min-width: 992px) {
+  .wrapperMobile {
+    display: none
+  }
 }
