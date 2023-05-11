@@ -1,12 +1,23 @@
 import React, {useLayoutEffect} from "react";
 import {Route, Routes, useLocation} from "react-router-dom";
 
-import {About, ArticlePage, CatalogCard, CatalogPage, Contacts, GalleryCard, Layout, Meeting,} from "../../pages";
-import {Gratitude} from "../../components";
-import {GalleryPage} from "../../pages/Gallery";
-import {BlogPage} from "../../pages/Blog";
-import {VideoBlog} from "../../pages/VideoBlog";
-import {LandingPage} from "../../pages/LandingPage";
+import {
+    About,
+    ArticlePage,
+    CatalogCard,
+    CatalogPage,
+    Contacts,
+    GalleryCard,
+    GratitudeForm,
+    Layout,
+    Meeting,
+    Gratitude,
+    GalleryPage,
+    BlogPage,
+    LandingPage,
+    VideoBlog,
+    Appointment,
+} from "../../pages";
 
 export const App = () => {
     const location = useLocation();
@@ -30,6 +41,10 @@ export const App = () => {
                 <Route path="about" element={<About/>}/>
                 <Route path="meeting" element={<Meeting/>}/>
                 <Route path="landing" element={<LandingPage/>}/>
+
+                <Route path="gratitude" element={<Gratitude/>}/>
+                <Route path="gratitude-success" element={<GratitudeForm/>}/>
+                <Route path="appointment" element={<Appointment/>}/>
             </Route>
         </Routes>
     );

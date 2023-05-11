@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 
-// import logo from "../../assets/logo3.svg";
 import plant from "../../assets/plant.png";
 import phone from "../../assets/phoneContact.png";
 

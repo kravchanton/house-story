@@ -4,19 +4,13 @@ import styles from "./Footer.module.scss";
 
 import logo from "../../assets/logo-variant.svg";
 
-// import { footerMenu } from "../../mockData/footerMenu";
-
 import {
   Container,
   MenuButton,
   NavMenu,
   ReviewsSlider,
-  // VideoLink,
-  // MenuFooterItem,
-  // ReviewsSlider,
 } from "../../components";
 import { Arrow, ArrowRight, LogoVariant } from "../../icons";
-// import { Swiper, SwiperSlide } from "swiper/react";
 
 export const Footer = ({ socialLinks, reviews }) => {
   console.log(reviews);

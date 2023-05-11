@@ -60,9 +60,17 @@ export const api = {
   getMainFormVariantData() {
     return apiInstance.get("main-form-variant?populate=deep");
   },
-
+  getLandingPage() {
+    return apiInstance.get("landing-page?populate=deep");
+  },
+  getGratitudeForm() {
+    return apiInstance.get("gratitude-form?populate=deep");
+  },
   getTopObject() {
     return apiInstance.get("top-objects?populate=deep");
+  },
+  getOurProject() {
+    return apiInstance.get("our-project?populate=deep");
   },
   getBlogData() {
     return apiInstance.get("blogs?populate=deep");

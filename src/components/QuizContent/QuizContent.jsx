@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import styles from "./QuizContent.module.scss";
 
 import { ContactForm, MenuButton, NavigationEl } from "../../components";
-import { Calculator } from "../../icons";
+import { Binoculars, Calculator, WorkerVariant } from "../../icons";
 import { QuizItem } from "../Quiz/QuizItem";
 import { useDispatch } from "react-redux";
 import { deleteLastAnswer, setAnswer } from "../../bll/AnswerReducer";
@@ -41,7 +41,7 @@ export const QuizContent = ({
   const navigate = useNavigate();
   const navigateToGratitude = () => {
     dispatch(setAnswer({ title: questions[questionNumber].title, answer }));
-    navigate("gratitude", { replace: true });
+    navigate("/gratitude", { replace: true });
   };
   return (
     <>
@@ -58,16 +58,16 @@ export const QuizContent = ({
           className={styles.feature}
           title="Расчет стоимости в 2 вариантах"
         >
-          <Calculator />
+          <Calculator className={styles.icon} />
         </MenuButton>
         <MenuButton className={styles.feature} title="Бесплатный выезд прораба">
-          <Calculator />
+          <WorkerVariant className={styles.icon} />
         </MenuButton>
         <MenuButton
           className={styles.feature}
           title="Следите за ремонтом онлайн"
         >
-          <Calculator />
+          <Binoculars />
         </MenuButton>
       </div>
       <div className={styles.quizWrapper}>
