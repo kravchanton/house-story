@@ -125,3 +125,54 @@
   box-shadow: 0px 0px 4px rgba(51, 51, 51, 0.5);
   border-radius: 5px;
 }
+
+@media (max-width: 480px) {
+  .treeLeft {
+    display: none;
+  }
+
+  .cloud {
+    display: none;
+  }
+  .rCloud {
+    display: none;
+  }
+  .text h1 {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .wrapper {
+    padding-top: 24px;
+  }
+  .text {
+    width: 100%;
+    gap: 16px;
+  }
+  .description h3 {
+    font-size: 12px;
+    line-height: 14px;
+    margin-bottom: 8px;
+  }
+  .text h4 {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+  }
+  .appointmentBlock {
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 40px;
+  }
+  .calendarWrapper {
+    width: 100%;
+    padding: 16px;
+  }
+  .arrow {
+    display: none;
+  }
+  .btn {
+    height: 40px;
+  }
+}

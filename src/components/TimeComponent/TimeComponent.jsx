@@ -43,7 +43,7 @@ export const TimeComponent = ({
             (day, index) => appointment.date.getMonth() === index
           )} ${appointment.date.getFullYear()} `}
         </h3>
-        <h4>Московское время</h4>
+        <h4>Минское время</h4>
       </div>
       <div className={styles.times}>
         {times.map((item, index) => (

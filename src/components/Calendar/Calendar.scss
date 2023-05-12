@@ -142,3 +142,45 @@ abbr[title] {
   flex-direction: column;
   gap: 36px;
 }
+.react-calendar__navigation__prev2-button,
+.react-calendar__navigation__next2-button {
+  display: none;
+}
+@media (max-width: 480px) {
+  .wrapper {
+    width: 100%;
+    gap: 24px;
+  }
+  .react-calendar__navigation__label__labelText {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+  }
+  .react-calendar__navigation button {
+    font-size: 30px;
+    min-width: 30px;
+  }
+  .react-calendar__navigation {
+    margin-bottom: 8px;
+    justify-content: space-between;
+  }
+  abbr[title] {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    text-transform: none;
+  }
+  .react-calendar__month-view__weekdays {
+    margin-bottom: 8px;
+  }
+  .react-calendar__month-view__days {
+    row-gap: 8px;
+    gap: 8px;
+  }
+  .react-calendar__tile {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    padding: 6px;
+  }
+}
