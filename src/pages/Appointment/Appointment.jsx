@@ -63,8 +63,7 @@ export const Appointment = () => {
       callTime: null,
     });
   };
-  console.log(date);
-  console.log(appointment);
+
   return (
     <section className={styles.wrapper}>
       <Container>
@@ -144,6 +143,9 @@ export const Appointment = () => {
             ) : null}
             {appointment.time && !appointment.name ? (
               <Basic
+                weekDays={weekDays}
+                months={months}
+                appointment={appointment}
                 callTime={true}
                 classNameForTitle={styles.titleForm}
                 lockText={true}

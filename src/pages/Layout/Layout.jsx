@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useState } from "react";
-import { Outlet } from "react-router-dom";
+import { Outlet, ScrollRestoration } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 
 import styles from "./Layout.module.scss";
@@ -41,6 +41,7 @@ export const Layout = () => {
   }, []);
   return (
     <>
+      <ScrollRestoration />
       {data && (
         <div className={styles.wrapper}>
           {isOpen && <Popup setIsOpen={setIsOpen} handleClose={handleClose} />}
