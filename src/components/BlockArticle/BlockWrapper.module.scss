@@ -150,3 +150,38 @@ h3 {
 .slide {
   width: 500px;
 }
+@media (max-width: 480px) {
+  .content {
+    flex-direction: column;
+    width: 100%;
+  }
+  .card {
+    width: 100%;
+    min-width: 10px;
+  }
+  .name {
+    left: 16px;
+    font-weight: 800;
+    font-size: 14px;
+    line-height: 17px;
+    color: #FFFFFF;
+  }
+  .read {
+    position: absolute;
+    right: 40px;
+    top: 87px;
+
+  }
+  .duration {
+    left: 16px;
+    top: 180px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    color: #ffffff;
+    z-index: 1;
+  }
+.section {
+  padding-bottom: 20px;
+}
+}

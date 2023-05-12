@@ -87,7 +87,6 @@
 
 .catalogListWrapperMobile {
   width: 100%;
-
   padding-top: 10px;
   display: flex;
   flex-direction: column;
@@ -269,5 +268,11 @@
     font-weight: 700;
     font-size: 16px;
     line-height: 20px
+  }
+  .catalogItem {
+    padding: 16px;
+  }
+  .catalogItem img{
+    width: 100%;
   }
 }

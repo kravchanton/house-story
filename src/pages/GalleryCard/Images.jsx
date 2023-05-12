@@ -5,7 +5,11 @@ import PhotoSwipeLightbox from "photoswipe/lightbox";
 import "photoswipe/style.css";
 
 export const Images = ({data, galleryID}) => {
-    const {currentPage, entriesPerPage, entries} = usePagination(1, 6);
+    let maxEntries = 6
+    if (document.documentElement.clientWidth < 480) {
+        maxEntries = 2
+    }
+    const {currentPage, entriesPerPage, entries} = usePagination(1, maxEntries);
 
     useEffect(() => {
         let lightbox = new PhotoSwipeLightbox({
@@ -23,7 +27,7 @@ export const Images = ({data, galleryID}) => {
 
     return <div>
         <div className={styles.gallery} id={galleryID}>
-            {data.slice(entries.indexOfFirst, entries.indexOfLast).map((t, index)=> (<a
+            {data.slice(entries.indexOfFirst, entries.indexOfLast).map((t, index) => (<a
                 href={`${process.env.REACT_APP_UPLOAD_URL}${t?.attributes?.url}`}
                 data-pswp-width={t?.attributes?.width}
                 data-pswp-height={t?.attributes?.height}
@@ -31,15 +35,15 @@ export const Images = ({data, galleryID}) => {
                 target="_blank"
                 rel="noreferrer"
             >
-                    <img
-                        className={styles.image}
-                        src={`${process.env.REACT_APP_UPLOAD_URL}${t?.attributes?.url}`}
-                        alt=""
-                    />
+                <img
+                    className={styles.image}
+                    src={`${process.env.REACT_APP_UPLOAD_URL}${t?.attributes?.url}`}
+                    alt=""
+                />
             </a>))
             }
         </div>
-        <div className={styles.wrap}> <Pagination
+        <div className={styles.wrap}><Pagination
             entriesPerPage={entriesPerPage.get}
             totalEntries={data.length}
             currentPage={{get: currentPage.get, set: currentPage.set}}
@@ -70,5 +74,6 @@ export const Images = ({data, galleryID}) => {
             }}
         />
 
-        </div>    </div>
+        </div>
+    </div>
 }

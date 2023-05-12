@@ -14,7 +14,6 @@ export const Layout = () => {
   // const data = useSelector((state) => state.layoutData.layoutData.attributes);
   // console.log(data);
   const data = useSelector((state) => state.layoutData.layoutData.attributes);
-  console.log(data);
 
   useEffect(() => {
     dispatch(fetchLayoutData());

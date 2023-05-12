@@ -38,7 +38,6 @@ export const CatalogCard = () => {
     let cardData
     let data = useSelector((state) => state.catalog.catalog);
     data?.map(t => (t.attributes.item.filter(item => item.id == idCard.id ? cardData = item : '')))
-    console.log(folder)
     return (
         <section className={styles.catalogCard}>
             {data && <Container className={styles.container}>
@@ -285,7 +284,7 @@ export const CatalogCard = () => {
                         buttonText={cardData.block[1].buttonTitle}
                         buttonLink={cardData.block[1].buttonLink}
                     >
-                        <BuildingHouse data={cardData.block[1].photos?.photos?.data}/>)
+                        <BuildingHouse data={cardData.block[1].photos?.photos?.data}/>
                     </SectionCard>}
                     {cardData.favourite[0].title && <SectionCard
                         title={cardData.favourite[0].title}

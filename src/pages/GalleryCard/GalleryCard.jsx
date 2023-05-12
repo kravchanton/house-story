@@ -1,21 +1,24 @@
 import React, {useEffect, useRef, useState} from "react";
 import {NavLink, useParams} from "react-router-dom";
-import instagram from "../../assets/inst.png";
-import facebook from "../../assets/facebook-logo.png";
 
 import styles from "./GalleryCard.module.scss";
 
 import {Container, Excursion, MenuButton} from "../../components";
-import {MailSocials, PhoneSocials, Telegram, Viber, WhatsUp,} from "../../icons";
 import {useDispatch, useSelector} from "react-redux";
 import {fetchPhotoGallery} from "../../bll/photoReducer";
 import {TopObject} from "../../components/TopObject/TopObject";
 import {BlockArticle} from "../../components/BlockArticle/BlockArticle";
 import {Images} from "./Images";
 import {BlockVideo} from "../../components/BlockVideo/BlockVideo";
+import ReactMarkdown from "react-markdown";
+import {fetchMainForm} from "../../bll/mainFormReducer";
 
 
 export const GalleryCard = () => {
+    useEffect(() => {
+        dispatch(fetchMainForm());
+    }, []);
+    let links = useSelector((state) => state.mainForm.mainForm);
 
     useEffect(() => {
         dispatch(fetchPhotoGallery());
@@ -31,6 +34,7 @@ export const GalleryCard = () => {
         setFolder(index)
     }
     const [folder, setFolder] = useState(0)
+    const [addition, setAddition] = useState(0)
     return (
         <section className={styles.galleryCard}>
             {cardData && <Container>
@@ -76,15 +80,57 @@ export const GalleryCard = () => {
                 </div>
                 <div className={styles.description}>
                     <div className={styles.buttonBlock}>
-                        <MenuButton title="Описание" className={styles.buttonAction}/>
-                        <MenuButton title="Вложения" className={styles.buttonAction}/>
-                        <MenuButton title="Доход" className={styles.buttonAction}/>
-                        <MenuButton title="Документы" className={styles.buttonAction}/>
+                        {cardData?.addition?.slice(0, 3).map((t, index) => <div key={index}
+                                                                                onClick={() => setAddition(index)}>
+                            <MenuButton title={t.title}
+                                        className={addition === index ? `${styles.buttonAction} ${styles.active}` : styles.buttonAction}/>
+                            <div className={addition === index ? styles.textBlockMobile : styles.hidden}>
+                                <div>
+                                    <p className={styles.text}>
+
+                                        {/* eslint-disable-next-line react/no-children-prop */}
+                                        <ReactMarkdown children={cardData?.addition[addition]?.descr}/>
+
+                                    </p>
+
+                                </div>
+
+                                <div className={styles.socials}>
+                                    <p className={styles.titleSocials}>
+                                        Напишите в удобный для вас месенжер и мы проконсультируем вас по
+                                        всем вопросам.
+                                    </p>
+                                    <div className={styles.socialsWrapper}>
+                                        {links?.attributes?.socialForm?.socialLinks.map((item) => (
+                                            <a
+                                                className={styles.link}
+                                                key={item.id}
+                                                href={item.link}
+                                                target="_blank"
+                                                rel="noreferrer"
+                                            >
+                                                <img
+                                                    src={`${process.env.REACT_APP_UPLOAD_URL}${item?.icon?.data?.attributes?.url}`}
+                                                    alt=""
+                                                />
+                                                <p>{item.title}</p>
+                                            </a>
+                                        ))}
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>)}
+                        <NavLink to={cardData.documentsLink}> <MenuButton title="Документы"
+                                                                          className={styles.buttonAction}/></NavLink>
                     </div>
                     <div className={styles.textBlock}>
                         <div>
                             <p className={styles.text}>
-                                {cardData.description}
+
+                                {/* eslint-disable-next-line react/no-children-prop */}
+                                <ReactMarkdown children={cardData?.addition[addition]?.descr}/>
+
                             </p>
 
                         </div>
@@ -95,38 +141,21 @@ export const GalleryCard = () => {
                                 всем вопросам.
                             </p>
                             <div className={styles.socialsWrapper}>
-                                <NavLink className={styles.link} to="#">
-                                    <PhoneSocials/>
-                                    <p>Звонок</p>
-                                </NavLink>
-                                <NavLink className={styles.link} to="#">
-                                    <MailSocials/>
-                                    <p>Почта</p>
-                                </NavLink>
-                                <NavLink className={styles.link} to="#">
-                                    <WhatsUp/>
-                                    <p>WhatsApp</p>
-                                </NavLink>
-                                <NavLink className={styles.link} to="#">
-                                    <Viber/>
-                                    <p>Viber</p>
-                                </NavLink>
-                                <NavLink className={styles.link} to="#">
-                                    <Telegram/>
-                                    <p>Telegram</p>
-                                </NavLink>
-                                <NavLink className={styles.link} to="#">
-                                    <img
-                                        className={styles.icon}
-                                        src={instagram}
-                                        alt="instagram"
-                                    />
-                                    <p>Instagram</p>
-                                </NavLink>
-                                <NavLink className={styles.link} to="#">
-                                    <img className={styles.icon} src={facebook} alt="facebook"/>
-                                    <p>Facebook</p>
-                                </NavLink>
+                                {links?.attributes?.socialForm?.socialLinks.map((item) => (
+                                    <a
+                                        className={styles.link}
+                                        key={item.id}
+                                        href={item.link}
+                                        target="_blank"
+                                        rel="noreferrer"
+                                    >
+                                        <img
+                                            src={`${process.env.REACT_APP_UPLOAD_URL}${item?.icon?.data?.attributes?.url}`}
+                                            alt=""
+                                        />
+                                        <p>{item.title}</p>
+                                    </a>
+                                ))}
 
                             </div>
                         </div>
