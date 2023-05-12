@@ -25,6 +25,7 @@ export const Basic = ({
   classNameForFile,
   file,
   select,
+  callTime,
 }) => {
   let answers = useSelector((state) => state.answers.answer);
   const navigate = useNavigate();
@@ -117,7 +118,7 @@ export const Basic = ({
                 type="file"
                 id="file"
                 name="file"
-                placeholder="Приккрепите свой проект"
+                placeholder="Прикрепите свой проект"
               />
             )}
 
@@ -137,6 +138,15 @@ export const Basic = ({
                 id="date"
                 name="date"
                 placeholder="Дата экскурсии"
+              />
+            )}
+            {callTime && (
+              <Field
+                className={classNames(styles.input, classNameForTextarea)}
+                type="text"
+                id="callTime"
+                name="callTime"
+                placeholder="Напишите удобное время и дату звонка"
               />
             )}
 

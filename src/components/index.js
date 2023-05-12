@@ -49,3 +49,4 @@ export * from "./PhotoItemAbout";
 export * from "./TopObject";
 export * from "./MainFormVariant";
 export * from "./OurProjects";
+export * from "./TimeComponent";

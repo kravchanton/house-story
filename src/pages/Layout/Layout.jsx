@@ -1,10 +1,10 @@
-import React, { useEffect } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import { Outlet } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 
 import styles from "./Layout.module.scss";
 
-import { Sprite } from "../../components";
+import { Popup, Sprite } from "../../components";
 import { Footer, Header } from "../../containers";
 
 import { fetchLayoutData } from "../../bll/layoutReducer";
@@ -19,31 +19,31 @@ export const Layout = () => {
   useEffect(() => {
     dispatch(fetchLayoutData());
   }, []);
-  // const [isOpen, setIsOpen] = useState(false);
-  //
-  // const handleClose = useCallback(() => {
-  //   setIsOpen(false);
-  // });
-  //
-  // const handleLeave = (e) => {
-  //   if (
-  //     e.clientY <= 0 ||
-  //     e.clientX <= 0 ||
-  //     e.clientX >= window.innerWidth ||
-  //     e.clientY >= window.innerHeight
-  //   ) {
-  //     setIsOpen(true);
-  //   }
-  // };
-  //
-  // useEffect(() => {
-  //   document.addEventListener("mouseleave", handleLeave);
-  // }, []);
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleClose = useCallback(() => {
+    setIsOpen(false);
+  });
+
+  const handleLeave = (e) => {
+    if (
+      e.clientY <= 0 ||
+      e.clientX <= 0 ||
+      e.clientX >= window.innerWidth ||
+      e.clientY >= window.innerHeight
+    ) {
+      setIsOpen(true);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener("mouseleave", handleLeave, { once: true });
+  }, []);
   return (
     <>
       {data && (
         <div className={styles.wrapper}>
-          {/*{isOpen && <Popup setIsOpen={setIsOpen} handleClose={handleClose} />}*/}
+          {isOpen && <Popup setIsOpen={setIsOpen} handleClose={handleClose} />}
           <Sprite />
           <Header
             mainPhone={data.header.mainPhone}

@@ -48,3 +48,6 @@ export * from "./Worker";
 export * from "./WorkerVariant";
 export * from "./HouseSecond";
 export * from "./Binoculars";
+export * from "./Timer";
+export * from "./Calendar";
+export * from "./World";
