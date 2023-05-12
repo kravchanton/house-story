@@ -1,13 +1,14 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import classNames from "classnames";
-import axios from "axios";
+
 import { Field, Form, Formik } from "formik";
 import * as Yup from "yup";
 
 import styles from "./Form.module.scss";
 import { MenuButton } from "../MenuButton";
 import { useNavigate } from "react-router-dom";
+import { sendNotification } from "../../utils/telegram";
 
 export const Basic = ({
   className,
@@ -25,6 +26,10 @@ export const Basic = ({
   classNameForFile,
   file,
   select,
+  callTime,
+  appointment,
+  weekDays,
+  months,
 }) => {
   let answers = useSelector((state) => state.answers.answer);
   const navigate = useNavigate();
@@ -37,6 +42,20 @@ export const Basic = ({
       .matches(phoneRegExp, "Неверный номер")
       .required("Введите, пожалуйста, номер телефона"),
   });
+
+  const sendDataToUser = async (name, phone, messenger, callTime, answers) => {
+    return await sendNotification(
+      `Поступила новая запись на встречу: ${
+        appointment?.time
+      }, ${weekDays?.filter(
+        (day, index) => appointment?.date?.getDay() === index + 1
+      )}, ${appointment?.date?.toLocaleString().slice(0, 2)}  ${months?.filter(
+        (month, index) => appointment?.date?.getMonth() === index
+      )} ${appointment?.date?.getFullYear()} года, ${name} ${phone}, ${messenger}, ${callTime}, ${answers}`
+        .split("undefined")
+        .join("")
+    );
+  };
 
   return (
     <div className={className}>
@@ -53,18 +72,12 @@ export const Basic = ({
         }}
         validationSchema={validSchema}
         onSubmit={(value) => {
-          let data = { ...value, answer: answers };
-
-          axios.post(
-            process.env.REACT_APP_API_URL + "/responses",
-            {
-              data,
-            },
-            {
-              headers: {
-                "Content-Type": "application/json",
-              },
-            }
+          sendDataToUser(
+            value.name,
+            value.phone,
+            value.messenger,
+            value.callTime,
+            answers.map((item) => `${item.title}: ${item.answ}`)
           );
           navigate("/gratitude-success");
         }}
@@ -117,7 +130,7 @@ export const Basic = ({
                 type="file"
                 id="file"
                 name="file"
-                placeholder="Приккрепите свой проект"
+                placeholder="Прикрепите свой проект"
               />
             )}
 
@@ -137,6 +150,15 @@ export const Basic = ({
                 id="date"
                 name="date"
                 placeholder="Дата экскурсии"
+              />
+            )}
+            {callTime && (
+              <Field
+                className={classNames(styles.input, classNameForTextarea)}
+                type="text"
+                id="callTime"
+                name="callTime"
+                placeholder="Напишите удобное время и дату звонка"
               />
             )}
 

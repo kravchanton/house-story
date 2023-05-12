@@ -4,7 +4,7 @@
 .appointmentBlock {
   display: flex;
   gap: 40px;
-  margin-bottom: 300px;
+  margin-bottom: 100px;
 }
 .text {
   position: relative;
@@ -43,7 +43,7 @@
   height: 59px;
   position: absolute;
   left: 260px;
-  top: 390px;
+  top: 440px;
   fill: #fddf31;
   stroke: #fddf31;
 }
@@ -67,14 +67,112 @@
   top: 50px;
   z-index: 2;
 }
-.calendar {
-  z-index: 2;
+.calendarWrapper {
   padding: 40px 125px;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  gap: 36px;
   width: 770px;
-  height: 558px;
+  z-index: 2;
   background: #ffffff;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
   border-radius: 3px;
+}
+.btn {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  width: 100%;
+  justify-content: center;
+  color: #000000;
+  background: #d0d0d0;
+}
+.btnActive {
+  background: #1eab5f;
+  color: #ffffff;
+}
+.time {
+  display: none;
+}
+.titleForm {
+  font-family: Montserrat, sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 29px;
+  color: #363130;
+}
+
+.descriptionFull {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.descItem {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.descItem p {
+  font-size: 24px;
+  line-height: 28px;
+  color: #000000;
+}
+.btnReset {
+  width: 474px;
+  justify-content: center;
+  color: #ffffff;
+  background: #363130;
+  box-shadow: 0px 0px 4px rgba(51, 51, 51, 0.5);
+  border-radius: 5px;
+}
+
+@media (max-width: 480px) {
+  .treeLeft {
+    display: none;
+  }
+
+  .cloud {
+    display: none;
+  }
+  .rCloud {
+    display: none;
+  }
+  .text h1 {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .wrapper {
+    padding-top: 24px;
+  }
+  .text {
+    width: 100%;
+    gap: 16px;
+  }
+  .description h3 {
+    font-size: 12px;
+    line-height: 14px;
+    margin-bottom: 8px;
+  }
+  .text h4 {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+  }
+  .appointmentBlock {
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 40px;
+  }
+  .calendarWrapper {
+    width: 100%;
+    padding: 16px;
+  }
+  .arrow {
+    display: none;
+  }
+  .btn {
+    height: 40px;
+  }
 }
