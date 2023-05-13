@@ -1,10 +1,10 @@
-import React, {useEffect, useRef} from "react";
+import React, {useEffect, useRef, useState} from "react";
 import classNames from "classnames";
 
 import styles from "./ArticlePage.module.scss";
 
 
-import {Container, Excursion, Garanties, MainForm, NavigationArticle, VideoLink,} from "../../components";
+import {Container, Excursion, Garanties, MainForm, MenuButton, NavigationArticle, VideoLink,} from "../../components";
 import {useParams} from "react-router-dom";
 import {useDispatch, useSelector} from "react-redux";
 import {fetchBlog} from "../../bll/blogReducer";
@@ -19,7 +19,7 @@ export const ArticlePage = () => {
     useEffect(() => {
         dispatch(fetchBlog());
     }, []);
-
+    const [count, setCount] = useState(null)
     let idCard = useParams();
     const dispatch = useDispatch();
     let cardData
@@ -29,10 +29,9 @@ export const ArticlePage = () => {
     const Refs = useRef([]);
     const RefsFirst = useRef(null);
     const scroll = (index) => {
-        if(index == 'first') {
-            RefsFirst.current.scrollIntoView({ behavior: "smooth" })
-        }
-        else Refs?.current[index]?.scrollIntoView({ behavior: "smooth" })
+        if (index == 'first') {
+            RefsFirst.current.scrollIntoView({behavior: "smooth"})
+        } else Refs?.current[index]?.scrollIntoView({behavior: "smooth"})
     }
 
     return (
@@ -57,7 +56,7 @@ export const ArticlePage = () => {
                             </h3>
                             <div className={styles.descText}>
                                 {/* eslint-disable-next-line react/no-children-prop */}
-                                <ReactMarkdown children={cardData.descr}rehypePlugins={[rehypeRaw]}/>
+                                <ReactMarkdown children={cardData.descr} rehypePlugins={[rehypeRaw]}/>
                             </div>
                         </div>
                         <div className={styles.content}>
@@ -72,7 +71,8 @@ export const ArticlePage = () => {
                                 />
                             )}
                         </div>
-                        {cardData.section.map((t, index) => <div key={index}  ref={el => Refs.current[index] = el} className={styles.textBlock}>
+                        {cardData.section.map((t, index) => <div key={index} ref={el => Refs.current[index] = el}
+                                                                 className={styles.textBlock}>
                                 <h3 className={styles.titleText}>
                                     {t.stage} <span>{t.title}</span>
                                 </h3>
@@ -82,7 +82,7 @@ export const ArticlePage = () => {
 
                                 </div>
                                 <div className={styles.images}>
-                                   <Images data={t.photos.data} galleryID="my-test-gallery"/>
+                                    <Images data={t.photos.data} galleryID="my-test-gallery"/>
 
                                 </div>
 
@@ -90,9 +90,51 @@ export const ArticlePage = () => {
                         )}
                     </div>
                 </div>
+                <div className={styles.contentMobile}>
+                    <div className={styles.desc}>
+                        <h3 className={classNames("titleBlock", styles.descTitle)}>
+                            {cardData.title}
+                        </h3>
+                        <div onClick={() => setCount(11)}><MenuButton
+                            className={styles.butns}
+                            title={cardData.descrTitle}
+                        />
+                            <div className={count === 11 ? styles.textBlock : styles.hidden}>
+
+                                <div className={styles.descText}>
+                                    {/* eslint-disable-next-line react/no-children-prop */}
+                                    <ReactMarkdown children={cardData.descr} rehypePlugins={[rehypeRaw]}/>
+                                </div>
+                            </div>
+                        </div>
+                        {cardData.section.map((t, index) => <div key={index}
+                                                                 onClick={() => setCount(index)}
+                                                                 className={styles.textBlock}>
+                                <MenuButton
+                                    className={styles.butns}
+                                    title={t.title}
+                                />
+                                <div className={count === index ? styles.textBlock : styles.hidden}>
+
+                                    <div className={styles.descText}>
+                                        {/* eslint-disable-next-line react/no-children-prop */}
+                                        <ReactMarkdown children={t.descr} rehypePlugins={[rehypeRaw]}/>
+
+                                    </div>
+
+
+                                <div className={styles.images}>
+                                    <Images data={t.photos.data} galleryID="my-test-gallery"/>
+
+                                </div>
+                                </div>
+                            </div>
+                        )}
+                    </div>
+                </div>
 
                 <TopObject/>
-                <BlockVideo />
+                <BlockVideo/>
                 <BlockArticle/>
                 <Excursion cloudImg={true} houseImg={true}/>
             </Container>}

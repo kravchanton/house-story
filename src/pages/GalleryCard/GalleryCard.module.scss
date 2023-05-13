@@ -1,8 +1,9 @@
 .title {
+  padding-top: 73px;
+  font-style: normal;
   font-weight: 900;
-  font-size: 32px;
-  line-height: 39px;
-  color: #363130;
+  font-size: 38px;
+  line-height: 52px;
   text-transform: uppercase;
   margin-bottom: 40px;
 }
@@ -30,6 +31,19 @@
   width: 100%;
   background: #1eab5f;
 
+}
+.buttonAction {
+  font-weight: 500;
+  color: #000000;
+  width: 365px;
+  height: 64px;
+  justify-content: center;
+  border: 1px solid #319f1c;
+  border-radius: 0 0 6px 6px;
+  &:active {
+    color: #ffffff;
+    background: #1eab5f;
+  }
 }
 
 .NavigationButton {
@@ -78,19 +92,7 @@
   gap: 40px;
   margin-bottom: 32px;
 }
-.buttonAction {
-  font-weight: 500;
-  color: #000000;
-  width: 365px;
-  height: 64px;
-  justify-content: center;
-  border: 1px solid #319f1c;
-  border-radius: 0 0 6px 6px;
-  &:active {
-    color: #ffffff;
-    background: #1eab5f;
-  }
-}
+
 .textBlock {
   display: flex;
   padding: 40px;
