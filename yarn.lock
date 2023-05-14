@@ -1304,6 +1304,13 @@
   resolved "https://registry.npmjs.org/@eslint/js/-/js-8.37.0.tgz"
   integrity sha512-x5vzdtOOGgFVDCUs81QRB2+liax8rFg3+7hqM+QhBG0/G3F1ZsoYl97UrqgHgQ9KKT7G6c4V+aTUCgu/n22v1A==
 
+"@googlemaps/js-api-loader@^1.7.0":
+  version "1.15.1"
+  resolved "https://registry.npmjs.org/@googlemaps/js-api-loader/-/js-api-loader-1.15.1.tgz"
+  integrity sha512-AsnEgNsB7S/VdrHGEQUaUM2e5tmjFGKBAfzR/AqO8O7TPq/jQGvoRw5liPBw4EMF38RDsHmKDV89q/X+qiUREQ==
+  dependencies:
+    fast-deep-equal "^3.1.3"
+
 "@humanwhocodes/config-array@^0.10.4":
   version "0.10.7"
   resolved "https://registry.npmjs.org/@humanwhocodes/config-array/-/config-array-0.10.7.tgz"
@@ -1642,6 +1649,11 @@
   resolved "https://registry.npmjs.org/@leichtgewicht/ip-codec/-/ip-codec-2.0.4.tgz"
   integrity sha512-Hcv+nVC0kZnQ3tD9GVu5xSMR4VVYOteQIr/hwFPVEvPdlXqgGEuRjiheChHgdM+JyqdgNcmzZOX/tnl0JOiI7A==
 
+"@mapbox/point-geometry@^0.1.0":
+  version "0.1.0"
+  resolved "https://registry.npmjs.org/@mapbox/point-geometry/-/point-geometry-0.1.0.tgz"
+  integrity sha512-6j56HdLTwWGO0fJPlrZtdU/B13q8Uwmo18Ck2GnGgN9PCFyKTZ3UbXeEdRFh18i9XQ92eH2VdtpJHpBD3aripQ==
+
 "@nicolo-ribaudo/eslint-scope-5-internals@5.1.1-v1":
   version "5.1.1-v1"
   resolved "https://registry.npmjs.org/@nicolo-ribaudo/eslint-scope-5-internals/-/eslint-scope-5-internals-5.1.1-v1.tgz"
@@ -1669,6 +1681,13 @@
   dependencies:
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
+
+"@pbe/react-yandex-maps@^1.2.4":
+  version "1.2.4"
+  resolved "https://registry.yarnpkg.com/@pbe/react-yandex-maps/-/react-yandex-maps-1.2.4.tgz#fe3cbc43f018e73878be01c1cd2d8758ef1464b9"
+  integrity sha512-3VL5wd92cinLUnkOqbsk27lAEqKrJBP+XmmbZK3L9trwUYbO2U5n/dlJiqHplYQQb6MnZlnWwZA6h8ZBQ/FsWg==
+  dependencies:
+    "@types/yandex-maps" "2.1.29"
 
 "@pmmmwh/react-refresh-webpack-plugin@^0.5.3":
   version "0.5.10"
@@ -2116,6 +2135,11 @@
     "@types/qs" "*"
     "@types/serve-static" "*"
 
+"@types/geojson@*":
+  version "7946.0.10"
+  resolved "https://registry.npmjs.org/@types/geojson/-/geojson-7946.0.10.tgz"
+  integrity sha512-Nmh0K3iWQJzniTuPRcJn5hxXkfB1T1pgB89SBig5PlJQU5yocazeu4jATJlaA0GYFKWMqDdvYemoSnF2pXgLVA==
+
 "@types/graceful-fs@^4.1.2":
   version "4.1.6"
   resolved "https://registry.npmjs.org/@types/graceful-fs/-/graceful-fs-4.1.6.tgz"
@@ -2189,15 +2213,22 @@
 
 "@types/lodash.memoize@^4.1.7":
   version "4.1.7"
-  resolved "https://registry.yarnpkg.com/@types/lodash.memoize/-/lodash.memoize-4.1.7.tgz#aff94ab32813c557cbc1104e127030e3d60a3b27"
+  resolved "https://registry.npmjs.org/@types/lodash.memoize/-/lodash.memoize-4.1.7.tgz"
   integrity sha512-lGN7WeO4vO6sICVpf041Q7BX/9k1Y24Zo3FY0aUezr1QlKznpjzsDk3T3wvH8ofYzoK0QupN9TWcFAFZlyPwQQ==
   dependencies:
     "@types/lodash" "*"
 
 "@types/lodash@*":
   version "4.14.194"
-  resolved "https://registry.yarnpkg.com/@types/lodash/-/lodash-4.14.194.tgz#b71eb6f7a0ff11bff59fc987134a093029258a76"
+  resolved "https://registry.npmjs.org/@types/lodash/-/lodash-4.14.194.tgz"
   integrity sha512-r22s9tAS7imvBt2lyHC9B8AGwWnXaYb1tY09oyLkXDs4vArpYJzw09nj8MLx5VfciBPGIb+ZwG0ssYnEPJxn/g==
+
+"@types/mapbox-gl@^2.6.0":
+  version "2.7.11"
+  resolved "https://registry.npmjs.org/@types/mapbox-gl/-/mapbox-gl-2.7.11.tgz"
+  integrity sha512-4vSwPSTQIawZTFRiTY2R74aZwAiM9gE6KGj871xdyAPpa+DmEObXxQQXqL2PsMH31/rP9nxJ2Kv0boeTVJMXVw==
+  dependencies:
+    "@types/geojson" "*"
 
 "@types/mdast@^3.0.0":
   version "3.0.11"
@@ -2344,6 +2375,11 @@
   integrity sha512-zdQDHKUgcX/zBc4GrwsE/7dVdAD8JR4EuiAXiiUhhfyIJXXb2+PrGshFyeXWQPMmmZ2XxgaqclgpIC7eTXc1mg==
   dependencies:
     "@types/node" "*"
+
+"@types/yandex-maps@2.1.29":
+  version "2.1.29"
+  resolved "https://registry.yarnpkg.com/@types/yandex-maps/-/yandex-maps-2.1.29.tgz#88dba8d99a4a05c6bf6d7fbc36c78e891ef30d38"
+  integrity sha512-nuibRWj3RU/9KXlCzTrRtDE+n6V9l7NbT9JakicqZ5OXIdwyb6blvV2Uwn6lB58WYm3DSUDP2I2AWlnWMc8z2w==
 
 "@types/yargs-parser@*":
   version "21.0.0"
@@ -2778,7 +2814,7 @@
 
 "@wojtekmaj/date-utils@^1.1.3":
   version "1.1.3"
-  resolved "https://registry.yarnpkg.com/@wojtekmaj/date-utils/-/date-utils-1.1.3.tgz#7be7fb33a2b987d886ff868877ee8c7908176e85"
+  resolved "https://registry.npmjs.org/@wojtekmaj/date-utils/-/date-utils-1.1.3.tgz"
   integrity sha512-rHrDuTl1cx5LYo8F4K4HVauVjwzx4LwrKfEk4br4fj4nK8JjJZ8IG6a6pBHkYmPLBQHCOEDwstb0WNXMGsmdOw==
 
 "@xmldom/xmldom@^0.8.3":
@@ -3935,7 +3971,7 @@ cliui@^7.0.2:
 
 clsx@^1.2.1:
   version "1.2.1"
-  resolved "https://registry.yarnpkg.com/clsx/-/clsx-1.2.1.tgz#0ddc4a20a549b59c93a4116bb26f5294ca17dc12"
+  resolved "https://registry.npmjs.org/clsx/-/clsx-1.2.1.tgz"
   integrity sha512-EcR6r5a8bj6pu3ycsa/E/cKVGuTgZJZdsyUYHOksG/UHIiKfjxzRxYJpyVBwYaQeOvghal9fcc4PidlgzugAQg==
 
 co@^4.6.0:
@@ -5411,7 +5447,7 @@ etag@~1.8.1:
   resolved "https://registry.npmjs.org/etag/-/etag-1.8.1.tgz"
   integrity sha512-aIL5Fx7mawVa300al2BnEE4iNvo1qETxLrPI/o05L7z6go7fCw1J6EQmbK4FmJ2AS7kgVF/KEZWufBfdClMcPg==
 
-eventemitter3@^4.0.0:
+eventemitter3@^4.0.0, eventemitter3@^4.0.4:
   version "4.0.7"
   resolved "https://registry.npmjs.org/eventemitter3/-/eventemitter3-4.0.7.tgz"
   integrity sha512-8guHBZCwKnFhYdHr2ysuRWErTwhoN2X8XELRlrRwpmfeY2jjuUN4taQMsULKUVo1K4DvZl+0pgfyoysHxvmvEw==
@@ -5971,7 +6007,7 @@ get-symbol-description@^1.0.0:
 
 get-user-locale@^2.2.1:
   version "2.2.1"
-  resolved "https://registry.yarnpkg.com/get-user-locale/-/get-user-locale-2.2.1.tgz#e7e9f365a202458a360d74c8a3516766d38402ae"
+  resolved "https://registry.npmjs.org/get-user-locale/-/get-user-locale-2.2.1.tgz"
   integrity sha512-3814zipTZ2MvczOcppEXB3jXu+0HWwj5WmPI6//SeCnUIUaRXu7W4S54eQZTEPadlMZefE+jAlPOn+zY3tD4Qw==
   dependencies:
     "@types/lodash.memoize" "^4.1.7"
@@ -6111,6 +6147,16 @@ globby@^6.1.0:
     object-assign "^4.0.1"
     pify "^2.0.0"
     pinkie-promise "^2.0.0"
+
+google-map-react@^2.2.0:
+  version "2.2.0"
+  resolved "https://registry.npmjs.org/google-map-react/-/google-map-react-2.2.0.tgz"
+  integrity sha512-UPiTwR3qNKJJizURXTuCbnBr8kLtLsiikj/KH1UTLGhadnU6fT+CE3CLw1lzZwk5zZIduQQODyIcEwNInECmUg==
+  dependencies:
+    "@googlemaps/js-api-loader" "^1.7.0"
+    "@mapbox/point-geometry" "^0.1.0"
+    eventemitter3 "^4.0.4"
+    prop-types "^15.7.2"
 
 gopd@^1.0.1:
   version "1.0.1"
@@ -6980,7 +7026,7 @@ jake@^10.8.5:
 
 jalaali-js@^1.1.5:
   version "1.2.6"
-  resolved "https://registry.yarnpkg.com/jalaali-js/-/jalaali-js-1.2.6.tgz#f4ee4bf686ed32bb9656f101225be4b7a1c3fd21"
+  resolved "https://registry.npmjs.org/jalaali-js/-/jalaali-js-1.2.6.tgz"
   integrity sha512-io974va+Qyu+UfuVX3UIAgJlxLhAMx9Y8VMfh+IG00Js7hXQo1qNQuwSiSa0xxco0SVgx5HWNkaiCcV+aZ8WPw==
 
 jest-changed-files@^27.5.1:
@@ -7657,7 +7703,7 @@ jsonfile@^6.0.1:
 
 jsonp@^0.2.1:
   version "0.2.1"
-  resolved "https://registry.yarnpkg.com/jsonp/-/jsonp-0.2.1.tgz#a65b4fa0f10bda719a05441ea7b94c55f3e15bae"
+  resolved "https://registry.npmjs.org/jsonp/-/jsonp-0.2.1.tgz"
   integrity sha512-pfog5gdDxPdV4eP7Kg87M8/bHgshlZ5pybl+yKxAnCZ5O7lCIn7Ixydj03wOlnDQesky2BPyA91SQ+5Y/mNwzw==
   dependencies:
     debug "^2.1.3"
@@ -10288,14 +10334,14 @@ react-app-polyfill@^3.0.0:
 
 react-calendar-datetime-picker@^1.6.3:
   version "1.6.3"
-  resolved "https://registry.yarnpkg.com/react-calendar-datetime-picker/-/react-calendar-datetime-picker-1.6.3.tgz#8d35cd59b34e109a82b3ded5dc62dad4a8522712"
+  resolved "https://registry.npmjs.org/react-calendar-datetime-picker/-/react-calendar-datetime-picker-1.6.3.tgz"
   integrity sha512-UQsPvMPG7FU9ebQLCVA+LkxJUzThEIx2ihjrTlY+s0FnqrqJvT/FfaZ+GfPNpUc/6K9JZmZOWNCuBT2EYXgNFg==
   dependencies:
     jalaali-js "^1.1.5"
 
 react-calendar@^4.2.1:
   version "4.2.1"
-  resolved "https://registry.yarnpkg.com/react-calendar/-/react-calendar-4.2.1.tgz#3706bfd5ff727f877c8a60c36bc352b4f8fdee55"
+  resolved "https://registry.npmjs.org/react-calendar/-/react-calendar-4.2.1.tgz"
   integrity sha512-T5oKXD+KLy/g6bmJJkZ7E9wj0iRMesWMZcrC7q2kI6ybOsu9NlPQx8uXJzG4A4C3Sh5Xi0deznyzWIVsUpF8tA==
   dependencies:
     "@types/react" "*"
@@ -10371,6 +10417,13 @@ react-is@^18.0.0:
   version "18.2.0"
   resolved "https://registry.npmjs.org/react-is/-/react-is-18.2.0.tgz"
   integrity sha512-xWGDIW6x921xtzPkhiULtthJHoJvBbF3q26fzloPCK0hsvxtPVelvftw3zjbHWSkR2km9Z+4uxbDDK/6Zw9B8w==
+
+react-map-gl@^7.0.23:
+  version "7.0.23"
+  resolved "https://registry.npmjs.org/react-map-gl/-/react-map-gl-7.0.23.tgz"
+  integrity sha512-874jEtdS/fB2R4jSJKud9va0H0GlxhtiSFuUMATiniQ7A2lQnZLkZIPEWwIPkMmNZDXNlTAkxWEdSHzsqADVAw==
+  dependencies:
+    "@types/mapbox-gl" "^2.6.0"
 
 react-markdown@^8.0.7:
   version "8.0.7"
@@ -10498,7 +10551,7 @@ react-scripts@5.0.1:
 
 react-share@^4.4.1:
   version "4.4.1"
-  resolved "https://registry.yarnpkg.com/react-share/-/react-share-4.4.1.tgz#4bfb0b512e26afedfea2fb66eb13c95c28fb216a"
+  resolved "https://registry.npmjs.org/react-share/-/react-share-4.4.1.tgz"
   integrity sha512-AJ9m9RiJssqvYg7MoJUc9J0D7b/liWrsfQ99ndKc5vJ4oVHHd4Fy87jBlKEQPibT40oYA3AQ/a9/oQY6/yaigw==
   dependencies:
     classnames "^2.3.2"
@@ -13051,7 +13104,7 @@ yocto-queue@^0.1.0:
 
 yup@^1.1.1:
   version "1.1.1"
-  resolved "https://registry.yarnpkg.com/yup/-/yup-1.1.1.tgz#49dbcf5ae7693ed0a36ed08a9e9de0a09ac18e6b"
+  resolved "https://registry.npmjs.org/yup/-/yup-1.1.1.tgz"
   integrity sha512-KfCGHdAErqFZWA5tZf7upSUnGKuTOnsI3hUsLr7fgVtx+DK04NPV01A68/FslI4t3s/ZWpvXJmgXhd7q6ICnag==
   dependencies:
     property-expr "^2.0.5"

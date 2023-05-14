@@ -59,12 +59,12 @@ export const GalleryCard = () => {
                             /></div>
                         )}
 
-
-                        <MenuButton
+                        <NavLink to={`/map/catalog/${cardData.id}`} > <MenuButton
                             classNameForBtn={styles.btnWrapper}
                             className={styles.btnTransparent}
                             title="На карте"
-                        />
+                        /></NavLink>
+
                         <MenuButton
                             classNameForBtn={styles.btnWrapper}
                             className={styles.btn}

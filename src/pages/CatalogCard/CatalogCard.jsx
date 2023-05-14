@@ -115,10 +115,11 @@ export const CatalogCard = () => {
                                             <p className={styles.text}>{t.value}</p>
                                         </li>)}
                                     </ul>
-                                    <MenuButton
+
+                                    <NavLink to={`/map/${cardData.catalog}/${cardData.id}`} > <MenuButton
                                         title="Смотреть на карте"
                                         className={classNames(styles.btn, styles.btnWhite)}
-                                    />
+                                    /></NavLink>
                                 </div>
                                 <div className={styles.descBlock}>
                                     <h4 className={styles.listTitle}>Описание работ</h4>
@@ -171,23 +172,13 @@ export const CatalogCard = () => {
                                             />
                                         </div>
                                     </div>
-                                  <div onClick={() => setFolder(3)} style={{width: "100%"}}><MenuButton
+                                     <div style={{width: "100%"}}><NavLink to={"/appointment/"}><MenuButton
 
-                                      title="Посетить объект"
-                                      className={folder === 3 ? `${styles.buttonAction} ${styles.active}` : styles.buttonAction}
-                                  />
-                                    <div className={folder === 3 ? styles.visible : styles.hidden}>
-                                      <Basic
-                                          select={true}
-                                          btnText="Отправить"
-                                          classNameSelect={styles.selectForm}
-                                          classNameInput={styles.inputForm}
-                                          classNameForBtn={styles.btnForm}
-                                          classNameForm={styles.contactForm}
-                                          lockText={true}
-                                      />
-                                    </div>
-                                  </div>
+                                        title="Посетить объект"
+                                        className={styles.buttonAction}
+                                    /> </NavLink> </div>
+
+
                                 </div>
                              <div className={styles.basic}>  <Basic
                                  select={true}
@@ -217,10 +208,10 @@ export const CatalogCard = () => {
                                         <p className={styles.text}>{t.value}</p>
                                     </li>)}
                                 </ul>
-                                <MenuButton
+                             <NavLink to={`/map/catalog/${cardData.id}`} >  <MenuButton
                                     title="Смотреть на карте"
                                     className={classNames(styles.btn, styles.btnWhite)}
-                                />
+                                /></NavLink>
                             </div>
                             <div className={styles.descBlock}>
                                 <h4 className={styles.listTitle}>Описание работ</h4>

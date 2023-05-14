@@ -22,6 +22,7 @@ export const CatalogItem = ({data}) => {
                 <div>{data.square} м<sup>2</sup></div>
                 <div>{data.price}₽</div>
             </div>
+            <div className={styles.projectNumber}>{data.projectNumber}</div>
             <img src={`${process.env.REACT_APP_UPLOAD_URL}${data?.mainPhoto?.data?.attributes?.url}`} alt=""/>
             <div className={styles.wrapperBtn}>
                 <NavLink to={`${data.id}`}><MenuButton

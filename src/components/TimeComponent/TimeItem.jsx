@@ -7,7 +7,7 @@ export const TimeItem = ({ setTime, item, time }) => {
   return (
     <button
       onClick={() => setTime(item)}
-      className={classNames(styles.item, time && styles.itemActive)}
+      className={classNames(styles.item, time === item && styles.itemActive)}
     >
       <p>{item}</p>
     </button>
