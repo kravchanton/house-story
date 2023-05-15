@@ -20,11 +20,11 @@ export const VideoLink = ({
   classNameWrapper,
   blurPoster,
   footer,
+  externalLink,
 }) => {
   const [play, setPlay] = useState(false);
   const [status, setStatus] = useState(playbackStatus.Stopped);
   const videoRef = useRef();
-  console.log(youtubeLink);
 
   const handlePlay = () => {
     setStatus(playbackStatus.Playing);
@@ -70,12 +70,55 @@ export const VideoLink = ({
               <Pause />
             </button>
           )}
+
           <video
             controls={status === "playing" && true}
             className={styles.video}
             ref={videoRef}
           >
             <source src={src} type="video/mp4" />
+          </video>
+        </div>
+      )}
+      {externalLink && (
+        <div className={classNames(styles.wrapper, classNameWrapper)}>
+          {status === "stopped" ? (
+            <div
+              className={classNames(
+                styles.poster,
+                blurPoster && styles.blurPoster
+              )}
+            >
+              <h3 className={styles.title}>{title}</h3>
+
+              <p className={styles.author}>{author}</p>
+              <p className={styles.desc}>{descr}</p>
+
+              <div>
+                <img
+                  className={!footer ? styles.image : styles.imageFooter}
+                  src={poster}
+                  alt=""
+                />
+              </div>
+            </div>
+          ) : null}
+          {status === "stopped" || status === "paused" ? (
+            <button className={styles.playBtn} onClick={handlePlay}>
+              <PlayVariant />
+            </button>
+          ) : (
+            <button className={styles.playBtn} onClick={handlePause}>
+              <Pause />
+            </button>
+          )}
+
+          <video
+            controls={status === "playing" && true}
+            className={styles.video}
+            ref={videoRef}
+          >
+            <source src={externalLink} type="video/mp4" />
           </video>
         </div>
       )}

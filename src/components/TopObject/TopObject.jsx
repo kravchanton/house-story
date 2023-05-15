@@ -6,7 +6,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import styles from "./TopObject.module.scss";
 
 import { MenuButton } from "../MenuButton";
-import { HouseVariant } from "../../icons";
+// import { HouseVariant } from "../../icons";
 import { SlideTop } from "../SlideTop";
 import { SliderBtn } from "../SliderBtn";
 
@@ -15,8 +15,6 @@ import { fetchTopObject } from "../../bll/topObjectReducer";
 export const TopObject = () => {
   const [folder, setFolder] = useState(null);
   const [isActive, setIsActive] = useState(false);
-  console.log(folder);
-  console.log(isActive);
 
   useEffect(() => {
     return document.documentElement.clientWidth < 768
@@ -34,7 +32,7 @@ export const TopObject = () => {
     dispatch(fetchTopObject());
   }, []);
   let data = useSelector((state) => state.topObject.topObject);
-  console.log(data);
+
   return (
     <section className={classNames(styles.section)}>
       <div>
@@ -67,7 +65,11 @@ export const TopObject = () => {
                       }
                       title={t.attributes.title}
                     >
-                      <HouseVariant className={styles.icon} />
+                      <svg xmlns="http://www.w3.org/2000/svg">
+                        <image
+                          href={`${process.env.REACT_APP_UPLOAD_URL}${t.attributes.icon.data.attributes.url}`}
+                        />
+                      </svg>
                     </MenuButton>
                   </div>
                   {isActive && (

@@ -42,11 +42,11 @@ export const Excursion = ({
             </div>
             <div className={styles.listItem}>
               <CheckVariant />
-              <li>Увидеть процесс строительства своими глазами</li>
+              <li>Познакомиться с нашими заказчиками</li>
             </div>
             <div className={styles.listItem}>
               <CheckVariant />
-              <li>Увидеть процесс строительства своими глазами</li>
+              <li>Ознакомиться с материалами из которых мы строим</li>
             </div>
           </ul>
         </div>
