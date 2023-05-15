@@ -1,32 +1,26 @@
 import React from "react";
 
 import styles from "./VideoExcursion.module.scss";
+import {VideoLink} from "../VideoLink";
 
-import dom1 from "../../assets/dom1.png";
-import poster from "../../assets/poster.png";
-
-export const VideoExcursion = ({ bgimage }) => {
+export const VideoExcursion = ({ data }) => {
+    console.log(data)
   return (
     <div className={styles.videoSection}>
-      {bgimage && <img className={styles.house1} src={dom1} alt="" />}
+        {data?.slice(0, 2).map((t, index) => <VideoLink
+                key={index}
+                link={false}
+                id={t.id}
+                title={t.title}
+                author={t.author}
+                position={t.position}
+                classNameWrapper={styles.wrapper}
+                youtubeLink={t.youtubeLink}
+                src={t?.video?.data?.attributes?.name && `${process.env.REACT_APP_UPLOAD_URL}${t?.video?.data?.attributes?.url}`}
+                poster={`${process.env.REACT_APP_UPLOAD_URL}${t?.image?.data?.attributes?.url}`}
+            />
+        )}
 
-      <video
-        poster={poster}
-        className={styles.video}
-        width="770"
-        height="507"
-        controls
-        src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
-      />
-      <video
-        poster={poster}
-        className={styles.video}
-        width="770"
-        height="507"
-        controls
-        src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
-      />
-      {/*<ReactPlayer url="../../assets/video.mp4" />*/}
     </div>
   );
 };

@@ -1,5 +1,5 @@
 .nav {
-  max-width: 365px;
+  width: 365px;
   display: flex;
   flex-direction: column;
   gap: 40px;
@@ -15,6 +15,7 @@
   color: #363130;
 }
 .navigationButton {
+  width: 365px;
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -27,7 +28,7 @@
 }
 .btn {
   text-align: left;
-  width: 365px;
+  width: 100%;
   color: #000000;
   border: 1px solid #1eab5f;
   border-radius: 5px;

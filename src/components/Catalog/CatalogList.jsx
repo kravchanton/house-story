@@ -11,7 +11,7 @@ export const CatalogList = ({data}) => {
         <div className={styles.catalogListWrapper}>
             <div
                 className={styles.catalogList}>{data.slice(entries.indexOfFirst, entries.indexOfLast).map((t, index) => (
-                <CatalogItem key={index} data={t}/>
+                <CatalogItem key={index} map={true} data={t}/>
             ))}
             </div>
             <Pagination

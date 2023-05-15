@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 
 import styles from "./BuildingHouse.module.scss";
 
@@ -7,13 +7,19 @@ import bgBuilding2 from "../../assets/buildingBackground2.png";
 import tree from "../../assets/tree.png";
 
 export const BuildingHouse = ({data}) => {
-        return (
+    const [count, setCount] = useState(6)
+useEffect(() => {
+    if (document.documentElement.clientWidth < 480) {
+        setCount(2)
+    }
+}, [])
+    return (
     <>
       <img className={styles.bgBuilding} src={bgBuilding1} alt="" />
       <img className={styles.bgBuilding1} src={bgBuilding2} alt="" />
       <img className={styles.tree} src={tree} alt="tree" />
       <div className={styles.houseImages}>
-          {data?.slice(0,5).map((t,index) => <img key={index}
+          {data?.slice(0,count).map((t,index) => <img key={index}
           className={styles.buildingImage}
           src={`${process.env.REACT_APP_UPLOAD_URL}${t?.attributes?.url}`}
           alt="buildingHouse"

@@ -16,6 +16,7 @@
   color: #1EAB5F
 }
 
+
 .wrapper {
   display: flex;
   z-index: 5;
@@ -25,6 +26,18 @@
 
 }
 
+.wrapperMobile {
+  display: flex;
+  flex-direction: column;
+  z-index: 5;
+  padding-top: 24px;
+
+
+}
+
+.itemMobile {
+
+}
 
 .NavigationWrapper {
 
@@ -51,7 +64,8 @@
   border-radius: 5px;
   color: #000000
 }
-.NavigationButton svg{
+
+.NavigationButton svg {
   width: 30px;
   height: 30px;
 }
@@ -60,36 +74,60 @@
   color: #FFFFFF;
   background: #1EAB5F;
 }
-.active svg{
+
+.active svg {
   filter: brightness(0) invert(1);
 }
+
 .catalogListWrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+
+.catalogListWrapperMobile {
+  width: 100%;
+  padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+  border-radius: 5px 5px 0px 0px;
+}
+
 .catalogList {
   display: flex;
   flex-direction: row;
   width: 65vw;
   flex-wrap: wrap;
   gap: 40px;
+
+}
+
+
+.hidden {
+  display: none;
 }
 
 .catalogItem {
+  position: relative;
   display: flex;
   flex-direction: column;
   width: 365px;
   height: 348px;
 }
-.catalogItem img{
+
+.catalogItem img {
   margin-top: 16px;
   width: 365px;
   height: 207px;
   object-fit: cover;
   border-radius: 3px;
 }
-.catalogItem h4{
+
+.catalogItem h4 {
   font-weight: 900;
   font-size: 24px;
   line-height: 29px;
@@ -106,12 +144,25 @@
   line-height: 24px;
   color: #1EAB5F;
 }
+.projectNumber {
+  position: absolute;
+  left: 10px;
+  top: 250px;
+  background: #FFFFFF;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 23px;
 
+  color: #1EAB5F;
+}
 .ItemButton {
   display: flex;
   justify-content: center;
 
-  width: 100%;
+  width: 220px;
   height: 50px;
   border: 1px solid #130D0D;
   box-shadow: inset 4px 4px 25px rgba(241, 241, 241, 0.25);
@@ -120,9 +171,56 @@
   margin-top: 16px;
 
 }
-.QuizWrapper{
+.maps {
+  display: flex;
+  justify-content: center;
+
+  width: 129px;
+  height: 50px;
+  border: 1px solid #130D0D;
+  box-shadow: inset 4px 4px 25px rgba(241, 241, 241, 0.25);
+  border-radius: 5px;
+  color: #000000;
+  margin-top: 16px;
+}
+
+.share {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  width: 129px;
+  height: 50px;
+  border: 1px solid #130D0D;
+  box-shadow: inset 4px 4px 25px rgba(241, 241, 241, 0.25);
+  border-radius: 5px;
+  color: #000000;
+  margin-top: 16px;
+}
+
+.share p {
+  font-style: normal;
+  font-size: 16px;
+  line-height: 19px;
+  color: #000000;
+}
+
+.shareLinks {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+}
+
+.QuizWrapper {
   padding-top: 160px;
 }
+
+.wrapperBtn {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+}
+
 .QuizWrapper h2 {
   font-weight: 700;
   font-size: 32px;
@@ -130,7 +228,8 @@
   text-transform: uppercase;
   color: #1EAB5F;
 }
-.QuizWrapper h2 span{
+
+.QuizWrapper h2 span {
   font-weight: 400;
   font-size: 18px;
   line-height: 21px;
@@ -142,4 +241,74 @@
 
 .icon {
   fill: #1eab5f;
+}
+
+@media (max-width: 992px) {
+  .wrapper {
+    display: none
+  }
+}
+
+@media (min-width: 992px) {
+  .wrapperMobile {
+    display: none
+  }
+}
+
+@media (max-width: 992px) {
+  .catalogList {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    gap:  0;
+  }
+  .NavigationButton {
+    margin-top: 24px;
+    height: 40px;
+    width: 100%;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+  }
+  .wrapper {
+    display: none
+  }
+  .catalog h2 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+
+  .catalogItem h4 {
+    font-style: normal;
+    font-weight: 900;
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .price {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px
+  }
+  .catalogItem {
+    padding: 16px;
+  }
+  .catalogItem img{
+    width: 100%;
+  }
+  .projectNumber {
+    left: 25px;
+    top: 230px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+  }
+  .maps {
+    width: 80px;
+  }
 }

@@ -1,0 +1,92 @@
+.title {
+  text-transform: uppercase;
+  margin-bottom: 40px;
+}
+.content {
+  display: flex;
+  gap: 40px;
+}
+.desc {
+  display: flex;
+  gap: 64px;
+  flex-direction: column;
+  flex-grow: 1;
+}
+.descTitle {
+  color: #1eab5f;
+}
+.textBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.titleText {
+  font-weight: 900;
+  font-size: 32px;
+  line-height: 52px;
+  color: #363130;
+  & span {
+    color: #1eab5f;
+  }
+}
+.descText {
+  padding: 32px 40px;
+  background: #ffffff;
+  border: 1px solid #319f1c;
+  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.25);
+  border-radius: 3px;
+  font-size: 16px;
+  line-height: 26px;
+}
+.garanties {
+  margin-bottom: 0;
+}
+.video {
+  margin-bottom: 0;
+}
+.images {
+  display: flex;
+  max-width: 1175px;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding-bottom: 24px;
+}
+
+.image {
+  width: 365px;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 3px;
+}
+.btn {
+  justify-content: center;
+  height: 45px;
+  font-weight: 600;
+  background: #1eab5f;
+  box-shadow: 0 4px 4px #64bc45;
+  border-radius: 5px;
+  width: 325px;
+  margin: 0 auto;
+}
+.sectionWrapper {
+  margin-bottom: 0;
+}
+.mediaWrapper {
+  margin-top: 120px;
+  margin-bottom: 100px;
+}
+
+.content {
+  display: flex;
+  gap: 40px;
+}
+
+.wrapper {
+  width: 1175px;
+  height: 774px;
+}
+
+.container {
+  padding-top: 56px;
+
+}

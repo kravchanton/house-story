@@ -31,7 +31,6 @@ export const Contacts = () => {
     dispatch(fetchMainForm());
   }, []);
 
-  console.log(data);
   return (
     <section className={styles.contactsSection}>
       {data && (

@@ -6,6 +6,8 @@ import {useParams} from "react-router-dom";
 import {PhotoList} from "./PhotoList";
 import {fetchPhotoGallery} from "../../bll/photoReducer";
 import {MenuPhoto} from "./MenuPhoto";
+import {MenuButton} from "../MenuButton";
+import {CatalogListMobile} from "../Catalog/CatalogListMobile";
 
 export const GalleryContainer = () => {
     const [folder, setFolder] = useState(0);
@@ -37,6 +39,28 @@ export const GalleryContainer = () => {
             <div className={styles.wrapper}>
                 <MenuPhoto search={search} setSearch={setSearch} data={data} folder={folder} setFolder={setFolder}/>
                 {data && <PhotoList key={folder} data={dataTransfer}/>}
+            </div>
+            <div className={styles.wrapperMobile}>
+                {data?.map((t, index) => {
+                    return (
+                        <div key={index} onClick={() => setFolder(index)} className={styles.itemMobile}>
+                            <MenuButton
+                                title={t.attributes.folder}
+                                className={
+                                    folder === index
+                                        ? `${styles.NavigationButton} ${styles.active}`
+                                        : styles.NavigationButton
+                                }
+                            >
+                                {t.attributes.icon &&   <svg xmlns="http://www.w3.org/2000/svg" >
+                                    <image href={`${process.env.REACT_APP_UPLOAD_URL}${t.attributes?.icon?.data?.attributes?.url}`}/>
+                                </svg>}
+
+                            </MenuButton>
+                            <CatalogListMobile visible={folder === index} data={dataTransfer} />
+                        </div>
+                    );
+                })}
             </div>
         </div>
     );

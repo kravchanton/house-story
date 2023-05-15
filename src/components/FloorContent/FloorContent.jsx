@@ -7,6 +7,7 @@ import {MenuButton} from "../MenuButton";
 import ReactMarkdown from "react-markdown";
 import {NavLink} from "react-router-dom";
 
+styles.imagesBlock = undefined;
 export const FloorContent = ({data}) => {
     return (
         <div className={styles.section}>
@@ -22,7 +23,8 @@ export const FloorContent = ({data}) => {
                     <img className={styles.smallImage}
                          src={`${process.env.REACT_APP_UPLOAD_URL}${data?.media?.data[0]?.attributes?.url}`}
                          alt="firstimg"/>
-                    <img src={`${process.env.REACT_APP_UPLOAD_URL}${data?.media?.data[1]?.attributes?.url}`}
+                    <img className={styles.smallImage}
+                         src={`${process.env.REACT_APP_UPLOAD_URL}${data?.media?.data[1]?.attributes?.url}`}
                          alt="secondimg"/>
                 </div>
                 <NavLink to={data.buttonLink}><MenuButton

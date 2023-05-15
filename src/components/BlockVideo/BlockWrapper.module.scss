@@ -150,3 +150,13 @@ h3 {
 .slide {
   width: 500px;
 }
+
+
+@media (max-width: 480px) {
+  .content {
+    flex-direction: column;
+  }
+  .wrapper {
+    width: 100%;
+  }
+}

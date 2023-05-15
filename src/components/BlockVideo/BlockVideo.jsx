@@ -28,22 +28,23 @@ export const BlockVideo = () => {
             <p className={styles.subtitle}>{data.subtitle}</p>
           </div>
 
-          <div className={styles.content}>
-            {data.video.slice(0, 3).map((t, index) => (
-              <VideoLink
-                key={index}
-                title={t.title}
-                author={t.author}
-                classNameWrapper={styles.wrapper}
-                youtubeLink={t.youtubeLink}
-                src={
-                  t?.video?.data?.attributes?.name &&
-                  `${process.env.REACT_APP_UPLOAD_URL}${t?.video?.data?.attributes?.url}`
-                }
-                poster={`${process.env.REACT_APP_UPLOAD_URL}${t?.image?.data[0]?.attributes?.url}`}
-              />
-            ))}
-          </div>
+                <div className={styles.content}>
+
+                    {data.video.slice(0, 3).map((t, index) => <VideoLink
+                            key={index}
+                            link={true}
+                            id={t.id}
+                            title={t.title}
+                            author={t.author}
+                            position={t.position}
+                            classNameWrapper={styles.wrapper}
+                            youtubeLink={t.youtubeLink}
+                            src={t?.video?.data?.attributes?.name && `${process.env.REACT_APP_UPLOAD_URL}${t?.video?.data?.attributes?.url}`}
+                            poster={`${process.env.REACT_APP_UPLOAD_URL}${t?.image?.data?.attributes?.url}`}
+                        />
+                    )}
+
+                </div>
 
           <NavLink to={data.buttonLink}>
             {" "}

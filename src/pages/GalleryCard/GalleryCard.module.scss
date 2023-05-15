@@ -1,8 +1,9 @@
 .title {
+  padding-top: 73px;
+  font-style: normal;
   font-weight: 900;
-  font-size: 32px;
-  line-height: 39px;
-  color: #363130;
+  font-size: 38px;
+  line-height: 52px;
   text-transform: uppercase;
   margin-bottom: 40px;
 }
@@ -30,6 +31,19 @@
   width: 100%;
   background: #1eab5f;
 
+}
+.buttonAction {
+  font-weight: 500;
+  color: #000000;
+  width: 365px;
+  height: 64px;
+  justify-content: center;
+  border: 1px solid #319f1c;
+  border-radius: 0 0 6px 6px;
+  &:active {
+    color: #ffffff;
+    background: #1eab5f;
+  }
 }
 
 .NavigationButton {
@@ -62,9 +76,10 @@
   width: 100%;
   color: #000000;
   background-color: transparent;
-  border: 1px solid #130d0d;
+  border: 1px solid #1EAB5F;
   box-shadow: inset 4px 4px 25px rgba(241, 241, 241, 0.25);
   margin-top: 77px;
+  margin-bottom: 16px;
 }
 .description {
   display: flex;
@@ -74,22 +89,11 @@
 }
 .buttonBlock {
   display: flex;
+
   gap: 40px;
   margin-bottom: 32px;
 }
-.buttonAction {
-  font-weight: 500;
-  color: #000000;
-  width: 100%;
-  height: 64px;
-  justify-content: center;
-  border: 1px solid #319f1c;
-  border-radius: 0 0 6px 6px;
-  &:active {
-    color: #ffffff;
-    background: #1eab5f;
-  }
-}
+
 .textBlock {
   display: flex;
   padding: 40px;
@@ -128,10 +132,11 @@
 
 }
 
-.images {
+.image {
   width: 500px;
   height: 374px;
   cursor: pointer;
+  object-fit: cover;
 }
 
 .gallery {
@@ -139,11 +144,80 @@
   gap: 40px;
   flex-wrap: wrap;
 }
-
+.hidden {
+  display: none;
+}
 .wrap {
   display: flex;
   justify-content: center;
 }
 .buttn {
   padding-top: 16px;
+}
+.textBlockMobile {
+  padding: 16px;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+  border-radius: 5px 5px 0px 0px;
+}
+
+@media (max-width: 480px) {
+  .plan {
+    width: 100%;
+  }
+  .imageFloor {
+    display: none;
+  }
+  .about {
+    flex-direction: column;
+  }
+  .title {
+    padding-top: 24px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    color: #1EAB5F;
+    line-height: 20px;
+    margin-bottom: 16px;
+  }
+  .btnTransparent {
+    margin-top: 16px;
+
+  }
+  .buttonBlock {
+    flex-direction: column;
+    gap: 16px;
+  }
+  .active {
+    color: #ffffff;
+  }
+
+  .buttonAction {
+    width: 100%;
+    height: 50px;
+    border: 1px solid #1EAB5F;
+    border-radius: 5px;
+  }
+  .textBlock {
+    display: none;
+  }
+.description {
+  margin-bottom: 10px;
+}
+  .photoBlock {
+    padding: 16px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+    border-radius: 3px;
+  }
+  .image {
+    width: 100%;
+  }
+}
+
+
+@media (min-width: 480px) {
+.textBlockMobile {
+  display: none;
+}
 }

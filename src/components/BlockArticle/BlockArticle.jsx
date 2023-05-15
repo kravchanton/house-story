@@ -34,7 +34,7 @@ export const BlockArticle = () => {
                             <img className={styles.img} src={`${process.env.REACT_APP_UPLOAD_URL}${t?.image?.data?.attributes?.url}`} alt="" />
                             <h4 className={styles.name}>{t.title}</h4>
                             <p className={styles.duration}>{t.time}</p>
-                            <p className={styles.read}>Читать</p>
+                            <p className={styles.read}>Читать  ⟶</p>
                         </NavLink>
                     )}
 

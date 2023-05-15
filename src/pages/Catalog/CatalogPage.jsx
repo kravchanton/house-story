@@ -15,7 +15,6 @@ export const CatalogPage = () => {
         dispatch(fetchCatalogPage());
     }, []);
     let data = useSelector((state) => state.catalogPage.catalogPage);
-    console.log(data)
     return (
         <main className={styles.main}>
             {data && <Container>
