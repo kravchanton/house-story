@@ -171,6 +171,18 @@
   margin-top: 16px;
 
 }
+.maps {
+  display: flex;
+  justify-content: center;
+
+  width: 129px;
+  height: 50px;
+  border: 1px solid #130D0D;
+  box-shadow: inset 4px 4px 25px rgba(241, 241, 241, 0.25);
+  border-radius: 5px;
+  color: #000000;
+  margin-top: 16px;
+}
 
 .share {
   display: flex;
@@ -295,5 +307,8 @@
     font-weight: 700;
     font-size: 16px;
     line-height: 19px;
+  }
+  .maps {
+    width: 80px;
   }
 }

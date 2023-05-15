@@ -4,14 +4,14 @@ import {CatalogItem} from "./CatalogItem";
 import {usePagination, Pagination} from "pagination-react-js"
 import './pagination.css'
 
-export const CatalogListMobile = ({data, visible}) => {
+export const CatalogListMobile = ({data, visible, map}) => {
     const {currentPage, entriesPerPage, entries} = usePagination(1, 1);
 
     return (
         <div className={visible ? styles.catalogListWrapperMobile : styles.hidden}>
             <div
                 className={styles.catalogList}>{data.slice(entries.indexOfFirst, entries.indexOfLast).map((t, index) => (
-                <CatalogItem key={index} data={t}/>
+                <CatalogItem key={index} map={map} data={t}/>
             ))}
                 <Pagination
                     entriesPerPage={entriesPerPage.get}

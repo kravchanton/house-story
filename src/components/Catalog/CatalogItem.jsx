@@ -13,7 +13,7 @@ import {
     WhatsappShareButton
 } from "react-share";
 
-export const CatalogItem = ({data}) => {
+export const CatalogItem = ({data, map}) => {
     console.log(data);
     return (
         <div className={styles.catalogItem}>
@@ -28,7 +28,9 @@ export const CatalogItem = ({data}) => {
                 <NavLink to={`${data.id}`}><MenuButton
                     title='Подробнее'
                     className={styles.ItemButton}/></NavLink>
-                <div className={styles.share}>
+                {map ?  <NavLink to={`/map/catalog/${data.id}`}><MenuButton
+                    title='На карте'
+                    className={styles.maps}/></NavLink>  :<div className={styles.share}>
                    <p>Поделиться</p>
                     <div className={styles.shareLinks}>
                         <WhatsappShareButton
@@ -58,7 +60,7 @@ export const CatalogItem = ({data}) => {
                             <ViberIcon size={18} round/>
                         </ViberShareButton>
                     </div>
-                </div>
+                </div>}
             </div>
         </div>
     );

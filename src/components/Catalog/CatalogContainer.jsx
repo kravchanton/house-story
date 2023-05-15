@@ -56,7 +56,7 @@ export const CatalogContainer = () => {
                                 </svg>}
 
                             </MenuButton>
-                            <CatalogListMobile visible={folder === index} data={dataTransfer} />
+                            <CatalogListMobile visible={folder === index} map={true} data={dataTransfer} />
                         </div>
                     );
                 })}
