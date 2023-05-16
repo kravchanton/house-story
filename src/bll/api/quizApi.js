@@ -49,7 +49,7 @@ export const catalogApi = {
     return apiInstance.get("catalogs?populate=deep");
   },
   getCatalogPageData() {
-    return apiInstance.get("gallery-pages?populate=deep");
+    return apiInstance.get("catalog-page?populate=deep");
   },
 };
 

@@ -44,14 +44,14 @@ export const Basic = ({
   });
 
   const sendDataToUser = async (name, phone, messenger, callTime, answers) => {
-    return await sendNotification(
+   return await sendNotification(
       `Поступила новая запись на встречу: ${
         appointment?.time
       }, ${weekDays?.filter(
         (day, index) => appointment?.date?.getDay() === index + 1
       )}, ${appointment?.date?.toLocaleString().slice(0, 2)}  ${months?.filter(
         (month, index) => appointment?.date?.getMonth() === index
-      )} ${appointment?.date?.getFullYear()} года, Имя Клиента: ${name}, Телефон: ${phone}, Мессенджер: ${messenger}, Время звонка: ${callTime}, Ответы на вопросы: ${answers}`
+      )} ${appointment?.date?.getFullYear()} года, ${name}  ${phone}, ${messenger}, ${callTime}, ${answers}`
         .split("undefined")
         .join("")
     );
