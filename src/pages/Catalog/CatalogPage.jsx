@@ -15,13 +15,14 @@ export const CatalogPage = () => {
         dispatch(fetchCatalogPage());
     }, []);
     let data = useSelector((state) => state.catalogPage.catalogPage);
+    console.log(data)
     return (
         <main className={styles.main}>
             {data && <Container>
                 <NavigationHeader/>
                 <MainForm/>
                 <CatalogContainer/>
-                <CatalogQuiz numberQuiz={2}/>
+                <CatalogQuiz numberQuiz={data.attributes.quizNumber}/>
                 <TopObject/>
 
                 <Garanties title={true}/>

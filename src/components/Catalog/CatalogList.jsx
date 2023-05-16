@@ -10,7 +10,7 @@ export const CatalogList = ({data}) => {
     return (
         <div className={styles.catalogListWrapper}>
             <div
-                className={styles.catalogList}>{data.slice(entries.indexOfFirst, entries.indexOfLast).map((t, index) => (
+                className={styles.catalogList}>{data?.slice(entries.indexOfFirst, entries.indexOfLast).map((t, index) => (
                 <CatalogItem key={index} map={true} data={t}/>
             ))}
             </div>
