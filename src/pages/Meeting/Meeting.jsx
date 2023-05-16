@@ -1,6 +1,8 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchMeetingData } from "../../bll/meetingReducer";
+import classNames from "classnames";
+import ReactMarkdown from "react-markdown";
 
 import styles from "./Meeting.module.scss";
 import {
@@ -8,19 +10,13 @@ import {
   Container,
   Excursion,
   Garanties,
-  // Quiz,
-  // MenuButton,
   MainForm,
   MenuButton,
   Quiz,
   TopObject,
   VideoLink,
-  // TopObject,
-  // Garanties,
 } from "../../components";
 import { ArrowVariant, CheckVariant } from "../../icons";
-import classNames from "classnames";
-import ReactMarkdown from "react-markdown";
 
 export const Meeting = () => {
   const dispatch = useDispatch();
@@ -65,7 +61,7 @@ export const Meeting = () => {
               ))}
             </div>
           </div>
-          <Quiz numberQuiz={1} />
+          <Quiz numberQuiz={data.quizNumber} />
           <div className={styles.visual}>
             <h3 className={classNames(styles.titleBlock, styles.visualTitle)}>
               3D визуализация поможет

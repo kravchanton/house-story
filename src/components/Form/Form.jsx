@@ -51,7 +51,7 @@ export const Basic = ({
         (day, index) => appointment?.date?.getDay() === index + 1
       )}, ${appointment?.date?.toLocaleString().slice(0, 2)}  ${months?.filter(
         (month, index) => appointment?.date?.getMonth() === index
-      )} ${appointment?.date?.getFullYear()} года, ${name} ${phone}, ${messenger}, ${callTime}, ${answers}`
+      )} ${appointment?.date?.getFullYear()} года, Имя Клиента: ${name}, Телефон: ${phone}, Мессенджер: ${messenger}, Время звонка: ${callTime}, Ответы на вопросы: ${answers}`
         .split("undefined")
         .join("")
     );

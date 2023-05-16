@@ -1,4 +1,4 @@
-@import "./src/styles/variables";
+@import "src/styles/variables";
 
 .footer {
   padding: 40px 0;
@@ -101,7 +101,7 @@
   width: 221px;
 }
 .arrow {
-  //transform: rotate(180deg);
+  order: 2;
 }
 .left {
   display: flex;
