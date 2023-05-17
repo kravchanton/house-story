@@ -9,7 +9,7 @@ import {useParams} from "react-router-dom";
 import {useDispatch, useSelector} from "react-redux";
 import {fetchBlog} from "../../bll/blogReducer";
 import ReactMarkdown from "react-markdown";
-import rehypeRaw from 'https://esm.sh/rehype-raw@6'
+import rehypeRaw from 'rehype-raw'
 import {Images} from "./Images";
 import {TopObject} from "../../components/TopObject/TopObject";
 import {BlockVideo} from "../../components/BlockVideo/BlockVideo";

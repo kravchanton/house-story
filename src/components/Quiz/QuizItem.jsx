@@ -34,7 +34,7 @@ export const QuizItem = ({
               >
                 {t.image.data !== null && (
                   <img
-                    src={`${process.env.REACT_APP_UPLOAD_URL}${t.image.data[0].attributes.formats.thumbnail.url}`}
+                    src={`${process.env.REACT_APP_UPLOAD_URL}${t.image.data[0].attributes.url}`}
                     alt="image"
                   />
                 )}

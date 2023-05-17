@@ -1,7 +1,7 @@
 import React from "react";
 
 import styles from "./FloorContent.module.scss";
-import rehypeRaw from 'https://esm.sh/rehype-raw@6'
+import rehypeRaw from 'rehype-raw'
 
 import {MenuButton} from "../MenuButton";
 import ReactMarkdown from "react-markdown";

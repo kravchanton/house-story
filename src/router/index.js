@@ -22,6 +22,7 @@ import {
   Meeting,
 } from "../pages";
 import {MapPage} from "../components/MapPage/MapPage";
+import {VideoBlog} from "../pages/VideoBlog";
 
 export const router = createBrowserRouter(
   createRoutesFromElements(
@@ -35,6 +36,7 @@ export const router = createBrowserRouter(
         <Route path="/gallery-card/:idPage/:id" element={<GalleryCard />} />
         <Route path="/blog/:idPage" element={<BlogPage />} />
         <Route path="/blog/:idPage/:id" element={<ArticlePage />} />
+        <Route path="/video/:id" element={<VideoBlog />} />
         <Route path="contacts" element={<Contacts />} />
         <Route path="about" element={<About />} />
         <Route path="meeting" element={<Meeting />} />
