@@ -56,57 +56,22 @@
   background-color: transparent;
   z-index: 2;
 }
-.poster {
-  position: relative;
-  width: 500px;
-  height: 329px;
-}
 
 .nonPoster {
   display: none;
 }
-.name {
-  max-width: 401px;
-  font-weight: 800;
-  font-size: 24px;
-  line-height: 29px;
-  color: #ffffff;
-  position: absolute;
-  left: 40px;
-  top: 40px;
-  z-index: 2;
-}
-.author {
-  max-width: 401px;
-  position: absolute;
-  left: 40px;
-  bottom: 70px;
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 22px;
-  color: #ffffff;
-  z-index: 2;
-}
-.desc {
-  max-width: 401px;
-  position: absolute;
-  left: 40px;
-  bottom: 43px;
-  font-size: 14px;
-  line-height: 18px;
-  color: #ffffff;
-  z-index: 2;
-}
+
 .link {
   max-width: 401px;
   position: absolute;
   right: 40px;
-  bottom: 45px;
+  bottom: 49px;
   font-size: 14px;
   line-height: 18px;
   color: #ffffff;
   z-index: 2;
 }
+
 .playBtn {
   position: absolute;
   left: 50%;
@@ -115,31 +80,7 @@
   background-color: transparent;
   z-index: 2;
 }
-.posterWrapper {
-  &:after {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #000000;
-    opacity: 0.5;
-    z-index: 0;
-  }
-}
 
-.posterVideo {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-}
-.posterVariant {
-  width: 704px;
-  height: 464px;
-}
 .poster {
   display: flex;
   flex-direction: column;
@@ -208,5 +149,8 @@
   .poster {
     padding: 15px 10px;
     gap: 100px;
+  }
+  .link {
+    display: none;
   }
 }

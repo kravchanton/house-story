@@ -11,8 +11,6 @@ import { fetchLayoutData } from "../../bll/layoutReducer";
 
 export const Layout = () => {
   const dispatch = useDispatch();
-  // const data = useSelector((state) => state.layoutData.layoutData.attributes);
-  // console.log(data);
   const data = useSelector((state) => state.layoutData.layoutData.attributes);
 
   useEffect(() => {

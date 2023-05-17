@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   gap: 40px;
-  padding-bottom: 107px;
+  padding-bottom: 60px;
 }
 .title {
   margin-bottom: 8px;
@@ -144,7 +144,7 @@
 }
 
 .NavigationButton {
-  justify-content: space-between;
+  justify-content: start;
   gap: 24px;
   width: 365px;
   height: 60px;
@@ -155,6 +155,14 @@
 .NavigationButton svg {
   width: 30px;
   height: 30px;
+}
+.NavigationButton image {
+  width: 30px;
+  height: 30px;
+}
+
+.NavigationButton p {
+  order: 2;
 }
 
 .active {
@@ -174,8 +182,10 @@
     line-height: 14px;
   }
   .section {
-    padding-top: 40px;
+    padding-top: 0;
     gap: 24px;
+    margin-bottom: 0;
+    padding-bottom: 0;
   }
   .content {
     flex-direction: column;
@@ -184,6 +194,7 @@
   .NavigationButton {
     height: 40px;
     width: 100%;
+    gap: 10px;
   }
   .buttonsBlock {
     width: 70px;
@@ -200,5 +211,13 @@
   }
   .mobile {
     display: block;
+  }
+  .NavigationButton image {
+    width: 20px;
+    height: 20px;
+  }
+  .NavigationButton svg {
+    width: 20px;
+    height: 20px;
   }
 }

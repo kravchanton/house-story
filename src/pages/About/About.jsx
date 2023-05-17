@@ -11,7 +11,6 @@ import house from "../../assets/img-home-e1581520380712 1.png";
 import cloud from "../../assets/1-14781_white-clouds-png-clipart-baby-e-kill-the 17 (1).png";
 import cloudVariant from "../../assets/1-14781_white-clouds-png-clipart-baby-e-kill-the 18.png";
 import shepki from "../../assets/shepki 4.png";
-import review from "../../assets/photo_2022-01-13_15-52-04 2.png";
 import bgReviews from "../../assets/00a8246c092185606e122eab3660496a 1.png";
 import cloud2 from "../../assets/1-14781_white-clouds-png-clipart-baby-e-kill-the 15.png";
 
@@ -54,7 +53,6 @@ export const About = () => {
       data?.keyPersons?.persons?.filter((item) => id === item.id)
     );
   }, [data, id]);
-  console.log(filteredData);
 
   useEffect(() => {
     dispatch(fetchAboutData());
@@ -133,7 +131,7 @@ export const About = () => {
                 <h4 className={styles.year}>2017</h4>
                 <div className={styles.desc}>
                   <div>
-                    <Worker />
+                    <Worker className={styles.iconWorker} />
                   </div>
                   <p className={styles.descText}>
                     <ReactMarkdown>
@@ -146,7 +144,7 @@ export const About = () => {
                 <h4 className={styles.year}>2018</h4>
                 <div className={styles.desc}>
                   <div>
-                    <WorkerVariant />
+                    <WorkerVariant className={styles.iconWorker} />
                   </div>
                   <p className={styles.descText}>
                     <ReactMarkdown>
@@ -472,34 +470,17 @@ export const About = () => {
               профессионализма
             </h3>
             <div className={styles.videoReview}>
-              {data.reviews.youtubeLink && (
-                <VideoLink
-                  className={styles.videoPoster}
-                  classNameWrapper={styles.videoWrapper}
-                  poster={review}
-                  youtubeLink={data.reviews.youtubeLink}
-                  // src="https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4"
-                />
-              )}
-              {data.reviews.externalLink && (
-                <VideoLink
-                  className={styles.videoPoster}
-                  classNameWrapper={styles.videoWrapper}
-                  poster={review}
-                  src={data.reviews.externalLink}
-                  // src="https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4"
-                />
-              )}
-              {data.reviews.mainVideo.data.attributes.url && (
-                <VideoLink
-                  className={styles.videoPoster}
-                  classNameWrapper={styles.videoWrapper}
-                  poster={review}
-                  src={`${process.env.REACT_APP_UPLOAD_URL}${data.reviews.mainVideo.data.attributes.url}`}
-                  // src="https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4"
-                />
-              )}
-
+              <VideoLink
+                externalLink={data.reviews.externalLink}
+                src={
+                  data.reviews.mainVideo.data &&
+                  `${process.env.REACT_APP_UPLOAD_URL}${data?.reviews?.mainVideo?.data?.attributes?.url}`
+                }
+                className={styles.videoPoster}
+                classNameWrapper={styles.videoWrapper}
+                poster={`${process.env.REACT_APP_UPLOAD_URL}${data.reviews.mainReview.poster.data.attributes.url}`}
+                youtubeLink={data.reviews.youtubeLink}
+              />
               <ReviewText
                 buttonLink={data.reviews.mainReview.buttonLink}
                 buttonText={data.reviews.mainReview.buttonText}

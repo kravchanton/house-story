@@ -28,7 +28,6 @@ export const router = createBrowserRouter(
   createRoutesFromElements(
     <>
       <Route path="/" element={<Layout />}>
-        <Route path="catalog" element={<CatalogPage />} />
         <Route path="/catalog/:idPage" element={<CatalogPage />} />
         <Route path="/catalog/:idPage/gratitude" element={<Gratitude />} />
         <Route path="/catalog/:idPage/:id" element={<CatalogCard />} />

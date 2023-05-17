@@ -13,17 +13,14 @@
 }
 
 .catalog span {
-  color: #1EAB5F
+  color: #1eab5f;
 }
-
 
 .wrapper {
   display: flex;
   z-index: 5;
   padding-top: 24px;
   gap: 40px;
-
-
 }
 
 .wrapperMobile {
@@ -31,24 +28,20 @@
   flex-direction: column;
   z-index: 5;
   padding-top: 24px;
-
-
 }
 
 .itemMobile {
-
 }
 
 .NavigationWrapper {
-
 }
 
 .searchInput {
   padding: 18px;
   width: 365px;
   height: 60px;
-  background: #FFFFFF;
-  border: 1px solid #1EAB5F;
+  background: #ffffff;
+  border: 1px solid #1eab5f;
   box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
   border-radius: 5px;
   color: #363130;
@@ -60,9 +53,9 @@
   gap: 16px;
   width: 365px;
   height: 60px;
-  border: 1px solid #1EAB5F;
+  border: 1px solid #1eab5f;
   border-radius: 5px;
-  color: #000000
+  color: #000000;
 }
 
 .NavigationButton svg {
@@ -71,8 +64,8 @@
 }
 
 .active {
-  color: #FFFFFF;
-  background: #1EAB5F;
+  color: #ffffff;
+  background: #1eab5f;
 }
 
 .active svg {
@@ -92,7 +85,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: #FFFFFF;
+  background: #ffffff;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
   border-radius: 5px 5px 0px 0px;
 }
@@ -103,9 +96,7 @@
   width: 65vw;
   flex-wrap: wrap;
   gap: 40px;
-
 }
-
 
 .hidden {
   display: none;
@@ -142,13 +133,13 @@
   font-weight: 900;
   font-size: 20px;
   line-height: 24px;
-  color: #1EAB5F;
+  color: #1eab5f;
 }
 .projectNumber {
   position: absolute;
   left: 10px;
   top: 250px;
-  background: #FFFFFF;
+  background: #ffffff;
   box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
   border-radius: 3px;
   font-style: normal;
@@ -156,20 +147,18 @@
   font-size: 20px;
   line-height: 23px;
 
-  color: #1EAB5F;
+  color: #1eab5f;
 }
 .ItemButton {
   display: flex;
   justify-content: center;
-
   width: 220px;
   height: 50px;
-  border: 1px solid #130D0D;
+  border: 1px solid #130d0d;
   box-shadow: inset 4px 4px 25px rgba(241, 241, 241, 0.25);
   border-radius: 5px;
   color: #000000;
   margin-top: 16px;
-
 }
 .maps {
   display: flex;
@@ -177,7 +166,7 @@
 
   width: 129px;
   height: 50px;
-  border: 1px solid #130D0D;
+  border: 1px solid #130d0d;
   box-shadow: inset 4px 4px 25px rgba(241, 241, 241, 0.25);
   border-radius: 5px;
   color: #000000;
@@ -191,7 +180,7 @@
   gap: 5px;
   width: 129px;
   height: 50px;
-  border: 1px solid #130D0D;
+  border: 1px solid #130d0d;
   box-shadow: inset 4px 4px 25px rgba(241, 241, 241, 0.25);
   border-radius: 5px;
   color: #000000;
@@ -226,7 +215,7 @@
   font-size: 32px;
   line-height: 39px;
   text-transform: uppercase;
-  color: #1EAB5F;
+  color: #1eab5f;
 }
 
 .QuizWrapper h2 span {
@@ -235,8 +224,6 @@
   line-height: 21px;
   color: #000000;
   text-transform: none;
-
-
 }
 
 .icon {
@@ -245,13 +232,13 @@
 
 @media (max-width: 992px) {
   .wrapper {
-    display: none
+    display: none;
   }
 }
 
 @media (min-width: 992px) {
   .wrapperMobile {
-    display: none
+    display: none;
   }
 }
 
@@ -261,7 +248,7 @@
     flex-direction: column;
     width: 100%;
     align-items: center;
-    gap:  0;
+    gap: 0;
   }
   .NavigationButton {
     margin-top: 24px;
@@ -273,15 +260,19 @@
     line-height: 14px;
   }
   .wrapper {
-    display: none
+    display: none;
   }
   .catalog h2 {
     font-style: normal;
     font-weight: 700;
     font-size: 18px;
     line-height: 22px;
+    background: linear-gradient(91.24deg, #1eab5f 0.36%, #e7b97e 103.9%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
   }
-
 
   .catalogItem h4 {
     font-style: normal;
@@ -293,12 +284,12 @@
     font-style: normal;
     font-weight: 700;
     font-size: 16px;
-    line-height: 20px
+    line-height: 20px;
   }
   .catalogItem {
     padding: 16px;
   }
-  .catalogItem img{
+  .catalogItem img {
     width: 100%;
   }
   .projectNumber {
@@ -310,6 +301,26 @@
   }
   .maps {
     width: 80px;
+  }
+}
+
+@media (max-width: 480px) {
+  .catalog h2 {
+  }
+  .wrapperMobile {
+    padding-top: 0;
+  }
+  .catalogItem {
+    width: 100%;
+  }
+  .ItemButton {
+    width: 100%;
+  }
+  .maps {
+    width: 100%;
+  }
+  .firstBtn {
+    flex-grow: 1;
   }
   .QuizWrapper {
     padding-top: 40px;

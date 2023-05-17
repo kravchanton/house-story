@@ -78,6 +78,9 @@
     color: #1eab5f;
   }
 }
+.iconWorker {
+  fill: #1eab5f;
+}
 .photos {
   display: flex;
   flex-direction: column;
@@ -777,6 +780,7 @@
   }
   .principles {
     gap: 16px;
+    margin-bottom: 0;
   }
   .principlesImg {
     width: 100%;
