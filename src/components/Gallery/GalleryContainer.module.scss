@@ -10,10 +10,11 @@
   line-height: 39px;
   color: #363130;
   z-index: 5;
+  text-transform: uppercase;
 }
 
 .catalog span {
-  color: #1EAB5F
+  color: #1eab5f;
 }
 
 .wrapper {
@@ -21,8 +22,6 @@
   z-index: 5;
   padding-top: 24px;
   gap: 40px;
-
-
 }
 
 .wrapperMobile {
@@ -30,8 +29,6 @@
   flex-direction: column;
   z-index: 5;
   padding-top: 24px;
-
-
 }
 .catalogListWrapperMobile {
   max-width: 65vw;
@@ -42,15 +39,14 @@
   justify-content: start;
 }
 .NavigationWrapper {
-
 }
 
 .searchInput {
   padding: 18px;
   width: 365px;
   height: 60px;
-  background: #FFFFFF;
-  border: 1px solid #1EAB5F;
+  background: #ffffff;
+  border: 1px solid #1eab5f;
   box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
   border-radius: 5px;
   color: #363130;
@@ -62,9 +58,9 @@
   gap: 24px;
   width: 365px;
   height: 60px;
-  border: 1px solid #1EAB5F;
+  border: 1px solid #1eab5f;
   border-radius: 5px;
-  color: #000000
+  color: #000000;
 }
 .NavigationButton svg {
   width: 30px;
@@ -76,8 +72,8 @@
 }
 
 .active {
-  color: #FFFFFF;
-  background: #1EAB5F;
+  color: #ffffff;
+  background: #1eab5f;
 }
 .active svg {
   filter: brightness(0) invert(1);
@@ -101,14 +97,14 @@
   width: 365px;
   height: 348px;
 }
-.catalogItem img{
+.catalogItem img {
   margin-top: 16px;
   width: 365px;
   height: 207px;
   object-fit: cover;
   border-radius: 3px;
 }
-.catalogItem h4{
+.catalogItem h4 {
   font-weight: 900;
   font-size: 24px;
   line-height: 29px;
@@ -123,7 +119,7 @@
   font-weight: 900;
   font-size: 20px;
   line-height: 24px;
-  color: #1EAB5F;
+  color: #1eab5f;
 }
 
 .ItemButton {
@@ -132,14 +128,13 @@
 
   width: 100%;
   height: 50px;
-  border: 1px solid #130D0D;
+  border: 1px solid #130d0d;
   box-shadow: inset 4px 4px 25px rgba(241, 241, 241, 0.25);
   border-radius: 5px;
   color: #000000;
   margin-top: 16px;
-
 }
-.QuizWrapper{
+.QuizWrapper {
   padding-top: 160px;
 }
 .QuizWrapper h2 {
@@ -147,16 +142,14 @@
   font-size: 32px;
   line-height: 39px;
   text-transform: uppercase;
-  color: #1EAB5F;
+  color: #1eab5f;
 }
-.QuizWrapper h2 span{
+.QuizWrapper h2 span {
   font-weight: 400;
   font-size: 18px;
   line-height: 21px;
   color: #000000;
   text-transform: none;
-
-
 }
 
 .wrapperMobile {
@@ -164,8 +157,6 @@
   flex-direction: column;
   z-index: 5;
   padding-top: 24px;
-
-
 }
 @media (max-width: 992px) {
   .catalogList {
@@ -173,7 +164,7 @@
     flex-direction: column;
     width: 65vw;
     flex-wrap: wrap;
-    gap:  0;
+    gap: 0;
     align-items: center;
   }
   .NavigationButton {
@@ -185,7 +176,7 @@
     line-height: 14px;
   }
   .wrapper {
-    display: none
+    display: none;
   }
   .catalog h2 {
     font-style: normal;
@@ -203,12 +194,12 @@
     font-style: normal;
     font-weight: 700;
     font-size: 16px;
-    line-height: 20px
+    line-height: 20px;
   }
 }
 
 @media (min-width: 992px) {
   .wrapperMobile {
-    display: none
+    display: none;
   }
 }

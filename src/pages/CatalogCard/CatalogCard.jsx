@@ -42,6 +42,7 @@ export const CatalogCard = () => {
       item.id == idCard.id ? (cardData = item) : ""
     )
   );
+  console.log(cardData);
   return (
     <section className={styles.catalogCard}>
       {data && (
@@ -348,7 +349,7 @@ export const CatalogCard = () => {
                 buttonText={cardData.block[0].buttonTitle}
                 buttonLink={cardData.block[0].buttonLink}
               >
-                <VideoExcursion data={cardData?.block[0]?.video} />
+                <VideoExcursion data={cardData.block[0].video} />
               </SectionCard>
             )}
             {cardData.block[1].title && (
