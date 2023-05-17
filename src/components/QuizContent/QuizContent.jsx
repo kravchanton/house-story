@@ -98,7 +98,7 @@ export const QuizContent = ({
           </div>
           <div className={styles.buttons}>
             {questions.length - 1 > questionNumber ? (
-              <div onClick={changeQuestion}>
+              <div style={{width: "100%"}} onClick={changeQuestion}>
                 <MenuButton
                   classNameForBtn={styles.btnWrapper}
                   disabled={disabledButton}
@@ -107,7 +107,7 @@ export const QuizContent = ({
                 />
               </div>
             ) : (
-              <div onClick={navigateToGratitude}>
+              <div style={{width: "100%"}} onClick={navigateToGratitude}>
                 <MenuButton
                   classNameForBtn={styles.btnWrapper}
                   disabled={disabledButton}
@@ -117,7 +117,7 @@ export const QuizContent = ({
               </div>
             )}
             {questionNumber > 0 && (
-              <div onClick={prevQuestion}>
+              <div style={{width: "100%"}} onClick={prevQuestion}>
                 <MenuButton
                   classNameForBtn={styles.btnWrapper}
                   title="Предыдущий вопрос"
