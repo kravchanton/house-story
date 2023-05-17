@@ -27,7 +27,6 @@ export const BlockVideo = () => {
             </h3>
             <p className={styles.subtitle}>{data.subtitle}</p>
           </div>
-
           <div className={styles.content}>
             {data.video.slice(0, 3).map((t, index) => (
               <VideoLink

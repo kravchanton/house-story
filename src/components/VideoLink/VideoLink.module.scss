@@ -38,7 +38,7 @@
   top: 0;
   width: 100%;
   height: 100%;
-  z-index: 1;
+  z-index: -3;
 }
 .videoYoutube {
   position: absolute;
@@ -91,10 +91,9 @@
   height: 100%;
   background: rgba(0, 0, 0, 0.5);
   border-radius: 3px;
-  z-index: 2;
+  z-index: 1;
 }
 .image {
-  filter:  grayscale(50%);
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -148,7 +147,7 @@
   }
   .poster {
     padding: 15px 10px;
-    gap: 100px;
+    height: 200px;
   }
   .link {
     display: none;
