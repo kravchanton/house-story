@@ -36,9 +36,13 @@ export const BlockArticle = () => {
                   src={`${process.env.REACT_APP_UPLOAD_URL}${t?.image?.data?.attributes?.url}`}
                   alt=""
                 />
-                <h4 className={styles.name}>{t.title}</h4>
-                <p className={styles.duration}>{t.time}</p>
-                <p className={styles.read}>Читать ⟶</p>
+                <div className={styles.poster}>
+                  <h4 className={styles.name}>{t.title}</h4>
+                  <div className={styles.durationWrapper}>
+                    <p className={styles.duration}>{t.time}</p>
+                    <p className={styles.read}>Читать ⟶</p>
+                  </div>
+                </div>
               </NavLink>
             ))}
           </div>
