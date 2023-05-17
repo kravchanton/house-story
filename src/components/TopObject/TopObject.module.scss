@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   gap: 40px;
-  padding-bottom: 107px;
+  padding-bottom: 60px;
 }
 .title {
   margin-bottom: 8px;
@@ -182,7 +182,7 @@
     line-height: 14px;
   }
   .section {
-    padding-top: 40px;
+    padding-top: 0;
     gap: 24px;
     margin-bottom: 0;
     padding-bottom: 0;
@@ -194,6 +194,7 @@
   .NavigationButton {
     height: 40px;
     width: 100%;
+    gap: 10px;
   }
   .buttonsBlock {
     width: 70px;
@@ -210,5 +211,13 @@
   }
   .mobile {
     display: block;
+  }
+  .NavigationButton image {
+    width: 20px;
+    height: 20px;
+  }
+  .NavigationButton svg {
+    width: 20px;
+    height: 20px;
   }
 }

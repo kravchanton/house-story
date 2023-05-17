@@ -65,12 +65,13 @@
   max-width: 401px;
   position: absolute;
   right: 40px;
-  bottom: 43px;
+  bottom: 49px;
   font-size: 14px;
   line-height: 18px;
   color: #ffffff;
   z-index: 2;
 }
+
 .playBtn {
   position: absolute;
   left: 50%;
@@ -147,5 +148,8 @@
   .poster {
     padding: 15px 10px;
     gap: 100px;
+  }
+  .link {
+    display: none;
   }
 }

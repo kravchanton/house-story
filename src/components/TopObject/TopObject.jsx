@@ -44,7 +44,6 @@ export const TopObject = () => {
           полезными фишками
         </p>
       </div>
-
       <div className={styles.content}>
         {" "}
         {data && (

@@ -29,7 +29,7 @@ export const CatalogItem = ({ data, map }) => {
         alt=""
       />
       <div className={styles.wrapperBtn}>
-        <NavLink to={`${data.id}`}>
+        <NavLink className={styles.firstBtn} to={`${data.id}`}>
           <MenuButton title="Подробнее" className={styles.ItemButton} />
         </NavLink>
         {map ? (
