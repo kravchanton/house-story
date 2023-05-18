@@ -74,4 +74,20 @@
   .wrapper {
     gap: 16px;
   }
+  .item {
+    padding: 0;
+    width: 50px;
+    height: 25px;
+  }
+  .item p {
+    font-size: 16px;
+    line-height: 19px;
+  }
+  .times {
+    gap: 16px;
+    column-gap: 18.6px;
+  }
+  .btn {
+    height: 40px;
+  }
 }

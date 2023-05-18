@@ -48,6 +48,8 @@ export const MapPage = () => {
       )
     );
 
+  console.log(cardData);
+
   const coordinate = cardData?.coordinates?.split(",").map((t) => Number(t));
   return (
     <div className={styles.wrapper}>
