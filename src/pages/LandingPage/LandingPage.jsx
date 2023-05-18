@@ -25,7 +25,9 @@ export const LandingPage = () => {
       {data && (
         <Container>
           {data.attributes.form && <MainFormVariant />}
-          {data.attributes.quiz && <Quiz numberQuiz={1} />}
+          {data.attributes.quiz && (
+            <Quiz numberQuiz={data.attributes.quizNumber} />
+          )}
           {data.attributes.ourProjects && <OurProjects />}
           {data.attributes.excursion && (
             <Excursion houseImgVariant={true} descWrapperVariant={true} />

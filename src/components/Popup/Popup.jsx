@@ -28,7 +28,12 @@ export const Popup = ({ setIsOpen, handleClose }) => {
           </div>
           <img className={styles.img} src={popupImg} alt="popupImg" />
         </div>
-        <Basic titleForm="Введите ваши данные" lockText={true} select={true} />
+        <Basic
+          classNameForTitle={styles.title}
+          titleForm="Введите ваши данные"
+          lockText={true}
+          select={true}
+        />
       </div>
     </section>
   );
