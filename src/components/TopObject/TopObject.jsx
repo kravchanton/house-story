@@ -3,14 +3,11 @@ import { useDispatch, useSelector } from "react-redux";
 import classNames from "classnames";
 import { Swiper, SwiperSlide } from "swiper/react";
 
+import { fetchTopObject } from "../../bll/reducers/topObjectReducer";
+
 import styles from "./TopObject.module.scss";
 
-import { MenuButton } from "../MenuButton";
-// import { HouseVariant } from "../../icons";
-import { SlideTop } from "../SlideTop";
-import { SliderBtn } from "../SliderBtn";
-
-import { fetchTopObject } from "../../bll/topObjectReducer";
+import { SlideTop, SliderBtn, MenuButton } from "../../components";
 
 export const TopObject = () => {
   const [folder, setFolder] = useState(null);

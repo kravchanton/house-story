@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchMeetingData } from "../../bll/meetingReducer";
+import { fetchMeetingData } from "../../bll/reducers/meetingReducer";
 import classNames from "classnames";
 import ReactMarkdown from "react-markdown";
 

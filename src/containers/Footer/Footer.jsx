@@ -13,7 +13,6 @@ import {
 import { Arrow, ArrowRight, LogoVariant } from "../../icons";
 
 export const Footer = ({ socialLinks, reviews }) => {
-  console.log(reviews);
   return (
     <footer className={styles.footer}>
       <Container className={styles.container}>

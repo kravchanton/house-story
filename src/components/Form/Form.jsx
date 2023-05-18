@@ -1,14 +1,15 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import classNames from "classnames";
-
+import { useNavigate } from "react-router-dom";
 import { Field, Form, Formik } from "formik";
 import * as Yup from "yup";
 
+import { sendNotification } from "../../utils/telegram";
+
 import styles from "./Form.module.scss";
+
 import { MenuButton } from "../MenuButton";
-import { useNavigate } from "react-router-dom";
-import {sendNotification} from "../../utils/telegram";
 
 export const Basic = ({
   className,
@@ -44,16 +45,16 @@ export const Basic = ({
   });
 
   const sendDataToUser = async (name, phone, messenger, callTime, answers) => {
-      const message =`Поступила новая запись на встречу: ${
-          appointment?.time
-      }, ${weekDays?.filter(
-          (day, index) => appointment?.date?.getDay() === index + 1
-      )}, ${appointment?.date?.toLocaleString().slice(0, 2)}  ${months?.filter(
-          (month, index) => appointment?.date?.getMonth() === index
-      )} ${appointment?.date?.getFullYear()} года, Имя: ${name}, Телефон: ${phone}, Мессенджер:${messenger}, Время: ${callTime}, Ответы:${answers}`
-          .split("undefined")
-          .join("")
-   return await sendNotification(message);
+    const message = `Поступила новая запись на встречу: ${
+      appointment?.time
+    }, ${weekDays?.filter(
+      (day, index) => appointment?.date?.getDay() === index + 1
+    )}, ${appointment?.date?.toLocaleString().slice(0, 2)}  ${months?.filter(
+      (month, index) => appointment?.date?.getMonth() === index
+    )} ${appointment?.date?.getFullYear()} года, Имя: ${name}, Телефон: ${phone}, Мессенджер:${messenger}, Время: ${callTime}, Ответы:${answers}`
+      .split("undefined")
+      .join("");
+    return await sendNotification(message);
   };
 
   return (

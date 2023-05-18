@@ -12,7 +12,7 @@ import {
 } from "../../components";
 import { CatalogQuiz } from "../../components/Catalog/CatalogQuiz";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchCatalogPage } from "../../bll/catalogPageReducer";
+import { fetchCatalogPage } from "../../bll/reducers/catalogPageReducer";
 import { BlockArticle } from "../../components/BlockArticle/BlockArticle";
 import { BlockVideo } from "../../components/BlockVideo/BlockVideo";
 

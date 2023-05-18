@@ -9,7 +9,7 @@ import { useDispatch, useSelector } from "react-redux";
 import ReactMarkdown from "react-markdown";
 import rehypeRaw from "https://esm.sh/rehype-raw@6";
 import { BlockVideo } from "../../components/BlockVideo/BlockVideo";
-import { fetchBlockVideo } from "../../bll/blockVideoReducer";
+import { fetchBlockVideo } from "../../bll/reducers/blockVideoReducer";
 import { NavigationVideo } from "./NavigationVideo";
 
 export const VideoBlog = () => {

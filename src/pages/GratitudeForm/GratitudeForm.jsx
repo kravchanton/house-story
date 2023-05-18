@@ -14,7 +14,7 @@ import {
   VideoLink,
 } from "../../components";
 
-import { fetchGratitudeForm } from "../../bll/gratitudeFormReducer";
+import { fetchGratitudeForm } from "../../bll/reducers/gratitudeFormReducer";
 
 export const GratitudeForm = () => {
   const dispatch = useDispatch();

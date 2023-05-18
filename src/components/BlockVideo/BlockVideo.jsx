@@ -1,13 +1,15 @@
 import React, { useEffect } from "react";
 import classNames from "classnames";
+import { useDispatch, useSelector } from "react-redux";
+import { NavLink } from "react-router-dom";
+
+import { fetchBlockVideo } from "../../bll/reducers/blockVideoReducer";
+
 import "swiper/css";
 
 import styles from "./BlockWrapper.module.scss";
-import { MenuButton } from "../MenuButton";
-import { useDispatch, useSelector } from "react-redux";
-import { fetchBlockVideo } from "../../bll/blockVideoReducer";
-import { NavLink } from "react-router-dom";
-import { VideoLink } from "../VideoLink";
+
+import { MenuButton, VideoLink } from "../../components";
 
 export const BlockVideo = () => {
   const dispatch = useDispatch();
@@ -15,7 +17,6 @@ export const BlockVideo = () => {
     dispatch(fetchBlockVideo());
   }, []);
   let data = useSelector((state) => state?.blockVideo?.blockVideo?.attributes);
-  console.log(data);
 
   return (
     <section className={classNames(styles.section)}>

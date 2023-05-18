@@ -1,14 +1,19 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import classNames from "classnames";
+
+import { deleteLastAnswer, setAnswer } from "../../bll/reducers/AnswerReducer";
 
 import styles from "./QuizContent.module.scss";
 
-import { ContactForm, MenuButton, NavigationEl } from "../../components";
+import {
+  ContactForm,
+  MenuButton,
+  NavigationEl,
+  QuizItem,
+} from "../../components";
 import { Binoculars, Calculator, WorkerVariant } from "../../icons";
-import { QuizItem } from "../Quiz/QuizItem";
-import { useDispatch } from "react-redux";
-import { deleteLastAnswer, setAnswer } from "../../bll/AnswerReducer";
-import classNames from "classnames";
 
 export const QuizContent = ({
   questionNumber,
@@ -98,7 +103,7 @@ export const QuizContent = ({
           </div>
           <div className={styles.buttons}>
             {questions.length - 1 > questionNumber ? (
-              <div style={{width: "100%"}} onClick={changeQuestion}>
+              <div style={{ width: "100%" }} onClick={changeQuestion}>
                 <MenuButton
                   classNameForBtn={styles.btnWrapper}
                   disabled={disabledButton}
@@ -107,7 +112,7 @@ export const QuizContent = ({
                 />
               </div>
             ) : (
-              <div style={{width: "100%"}} onClick={navigateToGratitude}>
+              <div style={{ width: "100%" }} onClick={navigateToGratitude}>
                 <MenuButton
                   classNameForBtn={styles.btnWrapper}
                   disabled={disabledButton}
@@ -117,7 +122,7 @@ export const QuizContent = ({
               </div>
             )}
             {questionNumber > 0 && (
-              <div style={{width: "100%"}} onClick={prevQuestion}>
+              <div style={{ width: "100%" }} onClick={prevQuestion}>
                 <MenuButton
                   classNameForBtn={styles.btnWrapper}
                   title="Предыдущий вопрос"

@@ -5,7 +5,7 @@ import ReactMarkdown from "react-markdown";
 import { NavLink } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 
-import { fetchAboutData } from "../../bll/aboutReducer";
+import { fetchAboutData } from "../../bll/reducers/aboutReducer";
 
 import house from "../../assets/img-home-e1581520380712 1.png";
 import cloud from "../../assets/1-14781_white-clouds-png-clipart-baby-e-kill-the 17 (1).png";

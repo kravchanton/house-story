@@ -1,9 +1,10 @@
 import React, { useRef, useState } from "react";
 import classNames from "classnames";
+import { NavLink } from "react-router-dom";
 
 import styles from "./VideoLink.module.scss";
+
 import { Pause, PlayVariant } from "../../icons";
-import { NavLink } from "react-router-dom";
 
 const playbackStatus = {
   Stopped: "stopped",
@@ -27,7 +28,6 @@ export const VideoLink = ({
   const [play, setPlay] = useState(false);
   const [status, setStatus] = useState(playbackStatus.Stopped);
   const videoRef = useRef();
-  console.log(youtubeLink);
 
   const handlePlay = () => {
     setStatus(playbackStatus.Playing);

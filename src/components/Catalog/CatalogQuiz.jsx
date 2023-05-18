@@ -1,13 +1,13 @@
 import React from "react";
-import {Quiz} from "../Quiz";
+
 import styles from "./Catalog.module.scss";
 
+import { Quiz } from "../Quiz";
 
-
-export const CatalogQuiz = ({numberQuiz}) => {
-    return <div className={styles.QuizWrapper}>
-        <Quiz numberQuiz={numberQuiz} />
+export const CatalogQuiz = ({ numberQuiz }) => {
+  return (
+    <div className={styles.QuizWrapper}>
+      <Quiz numberQuiz={numberQuiz} />
     </div>
-}
-
-
+  );
+};

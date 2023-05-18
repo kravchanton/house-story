@@ -14,8 +14,6 @@ export const AboutContentBlock = ({ title, reverseContent, src, text }) => {
       : setIsOpen(false);
   }, []);
 
-  console.log(isOpen);
-
   return (
     <>
       {reverseContent ? (

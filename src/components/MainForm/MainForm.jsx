@@ -1,14 +1,17 @@
 import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+
+import { fetchMainForm } from "../../bll/reducers/mainFormReducer";
+
 import styles from "./MainForm.module.scss";
+
 import tree from "./../../assets/tree.png";
 import cloud from "./../../assets/cloud.png";
 import backgroundHouse from "./../../assets/backgroudHouse.png";
 import rCloud from "./../../assets/rCloud.png";
 import tCloud from "./../../assets/tCloud.png";
-import { MainFormComponent } from "../MainFormComponent";
-import { useDispatch, useSelector } from "react-redux";
-import { fetchMainForm } from "../../bll/mainFormReducer";
-import { VideoLink } from "../VideoLink";
+
+import { MainFormComponent, VideoLink } from "../../components";
 
 export const MainForm = () => {
   const dispatch = useDispatch();
@@ -16,7 +19,7 @@ export const MainForm = () => {
     dispatch(fetchMainForm());
   }, []);
   let data = useSelector((state) => state.mainForm.mainForm);
-  console.log(data);
+
   return (
     <div className={styles.mainWrapper}>
       {data && (
@@ -42,21 +45,13 @@ export const MainForm = () => {
               title={data.attributes.videoTitle}
               author={data.attributes.author}
               descr={data.attributes.descr}
-              poster={`${process.env.REACT_APP_UPLOAD_URL}${data?.attributes?.poster?.data?.attributes?.url}`}
+              classNameWrapper={styles.wrapper}
               youtubeLink={data?.attributes?.youtubeLink}
-            />
-            <VideoLink
-                blurPoster={true}
-                title={data.attributes.videoTitle}
-                author={data.attributes.author}
-                descr={data.attributes.descr}
-                classNameWrapper={styles.wrapper}
-                youtubeLink={data?.attributes?.youtubeLink}
-                src={
-                    data?.attributes?.video?.data.attributes?.url &&
-                    `${process.env.REACT_APP_UPLOAD_URL}${data?.attributes?.video?.data.attributes?.url}`
-                }
-                poster={`${process.env.REACT_APP_UPLOAD_URL}${data?.attributes?.poster?.data?.attributes.url}`}
+              src={
+                data?.attributes?.video?.data?.attributes?.url &&
+                `${process.env.REACT_APP_UPLOAD_URL}${data?.attributes?.video?.data?.attributes?.url}`
+              }
+              poster={`${process.env.REACT_APP_UPLOAD_URL}${data?.attributes?.poster?.data?.attributes?.url}`}
             />
           </div>
         </>

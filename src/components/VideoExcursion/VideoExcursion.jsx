@@ -1,12 +1,10 @@
 import React from "react";
 
 import styles from "./VideoExcursion.module.scss";
+
 import { VideoLink } from "../VideoLink";
 
 export const VideoExcursion = ({ data }) => {
-  // eslint-disable-next-line no-debugger
-  debugger;
-  console.log(data);
   return (
     <div className={styles.videoSection}>
       {data?.slice(0, 2).map((t, index) => (

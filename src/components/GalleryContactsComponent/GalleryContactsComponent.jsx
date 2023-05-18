@@ -6,7 +6,7 @@ import "photoswipe/style.css";
 
 import "./GalleryContactsComponent.scss";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchContactsData } from "../../bll/contactsReducer";
+import { fetchContactsData } from "../../bll/reducers/contactsReducer";
 
 export const GalleryContactsComponent = (props) => {
   const dispatch = useDispatch();

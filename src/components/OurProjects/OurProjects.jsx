@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 
-import { fetchOurProject } from "../../bll/ourProjectReducer";
+import { fetchOurProject } from "../../bll/reducers/ourProjectReducer";
 
 import styles from "./OurProjects.module.scss";
 
@@ -14,7 +14,7 @@ export const OurProjects = () => {
     dispatch(fetchOurProject());
   }, []);
   let data = useSelector((state) => state.ourProject.ourProject);
-  console.log(data);
+
   return (
     <section className={styles.wrapper}>
       <h3 className={styles.title}>Наши проекты</h3>

@@ -1,8 +1,10 @@
-import React, {useEffect, useState} from "react";
-import {ContentWrapper, QuizContent} from "../../components";
-import {fetchQuizQuestion} from "../../bll/quizReducer";
-import {useDispatch, useSelector} from "react-redux";
-import {useParams} from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { useParams } from "react-router-dom";
+
+import { fetchQuizQuestion } from "../../bll/reducers/quizReducer";
+
+import { ContentWrapper, QuizContent } from "../../components";
 
 export const Quiz = ({ numberQuiz }) => {
   let [questionNumber, setQuestionNumber] = useState(0);
@@ -20,7 +22,6 @@ export const Quiz = ({ numberQuiz }) => {
   } else {
     params = idURL.id;
   }
-  console.log(params);
 
   useEffect(() => {
     dispatch(fetchQuizQuestion());

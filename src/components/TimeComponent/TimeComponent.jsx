@@ -1,8 +1,9 @@
 import React from "react";
+import classNames from "classnames";
 
 import styles from "./TimeComponent.module.scss";
+
 import { MenuButton } from "../MenuButton";
-import classNames from "classnames";
 import { TimeItem } from "./TimeItem";
 
 const times = [

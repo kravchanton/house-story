@@ -5,9 +5,9 @@ import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css";
 import "./Calendar.scss";
 
-import { MenuButton } from "../MenuButton";
-
 import styles from "../../pages/Appointment/Appointment.module.scss";
+
+import { MenuButton } from "../MenuButton";
 
 export const CalendarComponent = ({
   date,

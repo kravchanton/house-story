@@ -13,3 +13,6 @@ export * from "./Appointment";
 export * from "./Blog";
 export * from "./LandingPage";
 export * from "./Gallery";
+export * from "./VideoBlog";
+export * from "./MapPage";
+export * from "./QuizPage";

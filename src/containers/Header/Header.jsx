@@ -1,9 +1,12 @@
 import React, { useState } from "react";
+import { NavLink } from "react-router-dom";
 
 import plant from "../../assets/plant.png";
 import phone from "../../assets/phoneContact.png";
 
 import styles from "./Header.module.scss";
+
+import { menu } from "../../mockData/menu";
 
 import { Burger, Logo, SmallArrow, Structure } from "../../icons";
 import {
@@ -12,9 +15,6 @@ import {
   MenuDropdown,
   PhoneDropdown,
 } from "../../components";
-
-import { menu } from "../../mockData/menu";
-import { NavLink } from "react-router-dom";
 
 export const Header = ({
   buttonText,

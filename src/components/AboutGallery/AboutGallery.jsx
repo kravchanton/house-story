@@ -1,8 +1,8 @@
 import React from "react";
 
-import { GalleryAboutComponent } from "../GalleryAboutComponent";
-
 import "./AboutGallery.scss";
+
+import { GalleryAboutComponent } from "../GalleryAboutComponent";
 
 export const AboutGallery = ({
   isActiveOffice,

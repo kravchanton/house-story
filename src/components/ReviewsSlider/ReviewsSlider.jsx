@@ -7,8 +7,8 @@ import "swiper/css/pagination";
 
 import "./ReviewsSlider.scss";
 
-// import { Review } from "../Review";
 import { VideoLink } from "../VideoLink";
+
 import styles from "../Review/Review.module.scss";
 
 export const ReviewsSlider = ({ reviews }) => {
@@ -35,13 +35,7 @@ export const ReviewsSlider = ({ reviews }) => {
                   poster={`${process.env.REACT_APP_UPLOAD_URL}${item.posterImage.data.attributes.url}`}
                   youtubeLink={item?.youtubeLink}
                 />
-
-                {/*<Review*/}
-                {/*  externalLink={item?.externalLink}*/}
-                {/*  yotubeLink={item?.youtubeLink}*/}
-                {/*  src={`${process.env.REACT_APP_UPLOAD_URL}${item?.video?.data?.attributes?.url}`}*/}
-                {/*  image={`${process.env.REACT_APP_UPLOAD_URL}${item.posterImage.data.attributes.url}`}*/}
-                {/*/>*/}
+                
               </SwiperSlide>
             ))}
           </>

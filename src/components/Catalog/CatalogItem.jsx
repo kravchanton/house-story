@@ -1,6 +1,4 @@
 import React from "react";
-import styles from "./Catalog.module.scss";
-import { MenuButton } from "../MenuButton";
 import { NavLink } from "react-router-dom";
 import {
   FacebookIcon,
@@ -12,6 +10,10 @@ import {
   WhatsappIcon,
   WhatsappShareButton,
 } from "react-share";
+
+import styles from "./Catalog.module.scss";
+
+import { MenuButton } from "../MenuButton";
 
 export const CatalogItem = ({ data, map }) => {
   return (

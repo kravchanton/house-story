@@ -1,6 +1,8 @@
 import React, { useEffect } from "react";
 import PhotoSwipeLightbox from "photoswipe/lightbox";
+
 import "photoswipe/style.css";
+
 import "./Gallery.scss";
 
 export const Gallery = (props) => {

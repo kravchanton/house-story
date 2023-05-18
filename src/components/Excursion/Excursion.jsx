@@ -2,6 +2,7 @@ import React from "react";
 import classNames from "classnames";
 
 import styles from "./Excursion.module.scss";
+
 import dom from "../../assets/dom.png";
 import cloud from "../../assets/cloud.png";
 import houseVariant from "../../assets/img-home-e1581520380712 1 (1).png";

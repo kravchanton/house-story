@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import classNames from "classnames";
 
-import { fetchContactsData } from "../../bll/contactsReducer";
+import { fetchContactsData } from "../../bll/reducers/contactsReducer";
 
 import styles from "./Contacts.module.scss";
 
@@ -13,7 +13,7 @@ import {
   ContactsGallery,
   TopObject,
 } from "../../components";
-import { fetchMainForm } from "../../bll/mainFormReducer";
+import { fetchMainForm } from "../../bll/reducers/mainFormReducer";
 
 export const Contacts = () => {
   const dispatch = useDispatch();

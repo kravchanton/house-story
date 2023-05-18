@@ -7,7 +7,7 @@ import styles from "./Layout.module.scss";
 import { Popup, Sprite } from "../../components";
 import { Footer, Header } from "../../containers";
 
-import { fetchLayoutData } from "../../bll/layoutReducer";
+import { fetchLayoutData } from "../../bll/reducers/layoutReducer";
 
 export const Layout = () => {
   const dispatch = useDispatch();

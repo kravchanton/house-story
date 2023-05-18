@@ -1,9 +1,10 @@
 import React from "react";
-
-import styles from "./SlideTop.module.scss";
-import { MenuButton } from "../MenuButton";
 import { NavLink } from "react-router-dom";
 import classNames from "classnames";
+
+import styles from "./SlideTop.module.scss";
+
+import { MenuButton } from "../MenuButton";
 
 export const SlideTop = ({ img, data }) => {
   return (

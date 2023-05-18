@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
-import { fetchMainFormVariant } from "../../bll/mainFormVariantReducer";
+import { fetchMainFormVariant } from "../../bll/reducers/mainFormVariantReducer";
 
 import styles from "./MainFormVariant.module.scss";
 
@@ -12,10 +12,12 @@ import tCloud from "../../assets/tCloud.png";
 import fire from "../../assets/tild3363-6466-4832-b764-323531366564__fire-joypixels_1 1 (1).png";
 
 import { CheckVariant } from "../../icons";
-import { VideoLink } from "../VideoLink";
-import { MenuButton } from "../MenuButton";
-import { MainFormComponent } from "../MainFormComponent";
-import { MainForm } from "../MainForm";
+import {
+  VideoLink,
+  MenuButton,
+  MainFormComponent,
+  MainForm,
+} from "../../components";
 
 export const MainFormVariant = () => {
   const dispatch = useDispatch();
@@ -23,7 +25,7 @@ export const MainFormVariant = () => {
     dispatch(fetchMainFormVariant());
   }, []);
   let data = useSelector((state) => state.mainFormVariant.mainFormVariant);
-  console.log(data);
+
   return (
     <>
       {data && (

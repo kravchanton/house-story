@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+
+import { fetchMainForm } from "../../bll/reducers/mainFormReducer";
 
 import styles from "./MainFormComponent.module.scss";
 
 import { Basic } from "../Form";
-import { useDispatch, useSelector } from "react-redux";
-import { fetchMainForm } from "../../bll/mainFormReducer";
 
 export const MainFormComponent = () => {
   const dispatch = useDispatch();

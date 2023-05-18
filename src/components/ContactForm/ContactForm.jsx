@@ -3,6 +3,7 @@ import React from "react";
 import styles from "./ContactForm.module.scss";
 
 import specialist from "../../assets/specialist.png";
+
 import { Basic } from "../Form";
 
 export const ContactForm = ({ text }) => {

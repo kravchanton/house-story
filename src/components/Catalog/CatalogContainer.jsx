@@ -1,12 +1,17 @@
 import React, { useEffect, useState } from "react";
-import styles from "./Catalog.module.scss";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchCatalog } from "../../bll/catalogReducer";
-import { MenuCatalog } from "./MenuCatalog";
-import { CatalogList } from "./CatalogList";
 import { useParams } from "react-router-dom";
-import { MenuButton } from "../MenuButton";
-import { CatalogListMobile } from "./CatalogListMobile";
+
+import { fetchCatalog } from "../../bll/reducers/catalogReducer";
+
+import styles from "./Catalog.module.scss";
+
+import {
+  MenuCatalog,
+  CatalogList,
+  MenuButton,
+  CatalogListMobile,
+} from "../../components";
 
 export const CatalogContainer = () => {
   const [folder, setFolder] = useState(0);

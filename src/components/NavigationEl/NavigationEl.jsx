@@ -8,6 +8,7 @@ export const NavigationEl = ({ id, setQuestionNumber, questionNumber }) => {
       setQuestionNumber(--id);
     }
   };
+
   return (
     <div
       onClick={() => setNumber(id, questionNumber)}

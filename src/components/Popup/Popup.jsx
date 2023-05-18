@@ -3,6 +3,7 @@ import React from "react";
 import styles from "./Popup.module.scss";
 
 import popupImg from "../../assets/popup.png";
+
 import { Basic } from "../Form";
 import { Close } from "../../icons";
 import { Timer } from "../Timer";

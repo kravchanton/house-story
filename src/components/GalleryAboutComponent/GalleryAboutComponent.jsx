@@ -29,7 +29,6 @@ export const GalleryAboutComponent = (props) => {
       lightbox = null;
     };
   }, []);
-  console.log(props.isActiveProduction);
 
   return (
     <div className="pswp-gallery" id={props.galleryID}>

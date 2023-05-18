@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
-import { fetchLandingPage } from "../../bll/landingPageReducer";
+import { fetchLandingPage } from "../../bll/reducers/landingPageReducer";
 
 import styles from "./LandingPage.module.scss";
 

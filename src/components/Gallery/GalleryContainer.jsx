@@ -1,13 +1,15 @@
 import React, { useEffect, useState } from "react";
-import styles from "./GalleryContainer.module.scss";
 import { useDispatch, useSelector } from "react-redux";
-
 import { useParams } from "react-router-dom";
+
+import { fetchPhotoGallery } from "../../bll/reducers/photoReducer";
+
+import styles from "./GalleryContainer.module.scss";
+
 import { PhotoList } from "./PhotoList";
-import { fetchPhotoGallery } from "../../bll/photoReducer";
 import { MenuPhoto } from "./MenuPhoto";
 import { MenuButton } from "../MenuButton";
-import { CatalogListMobile } from "../Catalog/CatalogListMobile";
+import { CatalogListMobile } from "../Catalog";
 
 export const GalleryContainer = () => {
   const [folder, setFolder] = useState(0);
@@ -21,7 +23,7 @@ export const GalleryContainer = () => {
   }, []);
   let Arr = [];
   let data = useSelector((state) => state.photo.photo);
-  console.log(data);
+
   data?.map((t) =>
     t.attributes.project.filter((item) =>
       item.title?.toLowerCase().includes(search.toLowerCase())

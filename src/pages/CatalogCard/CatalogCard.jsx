@@ -7,7 +7,7 @@ import cloud1 from "../../assets/cloud1.png";
 import kaska from "../../assets/kaska.png";
 import styles from "./CatalogCard.module.scss";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchCatalog } from "../../bll/catalogReducer";
+import { fetchCatalog } from "../../bll/reducers/catalogReducer";
 import ReactMarkdown from "react-markdown";
 import {
   Basic,

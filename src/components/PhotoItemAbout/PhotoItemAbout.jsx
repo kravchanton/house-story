@@ -1,10 +1,9 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 import styles from "./PhotoItemAbout.module.scss";
-import { AboutGallery } from "../AboutGallery";
-import { NavLink } from "react-router-dom";
-import { MenuButton } from "../MenuButton";
-// import { GalleryAboutComponent } from "../GalleryAboutComponent";
+
+import { AboutGallery, MenuButton } from "../../components";
 
 export const PhotoItemAbout = ({
   title,
@@ -17,7 +16,6 @@ export const PhotoItemAbout = ({
   isActiveStock,
   activeStock,
 }) => {
-  console.log(isActiveProduction);
   return (
     <>
       {activeOffice && (

@@ -2,6 +2,7 @@ import React from "react";
 import classNames from "classnames";
 
 import styles from "./MenuButton.module.scss";
+
 import { Lock } from "../../icons";
 
 export const MenuButton = ({
@@ -18,9 +19,8 @@ export const MenuButton = ({
         disabled={disabled}
         className={classNames(styles.button, className)}
       >
-          {children}
+        {children}
         <p>{title}</p>
-
       </button>
       {lockText && (
         <div className={styles.lockWrapper}>

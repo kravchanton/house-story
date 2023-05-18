@@ -1,12 +1,15 @@
 import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import classNames from "classnames";
+import { NavLink } from "react-router-dom";
+
+import { fetchBlockArticle } from "../../bll/reducers/blockAtricleReducer";
+
 import "swiper/css";
 
 import styles from "./BlockWrapper.module.scss";
+
 import { MenuButton } from "../MenuButton";
-import { useDispatch, useSelector } from "react-redux";
-import { NavLink } from "react-router-dom";
-import { fetchBlockArticle } from "../../bll/blockAtricleReducer";
 
 export const BlockArticle = () => {
   const dispatch = useDispatch();
@@ -16,7 +19,7 @@ export const BlockArticle = () => {
   let data = useSelector(
     (state) => state?.blockArticle?.blockArticle?.attributes
   );
-  console.log(data);
+
   return (
     <section className={classNames(styles.section)}>
       {data && (
@@ -27,7 +30,6 @@ export const BlockArticle = () => {
             </h3>
             <p className={styles.subtitle}>{data.subtitle}</p>
           </div>
-
           <div className={styles.content}>
             {data.items.slice(0, 3).map((t, index) => (
               <NavLink key={index} className={styles.card} to={t.link}>
