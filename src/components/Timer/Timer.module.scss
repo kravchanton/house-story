@@ -4,3 +4,11 @@
   text-transform: uppercase;
   color: #fddf31;
 }
+@media (max-width: 480px) {
+  .timer {
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 49px;
+    margin-bottom: 24px;
+  }
+}
