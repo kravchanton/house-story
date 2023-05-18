@@ -45,6 +45,19 @@ export const MainForm = () => {
               poster={`${process.env.REACT_APP_UPLOAD_URL}${data?.attributes?.poster?.data?.attributes?.url}`}
               youtubeLink={data?.attributes?.youtubeLink}
             />
+            <VideoLink
+                blurPoster={true}
+                title={data.attributes.videoTitle}
+                author={data.attributes.author}
+                descr={data.attributes.descr}
+                classNameWrapper={styles.wrapper}
+                youtubeLink={data?.attributes?.youtubeLink}
+                src={
+                    data?.attributes?.video?.data.attributes?.url &&
+                    `${process.env.REACT_APP_UPLOAD_URL}${data?.attributes?.video?.data.attributes?.url}`
+                }
+                poster={`${process.env.REACT_APP_UPLOAD_URL}${data?.attributes?.poster?.data?.attributes.url}`}
+            />
           </div>
         </>
       )}

@@ -8,7 +8,7 @@ import * as Yup from "yup";
 import styles from "./Form.module.scss";
 import { MenuButton } from "../MenuButton";
 import { useNavigate } from "react-router-dom";
-import { sendNotification } from "../../utils/telegram";
+import {sendNotification} from "../../utils/telegram";
 
 export const Basic = ({
   className,
@@ -44,17 +44,16 @@ export const Basic = ({
   });
 
   const sendDataToUser = async (name, phone, messenger, callTime, answers) => {
-   return await sendNotification(
-      `Поступила новая запись на встречу: ${
-        appointment?.time
+      const message =`Поступила новая запись на встречу: ${
+          appointment?.time
       }, ${weekDays?.filter(
-        (day, index) => appointment?.date?.getDay() === index + 1
+          (day, index) => appointment?.date?.getDay() === index + 1
       )}, ${appointment?.date?.toLocaleString().slice(0, 2)}  ${months?.filter(
-        (month, index) => appointment?.date?.getMonth() === index
-      )} ${appointment?.date?.getFullYear()} года, ${name}  ${phone}, ${messenger}, ${callTime}, ${answers}`
-        .split("undefined")
-        .join("")
-    );
+          (month, index) => appointment?.date?.getMonth() === index
+      )} ${appointment?.date?.getFullYear()} года, Имя: ${name}, Телефон: ${phone}, Мессенджер:${messenger}, Время: ${callTime}, Ответы:${answers}`
+          .split("undefined")
+          .join("")
+   return await sendNotification(message);
   };
 
   return (

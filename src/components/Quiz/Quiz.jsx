@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from "react";
-import { ContentWrapper, QuizContent } from "../../components";
-import { fetchQuizQuestion } from "../../bll/quizReducer";
-import { useDispatch, useSelector } from "react-redux";
-import { useParams } from "react-router-dom";
+import React, {useEffect, useState} from "react";
+import {ContentWrapper, QuizContent} from "../../components";
+import {fetchQuizQuestion} from "../../bll/quizReducer";
+import {useDispatch, useSelector} from "react-redux";
+import {useParams} from "react-router-dom";
 
 export const Quiz = ({ numberQuiz }) => {
   let [questionNumber, setQuestionNumber] = useState(0);

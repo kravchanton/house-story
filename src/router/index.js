@@ -23,6 +23,7 @@ import {
 } from "../pages";
 import {MapPage} from "../components/MapPage/MapPage";
 import {VideoBlog} from "../pages/VideoBlog";
+import {QuizPage} from "../pages/QuizPage/QuizPage";
 
 export const router = createBrowserRouter(
   createRoutesFromElements(
@@ -44,6 +45,7 @@ export const router = createBrowserRouter(
         <Route path="gratitude-success" element={<GratitudeForm />} />
         <Route path="appointment" element={<Appointment />} />
         <Route path="/map/:folder/:id" element={<MapPage />} />
+        <Route path="/quiz/:id" element={<QuizPage />} />
       </Route>
     </>
   )

@@ -23,12 +23,12 @@ export const menu = [
   },
   {
     id: uuidv4(),
-    title: "Контакты",
-    link: 'contacts'
+    title: "Выезд специалиста",
+    link: 'meeting'
   },
   {
     id: uuidv4(),
-    title: "Фотогалерея",
-    link: 'gallery'
+    title: "Контакты",
+    link: 'contacts'
   },
 ];

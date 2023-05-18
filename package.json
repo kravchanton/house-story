@@ -2,6 +2,7 @@
   "name": "new-test",
   "version": "0.1.0",
   "private": true,
+
   "dependencies": {
     "@pbe/react-yandex-maps": "^1.2.4",
     "@reduxjs/toolkit": "^1.9.3",
