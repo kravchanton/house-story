@@ -14,3 +14,4 @@ export * from "./LandingPage";
 export * from "./Gallery";
 export * from "./MapPage";
 export * from "./QuizPage";
+export * from "./VideoBlog";

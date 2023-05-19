@@ -20,10 +20,10 @@ import {
   LandingPage,
   Layout,
   Meeting,
+  MapPage,
+  VideoBlog,
+  QuizPage,
 } from "../pages";
-import { MapPage } from "../pages/MapPage/MapPage";
-import { VideoBlog } from "../pages/VideoBlog";
-import { QuizPage } from "../pages/QuizPage/QuizPage";
 
 export const router = createBrowserRouter(
   createRoutesFromElements(
