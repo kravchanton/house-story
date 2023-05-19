@@ -26,7 +26,7 @@ import {
   MenuButton,
   SliderBtn,
   VideoLink,
-  // ReviewText,
+  ReviewText,
   AboutContentBlock,
   PhotoItemAbout,
 } from "../../components";
@@ -481,13 +481,13 @@ export const About = () => {
                 poster={`${process.env.REACT_APP_UPLOAD_URL}${data.reviews.mainReview.poster.data.attributes.url}`}
                 youtubeLink={data.reviews.youtubeLink}
               />
-              {/*<ReviewText*/}
-              {/*  buttonLink={data.reviews.mainReview.buttonLink}*/}
-              {/*  buttonText={data.reviews.mainReview.buttonText}*/}
-              {/*  name={data.reviews.mainReview.name}*/}
-              {/*  date={data.reviews.mainReview.date}*/}
-              {/*  reviewBody={data.reviews.mainReview.reviewBody}*/}
-              {/*/>*/}
+              <ReviewText
+                buttonLink={data.reviews.mainReview.buttonLink}
+                buttonText={data.reviews.mainReview.buttonText}
+                name={data.reviews.mainReview.name}
+                date={data.reviews.mainReview.date}
+                reviewBody={data.reviews.mainReview.reviewBody}
+              />
             </div>
             <div className={styles.reviewSlider}>
               <Swiper
