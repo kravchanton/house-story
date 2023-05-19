@@ -1,25 +1,27 @@
 import React from "react";
 
 import styles from "./GalleryPage.module.scss";
-import {Container, Excursion, Garanties, MainForm, NavigationHeader,} from "../../components";
-import {GalleryContainer} from "../../components/Gallery/GalleryContainer";
-import {TopObject} from "../../components/TopObject/TopObject";
-import {BlockVideo} from "../../components/BlockVideo/BlockVideo";
-import {BlockArticle} from "../../components/BlockArticle/BlockArticle";
+import {
+  Container,
+  Excursion,
+  Garanties,
+  MainForm,
+  TopObject,
+  BlockVideo,
+  BlockArticle,
+} from "../../components";
+import { GalleryContainer } from "../../components/Gallery/GalleryContainer";
 
 export const GalleryPage = () => {
   return (
     <main className={styles.main}>
       <Container>
-        <NavigationHeader />
         <MainForm />
         <GalleryContainer />
-        <TopObject/>
-
-
+        <TopObject />
         <Garanties title={true} />
         <BlockVideo />
-        <BlockArticle/>
+        <BlockArticle />
 
         <Excursion cloudImg={true} houseImg={true} />
       </Container>

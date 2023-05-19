@@ -1,4 +1,6 @@
 import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchCatalogPage } from "../../bll/reducers/catalogPageReducer";
 
 import styles from "./CatalogPage.module.scss";
 import {
@@ -7,14 +9,11 @@ import {
   Excursion,
   Garanties,
   MainForm,
-  NavigationHeader,
   TopObject,
+  BlockVideo,
+  BlockArticle,
 } from "../../components";
 import { CatalogQuiz } from "../../components/Catalog/CatalogQuiz";
-import { useDispatch, useSelector } from "react-redux";
-import { fetchCatalogPage } from "../../bll/reducers/catalogPageReducer";
-import { BlockArticle } from "../../components/BlockArticle/BlockArticle";
-import { BlockVideo } from "../../components/BlockVideo/BlockVideo";
 
 export const CatalogPage = () => {
   const dispatch = useDispatch();
@@ -27,7 +26,6 @@ export const CatalogPage = () => {
     <main className={styles.main}>
       {data && (
         <Container>
-          <NavigationHeader />
           <MainForm />
           <CatalogContainer />
           <CatalogQuiz numberQuiz={data.attributes.quizNumber} />

@@ -6,18 +6,16 @@ import {
   Excursion,
   Garanties,
   MainForm,
-  NavigationHeader,
+  TopObject,
+  BlockArticle,
+  BlockVideo,
+  BlogContainer,
 } from "../../components";
-import { BlogContainer } from "../../components/Blog/BlogContainer";
-import { TopObject } from "../../components/TopObject/TopObject";
-import { BlockArticle } from "../../components/BlockArticle/BlockArticle";
-import { BlockVideo } from "../../components/BlockVideo/BlockVideo";
 
 export const BlogPage = () => {
   return (
     <main className={styles.main}>
       <Container>
-        <NavigationHeader />
         <MainForm />
         <BlogContainer />
         <TopObject />
