@@ -1,9 +1,9 @@
 import React from "react";
 import classNames from "classnames";
 
-import styles from "./Garanties.module.scss";
-
 import { garanties, garantiesVariant } from "../../mockData/garanties";
+
+import styles from "./Garanties.module.scss";
 
 export const Garanties = ({
   title,

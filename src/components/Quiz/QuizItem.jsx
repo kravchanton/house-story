@@ -1,11 +1,10 @@
 import React from "react";
+import styles from "./Quiz.module.scss";
+import { RadioButton } from "../RadioButton/RadioButton";
+
 import { useDispatch } from "react-redux";
 import { changeData } from "../../bll/reducers/quizReducer";
-
-import styles from "./Quiz.module.scss";
-
-import { RadioButton } from "../RadioButton";
-import { Input } from "../Input";
+import { Input } from "../Input/Input";
 
 export const QuizItem = ({
   data,
@@ -16,6 +15,8 @@ export const QuizItem = ({
 }) => {
   const dispatch = useDispatch();
   const setData = (answer, id) => {
+    // eslint-disable-next-line no-debugger
+
     dispatch(changeData({ id, questionNumber, objNumber }));
     handleSetAnswer(answer);
   };

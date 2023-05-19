@@ -7,7 +7,7 @@ import { fetchTopObject } from "../../bll/reducers/topObjectReducer";
 
 import styles from "./TopObject.module.scss";
 
-import { SlideTop, SliderBtn, MenuButton } from "../../components";
+import { MenuButton, SliderBtn, SlideTop } from "../../components";
 
 export const TopObject = () => {
   const [folder, setFolder] = useState(null);

@@ -2,6 +2,8 @@ import React, { useEffect } from "react";
 import ReactMarkdown from "react-markdown";
 import { useDispatch, useSelector } from "react-redux";
 
+import { fetchGratitudeForm } from "../../bll/reducers/gratitudeFormReducer";
+
 import styles from "./GratitudeForm.module.scss";
 
 import hand from "../../assets/hand.png";
@@ -13,8 +15,6 @@ import {
   OurProjects,
   VideoLink,
 } from "../../components";
-
-import { fetchGratitudeForm } from "../../bll/reducers/gratitudeFormReducer";
 
 export const GratitudeForm = () => {
   const dispatch = useDispatch();

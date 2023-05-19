@@ -1,12 +1,11 @@
 import React from "react";
+import styles from "./MapPage.module.scss";
+import { MenuButton } from "../../components/MenuButton";
 import { NavLink } from "react-router-dom";
 import classNames from "classnames";
 
-import styles from "./MapPage.module.scss";
-
-import { MenuButton } from "../../components/MenuButton";
-
 export const Card = ({ data }) => {
+  console.log(data);
   return (
     <div className={styles.card}>
       <h3>{data.title}</h3>

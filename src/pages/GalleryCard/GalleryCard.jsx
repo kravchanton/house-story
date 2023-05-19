@@ -1,17 +1,22 @@
 import React, { useEffect, useRef, useState } from "react";
 import { NavLink, useParams } from "react-router-dom";
+import ReactMarkdown from "react-markdown";
+
+import { fetchPhotoGallery } from "../../bll/reducers/photoReducer";
+import { fetchMainForm } from "../../bll/reducers/mainFormReducer";
 
 import styles from "./GalleryCard.module.scss";
 
-import { Container, Excursion, MenuButton } from "../../components";
+import {
+  Container,
+  Excursion,
+  MenuButton,
+  TopObject,
+  BlockArticle,
+  BlockVideo,
+} from "../../components";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchPhotoGallery } from "../../bll/reducers/photoReducer";
-import { TopObject } from "../../components/TopObject/TopObject";
-import { BlockArticle } from "../../components/BlockArticle/BlockArticle";
 import { Images } from "./Images";
-import { BlockVideo } from "../../components/BlockVideo/BlockVideo";
-import ReactMarkdown from "react-markdown";
-import { fetchMainForm } from "../../bll/reducers/mainFormReducer";
 
 export const GalleryCard = () => {
   useEffect(() => {

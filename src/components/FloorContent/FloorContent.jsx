@@ -1,7 +1,7 @@
 import React from "react";
-import rehypeRaw from "rehype-raw";
 import ReactMarkdown from "react-markdown";
 import { NavLink } from "react-router-dom";
+import rehypeRaw from "rehype-raw";
 
 import styles from "./FloorContent.module.scss";
 

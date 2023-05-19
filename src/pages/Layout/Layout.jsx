@@ -2,12 +2,12 @@ import React, { useCallback, useEffect, useState } from "react";
 import { Outlet, ScrollRestoration } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 
+import { fetchLayoutData } from "../../bll/reducers/layoutReducer";
+
 import styles from "./Layout.module.scss";
 
 import { Popup, Sprite } from "../../components";
 import { Footer, Header } from "../../containers";
-
-import { fetchLayoutData } from "../../bll/reducers/layoutReducer";
 
 export const Layout = () => {
   const dispatch = useDispatch();

@@ -11,7 +11,8 @@ import backgroundHouse from "./../../assets/backgroudHouse.png";
 import rCloud from "./../../assets/rCloud.png";
 import tCloud from "./../../assets/tCloud.png";
 
-import { MainFormComponent, VideoLink } from "../../components";
+import { MainFormComponent } from "../MainFormComponent";
+import { VideoLink } from "../VideoLink";
 
 export const MainForm = () => {
   const dispatch = useDispatch();

@@ -9,7 +9,7 @@ import styles from "./GalleryContainer.module.scss";
 import { PhotoList } from "./PhotoList";
 import { MenuPhoto } from "./MenuPhoto";
 import { MenuButton } from "../MenuButton";
-import { CatalogListMobile } from "../Catalog";
+import { CatalogListMobile } from "../Catalog/CatalogListMobile";
 
 export const GalleryContainer = () => {
   const [folder, setFolder] = useState(0);
@@ -23,7 +23,6 @@ export const GalleryContainer = () => {
   }, []);
   let Arr = [];
   let data = useSelector((state) => state.photo.photo);
-
   data?.map((t) =>
     t.attributes.project.filter((item) =>
       item.title?.toLowerCase().includes(search.toLowerCase())

@@ -6,7 +6,6 @@ import ReactMarkdown from "react-markdown";
 
 import styles from "./Meeting.module.scss";
 import {
-  // Basic,
   Container,
   Excursion,
   Garanties,
@@ -27,8 +26,6 @@ export const Meeting = () => {
   useEffect(() => {
     dispatch(fetchMeetingData());
   }, [dispatch]);
-
-  console.log(data);
 
   return (
     <section className={styles.meeting}>
@@ -148,22 +145,6 @@ export const Meeting = () => {
               <ArrowVariant className={styles.arrow} />
             </div>
             <Excursion houseImg={true} cloudImg={true} />
-
-            {/*  <div className={styles.contacts}>*/}
-            {/*    <p className={styles.contactsTitle}>{data.contacts.title}</p>*/}
-            {/*    <p className={styles.visualSubtitle}>{data.contacts.subtitle}</p>*/}
-            {/*    <Basic*/}
-            {/*      className={styles.contactsFormWrapper}*/}
-            {/*      classNameForm={styles.contactsForm}*/}
-            {/*      classNameInput={styles.contactsFormInput}*/}
-            {/*      classNameSelect={styles.contactsFormSelect}*/}
-            {/*      classNameForTextarea={styles.contactsFormTextarea}*/}
-            {/*      inputVariant={true}*/}
-            {/*      classNameForBtn={styles.contactsFormBtn}*/}
-            {/*      btnText="Записаться"*/}
-            {/*      lockText={true}*/}
-            {/*    />*/}
-            {/*  </div>*/}
           </div>
         </Container>
       )}

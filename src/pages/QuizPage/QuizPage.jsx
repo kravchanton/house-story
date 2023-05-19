@@ -1,6 +1,5 @@
 import React from "react";
-import { Container, MainForm, Quiz } from "../../components";
-import { BlockArticle } from "../../components/BlockArticle/BlockArticle";
+import { Container, MainForm, Quiz, BlockArticle } from "../../components";
 
 export const QuizPage = () => {
   return (

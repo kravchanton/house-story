@@ -12,9 +12,9 @@ import {
   Excursion,
   MenuButton,
   TimeComponent,
+  CalendarComponent,
 } from "../../components";
 import { ArrowVariant, Calendar, Timer, World } from "../../icons";
-import { CalendarComponent } from "../../components/Calendar/Calendar";
 
 const weekDays = [
   "понедельник",

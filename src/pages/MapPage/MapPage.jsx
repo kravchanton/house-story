@@ -7,7 +7,8 @@ import { fetchCatalog } from "../../bll/reducers/catalogReducer";
 
 import styles from "./MapPage.module.scss";
 
-import { Excursion, Container, Card } from "../../components";
+import { Excursion, Container } from "../../components";
+import { Card } from "./Card";
 
 export const MapPage = () => {
   let idCard = useParams();

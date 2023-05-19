@@ -1,5 +1,11 @@
 import React, { useEffect, useRef, useState } from "react";
 import classNames from "classnames";
+import { useParams } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import ReactMarkdown from "react-markdown";
+import rehypeRaw from "rehype-raw";
+
+import { fetchBlog } from "../../bll/reducers/blogReducer";
 
 import styles from "./ArticlePage.module.scss";
 
@@ -12,15 +18,9 @@ import {
   NavigationArticle,
   VideoLink,
 } from "../../components";
-import { useParams } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
-import { fetchBlog } from "../../bll/reducers/blogReducer";
-import ReactMarkdown from "react-markdown";
-import rehypeRaw from "rehype-raw";
+
 import { Images } from "./Images";
-import { TopObject } from "../../components/TopObject/TopObject";
-import { BlockVideo } from "../../components/BlockVideo/BlockVideo";
-import { BlockArticle } from "../../components/BlockArticle/BlockArticle";
+import { TopObject, BlockVideo, BlockArticle } from "../../components";
 
 export const ArticlePage = () => {
   useEffect(() => {
@@ -65,7 +65,6 @@ export const ArticlePage = () => {
               <div ref={RefsFirst} className={styles.textBlock}>
                 <h3 className={styles.titleText}>{cardData.descrTitle}</h3>
                 <div className={styles.descText}>
-                  {/* eslint-disable-next-line react/no-children-prop */}
                   <ReactMarkdown rehypePlugins={[rehypeRaw]}>
                     {cardData.descr}
                   </ReactMarkdown>
@@ -122,7 +121,6 @@ export const ArticlePage = () => {
                   className={count === 11 ? styles.textBlock : styles.hidden}
                 >
                   <div className={styles.descText}>
-                    {/* eslint-disable-next-line react/no-children-prop */}
                     <ReactMarkdown rehypePlugins={[rehypeRaw]}>
                       {cardData.descr}
                     </ReactMarkdown>
@@ -142,6 +140,7 @@ export const ArticlePage = () => {
                     }
                   >
                     <div className={styles.descText}>
+                      {/* eslint-disable-next-line react/no-children-prop */}
                       <ReactMarkdown rehypePlugins={[rehypeRaw]}>
                         {t.descr}
                       </ReactMarkdown>

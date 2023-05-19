@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import classNames from "classnames";
-import { useDispatch, useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
 
 import { fetchBlockVideo } from "../../bll/reducers/blockVideoReducer";
 
@@ -9,7 +9,8 @@ import "swiper/css";
 
 import styles from "./BlockWrapper.module.scss";
 
-import { MenuButton, VideoLink } from "../../components";
+import { MenuButton } from "../MenuButton";
+import { VideoLink } from "../VideoLink";
 
 export const BlockVideo = () => {
   const dispatch = useDispatch();

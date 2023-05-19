@@ -19,7 +19,7 @@ export const LandingPage = () => {
     dispatch(fetchLandingPage());
   }, []);
   let data = useSelector((state) => state.landingPage.landingPage);
-  console.log(data);
+
   return (
     <section className={styles.wrapper}>
       {data && (

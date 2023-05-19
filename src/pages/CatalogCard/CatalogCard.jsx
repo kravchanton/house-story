@@ -1,14 +1,20 @@
 import React, { useEffect, useState } from "react";
 import { NavLink, useParams } from "react-router-dom";
 import classNames from "classnames";
+import { useDispatch, useSelector } from "react-redux";
+import ReactMarkdown from "react-markdown";
+import { Pagination, usePagination } from "pagination-react-js";
+import rehypeRaw from "https://esm.sh/rehype-raw@6";
+
+import { fetchCatalog } from "../../bll/reducers/catalogReducer";
+
 import dom from "../../assets/slider_dom 1 (2).jpg";
 import cloud from "../../assets/cloud.png";
 import cloud1 from "../../assets/cloud1.png";
 import kaska from "../../assets/kaska.png";
+
 import styles from "./CatalogCard.module.scss";
-import { useDispatch, useSelector } from "react-redux";
-import { fetchCatalog } from "../../bll/reducers/catalogReducer";
-import ReactMarkdown from "react-markdown";
+
 import {
   Basic,
   BuildingHouse,
@@ -18,11 +24,8 @@ import {
   VideoExcursion,
   FloorContent,
 } from "../../components";
-import { SectionCard } from "../../containers";
-import { Pagination, usePagination } from "pagination-react-js";
-import rehypeRaw from "https://esm.sh/rehype-raw@6";
 
-// import ReactPlayer from "react-player";
+import { SectionCard } from "../../containers";
 
 export const CatalogCard = () => {
   const { currentPage, entriesPerPage, entries } = usePagination(1, 1);
@@ -36,13 +39,13 @@ export const CatalogCard = () => {
   const dispatch = useDispatch();
   let cardData;
   let data = useSelector((state) => state.catalog.catalog);
-  console.log(data);
+
   data?.map((t) =>
     t.attributes.item.filter((item) =>
       item.id == idCard.id ? (cardData = item) : ""
     )
   );
-  console.log(cardData);
+
   return (
     <section className={styles.catalogCard}>
       {data && (

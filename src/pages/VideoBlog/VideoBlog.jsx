@@ -1,15 +1,16 @@
 import React, { useEffect } from "react";
 import classNames from "classnames";
-
-import styles from "./VideoBlog.module.scss";
-
-import { Container, Excursion, VideoLink } from "../../components";
 import { useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import ReactMarkdown from "react-markdown";
 import rehypeRaw from "https://esm.sh/rehype-raw@6";
-import { BlockVideo } from "../../components/BlockVideo/BlockVideo";
+
 import { fetchBlockVideo } from "../../bll/reducers/blockVideoReducer";
+
+import styles from "./VideoBlog.module.scss";
+
+import { Container, Excursion, VideoLink, BlockVideo } from "../../components";
+
 import { NavigationVideo } from "./NavigationVideo";
 
 export const VideoBlog = () => {

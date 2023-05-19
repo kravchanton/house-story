@@ -1,19 +1,15 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { useDispatch } from "react-redux";
 import classNames from "classnames";
+import { useDispatch } from "react-redux";
 
 import { deleteLastAnswer, setAnswer } from "../../bll/reducers/AnswerReducer";
 
 import styles from "./QuizContent.module.scss";
 
-import {
-  ContactForm,
-  MenuButton,
-  NavigationEl,
-  QuizItem,
-} from "../../components";
+import { ContactForm, MenuButton, NavigationEl } from "../../components";
 import { Binoculars, Calculator, WorkerVariant } from "../../icons";
+import { QuizItem } from "../Quiz/QuizItem";
 
 export const QuizContent = ({
   questionNumber,

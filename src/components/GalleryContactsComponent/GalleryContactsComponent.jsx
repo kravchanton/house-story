@@ -1,25 +1,18 @@
 import React, { useEffect } from "react";
-
+import { useDispatch, useSelector } from "react-redux";
 import PhotoSwipeLightbox from "photoswipe/lightbox";
+
+import { fetchContactsData } from "../../bll/reducers/contactsReducer";
 
 import "photoswipe/style.css";
 
 import "./GalleryContactsComponent.scss";
-import { useDispatch, useSelector } from "react-redux";
-import { fetchContactsData } from "../../bll/reducers/contactsReducer";
 
 export const GalleryContactsComponent = (props) => {
   const dispatch = useDispatch();
   const data = useSelector(
     (state) => state.contactsData.contactsData.attributes
   );
-  // const [isMobile, setIsMobile] = useState(100);
-  //
-  // useEffect(() => {
-  //   return document.documentElement.clientWidth > 768
-  //     ? setIsMobile(100)
-  //     : setIsMobile(2);
-  // }, []);
 
   useEffect(() => {
     dispatch(fetchContactsData());

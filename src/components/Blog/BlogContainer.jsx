@@ -6,12 +6,10 @@ import { fetchBlog } from "../../bll/reducers/blogReducer";
 
 import styles from "./GalleryContainer.module.scss";
 
-import {
-  PhotoList,
-  MenuPhoto,
-  MenuButton,
-  CatalogListMobile,
-} from "../../components";
+import { PhotoList } from "./PhotoList";
+import { MenuPhoto } from "./MenuPhoto";
+import { MenuButton } from "../MenuButton";
+import { CatalogListMobile } from "../Catalog/CatalogListMobile";
 
 export const BlogContainer = () => {
   const [folder, setFolder] = useState(0);
@@ -25,7 +23,7 @@ export const BlogContainer = () => {
   }, []);
   let Arr = [];
   let data = useSelector((state) => state.blog.blog);
-  console.log(data);
+
   data?.map((t) =>
     t.attributes.item.filter((item) =>
       item.title?.toLowerCase().includes(search.toLowerCase())

@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import classNames from "classnames";
 
 import { fetchContactsData } from "../../bll/reducers/contactsReducer";
+import { fetchMainForm } from "../../bll/reducers/mainFormReducer";
 
 import styles from "./Contacts.module.scss";
 
@@ -13,7 +14,6 @@ import {
   ContactsGallery,
   TopObject,
 } from "../../components";
-import { fetchMainForm } from "../../bll/reducers/mainFormReducer";
 
 export const Contacts = () => {
   const dispatch = useDispatch();

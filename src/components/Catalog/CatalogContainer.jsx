@@ -6,12 +6,10 @@ import { fetchCatalog } from "../../bll/reducers/catalogReducer";
 
 import styles from "./Catalog.module.scss";
 
-import {
-  MenuCatalog,
-  CatalogList,
-  MenuButton,
-  CatalogListMobile,
-} from "../../components";
+import { MenuCatalog } from "./MenuCatalog";
+import { CatalogList } from "./CatalogList";
+import { MenuButton } from "../MenuButton";
+import { CatalogListMobile } from "./CatalogListMobile";
 
 export const CatalogContainer = () => {
   const [folder, setFolder] = useState(0);
