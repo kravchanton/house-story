@@ -1,12 +1,9 @@
 export * from "./Sprite";
 export * from "./MenuButton";
-
 export * from "./Container";
 export * from "./ReviewsSlider";
-
 export * from "./Quiz";
 export * from "./ContentWrapper";
-
 export * from "./NavigationEl";
 export * from "./ContactForm";
 export * from "./Form";
@@ -45,7 +42,7 @@ export * from "./TimeComponent";
 export * from "./BlockVideo";
 export * from "./BlockArticle";
 export * from "./Calendar";
-
+export * from "./ReviewText";
 export * from "./Input";
 export * from "./VideoLink";
 export * from "./RadioButton";
