@@ -1,13 +1,12 @@
 export * from "./Sprite";
 export * from "./MenuButton";
-export * from "./ServiceTitle";
-export * from "./ServiceSubtitle";
+
 export * from "./Container";
 export * from "./ReviewsSlider";
-export * from "./Review";
+
 export * from "./Quiz";
 export * from "./ContentWrapper";
-export * from "./QuestionInner";
+
 export * from "./NavigationEl";
 export * from "./ContactForm";
 export * from "./Form";
@@ -19,7 +18,6 @@ export * from "./MainForm";
 export * from "./Excursion";
 export * from "./PhoneDropdown";
 export * from "./MenuDropdown";
-export * from "./Icon";
 export * from "./NavMenu";
 export * from "./SliderBtn";
 export * from "./BuildingHouse";
@@ -37,7 +35,6 @@ export * from "./ContactsGallery";
 export * from "./AboutGallery";
 export * from "./GalleryAboutComponent";
 export * from "./GalleryContactsComponent";
-export * from "./ReviewText";
 export * from "./CommonReviewText";
 export * from "./AboutContentBlock";
 export * from "./PhotoItemAbout";
@@ -48,7 +45,7 @@ export * from "./TimeComponent";
 export * from "./BlockVideo";
 export * from "./BlockArticle";
 export * from "./Calendar";
-export * from "./Icon";
+
 export * from "./Input";
 export * from "./VideoLink";
 export * from "./RadioButton";

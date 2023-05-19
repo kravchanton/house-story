@@ -3,8 +3,6 @@ import { useDispatch } from "react-redux";
 
 import { setAnswer } from "../../bll/reducers/AnswerReducer";
 
-import "./Input.css";
-
 export const Input = ({ data, setDisabledButton }) => {
   const dispatch = useDispatch();
 
