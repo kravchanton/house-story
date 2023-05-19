@@ -4,6 +4,7 @@ import {
   createBrowserRouter,
   createRoutesFromElements,
   Route,
+  Navigate
 } from "react-router-dom";
 import {
   About,
@@ -29,6 +30,7 @@ export const router = createBrowserRouter(
   createRoutesFromElements(
     <>
       <Route path="/" element={<Layout />}>
+        <Route path='/' element={ <Navigate to="/catalog/1" /> }/>
         <Route path="/catalog/:idPage" element={<CatalogPage />} />
         <Route path="/catalog/:idPage/gratitude" element={<Gratitude />} />
         <Route path="/catalog/:idPage/:id" element={<CatalogCard />} />

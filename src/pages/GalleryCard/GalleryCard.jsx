@@ -78,7 +78,7 @@ export const GalleryCard = () => {
                 </div>
               ))}
 
-              <NavLink to={`/map/catalog/${cardData.id}`}>
+              <NavLink to={cardData.mapLink}>
                 {" "}
                 <MenuButton
                   classNameForBtn={styles.btnWrapper}
@@ -86,18 +86,23 @@ export const GalleryCard = () => {
                   title="На карте"
                 />
               </NavLink>
-
+              <NavLink to={cardData.watchObjectLink}>
               <MenuButton
                 classNameForBtn={styles.btnWrapper}
                 className={styles.btn}
                 title="Смотреть объект"
               />
+              </NavLink>
+              <NavLink to={cardData.contactsLink
+              }>
 
               <MenuButton
                 classNameForBtn={styles.btnWrapper}
                 className={styles.btn}
                 title="Написать прорабу"
               />
+              </NavLink>
+
             </div>
           </div>
           <div className={styles.description}>
