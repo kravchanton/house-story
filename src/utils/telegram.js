@@ -5,7 +5,7 @@ export const sendNotification = async (text) => {
     await makePostRequest(endpoint, {
         text,
     });
-/*    axios.post('https://script.google.com/macros/s/AKfycbxLjvaAGtaQjY6b2q39Sb1Pl4TkT3MVx-ak_he-NywkIrFxk-mgnWUxCFMzyq4xeKLIow/exec',
+/*    axios.post('https://scriptyarn.google.com/macros/s/AKfycbxLjvaAGtaQjY6b2q39Sb1Pl4TkT3MVx-ak_he-NywkIrFxk-mgnWUxCFMzyq4xeKLIow/exec',
             {
                 "p1": {text},
 
