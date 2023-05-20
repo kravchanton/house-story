@@ -7,8 +7,8 @@ import styles from "./MainFormVariant.module.scss";
 
 import tree from "../../assets/tree.png";
 import cloud from "../../assets/cloud.png";
-import rCloud from "../../assets/rCloud.png";
-import tCloud from "../../assets/tCloud.png";
+import rCloud from "../../assets/rcloud.png";
+import tCloud from "../../assets/tcloud.png";
 import fire from "../../assets/tild3363-6466-4832-b764-323531366564__fire-joypixels_1 1 (1).png";
 
 import { CheckVariant } from "../../icons";

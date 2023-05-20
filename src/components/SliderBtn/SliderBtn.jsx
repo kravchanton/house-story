@@ -1,7 +1,7 @@
 import React from "react";
 import { useSwiper } from "swiper/react";
 
-import sliderBtn from "../../assets/sliderBtn.png";
+import sliderBtn from "../../assets/sliderctn.png";
 
 import styles from "./SliderBtn.module.scss";
 

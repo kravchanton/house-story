@@ -4,7 +4,7 @@ import classNames from "classnames";
 import { useDispatch, useSelector } from "react-redux";
 import ReactMarkdown from "react-markdown";
 import { Pagination, usePagination } from "pagination-react-js";
-import rehypeRaw from "https://esm.sh/rehype-raw@6";
+import rehypeRaw from 'rehype-raw'
 
 import { fetchCatalog } from "../../bll/reducers/catalogReducer";
 

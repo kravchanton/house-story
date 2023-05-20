@@ -134,3 +134,10 @@ li div {
     margin-top: 0;
   }
 }
+
+
+@media (max-width: 480px) {
+  .images {
+    max-height: none;
+  }
+}

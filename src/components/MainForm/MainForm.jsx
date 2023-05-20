@@ -7,9 +7,9 @@ import styles from "./MainForm.module.scss";
 
 import tree from "./../../assets/tree.png";
 import cloud from "./../../assets/cloud.png";
-import backgroundHouse from "./../../assets/backgroudHouse.png";
-import rCloud from "./../../assets/rCloud.png";
-import tCloud from "./../../assets/tCloud.png";
+import backgroundHouse from "../../assets/backgroudhouse.png";
+import rCloud from "../../assets/rcloud.png";
+import tCloud from "../../assets/tcloud.png";
 
 import { MainFormComponent } from "../MainFormComponent";
 import { VideoLink } from "../VideoLink";

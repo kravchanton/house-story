@@ -51,3 +51,9 @@
   width: 325px;
   margin: 0 auto;
 }
+
+@media (max-height: 480px) {
+  .btnFloor {
+    height: 40px;
+  }
+}

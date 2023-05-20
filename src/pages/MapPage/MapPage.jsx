@@ -14,10 +14,12 @@ export const MapPage = () => {
   let idCard = useParams();
   const dispatch = useDispatch();
   const [widthMap, setWidthMap] = useState("90vw");
+  const [heightMap, setHeightMap] = useState("80vh");
 
   useEffect(() => {
     if (document.documentElement.clientWidth < 768) {
       setWidthMap("100%");
+      setHeightMap("60vh")
     }
   }, []);
 
@@ -56,7 +58,7 @@ export const MapPage = () => {
             {cardData && (
               <Map
                 width={widthMap}
-                height="80vh"
+                height={heightMap}
                 z-index={1}
                 defaultState={{
                   center: coordinate,

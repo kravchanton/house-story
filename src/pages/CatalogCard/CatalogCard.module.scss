@@ -1,3 +1,8 @@
+.catalogCard {
+  padding-top: 40px;
+
+}
+
 .title {
   font-weight: 900;
   font-size: 38px;
@@ -363,9 +368,11 @@ li div {
 .file {
   height: 50px;
 }
+
 .sectionFloor {
 
 }
+
 .imagesMobile {
   display: flex;
   flex-direction: column;
@@ -382,10 +389,15 @@ li div {
   width: 100%;
   margin: 0 auto;
 }
+
 .sectionMobile {
 
 }
+
 @media (max-width: 480px) {
+  .catalogCard {
+    padding-top: 0;
+  }
   .container {
     display: flex;
     flex-direction: column;
@@ -519,7 +531,28 @@ li div {
     width: 47%;
     margin-right: 0;
   }
+  .content {
+    gap: 40px;
+  }
+  .cloud {
+    display: none
+  }
+  .house {
+    display: none
+  }
+  .cloud1 {
+    display: none
+  }
 
+  .kaska {
+    display: none
+  }
+  .form {
+    padding-top: 16px;
+  }
+  .btnFloor {
+    height: 40px;
+  }
 }
 
 @media (min-width: 480px) {

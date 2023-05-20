@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 
 import plant from "../../assets/plant.png";
-import phone from "../../assets/phoneContact.png";
+import phone from "../../assets/phonecontact.png";
 
 import styles from "./Header.module.scss";
 

@@ -3,7 +3,7 @@ import classNames from "classnames";
 import { useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import ReactMarkdown from "react-markdown";
-import rehypeRaw from "https://esm.sh/rehype-raw@6";
+import rehypeRaw from 'rehype-raw'
 
 import { fetchBlockVideo } from "../../bll/reducers/blockVideoReducer";
 

@@ -23,13 +23,7 @@ export const CatalogContainer = () => {
   }, []);
   let Arr = [];
   let data = useSelector((state) => state.catalog.catalog);
-  data?.map((t) =>
-    t.attributes.item.filter((item) =>
-      item.title?.toLowerCase().includes(search.toLowerCase())
-        ? Arr.push(item)
-        : ""
-    )
-  );
+  data?.map((t) => t.attributes.item.filter((item) => item.title?.toLowerCase().includes(search.toLowerCase()) ? Arr.push(item) : ""));
   let dataTransfer;
   if (search.length > 1) {
     dataTransfer = Arr;

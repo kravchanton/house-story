@@ -11,7 +11,7 @@ import { Footer, Header } from "../../containers";
 
 export const Layout = () => {
   const dispatch = useDispatch();
-  const data = useSelector((state) => state.layoutData.layoutData.attributes);
+  const data = useSelector((state) => state?.layoutData?.layoutData?.attributes);
 
   useEffect(() => {
     dispatch(fetchLayoutData());
