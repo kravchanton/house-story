@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef} from "react";
 import { useNavigate } from "react-router-dom";
 import classNames from "classnames";
 import { useDispatch } from "react-redux";
@@ -21,18 +21,24 @@ export const QuizContent = ({
 }) => {
   const [answer, getAnswer] = useState(null);
   let [disabledButton, setDisabledButton] = useState("disabled");
+  const RefItem = useRef(null);
+
 
   const dispatch = useDispatch();
 
   const changeQuestion = () => {
+    RefItem.current.scrollIntoView({ behavior: "smooth" });
     increaseCount();
     dispatch(setAnswer({ title: questions[questionNumber].title, answer }));
     setDisabledButton("disabled");
+
   };
   const prevQuestion = () => {
     decreaseCount();
     dispatch(deleteLastAnswer());
     setDisabledButton("");
+    RefItem.current.scrollIntoView({ behavior: "smooth" });
+
   };
 
   const handleSetAnswer = (v) => {
@@ -76,7 +82,7 @@ export const QuizContent = ({
           <ContactForm />
         </div>
 
-        <div className={styles.question}>
+        <div className={styles.question} ref={RefItem}>
           <div className={styles.navigation}>
             {questions?.map((item, index) => (
               <NavigationEl

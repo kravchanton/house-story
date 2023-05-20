@@ -1,6 +1,6 @@
 import React from "react";
 import { useDispatch } from "react-redux";
-
+import './input.css'
 import { setAnswer } from "../../bll/reducers/AnswerReducer";
 
 export const Input = ({ data, setDisabledButton }) => {
