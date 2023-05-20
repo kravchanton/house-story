@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 
-import bgBuilding1 from "../../assets/buildingBackground1.png";
-import bgBuilding2 from "../../assets/buildingBackground2.png";
+import bgBuilding1 from "../../assets/buildingbackground1.png";
+import bgBuilding2 from "../../assets/buildingbackground2.png";
 import tree from "../../assets/tree.png";
 
 import styles from "./BuildingHouse.module.scss";

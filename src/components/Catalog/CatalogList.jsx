@@ -21,7 +21,7 @@ export const CatalogList = ({ data }) => {
       </div>
       <Pagination
         entriesPerPage={entriesPerPage.get}
-        totalEntries={data.length}
+        totalEntries={data?.length}
         currentPage={{ get: currentPage.get, set: currentPage.set }}
         offset={3}
         classNames={{

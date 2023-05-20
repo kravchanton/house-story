@@ -13,6 +13,7 @@ import {
 import { GalleryContainer } from "../../components/Gallery/GalleryContainer";
 
 export const GalleryPage = () => {
+
   return (
     <main className={styles.main}>
       <Container>

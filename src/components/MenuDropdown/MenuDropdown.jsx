@@ -14,7 +14,7 @@ export const MenuDropdown = ({ isOpenMenu, closeMenu }) => {
       </div>
       <div className={styles.inner}>
         <div className={styles.leftWrapper}>
-          <NavMenu className={styles.nav} black={true} />
+          <NavMenu closeMenu={closeMenu} className={styles.nav} black={true} />
           <Basic
             lockText={true}
             titleForm="Оставьте заявку и мы с вами свяжемся в течении рабочего дня"

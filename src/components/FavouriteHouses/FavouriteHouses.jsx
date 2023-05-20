@@ -5,7 +5,7 @@ import { NavLink } from "react-router-dom";
 
 import styles from "./FavouriteHouses.module.scss";
 
-import bgFavourite from "../../assets/bgFavourite.png";
+import bgFavourite from "../../assets/bgfavourite.png";
 
 import { MenuButton, SliderBtn } from "../../components";
 
@@ -30,6 +30,14 @@ export const FavouriteHouses = ({ data }) => {
               <div className={styles.favouriteDesc}>
                 <h4 className={styles.descTitle}>{t.title}</h4>
                 <div className={styles.price}>
+                    <h4
+                        className={classNames(
+                            styles.priceText,
+                            styles.favouriteText
+                        )}
+                    >
+                        {t.price} руб
+                    </h4>
                   <h4
                     className={classNames(
                       styles.priceText,
@@ -38,14 +46,7 @@ export const FavouriteHouses = ({ data }) => {
                   >
                     {t.square} м²
                   </h4>
-                  <h4
-                    className={classNames(
-                      styles.priceText,
-                      styles.favouriteText
-                    )}
-                  >
-                    {t.price} руб
-                  </h4>
+
                 </div>
 
                 {t.item.map((i, index) => (

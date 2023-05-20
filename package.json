@@ -1,7 +1,8 @@
 {
-  "name": "new-test",
+  "name": "house-story",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://host050820221532.of.by/",
 
   "dependencies": {
     "@pbe/react-yandex-maps": "^1.2.4",
