@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 import tree from "../../assets/tree.png";
 import cloud from "../../assets/cloud.png";
-import rCloud from "../../assets/rCloud.png";
+import rCloud from "../../assets/rcloud.png";
 
 import styles from "./Appointment.module.scss";
 
