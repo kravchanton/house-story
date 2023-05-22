@@ -52,6 +52,19 @@
 }
 
 .btn {
+  justify-content: center;
+  width: 400px;
+  min-width: 200px;
+  height: 56px;
+  border: 1px solid #1EAB5F;
+  background: #1EAB5F;
+  border-radius: 5px;
+  margin: 10px 20px 10px 0;
+  color: #FFFFFF;
+  cursor: pointer;
+}
+.btnPrev {
+  justify-content: center;
   width: 400px;
   min-width: 200px;
   height: 56px;
@@ -61,11 +74,10 @@
   color: #000000;
   cursor: pointer;
 }
-
-.btn:hover {
+/*.btn:hover {
   color: #000000;
   border: 1px solid #000000;
-}
+}*/
 .btn:disabled {
   background: #d0d0d0;
   color: #000000;
@@ -138,6 +150,15 @@ border: none;
     background: #1EAB5F;
     border-radius: 3px;
     color: #FFFFFF;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16px;
+    width: 100%;
+    height: 40px;
+  }
+  .btnPrev {
+    border-radius: 3px;
+    color: #000000;
     font-weight: 600;
     font-size: 14px;
     line-height: 16px;

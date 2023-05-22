@@ -16,6 +16,7 @@ export const MenuButton = ({
   return (
     <div className={classNames(styles.wrapper, classNameForBtn)}>
       <button
+
         disabled={disabled}
         className={classNames(styles.button, className)}
       >

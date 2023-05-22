@@ -147,6 +147,9 @@ abbr[title] {
   display: none;
 }
 @media (max-width: 480px) {
+  .react-calendar__month-view__days button {
+    margin: 1px
+  }
   .wrapper {
     width: 100%;
     gap: 24px;

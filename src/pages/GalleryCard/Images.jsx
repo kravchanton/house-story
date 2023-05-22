@@ -1,16 +1,21 @@
-import React, { useEffect } from "react";
-import { Pagination, usePagination } from "pagination-react-js";
+import React, {useEffect} from "react";
+import {Pagination, usePagination} from "pagination-react-js";
 import PhotoSwipeLightbox from "photoswipe/lightbox";
 
 import styles from "./GalleryCard.module.scss";
-
-import "photoswipe/style.css";
+import './pagination.css'
 
 export const Images = ({ data, galleryID }) => {
-  let maxEntries = 6;
-  if (document.documentElement.clientWidth < 480) {
-    maxEntries = 2;
-  }
+    let maxEntries = 6
+    let offset = 3
+    let showFirst = true
+    if (document.documentElement.clientWidth < 480) {
+        maxEntries = 2
+        offset =0
+        showFirst = false
+    }
+
+    console.log(maxEntries)
   const { currentPage, entriesPerPage, entries } = usePagination(1, maxEntries);
 
   useEffect(() => {
@@ -54,7 +59,7 @@ export const Images = ({ data, galleryID }) => {
           entriesPerPage={entriesPerPage.get}
           totalEntries={data.length}
           currentPage={{ get: currentPage.get, set: currentPage.set }}
-          offset={3}
+          offset={offset}
           classNames={{
             wrapper: "pagination m-auto",
             item: "pagination-item",
@@ -66,17 +71,17 @@ export const Images = ({ data, galleryID }) => {
             navPrevCustom: "pagination-item",
             navNextCustom: "pagination-item",
           }}
-          showFirstNumberAlways={true}
-          showLastNumberAlways={true}
+          showFirstNumberAlways={showFirst}
+          showLastNumberAlways={showFirst}
           navPrev="&#x2039;" // Here you can pass anything (Text, HTML Tag, React Component, ...)
           navNext="&#x203a;" // Here you can pass anything (Text, HTML Tag, React Component, ...)
           navPrevCustom={{
-            steps: 6,
+            steps: 1,
             content:
               "\u00B7\u00B7\u00B7" /* Here you can pass anything (Text, HTML Tag, React Component, ...) */,
           }}
           navNextCustom={{
-            steps: 6,
+            steps: 1,
             content:
               "\u00B7\u00B7\u00B7" /* Here you can pass anything (Text, HTML Tag, React Component, ...) */,
           }}

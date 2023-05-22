@@ -163,6 +163,10 @@
 }
 
 @media (max-width: 480px) {
+  .socialsWrapper {
+    gap: 16px;
+    justify-content: space-around;
+  }
   .plan {
     width: 100%;
   }
@@ -172,7 +176,12 @@
   .about {
     flex-direction: column;
   }
+  .btn {
+    margin-top: 16px;
+    height: 40px;
+  }
   .title {
+
     padding-top: 24px;
     font-style: normal;
     font-weight: 700;
@@ -187,15 +196,26 @@
   }
   .buttonBlock {
     flex-direction: column;
+    gap: 0;
+  }
+  .btnWrapper {
+    height: 40px;
     gap: 16px;
+    margin-top: 16px;
   }
   .active {
     color: #ffffff;
   }
-
+.NavigationButton {
+  height: 40px;
+}
+  .btnTransparent {
+    height: 40px;
+  }
   .buttonAction {
+    margin-top: 16px;
     width: 100%;
-    height: 50px;
+    height: 40px;
     border: 1px solid #1EAB5F;
     border-radius: 5px;
   }
@@ -210,9 +230,14 @@
     background: #FFFFFF;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
     border-radius: 3px;
+    margin-bottom: 40px;
   }
   .image {
     width: 100%;
+    height: auto;
+  }
+  .about {
+    margin-bottom: 0;
   }
 }
 
