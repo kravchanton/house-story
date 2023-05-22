@@ -30,6 +30,7 @@
   z-index: 5;
   padding-top: 24px;
 }
+
 .catalogListWrapperMobile {
   max-width: 65vw;
   padding-top: 10px;
@@ -38,6 +39,7 @@
   align-items: start;
   justify-content: start;
 }
+
 .NavigationWrapper {
 }
 
@@ -62,10 +64,12 @@
   border-radius: 5px;
   color: #000000;
 }
+
 .NavigationButton svg {
   width: 30px;
   height: 30px;
 }
+
 .NavigationButton image {
   width: 30px;
   height: 30px;
@@ -75,14 +79,17 @@
   color: #ffffff;
   background: #1eab5f;
 }
+
 .active svg {
   filter: brightness(0) invert(1);
 }
+
 .catalogListWrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+
 .catalogList {
   display: flex;
   flex-direction: row;
@@ -97,6 +104,7 @@
   width: 365px;
   height: 348px;
 }
+
 .catalogItem img {
   margin-top: 16px;
   width: 365px;
@@ -104,6 +112,7 @@
   object-fit: cover;
   border-radius: 3px;
 }
+
 .catalogItem h4 {
   font-weight: 900;
   font-size: 24px;
@@ -134,9 +143,11 @@
   color: #000000;
   margin-top: 16px;
 }
+
 .QuizWrapper {
   padding-top: 160px;
 }
+
 .QuizWrapper h2 {
   font-weight: 700;
   font-size: 32px;
@@ -144,6 +155,7 @@
   text-transform: uppercase;
   color: #1eab5f;
 }
+
 .QuizWrapper h2 span {
   font-weight: 400;
   font-size: 18px;
@@ -158,6 +170,23 @@
   z-index: 5;
   padding-top: 24px;
 }
+
+@media (max-width: 1600px) {
+  .searchInput {
+    width: 280px;
+    height: 50px;
+  }
+  .NavigationButton {
+    margin-top: 30px;
+    width: 280px;
+    height: 50px;
+    gap: 10px;
+    font-size: 12px;
+    line-height: 14px;
+  }
+}
+
+
 @media (max-width: 992px) {
   .catalog {
     margin-bottom: 40px;
@@ -206,3 +235,5 @@
     display: none;
   }
 }
+
+
