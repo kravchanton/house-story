@@ -21,7 +21,7 @@ export const CatalogListMobile = ({ data, visible, map }) => {
           entriesPerPage={entriesPerPage.get}
           totalEntries={data.length}
           currentPage={{ get: currentPage.get, set: currentPage.set }}
-          offset={0}
+          offset={1}
           classNames={{
             wrapper: "pagination m-auto",
             item: "pagination-item",

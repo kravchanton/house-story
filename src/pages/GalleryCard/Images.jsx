@@ -11,7 +11,7 @@ export const Images = ({ data, galleryID }) => {
     let showFirst = true
     if (document.documentElement.clientWidth < 480) {
         maxEntries = 2
-        offset =0
+        offset =1
         showFirst = false
     }
 

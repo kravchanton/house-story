@@ -1,23 +1,15 @@
-import React, { useEffect, useRef, useState } from "react";
-import { NavLink, useParams } from "react-router-dom";
+import React, {useEffect, useRef, useState} from "react";
+import {NavLink, useParams} from "react-router-dom";
 import ReactMarkdown from "react-markdown";
 
-import { fetchPhotoGallery } from "../../bll/reducers/photoReducer";
-import { fetchMainForm } from "../../bll/reducers/mainFormReducer";
+import {fetchPhotoGallery} from "../../bll/reducers/photoReducer";
+import {fetchMainForm} from "../../bll/reducers/mainFormReducer";
 
 import styles from "./GalleryCard.module.scss";
 
-import {
-  Container,
-  Excursion,
-  MenuButton,
-  TopObject,
-  BlockArticle,
-  BlockVideo, FavouriteHouses,
-} from "../../components";
-import { useDispatch, useSelector } from "react-redux";
-import { Images } from "./Images";
-import {SectionCard} from "../../containers";
+import {BlockArticle, BlockVideo, Container, Excursion, MenuButton, TopObject,} from "../../components";
+import {useDispatch, useSelector} from "react-redux";
+import {Images} from "./Images";
 
 export const GalleryCard = () => {
   useEffect(() => {
@@ -206,15 +198,7 @@ export const GalleryCard = () => {
               galleryID="my-test-gallery"
             />
           </div>
-          <div style={{width: "100%"}}> {!!cardData?.favourite && (
-              <SectionCard
-                  title={cardData.favourite[0].title}
-                  buttonText={cardData.favourite[0].buttonTitle}
-                  buttonLink={cardData.favourite[0].buttonLink}
-              >
-                <FavouriteHouses data={cardData.favourite[0].itemCard} />
-              </SectionCard>
-          )} </div>
+
           <TopObject />
           <BlockVideo />
           <BlockArticle />
