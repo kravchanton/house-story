@@ -159,6 +159,9 @@
   padding-top: 24px;
 }
 @media (max-width: 992px) {
+  .catalog {
+    margin-bottom: 40px;
+  }
   .catalogList {
     display: flex;
     flex-direction: column;

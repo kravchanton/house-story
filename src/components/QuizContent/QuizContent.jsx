@@ -27,7 +27,8 @@ export const QuizContent = ({
   const dispatch = useDispatch();
 
   const changeQuestion = () => {
-    RefItem.current.scrollIntoView({ behavior: "smooth" });
+    setTimeout(() => RefItem.current.scrollIntoView({ behavior: "smooth" }), 1)
+
     increaseCount();
     dispatch(setAnswer({ title: questions[questionNumber].title, answer }));
     setDisabledButton("disabled");
@@ -52,14 +53,14 @@ export const QuizContent = ({
   };
   return (
     <>
-      <h3 className={classNames("titleBlock", styles.title)}>
+      <h3  className={classNames("titleBlock", styles.title)}>
         Не знаете какой дом хотите построить?{" "}
       </h3>
       <p className={styles.subtitle}>
         Пройдите тест, и мы подберем для вас проект дома и рассчитаем стоимость
         строительства!
       </p>
-      <div className={styles.buttonBlock}>
+      <div className={styles.buttonBlock} >
         <MenuButton
           classNameForBtn={styles.btnWrapper}
           className={styles.feature}
@@ -82,7 +83,7 @@ export const QuizContent = ({
           <ContactForm />
         </div>
 
-        <div className={styles.question} ref={RefItem}>
+        <div className={styles.question} ref={RefItem}  >
           <div className={styles.navigation}>
             {questions?.map((item, index) => (
               <NavigationEl
@@ -94,7 +95,7 @@ export const QuizContent = ({
             ))}
           </div>
 
-          <div>
+          <div >
             <QuizItem
               setDisabledButton={setDisabledButton}
               objNumber={objNumber}

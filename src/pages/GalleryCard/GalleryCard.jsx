@@ -13,10 +13,11 @@ import {
   MenuButton,
   TopObject,
   BlockArticle,
-  BlockVideo,
+  BlockVideo, FavouriteHouses,
 } from "../../components";
 import { useDispatch, useSelector } from "react-redux";
 import { Images } from "./Images";
+import {SectionCard} from "../../containers";
 
 export const GalleryCard = () => {
   useEffect(() => {
@@ -205,6 +206,15 @@ export const GalleryCard = () => {
               galleryID="my-test-gallery"
             />
           </div>
+          <div style={{width: "100%"}}> {!!cardData?.favourite && (
+              <SectionCard
+                  title={cardData.favourite[0].title}
+                  buttonText={cardData.favourite[0].buttonTitle}
+                  buttonLink={cardData.favourite[0].buttonLink}
+              >
+                <FavouriteHouses data={cardData.favourite[0].itemCard} />
+              </SectionCard>
+          )} </div>
           <TopObject />
           <BlockVideo />
           <BlockArticle />
