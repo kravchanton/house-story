@@ -42,3 +42,10 @@
     transition: background-color .1s linear;
 }
 
+@media (max-width: 480px) {
+
+    .pagination-item {
+        height: 40px;
+        width: 40px;
+    }
+}

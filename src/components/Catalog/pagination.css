@@ -47,4 +47,8 @@
   .pagination {
     padding: 0;
   }
+  .pagination-item {
+    height: 40px;
+    width: 40px;
+  }
 }
