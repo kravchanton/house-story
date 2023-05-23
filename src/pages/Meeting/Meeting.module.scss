@@ -206,6 +206,40 @@
   margin-bottom: 60px;
 }
 
+@media (max-width: 1600px) {
+  .mediaContent {
+    height: 500px;
+  }
+  .gifts {
+    padding-top: 50px;
+  }
+  .gift {
+    max-width: 370px;
+  }
+  .mainPhoto {
+    width: 500px;
+    height: 100%;
+  }
+  .photo {
+    height: 100%;
+    width: 196px;
+  }
+  .videoGroup {
+    height: 100%;
+  }
+  .videoWrapper {
+    width: 405px;
+    height: 100%;
+  }
+  .meetingImg {
+    width: 640px;
+  }
+  .actions {
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+}
+
 @media (max-width: 480px) {
   .firstText {
     margin-bottom: 8px;
