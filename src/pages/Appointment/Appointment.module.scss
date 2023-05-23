@@ -126,6 +126,16 @@
   border-radius: 5px;
 }
 
+@media (max-width: 1600px) {
+  .calendarWrapper {
+    padding: 20px 25px;
+    width: 547px;
+  }
+  .arrow {
+    width: 340px;
+  }
+}
+
 @media (max-width: 480px) {
   .treeLeft {
     display: none;

@@ -70,6 +70,15 @@
   flex-grow: 1;
 }
 
+@media (max-width: 1600px) {
+  .wrapper {
+    margin-top: 20px;
+  }
+  .textWrapper {
+    margin-bottom: 60px;
+  }
+}
+
 @media (max-width: 480px) {
   .wrapper {
     margin-top: 20px;

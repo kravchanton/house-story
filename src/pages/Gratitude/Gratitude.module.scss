@@ -63,7 +63,12 @@
   line-height: 21px;
   margin-bottom: 24px;
 }
-
+@media (max-width: 1600px) {
+  .gratitude {
+    margin-top: 20px;
+    margin-bottom: 60px;
+  }
+}
 @media (max-width: 480px) {
   .title {
     font-weight: 700;

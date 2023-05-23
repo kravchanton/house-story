@@ -78,6 +78,15 @@
   text-align: center;
 }
 
+@media (max-width: 1600px) {
+  .wrapper {
+    margin-bottom: 60px;
+  }
+  .projectCard {
+    width: 389px;
+  }
+}
+
 @media (max-width: 480px) {
   .wrapper {
     gap: 16px;
