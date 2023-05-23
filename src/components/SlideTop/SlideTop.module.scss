@@ -76,6 +76,35 @@ li div {
   border: none;
 }
 
+@media (max-width: 1600px) {
+  .image {
+    width: 500px;
+    height: 370px;
+  }
+  .desc h3 {
+    font-size: 20px;
+    line-height: 22px;
+  }
+  .priceText {
+    font-size: 18px;
+    line-height: 21px;
+  }
+  .price {
+    padding-top: 16px;
+  }
+  .descHouse {
+    padding-top: 16px;
+    gap: 8px;
+  }
+  .propertyWrapper {
+    font-size: 16px;
+    line-height: 19px;
+  }
+  .btn {
+    width: 280px;
+  }
+}
+
 @media (max-width: 480px) {
   .images {
     flex-direction: column;

@@ -9,7 +9,6 @@ body {
   font-weight: 400;
   background-color: $background;
   color: $text-color;
-
 }
 h1,
 h2,
@@ -27,6 +26,13 @@ h6 {
   color: #363130;
   & span {
     color: #1eab5f;
+  }
+}
+
+@media (max-width: 1600px) {
+  .titleBlock {
+    font-size: 28px;
+    line-height: 34px;
   }
 }
 @media (max-width: 480px) {

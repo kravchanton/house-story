@@ -10,6 +10,7 @@ import { MenuCatalog } from "./MenuCatalog";
 import { CatalogList } from "./CatalogList";
 import { MenuButton } from "../MenuButton";
 import { CatalogListMobile } from "./CatalogListMobile";
+import classNames from "classnames";
 
 export const CatalogContainer = () => {
   const [folder, setFolder] = useState(0);
@@ -23,7 +24,13 @@ export const CatalogContainer = () => {
   }, []);
   let Arr = [];
   let data = useSelector((state) => state.catalog.catalog);
-  data?.map((t) => t.attributes.item.filter((item) => item.title?.toLowerCase().includes(search.toLowerCase()) ? Arr.push(item) : ""));
+  data?.map((t) =>
+    t.attributes.item.filter((item) =>
+      item.title?.toLowerCase().includes(search.toLowerCase())
+        ? Arr.push(item)
+        : ""
+    )
+  );
   let dataTransfer;
   if (search.length > 1) {
     dataTransfer = Arr;
@@ -33,7 +40,7 @@ export const CatalogContainer = () => {
 
   return (
     <div className={styles.catalog}>
-      <h2>
+      <h2 className={classNames("titleBlock", styles.title)}>
         Каталог более чем 70 готовых проектов из любых материалов <br />{" "}
         <span>напрямую от производителя и с гарантией до 50 лет</span>
       </h2>
