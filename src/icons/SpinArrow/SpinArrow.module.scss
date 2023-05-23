@@ -1,6 +1,11 @@
-@import "./src/styles/variables";
+@import "/src/styles/variables";
 .icon {
   width: 110px;
   height: 210px;
   fill: none;
+}
+@media (max-width: 1600px) {
+  .icon {
+    width: 93px;
+  }
 }

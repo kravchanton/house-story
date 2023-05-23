@@ -555,6 +555,83 @@
 }
 .videoPoster {
 }
+@media (max-width: 1600px) {
+  .history {
+    gap: 20px;
+  }
+  .titleContent {
+    font-size: 28px;
+    line-height: 34px;
+  }
+  .iconArrow2 {
+    left: 280px;
+    top: 315px;
+  }
+  .iconArrow1,
+  .iconArrow3 {
+    left: -20px;
+  }
+  .tab {
+    font-size: 24px;
+    line-height: 28px;
+    height: 60px;
+  }
+  .column {
+    gap: 40px;
+  }
+  .middleColumn img {
+    width: 350px;
+  }
+  .card {
+    padding: 10px;
+    width: 367px;
+    height: 200px;
+  }
+  .number {
+    font-size: 45px;
+    line-height: 50px;
+  }
+  .textNumber {
+    font-size: 21px;
+    line-height: 25px;
+  }
+  .cloud {
+    left: -190px;
+    bottom: -130px;
+  }
+  .clientCard {
+    max-width: 265px;
+    height: 183px;
+    padding: 10px 20px;
+  }
+  .cardTitle {
+    font-size: 16px;
+    line-height: 18px;
+  }
+  .cardDesc {
+    line-height: 21px;
+  }
+  .clients {
+    margin-bottom: 80px;
+  }
+  .cloudClient {
+    right: -210px;
+    bottom: -175px;
+  }
+  .videoWrapper {
+    min-width: 590px;
+  }
+  .bg {
+    left: -188px;
+    top: 220px;
+  }
+  .sliderCard {
+    width: 100%;
+  }
+  .keyPersons {
+    margin-bottom: 0;
+  }
+}
 
 @media (max-width: 480px) {
   .aboutContainer {
