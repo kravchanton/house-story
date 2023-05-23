@@ -111,6 +111,12 @@
 .logoMobile {
   display: none;
 }
+
+@media (max-width: 1600px) {
+  .left {
+    width: 550px;
+  }
+}
 @media (max-width: 767px) {
   .reviews {
     display: none;

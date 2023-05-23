@@ -96,6 +96,37 @@
   height: 100%;
 }
 
+@media (max-width: 1600px) {
+  .wrapper {
+    width: 540px;
+  }
+  .form {
+    padding: 20px;
+    width: 540px;
+  }
+  .titleForm {
+    font-size: 20px;
+    line-height: 23px;
+  }
+  .subTitleForm {
+    font-size: 14px;
+    line-height: 16px;
+  }
+  .contactsFormInput {
+    width: 46%;
+  }
+  .contactsFormSelect {
+    width: 46%;
+  }
+  .contactsFormBtn {
+    width: 46%;
+  }
+  .contactsForm {
+    gap: 26px;
+    row-gap: 15px;
+  }
+}
+
 @media (max-width: 480px) {
   .wrapper {
     display: flex;

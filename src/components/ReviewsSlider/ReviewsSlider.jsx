@@ -24,6 +24,7 @@ export const ReviewsSlider = ({ reviews }) => {
             {reviews.map((item) => (
               <SwiperSlide key={item.id}>
                 <VideoLink
+                  classNameWrapper="wrapper-video"
                   footer={true}
                   src={
                     item?.video?.data?.attributes?.url &&

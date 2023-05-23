@@ -37,6 +37,27 @@
   color: #1eab5f;
 }
 
+@media (max-width: 1600px) {
+  .wrapper {
+    right: 388px;
+    top: 88px;
+    padding: 25px 28px 25px 47px;
+  }
+  .name {
+    font-size: 12px;
+    line-height: 14px;
+    margin-bottom: 5px;
+  }
+  .phone {
+    font-size: 12px;
+    line-height: 14px;
+    padding-bottom: 10px;
+    &:after {
+      top: 20px;
+    }
+  }
+}
+
 @media (max-width: 480px) {
   .wrapper {
     width: 100%;
