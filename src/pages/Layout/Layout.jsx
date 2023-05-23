@@ -29,7 +29,7 @@ export const Layout = () => {
       e.clientX >= window.innerWidth ||
       e.clientY >= window.innerHeight
     ) {
-      setIsOpen(true);
+      setIsOpen(false);
     }
   };
 
