@@ -32,7 +32,7 @@
 .text {
   font-weight: 500;
   font-size: 18px;
-  line-height: 21px;
+  line-height: 40px;
   color: #000000;
 }
 .descTitle {
@@ -52,6 +52,44 @@
   margin: 0 auto;
 }
 
+@media (max-height: 1600px) {
+  .floorImage {
+    max-width: 380px;
+
+    height: 270px;
+    object-fit: cover;
+    margin-right: 16px;
+  }
+  .smallImage {
+    max-width: 240px;
+    object-fit: cover;
+    margin-right: 40px;
+  }
+  .description {
+    width: 260px;
+
+    gap: 20px;
+    flex-grow: 1;
+  }
+  .descTitle {
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 29px;
+
+  }
+  .text {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 40px;
+  }
+  .btnFloor {
+    justify-content: center;
+    height: 40px;
+    font-size: 12px;
+    font-weight: 600;
+    width: 280px;
+  }
+}
 @media (max-height: 480px) {
   .btnFloor {
     height: 40px;

@@ -394,6 +394,100 @@ li div {
 
 }
 
+@media (max-width: 1600px) {
+  .content {
+    gap: 80px;
+  }
+  .contactForm {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 16px;
+  }
+
+  .btnForm {
+    width: 350px;
+    height: 40px;
+  }
+
+  .inputForm {
+    width: 350px;
+    height: 40px;
+  }
+
+  .selectForm {
+    width: 350px;
+    height: 40px;
+  }
+  .buttonAction {
+    font-weight: 500;
+    font-size: 14px;
+    width: 100%;
+    height: 45px;
+
+
+  }
+  .additionalInfo {
+    padding: 5px 10px;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 22px;
+
+  }
+  .list {
+    padding-left: 0;
+  }
+
+  .listItem {
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .listTitle {
+    font-size: 20px;
+  }
+  .btn {
+    font-weight: 600;
+    height: 40px;
+    font-size: 14px;
+  }
+  .priceBlock {
+    gap: 16px;
+    margin-bottom: 20px;
+  }
+  .descHouse {
+    gap: 10px;
+  }
+    .priceText {
+    font-size: 22px;
+  }
+  .text {
+    font-size: 14px;
+  }
+  .title {
+    margin-top: 20px;
+    font-weight: 900;
+    font-size: 30px;
+
+  }
+
+  .images {
+    gap: 30px;
+  }
+  .mainImage {
+    width: 550px;
+    height: 400px;
+    object-fit: cover;
+  }
+  .tripleImages {
+    gap: 17px;
+  }
+  .imageView {
+    width: 175px;
+    height: 122px;
+  }
+}
 @media (max-width: 480px) {
   .catalogCard {
     padding-top: 0;

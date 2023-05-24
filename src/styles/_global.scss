@@ -11,6 +11,7 @@ body {
   color: $text-color;
 
 }
+
 h1,
 h2,
 h3,
@@ -19,16 +20,25 @@ h5,
 h6 {
   font-family: Montserrat, sans-serif;
 }
+
 .titleBlock {
   max-width: 781px;
   font-weight: 900;
   font-size: 32px;
   line-height: 39px;
   color: #363130;
+
   & span {
     color: #1eab5f;
   }
 }
+
+@media (max-width: 1600px) {
+  .titleBlock {
+    font-size: 22px;
+  }
+}
+
 @media (max-width: 480px) {
   .titleBlock {
     font-weight: 700;

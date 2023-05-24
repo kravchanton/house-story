@@ -151,7 +151,7 @@ export const CatalogCard = () => {
                     <ul className={styles.list}>
                       {/* eslint-disable-next-line react/no-children-prop */}
                       <div className={styles.listItem}>
-                        <ReactMarkdown>{cardData.description}</ReactMarkdown>
+                        <ReactMarkdown rehypePlugins={[rehypeRaw]}>{cardData.description}</ReactMarkdown>
                       </div>
                     </ul>
                     <NavLink>
@@ -267,9 +267,8 @@ export const CatalogCard = () => {
                 <div className={styles.descBlock}>
                   <h4 className={styles.listTitle}>Описание работ</h4>
                   <ul className={styles.list}>
-                    {/* eslint-disable-next-line react/no-children-prop */}
                     <div className={styles.listItem}>
-                      <ReactMarkdown>{cardData.description}</ReactMarkdown>
+                      <ReactMarkdown >{cardData.description}</ReactMarkdown>
                     </div>
                   </ul>
                   <NavLink>

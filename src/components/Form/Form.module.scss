@@ -68,6 +68,11 @@
   color: red;
 }
 
+@media (max-width: 1600px) {
+  .btn {
+    height: 40px;
+  }
+}
 @media (max-width: 480px) {
   .input {
     font-size: 12px;
