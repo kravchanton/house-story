@@ -31,6 +31,17 @@
   background: #1eab5f;
 }
 
+@media (max-width: 1600px) {
+  .text,
+  .name,
+  .about {
+    font-size: 14px;
+    line-height: 18px;
+  }
+  .specialist {
+    margin-top: 20px;
+  }
+}
 @media (max-width: 480px) {
   .img {
     width: 80px;

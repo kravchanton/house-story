@@ -395,6 +395,40 @@ li div {
 }
 
 @media (max-width: 1600px) {
+  .description {
+    gap: 0;
+  }
+.contacts{
+  max-width: 400px;
+}
+  .titleFormInner {
+    margin-bottom: 40px;
+  }
+
+  .input {
+    height: 40px;
+  }
+
+  .select {
+    height: 40px;
+  }
+
+  .btnFormClass {
+    height: 40px;
+  }
+
+  .file {
+    height: 40px;
+  }
+
+  .sectionFloor {
+
+  }
+
+  .catalogCard {
+    padding-top: 0;
+
+  }
   .content {
     gap: 80px;
   }

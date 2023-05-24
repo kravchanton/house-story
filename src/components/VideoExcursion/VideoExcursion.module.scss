@@ -1,5 +1,6 @@
 .videoSection {
   position: relative;
+  justify-content: center;
   display: flex;
   gap: 40px;
 }
@@ -23,8 +24,8 @@
 
 @media (max-width: 1600px) {
   .wrapper {
-    width: 500px;
-    height: 400px;
+    width: 570px;
+    height: 430px;
   }
 
 }

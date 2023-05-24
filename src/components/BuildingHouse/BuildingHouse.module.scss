@@ -31,6 +31,15 @@
 
 
 
+@media (max-width: 1600px) {
+  .buildingImage {
+    width: 370px;
+    height: 280px;
+  }
+  .houseImages {
+    gap: 30px;
+  }
+}
 @media (max-width: 480px) {
   .buildingImage {
     width: 100%;

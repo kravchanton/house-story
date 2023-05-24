@@ -77,3 +77,36 @@ li div {
 .swiperWrapper {
   position: relative;
 }
+@media (max-width: 1600px) {
+
+  .text {
+    font-size: 14px;
+
+  }
+  .favouriteCard {
+    gap: 20px;
+  }
+  .favouriteImg {
+    max-width: 250px;
+  }
+  .favouriteDesc {
+    gap: 20px;
+  }
+  .favouriteText {
+    font-size: 16px;
+    line-height: 22px;
+  }
+  .favouritePrice {
+
+    gap: 20px;
+  }
+  .btnFloor {
+    font-size: 14px;
+    height: 30px;
+    width: 250px;
+  }
+  .descTitle {
+    font-size: 20px;
+
+  }
+}

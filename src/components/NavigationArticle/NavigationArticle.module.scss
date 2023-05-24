@@ -32,3 +32,12 @@
   border: 1px solid #1eab5f;
   border-radius: 5px;
 }
+@media (max-width: 1600px) {
+  .nav {
+    max-width: 300px;
+    gap: 30px;
+  }
+  .btn {
+    width: 300px;
+  }
+}

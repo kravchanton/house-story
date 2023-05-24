@@ -132,6 +132,14 @@
   z-index: auto;
 }
 
+@media (max-width: 1600px) {
+  .title {
+    font-size: 20px;
+  }
+  .poster {
+    padding: 30px;
+  }
+}
 @media (max-width: 480px) {
   .author {
     font-size: 12px;
