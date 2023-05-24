@@ -1,4 +1,4 @@
-@import "./src/styles/variables";
+@import "/src/styles/variables";
 
 .header {
   min-height: 214px;
@@ -183,13 +183,67 @@
   padding: 7px;
   background-color: #e4e4e4;
 }
-@media (max-width: 1200px) {
+
+@media (max-width: 1600px) {
+  .container {
+    max-width: 1200px;
+  }
+
+  .info {
+    flex-wrap: nowrap;
+  }
+  .logo {
+    max-width: 100%;
+  }
+  .logo p {
+    font-size: 12px;
+    line-height: 14px;
+  }
+
   .nav {
     gap: 10px;
   }
   .btn {
     font-size: 12px;
     padding: 15px 30px;
+  }
+  .plantWrapper img {
+    width: 50px;
+  }
+  .plantWrapper {
+    max-width: 272px;
+  }
+  .plantText {
+    font-size: 12px;
+    line-height: 14px;
+  }
+  .iconWrapper {
+    padding: 5px 5px;
+  }
+  .phoneWrapper {
+    padding: 5px 5px;
+  }
+  .structureText {
+    font-size: 12px;
+    line-height: 14px;
+  }
+  .phoneWrapper img {
+    width: 50px;
+  }
+  .phoneNumber {
+    font-size: 16px;
+    line-height: 19px;
+  }
+  .text {
+    font-size: 12px;
+    line-height: 14px;
+  }
+  .socials {
+    gap: 15px;
+  }
+  .socials img {
+    width: 25px;
+    height: 25px;
   }
 }
 

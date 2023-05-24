@@ -26,6 +26,7 @@ export const Header = ({
 }) => {
   const [isOpenContacts, setIsOpenContacts] = useState(false);
   const [isOpenMenu, setIsOpenMenu] = useState(false);
+
   return (
     <header className={styles.header}>
       <Container className={styles.container}>

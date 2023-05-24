@@ -29,6 +29,21 @@
   margin-bottom: 16px;
 }
 
+@media (max-width: 1600px) {
+  .card {
+    max-width: 265px;
+    padding: 15px;
+  }
+  .title {
+    font-size: 18px;
+    line-height: 21px;
+  }
+  .descWeapper p {
+    font-size: 14px;
+    line-height: 16px;
+  }
+}
+
 @media (max-width: 480px) {
   .wrapper {
     gap: 24px;

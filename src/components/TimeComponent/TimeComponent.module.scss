@@ -60,6 +60,17 @@
   color: #ffffff;
 }
 
+@media (max-width: 1600px) {
+  .times {
+    row-gap: 17px;
+    column-gap: 37px;
+  }
+  .item {
+    width: 80px;
+    flex-grow: 1;
+  }
+}
+
 @media (max-width: 480px) {
   .top h3 {
     font-weight: 400;

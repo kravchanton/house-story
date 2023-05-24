@@ -68,6 +68,31 @@
   z-index: 2;
 }
 
+@media (max-width: 1600px) {
+  .descTitle {
+    font-size: 18px;
+    line-height: 27px;
+  }
+  .form {
+    max-width: 340px;
+  }
+  .imageCloud {
+    right: -288px;
+    top: 280px;
+  }
+  .imageHouse {
+    right: -190px;
+    top: 0;
+  }
+  .descWrapper {
+    gap: 25px;
+  }
+  .imageHouseVariant {
+    left: -188px;
+    top: 12px;
+    width: 50%;
+  }
+}
 @media (max-width: 480px) {
   .imageHouse {
     display: none;
