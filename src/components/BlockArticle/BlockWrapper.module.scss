@@ -154,6 +154,26 @@ h3 {
 .slide {
   width: 500px;
 }
+@media (max-width: 1600px) {
+  .btnFloor {
+    font-size: 14px;
+    height: 40px;
+    width: 300px;
+  }
+  .read,
+  .duration {
+    font-size: 14px;
+  }
+  .name {
+    font-size: 20px;
+  }
+  .card {
+    min-width: 350px;
+  }
+  .poster {
+    padding: 30px;
+  }
+}
 @media (max-width: 480px) {
   .content {
     flex-direction: column;

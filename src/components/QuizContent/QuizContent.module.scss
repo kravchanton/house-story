@@ -63,6 +63,7 @@
   color: #FFFFFF;
   cursor: pointer;
 }
+
 .btnPrev {
   justify-content: center;
   width: 400px;
@@ -74,6 +75,7 @@
   color: #000000;
   cursor: pointer;
 }
+
 /*.btn:hover {
   color: #000000;
   border: 1px solid #000000;
@@ -85,6 +87,7 @@
   cursor: auto;
   border-radius: 5px;
 }
+
 .btnWrapper {
   cursor: pointer;
 }
@@ -94,6 +97,7 @@
   height: 36px;
   stroke: #ffffff;
 }
+
 @media (max-width: 1200px) {
   .feature {
     display: none;
@@ -109,11 +113,28 @@
   }
 }
 
-@media (max-width: 480px) {
-.navigation {
-  align-items: center;
-  justify-content: center;
+@media (max-width: 1600px) {
+  .quizWrapper {
+    gap: 40px;
+  }
+  .btn {
+    width: 350px;
+    min-width: 200px;
+    height: 45px;
+  }
+
+  .btnPrev {
+    width: 350px;
+    min-width: 200px;
+    height: 45px;
+
+  }
 }
+@media (max-width: 480px) {
+  .navigation {
+    align-items: center;
+    justify-content: center;
+  }
   .question {
     width: 100%;
   }
@@ -131,10 +152,10 @@
     line-height: 16px;
     margin-bottom: 24px;
   }
-.buttons {
-  padding-top: 10px;
-justify-content: center
-}
+  .buttons {
+    padding-top: 10px;
+    justify-content: center
+  }
   .buttonBlock {
     display: none;
   }
@@ -146,7 +167,7 @@ justify-content: center
   }
   .btn {
     justify-content: center;
-border: none;
+    border: none;
     background: #1EAB5F;
     border-radius: 3px;
     color: #FFFFFF;

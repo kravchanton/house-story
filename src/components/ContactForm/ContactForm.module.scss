@@ -41,6 +41,13 @@
   .specialist {
     margin-top: 20px;
   }
+  .specialist {
+    gap: 16px;
+  }
+  .img {
+    width: 100px;
+    height: 100px;
+  }
 }
 @media (max-width: 480px) {
   .img {
